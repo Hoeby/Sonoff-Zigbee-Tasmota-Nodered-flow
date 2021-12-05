@@ -1,0 +1,1402 @@
+[
+    {
+        "id": "32e6b1c785b786d2",
+        "type": "tab",
+        "label": "Sonoff Zigbee2Domoticz",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "a6a5a94e584da383",
+        "type": "mqtt in",
+        "z": "32e6b1c785b786d2",
+        "name": "",
+        "topic": "tele/#",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "b1bc1db1ae7424c0",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 270,
+        "y": 340,
+        "wires": [
+            [
+                "ad071cf746fd4fd2"
+            ]
+        ]
+    },
+    {
+        "id": "fcdf7fc73dd7af70",
+        "type": "mqtt out",
+        "z": "32e6b1c785b786d2",
+        "name": "MQTT Server",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "b1bc1db1ae7424c0",
+        "x": 380,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "28760220d0b4981f",
+        "type": "comment",
+        "z": "32e6b1c785b786d2",
+        "name": "Tasmota commands",
+        "info": "ZbPermitJoin 1 = pairing mode voor 60sec\n\nZbName = Friendly name invoeren\n   voorbeeld: ZbName 0x2590,Test_deurcontact\n   \nZbForget <device> = verwijderen device\n\nChange channel:\nZbConfig {\"Channel\":12}\n\nChange panid:\nZbConfig {\"PanID\":\"0x1A69\"}\nhttps://tasmota.github.io/docs/Commands/#zbconfig",
+        "x": 330,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "adf1e03e1e45ba46",
+        "type": "comment",
+        "z": "32e6b1c785b786d2",
+        "name": "Test Xiaomi Deurcontact",
+        "info": "Which domoticz dummy needed:\n- Switch (schakelaar)\n\nCode send by device:\nDevice: \"0x2590\"\nName: \"Test_deurcontact\"\nContact: 0  (0=contact dicht, 1=contact open)\nEndpoint: 1\nLinkQuality: 134",
+        "x": 2630,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "ba9518b91748cf45",
+        "type": "comment",
+        "z": "32e6b1c785b786d2",
+        "name": "Test Xiaomi Beweging",
+        "info": "Which domoticz dummy needed:\n- Switch (schakelaar)\n\nCode send by device:\nDevice: \"0x11F0\"\nName: \"Test_beweging\"\nOccupancy: 1 (Occupancy 1 = motion, 0 = no motion)\nEndpoint: 1\nLinkQuality: 173",
+        "x": 2620,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "e8b6a0c9bf81e4bc",
+        "type": "comment",
+        "z": "32e6b1c785b786d2",
+        "name": "Test Xiaomi Rookmelder",
+        "info": "Which domoticz dummy needed:\n- Switch (schakelaar)\n\nCode send by device:\n3 messages when pushing test button\n\n*** Bericht 1:***\nDevice: \"0x7460\"\nName: \"Test_rookmelder\"\nModelId: \"lumi.sensor_smoke\"\nEndpoint: 1\nLinkQuality: 157\n\n*** Bericht 2:***\nDevice: \"0x7460\"\nName: \"Test_rookmelder\"\n0500<00: 00000FF0000\nZoneStatusChange: 0\nFire: 0\nEndpoint: 1\nLinkQuality: 157\n\n*** Bericht 3:***\nDevice: \"0x7460\"\nName: \"Test_rookmelder\"\nBatteryVoltage: 3.05\nBatteryPercentage: 100\nSmokeDensity: 0\nEndpoint: 1\nLinkQuality: 157\n",
+        "x": 2630,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "0f01862f36be38ab",
+        "type": "switch",
+        "z": "32e6b1c785b786d2",
+        "name": "Filter Topic",
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "RESULT",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "STATE",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "SENSOR",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "domoticz/out",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "INFO1",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "INFO2",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "INFO3",
+                "vt": "str"
+            },
+            {
+                "t": "cont",
+                "v": "LWT",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 9,
+        "x": 650,
+        "y": 380,
+        "wires": [
+            [
+                "38309599e8c8d9e1"
+            ],
+            [
+                "d4a33985746fb725"
+            ],
+            [
+                "7b575e0384d79c38"
+            ],
+            [
+                "42ee16d8e12d67f4"
+            ],
+            [
+                "d7df5ed598257739"
+            ],
+            [
+                "83800a22948e6211"
+            ],
+            [
+                "83166d5da37022e7"
+            ],
+            [
+                "57712e7cca74ee29"
+            ],
+            [
+                "d49bd6378f71a628"
+            ]
+        ]
+    },
+    {
+        "id": "d4a33985746fb725",
+        "type": "debug",
+        "z": "32e6b1c785b786d2",
+        "name": "Topic State",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 930,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "38309599e8c8d9e1",
+        "type": "debug",
+        "z": "32e6b1c785b786d2",
+        "name": "Topic Result",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 930,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "d49bd6378f71a628",
+        "type": "debug",
+        "z": "32e6b1c785b786d2",
+        "name": "Topic not in filter",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 940,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "d7df5ed598257739",
+        "type": "debug",
+        "z": "32e6b1c785b786d2",
+        "name": "Topic Info1",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 930,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "83166d5da37022e7",
+        "type": "debug",
+        "z": "32e6b1c785b786d2",
+        "name": "Topic Info3",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 930,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "83800a22948e6211",
+        "type": "debug",
+        "z": "32e6b1c785b786d2",
+        "name": "Topic Info2",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 930,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "1bda201a500415c1",
+        "type": "comment",
+        "z": "32e6b1c785b786d2",
+        "name": "Test Osram Mini Switch",
+        "info": "Which domoticz dummy needed:\n- Selector switch (keuzeschakelaar)\n\nSelector switch setup:\n0  = Off\n10 = Up\n20 = Up: hold\n30 = Up: release\n40 = Circle: click\n50 = Circle: hold\n60 = Circle: release\n70 = Down\n80 = Down: hold\n90 = Down: release\n\nCode send by device:\n*** Knop omhoog kort ***\nDevice: \"0x5FE5\"\nName: \"Test_osramswitch\"\n0006!01: \"\"\nPower: 1\nEndpoint: 1\nLinkQuality: 157\n\n*** Knop omhoog lang ***\nDevice: \"0x5FE5\"\nName: \"Test_osramswitch\"\n0008!03: \"\"\nDimmerStop: true\nEndpoint: 1\nLinkQuality: 157\n\n*** Knop midden kort bericht 1 ***\nDevice: \"0x5FE5\"\nName: \"Test_osramswitch\"\n0008!04: \"FE0A00\"\nDimmer: 254\nPower: 1\nEndpoint: 3\nLinkQuality: 157\n\n*** Knop midden kort bericht 2 ***\nDevice: \"0x5FE5\"\nName: \"Test_osramswitch\"\n0300!0A: \"72010A00\"\nCT:370\nEndpoint: 3\nLinkQuality: 157\n\n*** Knop midden lang bericht 1 ***\nDevice: \"0x5FE5\"\nName: \"Test_osramswitch\"\n0300!03: \"FE0200\"\nSat: 254\nEndpoint: 3\nLinkQuality: 157\n\n*** Knop midden lang bericht 2 ***\nDevice: \"0x5FE5\"\nName: \"Test_osramswitch\"\n0300!01: \"0119\"\nHueMove: 1\nEndpoint: 3\nLinkQuality: 157\n\n*** Knop midden lang bericht 3 ***\nDevice: \"0x5FE5\"\nName: \"Test_osramswitch\"\n0003!01: \"0000\"\nHueMove: 0\nEndpoint: 3\nLinkQuality: 157\n\n*** Knop omlaag kort ***\nDevice: \"0x5FE5\"\nName: \"Test_osramswitch\"\n0006!00: \"\"\nPower: 0\nEndpoint: 2\nLinkQuality: 157\n\n*** Knop omlaag lang ***\nDevice: \"0x5FE5\"\nName: \"Test_osramswitch\"\n0008!01: \"0126\"\nDimmerMove: 1\nEndpoint: 2\nLinkQuality: 157\n\n",
+        "x": 2620,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "08ef5d34fa2f5b9a",
+        "type": "debug",
+        "z": "32e6b1c785b786d2",
+        "name": "To MQTT Server",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 390,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "ad071cf746fd4fd2",
+        "type": "function",
+        "z": "32e6b1c785b786d2",
+        "name": "add src",
+        "func": "msg.src = 'tasmota';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 440,
+        "y": 340,
+        "wires": [
+            [
+                "0f01862f36be38ab"
+            ]
+        ]
+    },
+    {
+        "id": "3d4832ee8bb60568",
+        "type": "comment",
+        "z": "32e6b1c785b786d2",
+        "name": "Test Lidl CCT bulb",
+        "info": "Which domoticz dummy needed:\n- Switch (schakelaar)\n\nCode send by device:\nDevice: \"0xAF37\"\nName: \"Test_Lamp\"\nPower: 1\nDimmer: null\nHue: 0\nSat: 254\nX: 45874\nY: 19660\nCT: 153  // 153 = warm white, 500 = cold\nColorMode: 1\nRGB: \"FF0000\"\nRGBb: \"000000\"\nEndpoint: 1\nLinkQuality: 134",
+        "x": 2610,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "2ecc0c65e522d6ab",
+        "type": "mqtt in",
+        "z": "32e6b1c785b786d2",
+        "name": "",
+        "topic": "domoticz/out",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "b1bc1db1ae7424c0",
+        "inputs": 0,
+        "x": 290,
+        "y": 420,
+        "wires": [
+            [
+                "7e37ed3f80e6353e"
+            ]
+        ]
+    },
+    {
+        "id": "7e37ed3f80e6353e",
+        "type": "function",
+        "z": "32e6b1c785b786d2",
+        "name": "add src",
+        "func": "msg.src = 'domoticz';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 440,
+        "y": 420,
+        "wires": [
+            [
+                "0f01862f36be38ab"
+            ]
+        ]
+    },
+    {
+        "id": "bf65146bd8d167aa",
+        "type": "json",
+        "z": "32e6b1c785b786d2",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 1150,
+        "y": 320,
+        "wires": [
+            [
+                "269bdd93eaa30e8b"
+            ]
+        ]
+    },
+    {
+        "id": "e4ed3f9404692874",
+        "type": "link in",
+        "z": "32e6b1c785b786d2",
+        "name": "MQTT Server",
+        "links": [
+            "fe1b30e1681a0b63",
+            "b6f143479743cebb",
+            "996c20a7f43bb922",
+            "7c39b8f4766d8af2",
+            "1f300e21c525ad4d",
+            "4651c83ecce552f8",
+            "38b2d29beeb9a423",
+            "b58fbdd1751a2cd8",
+            "34ebad78371bfc78",
+            "b0b36a57add1ac04"
+        ],
+        "x": 235,
+        "y": 500,
+        "wires": [
+            [
+                "fcdf7fc73dd7af70",
+                "08ef5d34fa2f5b9a"
+            ]
+        ]
+    },
+    {
+        "id": "57712e7cca74ee29",
+        "type": "debug",
+        "z": "32e6b1c785b786d2",
+        "name": "Topic LWT",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 930,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "7b575e0384d79c38",
+        "type": "json",
+        "z": "32e6b1c785b786d2",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 910,
+        "y": 300,
+        "wires": [
+            [
+                "273c9ce4a5f2a5fc",
+                "1805c2bdbbc563df",
+                "e1a8b7f42306cbce"
+            ]
+        ]
+    },
+    {
+        "id": "273c9ce4a5f2a5fc",
+        "type": "debug",
+        "z": "32e6b1c785b786d2",
+        "name": "Tasmota Json Receive",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1200,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "c870e39f002e4de2",
+        "type": "comment",
+        "z": "32e6b1c785b786d2",
+        "name": "Todo list",
+        "info": "",
+        "x": 300,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "269bdd93eaa30e8b",
+        "type": "function",
+        "z": "32e6b1c785b786d2",
+        "name": "Tasmota ID filter",
+        "func": "var idx_zigbee_table = [\n  //[ device type, domoticz idx, domoticz idx battery, tasmota device, tasmota topic]   // syntax\n    [5,  57, 0, \"0x6AA3\", \"tasmota_96373D\"],    // Lidl Livarno Lux E27 9W CCT Bulb\n    [4,  29, 0, \"0xB275\", \"tasmota_963592\"],    // Remote Maaike\n    [4,  28, 0, \"0x65A9\", \"tasmota_963592\"],    // Remote Aukje\n    [4,  30, 0, \"0x0447\", \"tasmota_963592\"],    // Remote Ouders\n    [3,  44, 0, \"0x7460\", \"tasmota_96373D\"],    // Rookmelder zolder\n    [3,  42, 0, \"0xF5CA\", \"tasmota_963592\"],    // Rookmelder Ouders\n    [3,  41, 0, \"0xB450\", \"tasmota_963592\"],    // Rookmelder Maaike\n    [3,  40, 0, \"0xDBE4\", \"tasmota_963592\"],    // Rookmelder Aukje\n    [7,  58, 0, \"0x5D14\", \"tasmota_963592\"],    // Remote Kledingkast\n    [8,  59, 0, \"0x3743\", \"tasmota_963592\"],    // Led strip meterkast\n    \n    \n];\n\n//1 = Xiaomi Door sensor\n//2 = Xiaomi Motion Sensor\n//3 = Xiaomi Smoke detector\n//4 = Osram mini switch\n//5 = Lidl Livarno Lux E27 9W CCT Bulb\n//6 = Heiman CO detector\n//7 = Ikea E1743 remote\n//8 = Ikea ICPSHC24-30EU-IL-1 LED strip supply\n\nif ( msg.src === 'tasmota' ) {\n    for ( var i = 0; i < idx_zigbee_table.length; i++ ) {\n        var zigbeedevice = idx_zigbee_table[i][0];\n        var idx = idx_zigbee_table[i][1];\n        var idxbat = idx_zigbee_table[i][2];\n        var zigbeeid = idx_zigbee_table[i][3];\n\n        if ( msg.payload.ZbReceived[zigbeeid] ) {\n            msg.payload.ZbReceived.idx = idx;\n            msg.payload.ZbReceived.idxbat = idxbat;\n            msg.payload.ZbReceived.zigbeeid = zigbeeid;\n            if ( zigbeedevice === 1 ) {\n                return [msg, null, null, null, null, null, null, null, null]; \n            } \n            else if ( zigbeedevice === 2 ) {\n                return [null, msg, null, null, null, null, null, null, null]; \n            }\n            else if ( zigbeedevice === 3 ) {\n                return [null, null, msg, null, null, null, null, null, null]; \n            }\n            else if ( zigbeedevice === 4 ) {\n                return [null, null, null, msg, null, null, null, null, null]; \n            }\n            else if ( zigbeedevice === 5 ) {\n                return [null, null, null, null, msg, null, null, null, null]; \n            }\n            else if ( zigbeedevice === 6 ) {\n                return [null, null, null, null, null, msg, null, null, null]; \n            }\n            else if ( zigbeedevice === 7 ) {\n                return [null, null, null, null, null, null, msg, null, null]; \n            }\n            else if ( zigbeedevice === 8 ) {\n                return [null, null, null, null, null, null, null, msg, null]; \n            }\n        }\n    }\n   return [null, null, null, null, null, null, null, null, msg];\n}\n\nif ( msg.src === 'domoticz' ) {\n    for ( var j = 0; j < idx_zigbee_table.length; j++ ) {\n        var zigbeedevicedz = idx_zigbee_table[j][0];\n        var idxdz = idx_zigbee_table[j][1];\n        var idxbatdz = idx_zigbee_table[j][2];\n        var zigbeeiddz = idx_zigbee_table[j][3];\n        var topicname = idx_zigbee_table[j][4];   \n   \n        if ( idxdz === msg.payload.idx ) {\n            msg.payload.idxdz = idxdz;\n            msg.payload.idxbat = idxbatdz;\n            msg.payload.zigbeeid = zigbeeiddz;\n            msg.payload.topicname = topicname;\n            if ( zigbeedevicedz === 5 ) {    \n                return [null, null, null, null, msg, null, null, null, null]; \n            }\n            else if ( zigbeedevicedz === 8 ) {\n                return [null, null, null, null, null, null, null, msg, null]; \n            }\n        }\n    }\n    return [null, null, null, null, null, null, null, null, msg]; \n}",
+        "outputs": 9,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1640,
+        "y": 320,
+        "wires": [
+            [
+                "ad164d166565ab20"
+            ],
+            [
+                "64ee5c7c3bf2531b"
+            ],
+            [
+                "283b251afd36b91e"
+            ],
+            [
+                "e3ecd92d6e4b4333"
+            ],
+            [
+                "74078727af5ee2e0"
+            ],
+            [
+                "a7f14c9f10b3d453"
+            ],
+            [
+                "e3c55ccb8b099b3c"
+            ],
+            [
+                "6b7ca6afa0a0133a",
+                "c279eb08d2518c16"
+            ],
+            [
+                "04ae07b732cc638c"
+            ]
+        ]
+    },
+    {
+        "id": "ad164d166565ab20",
+        "type": "function",
+        "z": "32e6b1c785b786d2",
+        "name": " Xiaomi door senor",
+        "func": "msg.topic = \"domoticz/in\";\nvar idx = msg.payload.ZbReceived.idx;\nvar idxbat = msg.payload.ZbReceived.idxbat;\nvar zigbeeid = msg.payload.ZbReceived.zigbeeid;\nif ( msg.payload.ZbReceived[zigbeeid] ) {    \n    if (msg.payload.ZbReceived[zigbeeid].hasOwnProperty(\"BatteryVoltage\")) {\n        var valuebat = msg.payload.ZbReceived[zigbeeid].BatteryVoltage;\n    }\n    if ( idxbat === 0 ) {\n        var batmsg = null\n    }\n    else{\n        var batmsg = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idxbat , \"svalue\": \"\" + valuebat + \"\", \"parsetrigger\": false}}; \n    }\n    var updmsg0 = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idx , \"nvalue\": 0, \"svalue\": \"0\" , \"parsetrigger\": false}}; \n    var updmsg1 = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idx , \"nvalue\": 1, \"svalue\": \"0\" , \"parsetrigger\": false}}; \n    if (context.get(zigbeeid) === undefined) {\n        context.set(zigbeeid, 3)\n    }\n    \n    if (msg.payload.ZbReceived[zigbeeid].Contact === 1) {\n        if (context.get(zigbeeid) === 0 || context.get(zigbeeid) === 3 ) {\n            context.set(zigbeeid, 1);      \n            msg.payload = {\"command\": \"switchlight\", \"idx\": idx, \"switchcmd\": \"On\" };\n            if (valuebat !== undefined) {\n                return [msg, batmsg];\n            }   \n            return [msg, null];\n        } \n        else if (context.get(zigbeeid) === 1) {\n            if (valuebat !== undefined) {\n                return [updmsg1, batmsg];\n            }   \n            return [updmsg1, null];\n        }        \n    }\n    else if (msg.payload.ZbReceived[zigbeeid].Contact === 0) {\n        if (context.get(zigbeeid) === 1 || context.get(zigbeeid) === 3 ) {\n            context.set(zigbeeid, 0);   \n            msg.payload = {\"command\": \"switchlight\", \"idx\": idx, \"switchcmd\": \"Off\" };\n            if (valuebat !== undefined) {\n                return [msg, batmsg];\n            } \n            return [msg, null];\n        } \n        else if (context.get(zigbeeid) === 0) {  \n            if (valuebat !== undefined) {\n                return [updmsg0, batmsg];\n            }   \n            return [updmsg0, null, null]; \n        }\n    } else {\n        if (valuebat !== undefined) {\n            msg.payload = {\"command\": \"udevice\" , \"idx\": idxbat , \"nvalue\":0 , \"svalue\": \"\" + valuebat + \"\"}; \n            return [null, msg];\n        }            \n        return [null, null]\n    }\n}\n",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1950,
+        "y": 180,
+        "wires": [
+            [
+                "996c20a7f43bb922"
+            ],
+            [
+                "996c20a7f43bb922"
+            ]
+        ]
+    },
+    {
+        "id": "902db89cf58e7d4a",
+        "type": "debug",
+        "z": "32e6b1c785b786d2",
+        "name": "Xiaomi door sensor",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2350,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "04ae07b732cc638c",
+        "type": "debug",
+        "z": "32e6b1c785b786d2",
+        "name": "Not in the filter",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1940,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "64ee5c7c3bf2531b",
+        "type": "function",
+        "z": "32e6b1c785b786d2",
+        "name": " Xiaomi motion senor",
+        "func": "msg.topic = \"domoticz/in\";\nvar idx = msg.payload.ZbReceived.idx;\nvar idxbat = msg.payload.ZbReceived.idxbat;\nvar zigbeeid = msg.payload.ZbReceived.zigbeeid;\nif ( msg.payload.ZbReceived[zigbeeid] ) {    \n    if (msg.payload.ZbReceived[zigbeeid].hasOwnProperty(\"BatteryVoltage\")) {\n        var valuebat = msg.payload.ZbReceived[zigbeeid].BatteryVoltage;\n    }\n    if ( idxbat === 0 ) {\n        var batmsg = null\n    }\n    else{\n        var batmsg = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idxbat , \"svalue\": \"\" + valuebat + \"\", \"parsetrigger\": false}}; \n    }\n    var updmsg0 = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idx , \"nvalue\": 0, \"svalue\": \"0\" , \"parsetrigger\": false}}; \n    var updmsg1 = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idx , \"nvalue\": 1, \"svalue\": \"0\" , \"parsetrigger\": false}}; \n    if (context.get(zigbeeid) === undefined) {\n        context.set(zigbeeid, 3)\n    }\n     \n    if (msg.payload.ZbReceived[zigbeeid].Occupancy === 1) {\n        if (context.get(zigbeeid) === 0 || contect.get(zigbeeid) === 3) {\n            context.set(zigbeeid, 1);      \n            msg.payload = {\"command\": \"switchlight\", \"idx\": idx, \"switchcmd\": \"On\" };\n            if (valuebat !== undefined) {\n                return [msg, batmsg];\n            }   \n            return [msg, null];\n        } \n        else if (context.get(zigbeeid) === 1) {\n            if (valuebat !== undefined) {\n                return [updmsg1, batmsg];\n            }   \n            return [updmsg1, null];\n        }        \n    }\n    else if (msg.payload.ZbReceived[zigbeeid].Occupancy === 0) {\n        if (context.get(zigbeeid) === 1 || contect.get(zigbeeid) === 3) {\n            context.set(zigbeeid, 0);   \n            msg.payload = {\"command\": \"switchlight\", \"idx\": idx, \"switchcmd\": \"Off\" };\n            if (valuebat !== undefined) {\n                return [msg, batmsg];\n            } \n            return [msg, null];\n        } \n        else if (context.get(zigbeeid) === 0) {  \n            if (valuebat !== undefined) {\n                return [updmsg0, batmsg];\n            }   \n            return [updmsg0, null, null]; \n        }\n    } else {\n        if (valuebat !== undefined) {\n            return [null, batmsg];\n        }            \n        return [null, null]\n    }\n}",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1960,
+        "y": 220,
+        "wires": [
+            [
+                "7c39b8f4766d8af2"
+            ],
+            [
+                "7c39b8f4766d8af2"
+            ]
+        ]
+    },
+    {
+        "id": "93278f76c19d10e5",
+        "type": "debug",
+        "z": "32e6b1c785b786d2",
+        "name": "Xiaomi motion sensor",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2360,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "283b251afd36b91e",
+        "type": "function",
+        "z": "32e6b1c785b786d2",
+        "name": " Xiaomi smoke detector",
+        "func": "msg.topic = \"domoticz/in\";\nvar idx = msg.payload.ZbReceived.idx;\nvar idxbat = msg.payload.ZbReceived.idxbat;\nvar zigbeeid = msg.payload.ZbReceived.zigbeeid;\nif ( msg.payload.ZbReceived[zigbeeid] ) {    \n    if (msg.payload.ZbReceived[zigbeeid].hasOwnProperty(\"BatteryVoltage\")) {\n        var valuebat = msg.payload.ZbReceived[zigbeeid].BatteryVoltage;\n    }\n    if ( idxbat === 0 ) {\n        var batmsg = null\n    }\n    else{\n        var batmsg = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idxbat , \"svalue\": \"\" + valuebat + \"\", \"parsetrigger\": false}}; \n    }\n    var updmsg0 = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idx , \"nvalue\": 0, \"svalue\": \"0\" , \"parsetrigger\": false}}; \n    var updmsg1 = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idx , \"nvalue\": 1, \"svalue\": \"0\" , \"parsetrigger\": false}}; \n    if (context.get(zigbeeid) === undefined) {\n            context.set(zigbeeid, 3)\n        }\n        \n    if (msg.payload.ZbReceived[zigbeeid].Fire === 1) {\n        if (context.get(zigbeeid) === 0 || contect.get(zigbeeid) === 3) {\n            context.set(zigbeeid, 1);      \n            msg.payload = {\"command\": \"switchlight\", \"idx\": idx, \"switchcmd\": \"On\" };\n            if (valuebat !== undefined) {\n                return [msg, batmsg];\n            }   \n            return [msg, null];\n        } \n        else if (context.get(zigbeeid) === 1) {\n            if (valuebat !== undefined) {\n                return [updmsg1, batmsg];\n            }   \n            return [updmsg1, null];\n        }        \n    }\n    else if (msg.payload.ZbReceived[zigbeeid].Fire === 0) {\n        if (context.get(zigbeeid) === 1 || contect.get(zigbee) === 3) {\n            context.set(zigbeeid, 0);   \n            msg.payload = {\"command\": \"switchlight\", \"idx\": idx, \"switchcmd\": \"Off\" };\n            if (valuebat !== undefined) {\n                return [msg, batmsg];\n                //  return [null, batmsg];\n            } \n            return [msg, null];\n            //return [null, null];\n        } \n        else if (context.get(zigbeeid) === 0) {  \n            if (valuebat !== undefined) {\n                return [updmsg0, batmsg];\n            }   \n            return [updmsg0, null]; \n        }\n    } else {\n        if (valuebat !== undefined) {\n            return [updmsg0, batmsg];\n        }       \n        return [updmsg0, null]; \n    }\n}",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1960,
+        "y": 260,
+        "wires": [
+            [
+                "1f300e21c525ad4d"
+            ],
+            [
+                "1f300e21c525ad4d"
+            ]
+        ]
+    },
+    {
+        "id": "943f1135c3828226",
+        "type": "debug",
+        "z": "32e6b1c785b786d2",
+        "name": "Xiaomi smoke detector",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2360,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "b96a18aebbaf647b",
+        "type": "debug",
+        "z": "32e6b1c785b786d2",
+        "name": "Osram mini switch",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2350,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "74078727af5ee2e0",
+        "type": "function",
+        "z": "32e6b1c785b786d2",
+        "name": "Lidl Livarno CCT Bulb",
+        "func": "\nif ( msg.src === 'tasmota' ) {\n    msg.topic = \"domoticz/in\";\n    var idx = msg.payload.ZbReceived.idx;\n    var idxbat = msg.payload.ZbReceived.idxbat;\n    var zigbeeid = msg.payload.ZbReceived.zigbeeid;\n    if ( msg.payload.ZbReceived[zigbeeid] ) {    \n        if (msg.payload.ZbReceived[zigbeeid].Power === 1) {\n            var updmsg1 = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idx , \"nvalue\": 1, \"svalue\": \"0\" , \"parsetrigger\": false}}; \n            return [updmsg1, null];\n        }\n        else if (msg.payload.ZbReceived[zigbeeid].Power === 0) { \n            var updmsg0 = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idx , \"nvalue\": 0, \"svalue\": \"0\" , \"parsetrigger\": false}}; \n            return [updmsg0, null];\n        }\n        return [null, null];\n    }\n}\n\nif ( msg.src === 'domoticz' ) {\n        var ZigbeeID = msg.payload.zigbeeid\n        var level = (msg.payload.Level * 2.54);\n        if (msg.payload.Color.t === null) {\n            var color = (153);    \n        } \n        else {\n            var color = ((msg.payload.Color.t * 1.37) + 153);\n        }\n        var topicname = msg.payload.topicname;\n        if ( msg.payload.nvalue === 1) {\n            var msgpow1 = { \"topic\": \"cmnd/\" + topicname + \"/ZbSend\",\"payload\":{\"Device\":ZigbeeID,\"Send\":{\"Power\":1}}};\n            return [msgpow1, null];\n        } else if ( msg.payload.nvalue === 0) {\n            var msgpow0 = { \"topic\": \"cmnd/\" + topicname + \"/ZbSend\",\"payload\":{\"Device\":ZigbeeID,\"Send\":{\"Power\":0}}};\n            return [msgpow0, null];\n        }\n        else {\n            var msgcol = { \"topic\": \"cmnd/\" + topicname + \"/ZbSend\",\"payload\":{\"Device\":ZigbeeID,\"Send\":{\"CT\":color}}};\n            var msglev = { \"topic\": \"cmnd/\" + topicname + \"/ZbSend\",\"payload\":{\"Device\":ZigbeeID,\"Send\":{\"Dimmer\":level}}};\n            return [msgcol, msglev];\n        }\n    return [null, null];\n}",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1960,
+        "y": 340,
+        "wires": [
+            [
+                "38b2d29beeb9a423"
+            ],
+            [
+                "38b2d29beeb9a423"
+            ]
+        ]
+    },
+    {
+        "id": "29f4524a41c3bbe4",
+        "type": "debug",
+        "z": "32e6b1c785b786d2",
+        "name": "Lidl Livarno CCT Bulb",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2360,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "a7f14c9f10b3d453",
+        "type": "function",
+        "z": "32e6b1c785b786d2",
+        "name": "Heiman CO detector",
+        "func": "msg.topic = \"domoticz/in\";\nvar idx = msg.payload.ZbReceived.idx;\nvar idxbat = msg.payload.ZbReceived.idxbat;\nvar zigbeeid = msg.payload.ZbReceived.zigbeeid;\nif ( msg.payload.ZbReceived[zigbeeid] ) {    \n    if (msg.payload.ZbReceived[zigbeeid].hasOwnProperty(\"BatteryVoltage\")) {\n        var valuebat = msg.payload.ZbReceived[zigbeeid].BatteryVoltage;\n    }\n    if ( idxbat === 0) {\n        var batmsg = null\n    }\n    else{\n        var batmsg = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idxbat , \"svalue\": \"\" + valuebat + \"\", \"parsetrigger\": false}}; \n    }\n    var updmsg0 = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idx , \"nvalue\": 0, \"svalue\": \"0\" , \"parsetrigger\": false}}; \n    var updmsg1 = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idx , \"nvalue\": 1, \"svalue\": \"0\" , \"parsetrigger\": false}}; \n    if (context.get(zigbeeid) === undefined) {\n        context.set(zigbeeid, 3)\n    }\n        \n    if (msg.payload.ZbReceived[zigbeeid].CO === 1) {\n        if (context.get(zigbeeid) === 1 || context.get(zigbeeid) === 3) {\n            context.set(zigbeeid, 1);      \n            msg.payload = {\"command\": \"switchlight\", \"idx\": idx, \"switchcmd\": \"On\" };\n            if (valuebat !== undefined) {\n                return [msg, batmsg];\n            }   \n            return [msg, null];\n        } \n        else if (context.get(zigbeeid) === 1) {\n            if (valuebat !== undefined) {\n                return [updmsg1, batmsg];\n            }   \n            return [updmsg1, null];\n        }        \n    }\n    else if (msg.payload.ZbReceived[zigbeeid].CO === 0) {\n        if (context.get(zigbeeid) === 1 || context.get(zigbeeid) === 3) {\n            context.set(zigbeeid, 0);   \n            msg.payload = {\"command\": \"switchlight\", \"idx\": idx, \"switchcmd\": \"Off\" };\n            if (valuebat !== undefined) {\n                return [msg, batmsg];\n            } \n            return [msg, null];\n        } \n        else if (context.get(zigbeeid) === 0) {  \n            if (valuebat !== undefined) {\n                return [updmsg0, batmsg];\n            }   \n            return [updmsg0, null, null]; \n        }\n    } else {\n        if (valuebat !== undefined) {\n            msg.payload = {\"command\": \"udevice\" , \"idx\": idxbat , \"nvalue\":0 , \"svalue\": \"\" + valuebat + \"\"}; \n            return [null, msg];\n        }            \n        return [null, null];\n    }\n}",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1960,
+        "y": 380,
+        "wires": [
+            [
+                "b58fbdd1751a2cd8"
+            ],
+            [
+                "b58fbdd1751a2cd8"
+            ]
+        ]
+    },
+    {
+        "id": "d6291551d1852638",
+        "type": "debug",
+        "z": "32e6b1c785b786d2",
+        "name": "Heiman CO detector",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2360,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "e3c55ccb8b099b3c",
+        "type": "function",
+        "z": "32e6b1c785b786d2",
+        "name": "Ikea E1743 remote",
+        "func": "msg.topic = \"domoticz/in\";\nvar idx = msg.payload.ZbReceived.idx;\nvar idxbat = msg.payload.ZbReceived.idxbat;\nvar zigbeeid = msg.payload.ZbReceived.zigbeeid;\nif ( msg.payload.ZbReceived[zigbeeid] ) {    \n    if (msg.payload.ZbReceived[zigbeeid].hasOwnProperty(\"BatteryVoltage\")) {\n        var valuebat = msg.payload.ZbReceived[zigbeeid].BatteryVoltage;\n    }\n    if ( idxbat === 0) {\n        var batmsg = null\n    }\n    else{\n        var batmsg = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idxbat , \"svalue\": \"\" + valuebat + \"\", \"parsetrigger\": false}}; \n    }\n    var updmsg0 = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idx , \"nvalue\": 0, \"svalue\": \"0\" , \"parsetrigger\": false}}; \n    var updmsg1 = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idx , \"nvalue\": 1, \"svalue\": \"0\" , \"parsetrigger\": false}}; \n    if (context.get(zigbeeid) === undefined) {\n            context.set(zigbeeid, 5);\n    }\n        \n    if (msg.payload.ZbReceived[zigbeeid].Power === 0) {\n        if (context.get(zigbeeid) === 1 || context.get(zigbeeid) === 2 || context.get(zigbeeid) === 3 || context.get(zigbeeid) === 4 || context.get(zigbeeid) === 5) {\n            context.set(zigbeeid, 0);      \n            msg.payload = {\"command\": \"switchlight\", \"idx\": idx, \"switchcmd\": \"Set Level\", \"level\":\"0\"};\n            if (valuebat !== undefined) {\n                return [msg, batmsg];\n            }   \n            return [msg, null];\n        } \n        else if (context.get(zigbeeid) === 0) {\n            if (valuebat !== undefined) {\n                return [updmsg1, batmsg];\n            }   \n            return [updmsg1, null];\n        }        \n    }\n    else if (msg.payload.ZbReceived[zigbeeid].Power === 1) {\n        if (context.get(zigbeeid) === 0 || context.get(zigbeeid) === 2 || context.get(zigbeeid) === 3 || context.get(zigbeeid) === 4 || context.get(zigbeeid) === 5) {\n            context.set(zigbeeid, 1);   \n            msg.payload = {\"command\": \"switchlight\", \"idx\": idx, \"switchcmd\": \"Set Level\", \"level\":\"10\"};\n            if (valuebat !== undefined) {\n                return [msg, batmsg];\n            } \n            return [msg, null];\n        } \n        else if (context.get(zigbeeid) === 1) {  \n            if (valuebat !== undefined) {\n                return [updmsg0, batmsg];\n            }   \n            return [updmsg0, null]; \n        }\n    }    \n    else if (msg.payload.ZbReceived[zigbeeid].DimmerMove === 0) {\n        if (context.get(zigbeeid) === 0 || context.get(zigbeeid) === 1 || context.get(zigbeeid) === 3 || context.get(zigbeeid) === 4 || context.get(zigbeeid) === 5) {\n            context.set(zigbeeid, 2);   \n            msg.payload = {\"command\": \"switchlight\", \"idx\": idx, \"switchcmd\": \"Set Level\", \"level\":\"20\"};\n            if (valuebat !== undefined) {\n                return [msg, batmsg];\n            } \n            return [msg, null];\n        } \n        else if (context.get(zigbeeid) === 2) {  \n            if (valuebat !== undefined) {\n                return [updmsg0, batmsg];\n            }   \n            return [updmsg0, null]; \n        }\n    }\n    else if (msg.payload.ZbReceived[zigbeeid].DimmerMove === 1) {\n        if (context.get(zigbeeid) === 0 || context.get(zigbeeid) === 1 || context.get(zigbeeid) === 2 || context.get(zigbeeid) === 4 || context.get(zigbeeid) === 5) {\n            context.set(zigbeeid, 3);   \n            msg.payload = {\"command\": \"switchlight\", \"idx\": idx, \"switchcmd\": \"Set Level\", \"level\":\"30\"};\n            if (valuebat !== undefined) {\n                return [msg, batmsg];\n            } \n            return [msg, null];\n        } \n        else if (context.get(zigbeeid) === 3) {  \n            if (valuebat !== undefined) {\n                return [updmsg0, batmsg];\n            }   \n            return [updmsg0, null]; \n        }\n    }\n    else if (msg.payload.ZbReceived[zigbeeid].DimmerStop === true) {\n        if (context.get(zigbeeid) === 0 || context.get(zigbeeid) === 1 || context.get(zigbeeid) === 2 || context.get(zigbeeid) === 3 || context.get(zigbeeid) === 5) {\n            context.set(zigbeeid, 4);   \n            msg.payload = {\"command\": \"switchlight\", \"idx\": idx, \"switchcmd\": \"Set Level\", \"level\":\"40\"};\n            if (valuebat !== undefined) {\n                return [msg, batmsg];\n            } \n            return [msg, null];\n        } \n        else if (context.get(zigbeeid) === 4) {  \n            if (valuebat !== undefined) {\n                return [updmsg0, batmsg];\n            }   \n            return [updmsg0, null]; \n        }    \n    } \n    else {\n        if (valuebat !== undefined) {\n            msg.payload = {\"command\": \"udevice\" , \"idx\": idxbat , \"nvalue\":0 , \"svalue\": \"\" + valuebat + \"\"}; \n            return [null, msg];\n        }            \n    }\n}\n",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1950,
+        "y": 420,
+        "wires": [
+            [
+                "34ebad78371bfc78"
+            ],
+            [
+                "34ebad78371bfc78"
+            ]
+        ]
+    },
+    {
+        "id": "54dd8d6bf95fde5b",
+        "type": "debug",
+        "z": "32e6b1c785b786d2",
+        "name": "Ikea E1743 remote",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2350,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "42ee16d8e12d67f4",
+        "type": "switch",
+        "z": "32e6b1c785b786d2",
+        "name": "IDX check",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "cont",
+                "v": "idx",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 930,
+        "y": 340,
+        "wires": [
+            [
+                "bf65146bd8d167aa"
+            ],
+            [
+                "ae0c40229b700502"
+            ]
+        ]
+    },
+    {
+        "id": "ae0c40229b700502",
+        "type": "debug",
+        "z": "32e6b1c785b786d2",
+        "name": "no IDX availble",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1180,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "0adbc247aab5c6ef",
+        "type": "comment",
+        "z": "32e6b1c785b786d2",
+        "name": "",
+        "info": "loop prevent idee\n\nneem idx, als idx hetzelde is, dan stop\n\n\nconst dimmerList = [\"dimmer1\",\"dimmer2\",\"dimmer3\",\"dimmer4\"];\nlet receiving = context.get(\"receiving\") || false;\nlet source = context.get(\"source\");\nfunction propagate (value, items, noSend) {\n    items.forEach(item => {\n        if (item !== noSend) {\n            node.send({payload:value, topic:`cmnd/lighting/${item}/dimmer`});\n        }\n    });\n}\nif (!receiving) {\n    context.set(\"receiving\", true);\n    const splitTopic = msg.topic.split(\"/\");\n    context.set(\"source\", splitTopic[2]);\n    const propTimeout = setTimeout(()=>{\n        context.set(\"receiving\",false);\n    },500);\n    context.set(\"propTimeout\", propTimeout);\n    propagate(msg.payload, dimmerList, splitTopic[2]);\n} else if (msg.topic === source) {\n    let propTimeout = context.get(\"propTimeout\");\n    clearTimeout(propTimeout);\n    propTimeout = setTimeout(()=>{\n        context.set(\"receiving\",false);\n    },500);\n    context.set(\"propTimeout\", propTimeout);\n    propagate(msg.payload, dimmerList, source);\n}\nreturn null;",
+        "x": 440,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "1805c2bdbbc563df",
+        "type": "gate",
+        "z": "32e6b1c785b786d2",
+        "name": "Gate",
+        "controlTopic": "control",
+        "defaultState": "open",
+        "openCmd": "open",
+        "closeCmd": "close",
+        "toggleCmd": "toggle",
+        "defaultCmd": "default",
+        "persist": false,
+        "x": 1430,
+        "y": 300,
+        "wires": [
+            [
+                "269bdd93eaa30e8b",
+                "d3750fa1f4bdc266"
+            ]
+        ]
+    },
+    {
+        "id": "3b9a33f80d8918c6",
+        "type": "change",
+        "z": "32e6b1c785b786d2",
+        "name": "Set Control",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "control",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "close",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1050,
+        "y": 180,
+        "wires": [
+            [
+                "6f07890f180e41d6"
+            ]
+        ]
+    },
+    {
+        "id": "6f07890f180e41d6",
+        "type": "trigger",
+        "z": "32e6b1c785b786d2",
+        "name": "",
+        "op1": "",
+        "op2": "open",
+        "op1type": "pay",
+        "op2type": "str",
+        "duration": "3000",
+        "extend": true,
+        "units": "ms",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 1220,
+        "y": 180,
+        "wires": [
+            [
+                "1805c2bdbbc563df"
+            ]
+        ]
+    },
+    {
+        "id": "1eedb21f332574cd",
+        "type": "function",
+        "z": "32e6b1c785b786d2",
+        "name": "filter device",
+        "func": "if ( msg.src === 'gateblock' ) {\n    return [null, msg];\n}\nreturn [msg, null];",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 870,
+        "y": 180,
+        "wires": [
+            [
+                "5b9d66c089d1d01a"
+            ],
+            [
+                "3b9a33f80d8918c6"
+            ]
+        ]
+    },
+    {
+        "id": "1d935a19c2d48baa",
+        "type": "link in",
+        "z": "32e6b1c785b786d2",
+        "name": "Block-gate-in",
+        "links": [
+            "0ded517531ee02b6",
+            "38b2d29beeb9a423"
+        ],
+        "x": 595,
+        "y": 180,
+        "wires": [
+            [
+                "1a59f8baadce86e4"
+            ]
+        ]
+    },
+    {
+        "id": "d3750fa1f4bdc266",
+        "type": "debug",
+        "z": "32e6b1c785b786d2",
+        "name": "Gate block",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1630,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "1a59f8baadce86e4",
+        "type": "function",
+        "z": "32e6b1c785b786d2",
+        "name": "Gate activate",
+        "func": "msg.src = 'gateblock';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 710,
+        "y": 180,
+        "wires": [
+            [
+                "1eedb21f332574cd"
+            ]
+        ]
+    },
+    {
+        "id": "e3ecd92d6e4b4333",
+        "type": "function",
+        "z": "32e6b1c785b786d2",
+        "name": "Osram mini switch",
+        "func": "msg.topic = \"domoticz/in\";\nvar idx = msg.payload.ZbReceived.idx;\nvar idxbat = msg.payload.ZbReceived.idxbat;\nvar zigbeeid = msg.payload.ZbReceived.zigbeeid;\nif ( msg.payload.ZbReceived[zigbeeid] ) {    \n    if (msg.payload.ZbReceived[zigbeeid].hasOwnProperty(\"BatteryVoltage\")) {\n        var valuebat = msg.payload.ZbReceived[zigbeeid].BatteryVoltage;\n    }\n    if ( idxbat === 0 ) {\n        var batmsg = null\n    }\n    else{\n        var batmsg = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idxbat , \"svalue\": \"\" + valuebat + \"\", \"parsetrigger\": false}}; \n    }\n    var updmsg0 = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idx , \"nvalue\": 0, \"svalue\": \"0\" , \"parsetrigger\": false}}; \n    var updmsg1 = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idx , \"nvalue\": 1, \"svalue\": \"0\" , \"parsetrigger\": false}}; \n    if (context.get(zigbeeid) === undefined) {\n            context.set(zigbeeid, 4)\n    }\n    \n    if (msg.payload.ZbReceived[zigbeeid][\"0006!01\"] === \"\" && msg.payload.ZbReceived[zigbeeid].Endpoint === 1) {\n        if (context.get(zigbeeid) === 2 || context.get(zigbeeid) === 3 || context.get(zigbeeid) === 4) {\n            context.set(zigbeeid, 1);\n            msg.payload = {\"command\": \"switchlight\", \"idx\": idx, \"switchcmd\": \"Set Level\", \"level\":\"10\"};\n            if (valuebat !== undefined) {\n                return [msg, batmsg];\n            }   \n            return [msg, null];\n        } \n        else if (context.get(zigbeeid) === 1) {\n            if (valuebat !== undefined) {\n                return [null, batmsg];\n            }   \n            return [null, null];\n        }        \n    }                   \n    else if (msg.payload.ZbReceived[zigbeeid][\"0300!0A\"] === \"72010A00\") {\n        if (context.get(zigbeeid) === 1 || context.get(zigbeeid) === 3 || context.get(zigbeeid) === 4) {\n            context.set(zigbeeid, 2);   \n            msg.payload = {\"command\": \"switchlight\", \"idx\": idx, \"switchcmd\": \"Set Level\", \"level\":\"40\"};\n            if (valuebat !== undefined) {\n                return [msg, batmsg];\n            } \n            return [msg, null];\n        } \n        else if (context.get(zigbeeid) === 2) {  \n            if (valuebat !== undefined) {\n                return [null, batmsg];\n            }   \n            return [null, null]; \n        }\n    }\n    else if (msg.payload.ZbReceived[zigbeeid][\"0006!00\"] === \"\" && msg.payload.ZbReceived[zigbeeid].Endpoint === 2) {\n        if (context.get(zigbeeid) === 1 || context.get(zigbeeid) === 2 || context.get(zigbeeid) === 4) {\n            context.set(zigbeeid, 3);   \n            msg.payload = {\"command\": \"switchlight\", \"idx\": idx, \"switchcmd\": \"Set Level\", \"level\":\"70\"};\n            if (valuebat !== undefined) {\n                return [msg, batmsg];\n            } \n            return [msg, null];\n        } \n        else if (context.get(zigbeeid) === 3) {  \n            if (valuebat !== undefined) {\n                return [null, batmsg];\n            }   \n            return [null, null]; \n        }        \n    }\n    else {\n        if (valuebat !== undefined) {\n            msg.payload = {\"command\": \"udevice\" , \"idx\": idxbat , \"nvalue\":0 , \"svalue\": \"\" + valuebat + \"\"}; \n        return [null, msg];\n        }            \n    }\n}",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1950,
+        "y": 300,
+        "wires": [
+            [
+                "4651c83ecce552f8"
+            ],
+            [
+                "4651c83ecce552f8"
+            ]
+        ]
+    },
+    {
+        "id": "c279eb08d2518c16",
+        "type": "flogger",
+        "z": "32e6b1c785b786d2",
+        "d": true,
+        "name": "",
+        "logfile": "zigbeelog.txt",
+        "inputchoice": "fullmsg",
+        "inputobject": "payload",
+        "inputobjectType": "msg",
+        "inputmoustache": "Recieved payload {{payload}} and topic {{topic}}",
+        "loglevel": "INFO",
+        "logconfig": "f6ad6c620c7a1df8",
+        "sendpane": "",
+        "x": 1910,
+        "y": 540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f73a6f39342779fd",
+        "type": "comment",
+        "z": "32e6b1c785b786d2",
+        "name": "Test Ikea E1743",
+        "info": "Which domoticz dummy needed:\n- Selector switch (keuzeschakelaar)\n\nSelector switch setup:\n0  = Off\n10 = On\n20 = On: hold\n30 = Off: hold\n40 = Hold: stop\n\nCode send by device:\n*** Knop streepje kort ***\nDevice: \"0x5D14\"\nName: \"Remote_kledingkast\"\n0006!01: \"\"\nPower: 1\nEndpoint: 1\nLinkQuality: 157\n\n*** Knop rondje kort ***\nDevice: \"0x5D14\"\nName: \"Remote_kledingkast\"\n0006!00: \"\"\nPower: 0\nEndpoint: 1\nLinkQuality: 157\n\n*** Knop streepje lang ***\nDevice: \"0x5D14\"\nName: \"Remote_kledingkast\"\n0008!05: \"0053\"\nDimmerMove: 0\nEndpoint: 1\nLinkQuality: 157\n\n*** Knop streepje lang release ***\nDevice: \"0x5D14\"\nName: \"Remote_kledingkast\n0008!07: \"\"\nDimmerStop: true\nEndpoint: 1\nLinkQuality: 157\n\n*** Knop rondje lang ***\nDevice: \"0x5D14\"\nName: \"Remote_kledingkast\"\n0008!01: \"01530000\"\nDimmermove: 1\nEndpoint: 1\nLinkQuality: 157\n\n*** Knop rondje lang release ***\nDevice: \"0x5D14\"\nName: \"Remote_kledingkast\"\n0008!07: \"\"\nDimmerStop: true\nEndpoint: 1\nLinkQuality: 157\n\n",
+        "x": 2600,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "6b7ca6afa0a0133a",
+        "type": "function",
+        "z": "32e6b1c785b786d2",
+        "name": "Ikea ICPSHC24 led strip",
+        "func": "\n//if ( msg.src === 'tasmota' ) {\n//    msg.topic = \"domoticz/in\";\n//    var idx = msg.payload.ZbReceived.idx;\n//    var idxbat = msg.payload.ZbReceived.idxbat;\n//    var zigbeeid = msg.payload.ZbReceived.zigbeeid;\n//    if ( msg.payload.ZbReceived[zigbeeid] ) {    \n//        if (msg.payload.ZbReceived[zigbeeid].Power === 1) {\n//            var updmsg1 = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idx , \"nvalue\": 1, \"svalue\": \"0\" , \"parsetrigger\": false}}; \n//          //  msg.payload.zigbeeid = zigbeeid;\n//            return [updmsg1, null];\n//        }\n//        else if (msg.payload.ZbReceived[zigbeeid].Power === 0) { \n//            var updmsg0 = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idx , \"nvalue\": 0, \"svalue\": \"0\" , \"parsetrigger\": false}}; \n//           // msg.payload.zigbeeid = zigbeeid;\n//            return [updmsg0, null];\n//        }\n//        return [null, null];\n//    }\n//}\n\nif ( msg.src === 'domoticz' ) {\n        var ZigbeeID = msg.payload.zigbeeid\n        var level = (msg.payload.Level * 2.54);\n        var topicname = msg.payload.topicname;\n        if ( msg.payload.nvalue === 1) {\n            var msgpow1 = { \"topic\": \"cmnd/\" + topicname + \"/ZbSend\",\"payload\":{\"Device\":ZigbeeID,\"Send\":{\"Power\":1}}};\n            return [msgpow1, null];\n        } else if ( msg.payload.nvalue === 0) {\n            var msgpow0 = { \"topic\": \"cmnd/\" + topicname + \"/ZbSend\",\"payload\":{\"Device\":ZigbeeID,\"Send\":{\"Power\":0}}};\n            return [msgpow0, null];//\n        }\n        else {\n            var msglev = { \"topic\": \"cmnd/\" + topicname + \"/ZbSend\",\"payload\":{\"Device\":ZigbeeID,\"Send\":{\"Dimmer\":level}}};\n            return [null, msglev];\n        }\n    return [null, null];\n}",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1970,
+        "y": 460,
+        "wires": [
+            [
+                "b0b36a57add1ac04"
+            ],
+            [
+                "b0b36a57add1ac04"
+            ]
+        ]
+    },
+    {
+        "id": "40855101e292585d",
+        "type": "debug",
+        "z": "32e6b1c785b786d2",
+        "name": "Ikea ICPSHC24 led strip",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2370,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "996c20a7f43bb922",
+        "type": "link out",
+        "z": "32e6b1c785b786d2",
+        "name": "Xiaomi doorsensor out",
+        "mode": "link",
+        "links": [
+            "e4ed3f9404692874",
+            "eb12fa8049a9c2f5"
+        ],
+        "x": 2135,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "eb12fa8049a9c2f5",
+        "type": "link in",
+        "z": "32e6b1c785b786d2",
+        "name": "Xiaomi doorsensor in",
+        "links": [
+            "996c20a7f43bb922"
+        ],
+        "x": 2195,
+        "y": 180,
+        "wires": [
+            [
+                "902db89cf58e7d4a"
+            ]
+        ]
+    },
+    {
+        "id": "7c39b8f4766d8af2",
+        "type": "link out",
+        "z": "32e6b1c785b786d2",
+        "name": "Xiaomi motion sensor out",
+        "mode": "link",
+        "links": [
+            "d37266ca5003002f",
+            "e4ed3f9404692874"
+        ],
+        "x": 2135,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "d37266ca5003002f",
+        "type": "link in",
+        "z": "32e6b1c785b786d2",
+        "name": "Xiaomi motion sensor in",
+        "links": [
+            "7c39b8f4766d8af2"
+        ],
+        "x": 2195,
+        "y": 220,
+        "wires": [
+            [
+                "93278f76c19d10e5"
+            ]
+        ]
+    },
+    {
+        "id": "81b0bc5b842b0fd9",
+        "type": "link in",
+        "z": "32e6b1c785b786d2",
+        "name": "Xiaomi smoke detector in",
+        "links": [
+            "1f300e21c525ad4d"
+        ],
+        "x": 2195,
+        "y": 260,
+        "wires": [
+            [
+                "943f1135c3828226"
+            ]
+        ]
+    },
+    {
+        "id": "1f300e21c525ad4d",
+        "type": "link out",
+        "z": "32e6b1c785b786d2",
+        "name": "Xiaomi smoke detector out",
+        "mode": "link",
+        "links": [
+            "81b0bc5b842b0fd9",
+            "e4ed3f9404692874"
+        ],
+        "x": 2135,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "b5be4ef2c3766c16",
+        "type": "link in",
+        "z": "32e6b1c785b786d2",
+        "name": "Osram mini switch in",
+        "links": [
+            "4651c83ecce552f8"
+        ],
+        "x": 2195,
+        "y": 300,
+        "wires": [
+            [
+                "b96a18aebbaf647b"
+            ]
+        ]
+    },
+    {
+        "id": "4651c83ecce552f8",
+        "type": "link out",
+        "z": "32e6b1c785b786d2",
+        "name": "Osram mini switch out",
+        "mode": "link",
+        "links": [
+            "b5be4ef2c3766c16",
+            "e4ed3f9404692874"
+        ],
+        "x": 2135,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "7f8f8c048a5a9e50",
+        "type": "link in",
+        "z": "32e6b1c785b786d2",
+        "name": "Lidl Livarno CCT in",
+        "links": [
+            "38b2d29beeb9a423"
+        ],
+        "x": 2195,
+        "y": 340,
+        "wires": [
+            [
+                "29f4524a41c3bbe4"
+            ]
+        ]
+    },
+    {
+        "id": "38b2d29beeb9a423",
+        "type": "link out",
+        "z": "32e6b1c785b786d2",
+        "name": "Lidl Livarno CCT out",
+        "mode": "link",
+        "links": [
+            "1d935a19c2d48baa",
+            "7f8f8c048a5a9e50",
+            "e4ed3f9404692874"
+        ],
+        "x": 2135,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "6bf493cc359ec5a6",
+        "type": "link in",
+        "z": "32e6b1c785b786d2",
+        "name": "Heiman CO in",
+        "links": [
+            "b58fbdd1751a2cd8"
+        ],
+        "x": 2195,
+        "y": 380,
+        "wires": [
+            [
+                "d6291551d1852638"
+            ]
+        ]
+    },
+    {
+        "id": "b58fbdd1751a2cd8",
+        "type": "link out",
+        "z": "32e6b1c785b786d2",
+        "name": "Heiman CO out",
+        "mode": "link",
+        "links": [
+            "6bf493cc359ec5a6",
+            "e4ed3f9404692874"
+        ],
+        "x": 2135,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "0140bb4b0c66e251",
+        "type": "link in",
+        "z": "32e6b1c785b786d2",
+        "name": "Ikea E1743 in",
+        "links": [
+            "34ebad78371bfc78"
+        ],
+        "x": 2195,
+        "y": 420,
+        "wires": [
+            [
+                "54dd8d6bf95fde5b"
+            ]
+        ]
+    },
+    {
+        "id": "34ebad78371bfc78",
+        "type": "link out",
+        "z": "32e6b1c785b786d2",
+        "name": "Ikea E1743 out",
+        "mode": "link",
+        "links": [
+            "0140bb4b0c66e251",
+            "e4ed3f9404692874"
+        ],
+        "x": 2135,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "b80d54c068c87573",
+        "type": "link in",
+        "z": "32e6b1c785b786d2",
+        "name": "Ikea ICPSHC24 in",
+        "links": [
+            "b0b36a57add1ac04"
+        ],
+        "x": 2195,
+        "y": 460,
+        "wires": [
+            [
+                "40855101e292585d"
+            ]
+        ]
+    },
+    {
+        "id": "b0b36a57add1ac04",
+        "type": "link out",
+        "z": "32e6b1c785b786d2",
+        "name": "Ikea ICPSHC24 out",
+        "mode": "link",
+        "links": [
+            "b80d54c068c87573",
+            "e4ed3f9404692874"
+        ],
+        "x": 2135,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "5b9d66c089d1d01a",
+        "type": "debug",
+        "z": "32e6b1c785b786d2",
+        "name": "No block necessary",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1070,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "e1a8b7f42306cbce",
+        "type": "flogger",
+        "z": "32e6b1c785b786d2",
+        "d": true,
+        "name": "tasmotajsonreceive",
+        "logfile": "tasmotajsonreceive.txt",
+        "inputchoice": "fullmsg",
+        "inputobject": "payload",
+        "inputobjectType": "msg",
+        "inputmoustache": "Recieved payload {{payload}} and topic {{topic}}",
+        "loglevel": "INFO",
+        "logconfig": "f6ad6c620c7a1df8",
+        "sendpane": "",
+        "x": 1190,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b1bc1db1ae7424c0",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "127.0.0.1",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "verifyservercert": true,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "f6ad6c620c7a1df8",
+        "type": "config-log",
+        "logname": "DeviceLogSonoffZigbee",
+        "logdir": "/home/pi/domoticz/scripts/",
+        "stamp": "local",
+        "logstyle": "plain",
+        "logrotate": true,
+        "logcompress": false,
+        "logrotatecount": "15",
+        "logsize": "100"
+    }
+]
