@@ -1005,7 +1005,7 @@
         "loglevel": "INFO",
         "logconfig": "f6ad6c620c7a1df8",
         "sendpane": "",
-        "x": 2650,
+        "x": 2670,
         "y": 600,
         "wires": [
             []
@@ -1345,7 +1345,7 @@
         "type": "function",
         "z": "32e6b1c785b786d2",
         "name": " Xiaomi WSDCGQ11LM temp sensor",
-        "func": "msg.topic = \"domoticz/in\";\nvar idx = msg.payload.ZbReceived.idx;\nvar idxbat = msg.payload.ZbReceived.idxbat;\nvar zigbeeid = msg.payload.ZbReceived.zigbeeid;\nif ( msg.payload.ZbReceived[zigbeeid] ) {    \n    var temp = msg.payload.ZbReceived[zigbeeid].Temperature\n    var bar = msg.payload.ZbReceived[zigbeeid].Pressure\n    var hum = msg.payload.ZbReceived[zigbeeid].Humidity\n    var humstat = 0\n    if ( hum < 30 ) {\n        humstat = 2\n    }\n    else if (( hum >= 30) && ( hum <= 45))  {\n        humstat = 0\n    }\n    else if (( hum >= 46) && ( hum <= 70))  {\n        humstat = 1\n    }\n    else {\n        humstat = 3\n    }\n    msg = { \"topic\": \"domoticz/in\",\"payload\":{\"command\":\"udevice\", \"idx\": idx, \"svalue\": \"\" + temp + \";\" + hum + \";\" + humstat + \";\" + bar + \";0\"}};\n  \n    if (msg.payload.ZbReceived[zigbeeid].hasOwnProperty(\"BatteryVoltage\")) {\n        var valuebat = msg.payload.ZbReceived[zigbeeid].BatteryVoltage;\n        var batmsg = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idxbat , \"svalue\": \"\" + valuebat + \"\", \"parse\": false}}; \n        if ( idxbat === 0 ) {\n            return [msg, null];\n        }\n        else {\n            return [msg, batmsg];\n        }\n    } \n    else {\n        return [msg, null];\n    }\n}\n\n\n\n\n\n\n\nmsg.topic = \"domoticz/in\";\nvar idx = msg.payload.ZbReceived.idx;\nvar idxbat = msg.payload.ZbReceived.idxbat;\nvar zigbeeid = msg.payload.ZbReceived.zigbeeid;\nif ( msg.payload.ZbReceived[zigbeeid] ) {    \n    if (msg.payload.ZbReceived[zigbeeid].hasOwnProperty(\"BatteryVoltage\")) {\n        var valuebat = msg.payload.ZbReceived[zigbeeid].BatteryVoltage;\n    }\n    if ( idxbat === 0 ) {\n        var batmsg = null\n    }\n    else {\n        var batmsg = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idxbat , \"svalue\": \"\" + valuebat + \"\", \"parse\": false}}; \n    }\n    \n    var temp = msg.payload.ZbReceived[zigbeeid].Temperature\n    var hum = msg.payload.ZbReceived[zigbeeid].Humidity\n    var humstat = 0\n    if ( hum < 30 ) {\n        humstat = 2\n    }\n    else if (( hum >= 30) && ( hum <= 45))  {\n        humstat = 0\n    }\n    else if (( hum >= 46) && ( hum <= 70))  {\n        humstat = 1\n    }\n    else {\n        humstat = 3\n    }\n    var bar = msg.payload.ZbReceived[zigbeeid].Pressure\n    msg = { \"topic\": \"domoticz/in\",\"payload\":{\"command\":\"udevice\", \"idx\": idx, \"svalue\": \"\" + temp + \";\" + hum + \";\" + humstat + \";\" + bar + \";0\"}};\n    return [msg, null];\n}",
+        "func": "msg.topic = \"domoticz/in\";\nvar idx = msg.payload.ZbReceived.idx;\nvar idxbat = msg.payload.ZbReceived.idxbat;\nvar zigbeeid = msg.payload.ZbReceived.zigbeeid;\nif ( msg.payload.ZbReceived[zigbeeid] ) {    \n    var temp = msg.payload.ZbReceived[zigbeeid].Temperature\n    var bar = msg.payload.ZbReceived[zigbeeid].Pressure\n    var hum = msg.payload.ZbReceived[zigbeeid].Humidity\n    var humstat = 0\n    if ( hum < 30 ) {\n        humstat = 2\n    }\n    else if (( hum >= 30) && ( hum <= 45))  {\n        humstat = 0\n    }\n    else if (( hum >= 46) && ( hum <= 70))  {\n        humstat = 1\n    }\n    else {\n        humstat = 3\n    }\n    msg = { \"topic\": \"domoticz/in\",\"payload\":{\"command\":\"udevice\", \"idx\": idx, \"svalue\": \"\" + temp + \";\" + hum + \";\" + humstat + \";\" + bar + \";0\"}};\n            \n    //if (msg.payload.ZbReceived[zigbeeid].hasOwnProperty(\"BatteryVoltage\")) {\n    if (typeof msg.payload.ZbReceived[zigbeeid].BatteryVoltage !== 'undefined') {\n        var valuebat = msg.payload.ZbReceived[zigbeeid].BatteryVoltage;\n        var batmsg = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idxbat , \"svalue\": \"\" + valuebat + \"\", \"parse\": false}}; \n        if ( idxbat === 0 ) {\n            return [msg, null];\n        }\n        else {\n            return [msg, batmsg];\n        }\n    } \n    else {\n        return [msg, null];\n    }\n}\n\n\n\n\n\n\n\nmsg.topic = \"domoticz/in\";\nvar idx = msg.payload.ZbReceived.idx;\nvar idxbat = msg.payload.ZbReceived.idxbat;\nvar zigbeeid = msg.payload.ZbReceived.zigbeeid;\nif ( msg.payload.ZbReceived[zigbeeid] ) {    \n    if (msg.payload.ZbReceived[zigbeeid].hasOwnProperty(\"BatteryVoltage\")) {\n        var valuebat = msg.payload.ZbReceived[zigbeeid].BatteryVoltage;\n    }\n    if ( idxbat === 0 ) {\n        var batmsg = null\n    }\n    else {\n        var batmsg = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idxbat , \"svalue\": \"\" + valuebat + \"\", \"parse\": false}}; \n    }\n    \n    var temp = msg.payload.ZbReceived[zigbeeid].Temperature\n    var hum = msg.payload.ZbReceived[zigbeeid].Humidity\n    var humstat = 0\n    if ( hum < 30 ) {\n        humstat = 2\n    }\n    else if (( hum >= 30) && ( hum <= 45))  {\n        humstat = 0\n    }\n    else if (( hum >= 46) && ( hum <= 70))  {\n        humstat = 1\n    }\n    else {\n        humstat = 3\n    }\n    var bar = msg.payload.ZbReceived[zigbeeid].Pressure\n    msg = { \"topic\": \"domoticz/in\",\"payload\":{\"command\":\"udevice\", \"idx\": idx, \"svalue\": \"\" + temp + \";\" + hum + \";\" + humstat + \";\" + bar + \";0\"}};\n    return [msg, null];\n}",
         "outputs": 2,
         "noerr": 0,
         "initialize": "",
@@ -1367,7 +1367,7 @@
         "type": "debug",
         "z": "32e6b1c785b786d2",
         "name": "Xiaomi WSDCGQ11LM tempsensor",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -1639,7 +1639,7 @@
         "type": "function",
         "z": "32e6b1c785b786d2",
         "name": " Xiaomi WSDCGQ01LM temp sensor",
-        "func": "msg.topic = \"domoticz/in\";\nvar idx = msg.payload.ZbReceived.idx;\nvar idxbat = msg.payload.ZbReceived.idxbat;\nvar zigbeeid = msg.payload.ZbReceived.zigbeeid;\nif ( msg.payload.ZbReceived[zigbeeid] ) {    \n    var temp = msg.payload.ZbReceived[zigbeeid].Temperature\n    var hum = msg.payload.ZbReceived[zigbeeid].Humidity\n    var humstat = 0\n    if ( hum < 30 ) {\n        humstat = 2\n    }\n    else if (( hum >= 30) && ( hum <= 45))  {\n        humstat = 0\n    }\n    else if (( hum >= 46) && ( hum <= 70))  {\n        humstat = 1\n    }\n    else {\n        humstat = 3\n    }                                                                                                          \n    msg = { \"topic\": \"domoticz/in\",\"payload\":{\"command\":\"udevice\", \"idx\": idx, \"svalue\": \"\" + temp + \";\" + hum + \";\" + humstat + \"\"}};\n\n    if (msg.payload.ZbReceived[zigbeeid].hasOwnProperty(\"BatteryVoltage\")) {\n        var valuebat = msg.payload.ZbReceived[zigbeeid].BatteryVoltage;\n        var batmsg = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idxbat , \"svalue\": \"\" + valuebat + \"\", \"parse\": false}}; \n        if ( idxbat === 0 ) {\n            return [msg, null];\n        }\n        else {\n            return [msg, batmsg];\n        }\n    } \n    else {\n        return [msg, null];\n    }\n}",
+        "func": "msg.topic = \"domoticz/in\";\nvar idx = msg.payload.ZbReceived.idx;\nvar idxbat = msg.payload.ZbReceived.idxbat;\nvar zigbeeid = msg.payload.ZbReceived.zigbeeid;\nif ( msg.payload.ZbReceived[zigbeeid] ) {    \n    var temp = msg.payload.ZbReceived[zigbeeid].Temperature\n    var hum = msg.payload.ZbReceived[zigbeeid].Humidity\n    var humstat = 0\n    if ( hum < 30 ) {\n        humstat = 2\n    }\n    else if (( hum >= 30) && ( hum <= 45))  {\n        humstat = 0\n    }\n    else if (( hum >= 46) && ( hum <= 70))  {\n        humstat = 1\n    }\n    else {\n        humstat = 3\n    }                                                                                                          \n    msg = { \"topic\": \"domoticz/in\",\"payload\":{\"command\":\"udevice\", \"idx\": idx, \"svalue\": \"\" + temp + \";\" + hum + \";\" + humstat + \"\"}};\n\n    //if (msg.payload.ZbReceived[zigbeeid].hasOwnProperty(\"BatteryVoltage\")) {\n    if (typeof msg.payload.ZbReceived[zigbeeid].BatteryVoltage !== 'undefined') {\n        var valuebat = msg.payload.ZbReceived[zigbeeid].BatteryVoltage;\n        var batmsg = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idxbat , \"svalue\": \"\" + valuebat + \"\", \"parse\": false}}; \n        if ( idxbat === 0 ) {\n            return [msg, null];\n        }\n        else {\n            return [msg, batmsg];\n        }\n    } \n    else {\n        return [msg, null];\n    }\n}",
         "outputs": 2,
         "noerr": 0,
         "initialize": "",
@@ -2105,7 +2105,9 @@
         "x": 2555,
         "y": 600,
         "wires": [
-            []
+            [
+                "c279eb08d2518c16"
+            ]
         ]
     },
     {
