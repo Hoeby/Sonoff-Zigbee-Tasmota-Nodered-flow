@@ -479,7 +479,7 @@
         "type": "function",
         "z": "32e6b1c785b786d2",
         "name": "Tasmota ID filter",
-        "func": "var idx_zigbee_table = [\n  //[ device type, domoticz idx, domoticz idx battery, tasmota device, tasmota topic]   // syntax\n    [5,  57,  0, \"0xC7AB\", \"tasmota_96373D\"],    // Lidl Livarno Lux E27 9W CCT Bulb\n    [4,  29, 67, \"0xB275\", \"tasmota_963592\"],    // Remote Maaike\n    [4,  28, 68, \"0x65A9\", \"tasmota_963592\"],    // Remote Aukje\n    [4,  30, 69, \"0x0447\", \"tasmota_963592\"],    // Remote Ouders\n    [3,  44, 70, \"0x7460\", \"tasmota_96373D\"],    // Rookmelder zolder\n    [3,  42, 73, \"0xF5CA\", \"tasmota_963592\"],    // Rookmelder Ouders\n    [3,  41, 71, \"0xB450\", \"tasmota_963592\"],    // Rookmelder Maaike\n    [3,  40, 72, \"0xDBE4\", \"tasmota_963592\"],    // Rookmelder Aukje\n    [7,  58, 0,  \"0x5D14\", \"tasmota_963592\"],    // Remote Kledingkast\n    [8,  59, 0,  \"0x3743\", \"tasmota_963592\"],    // Led strip meterkast\n    [1,  63, 79, \"0x0F9D\", \"tasmota_9467D4\"],    // Garagepoort sensor\n    [3,  43, 74, \"0x004B\", \"tasmota_9467D4\"],    // Rookmelder meterkast\n    [2,  45, 81,  \"0xAB75\", \"tasmota_9467D4\"],    // Beweging woonkamer\n    [6,  76, 77, \"0xC582\", \"tasmota_96373D\"],    // CO melder zolder\n    [9,  62, 80, \"0x4C81\", \"tasmota_96373D\"],    // Temp woonkamer\n    [11, 78, 0,  \"0x94C1\", \"tasmota_963592\"],    // Xiaomi GZCGQ01LM lux-sensor\n];\n\n//1  = Xiaomi Door sensor\n//2  = Xiaomi Motion Sensor\n//3  = Xiaomi Smoke detector\n//4  = Osram mini switch\n//5  = Lidl Livarno Lux E27 9W CCT Bulb\n//6  = Heiman CO detector\n//7  = Ikea E1743 remote\n//8  = Ikea ICPSHC24-30EU-IL-1 LED strip supply\n//9  = Xiaomi WSDCGQ11LM sensor\n//10 = Ikea Powerplug\n//11 = Xiaomi GZCGQ01LM lux-sensor\n//12 = Xiaomi WSDCGQ01LM sensor\n//13 = Xiaomi water sensor\n\nif ( msg.src === 'tasmota' ) {\n    for ( var i = 0; i < idx_zigbee_table.length; i++ ) {\n        var zigbeedevice = idx_zigbee_table[i][0];\n        var idx = idx_zigbee_table[i][1];\n        var idxbat = idx_zigbee_table[i][2];\n        var zigbeeid = idx_zigbee_table[i][3];\n\n        if ( msg.payload.ZbReceived[zigbeeid] ) {\n            msg.payload.ZbReceived.idx = idx;\n            msg.payload.ZbReceived.idxbat = idxbat;\n            msg.payload.ZbReceived.zigbeeid = zigbeeid;\n            if ( zigbeedevice === 1 ) {\n                return [null, msg, null, null, null, null, null, null, null, null, null, null, null, null]; \n            } \n            else if ( zigbeedevice === 2 ) {\n                return [null, null, msg, null, null, null, null, null, null, null, null, null, null, null]; \n            }\n            else if ( zigbeedevice === 3 ) {\n                return [null, null, null, msg, null, null, null, null, null, null, null, null, null, null]; \n            }\n            else if ( zigbeedevice === 4 ) {\n                return [null, null, null, null, msg, null, null, null, null, null, null, null, null, null]; \n            }\n            else if ( zigbeedevice === 5 ) {\n                return [null, null, null, null, null, msg, null, null, null, null, null, null, null, null]; \n            }\n            else if ( zigbeedevice === 6 ) {\n                return [null, null, null, null, null, null, msg, null, null, null, null, null, null, null]; \n            }\n            else if ( zigbeedevice === 7 ) {\n                return [null, null, null, null, null, null, null, msg, null, null, null, null, null, null]; \n            }\n            else if ( zigbeedevice === 8 ) {\n                return [null, null, null, null, null, null, null, null, msg, null, null, null, null, null]; \n            }\n            else if ( zigbeedevice === 9 ) {\n                return [null, null, null, null, null, null, null, null, null, msg, null, null, null, null]; \n            }\n            else if ( zigbeedevice === 10 ) {\n                return [null, null, null, null, null, null, null, null, null, null, msg, null, null, null]; \n            }\n            else if ( zigbeedevice === 11 ) {\n                return [null, null, null, null, null, null, null, null, null, null, null, msg, null, null]; \n            }\n            else if ( zigbeedevice === 12 ) {\n                return [null, null, null, null, null, null, null, null, null, null, null, null, msg, null]; \n            }\n            else if ( zigbeedevice === 13 ) {\n                return [null, null, null, null, null, null, null, null, null, null, null, null, null, msg]; \n            }\n        }\n    }\n   return [msg, null, null, null, null, null, null, null, null, null, null, null, null];\n}\n\nif ( msg.src === 'domoticz' ) {\n    for ( var j = 0; j < idx_zigbee_table.length; j++ ) {\n        var zigbeedevicedz = idx_zigbee_table[j][0];\n        var idxdz = idx_zigbee_table[j][1];\n        var idxbatdz = idx_zigbee_table[j][2];\n        var zigbeeiddz = idx_zigbee_table[j][3];\n        var topicname = idx_zigbee_table[j][4];   \n   \n        if ( idxdz === msg.payload.idx ) {\n            msg.payload.idxdz = idxdz;\n            msg.payload.idxbat = idxbatdz;\n            msg.payload.zigbeeid = zigbeeiddz;\n            msg.payload.topicname = topicname;\n            if ( zigbeedevicedz === 5 ) {    \n                return [null, null, null, null, null, msg, null, null, null, null, null, null, null, null]; \n            }\n            else if ( zigbeedevicedz === 8 ) {\n                return [null, null, null, null, null, null, null, null, msg, null, null, null, null, null]; \n            }\n            else if ( zigbeedevicedz === 10 ) {\n                return [null, null, null, null, null, null, null, null, null, null, msg, null, null, null]; \n            }\n        }\n    }\n    return [msg, null, null, null, null, null, null, null, null, null, null, null, null, null]; \n}",
+        "func": "var idx_zigbee_table = [\n  //[ device type(0), domoticz idx(1), domoticz idx battery voltage(2), domoticz idx battery percentage(3), domoticz idx link quality(4), tasmota device(5), tasmota topic(6)]   // syntax\n    [5,  57,  0, 0, 0, \"0xC7AB\", \"tasmota_96373D\"],    // Lidl Livarno Lux E27 9W CCT Bulb\n    [4,  29, 67, 0, 0, \"0xB275\", \"tasmota_963592\"],    // Remote Maaike\n    [4,  28, 68, 0, 0, \"0x65A9\", \"tasmota_963592\"],    // Remote Aukje\n    [4,  30, 69, 0, 0, \"0x0447\", \"tasmota_963592\"],    // Remote Ouders\n    [3,  44, 70, 0, 0, \"0x7460\", \"tasmota_96373D\"],    // Rookmelder zolder\n    [3,  42, 73, 0, 0, \"0xF5CA\", \"tasmota_963592\"],    // Rookmelder Ouders\n    [3,  41, 71, 0, 0, \"0xB450\", \"tasmota_963592\"],    // Rookmelder Maaike\n    [3,  40, 72, 0, 0, \"0xDBE4\", \"tasmota_963592\"],    // Rookmelder Aukje\n    [7,  58, 0,  0, 0, \"0x5D14\", \"tasmota_963592\"],    // Remote Kledingkast\n    [8,  59, 0,  0, 0, \"0x3743\", \"tasmota_963592\"],    // Led strip meterkast\n    [1,  63, 79, 0, 0, \"0x0F9D\", \"tasmota_9467D4\"],    // Garagepoort sensor\n    [3,  43, 74, 0, 0, \"0x004B\", \"tasmota_9467D4\"],    // Rookmelder meterkast\n    [2,  45, 81, 0, 0, \"0xAB75\", \"tasmota_9467D4\"],    // Beweging woonkamer\n    [6,  76, 77, 0, 0, \"0xC582\", \"tasmota_96373D\"],    // CO melder zolder\n    [9,  62, 80, 0, 0, \"0x4C81\", \"tasmota_96373D\"],    // Temp woonkamer\n    [11, 78, 0,  0, 0, \"0x94C1\", \"tasmota_963592\"],    // Xiaomi GZCGQ01LM lux-sensor\n];\n\n//1  = Xiaomi Door sensor\n//2  = Xiaomi Motion Sensor\n//3  = Xiaomi Smoke detector\n//4  = Osram mini switch\n//5  = Lidl Livarno Lux E27 9W CCT Bulb\n//6  = Heiman CO detector\n//7  = Ikea E1743 remote\n//8  = Ikea ICPSHC24-30EU-IL-1 LED strip supply\n//9  = Xiaomi WSDCGQ11LM sensor\n//10 = Ikea Powerplug\n//11 = Xiaomi GZCGQ01LM lux-sensor\n//12 = Xiaomi WSDCGQ01LM sensor\n//13 = Xiaomi water sensor\n\nif ( msg.src === 'tasmota' ) {\n    for ( var i = 0; i < idx_zigbee_table.length; i++ ) {\n        var zigbeedevice = idx_zigbee_table[i][0];\n        var idx = idx_zigbee_table[i][1];\n        var idxbat = idx_zigbee_table[i][2];\n\t\tvar idxper = idx_zigbee_table[i][3];\n\t\tvar idxlink = idx_zigbee_table[i][4];\n        var zigbeeid = idx_zigbee_table[i][5];\n\n        if ( msg.payload.ZbReceived[zigbeeid] ) {\n            msg.payload.ZbReceived.idx = idx;\n            msg.payload.ZbReceived.idxbat = idxbat;\n\t\t\tmsg.payload.ZbReceived.idxper = idxper;\n\t\t\tmsg.payload.ZbReceived.idxlink = idxlink;\n            msg.payload.ZbReceived.zigbeeid = zigbeeid;\n            if ( zigbeedevice === 1 ) {\n                return [null, msg, null, null, null, null, null, null, null, null, null, null, null, null]; \n            } \n            else if ( zigbeedevice === 2 ) {\n                return [null, null, msg, null, null, null, null, null, null, null, null, null, null, null]; \n            }\n            else if ( zigbeedevice === 3 ) {\n                return [null, null, null, msg, null, null, null, null, null, null, null, null, null, null]; \n            }\n            else if ( zigbeedevice === 4 ) {\n                return [null, null, null, null, msg, null, null, null, null, null, null, null, null, null]; \n            }\n            else if ( zigbeedevice === 5 ) {\n                return [null, null, null, null, null, msg, null, null, null, null, null, null, null, null]; \n            }\n            else if ( zigbeedevice === 6 ) {\n                return [null, null, null, null, null, null, msg, null, null, null, null, null, null, null]; \n            }\n            else if ( zigbeedevice === 7 ) {\n                return [null, null, null, null, null, null, null, msg, null, null, null, null, null, null]; \n            }\n            else if ( zigbeedevice === 8 ) {\n                return [null, null, null, null, null, null, null, null, msg, null, null, null, null, null]; \n            }\n            else if ( zigbeedevice === 9 ) {\n                return [null, null, null, null, null, null, null, null, null, msg, null, null, null, null]; \n            }\n            else if ( zigbeedevice === 10 ) {\n                return [null, null, null, null, null, null, null, null, null, null, msg, null, null, null]; \n            }\n            else if ( zigbeedevice === 11 ) {\n                return [null, null, null, null, null, null, null, null, null, null, null, msg, null, null]; \n            }\n            else if ( zigbeedevice === 12 ) {\n                return [null, null, null, null, null, null, null, null, null, null, null, null, msg, null]; \n            }\n            else if ( zigbeedevice === 13 ) {\n                return [null, null, null, null, null, null, null, null, null, null, null, null, null, msg]; \n            }\n        }\n    }\n   return [msg, null, null, null, null, null, null, null, null, null, null, null, null];\n}\n\nif ( msg.src === 'domoticz' ) {\n    for ( var j = 0; j < idx_zigbee_table.length; j++ ) {\n        var zigbeedevicedz = idx_zigbee_table[j][0];\n        var idxdz = idx_zigbee_table[j][1];\n        var idxbatdz = idx_zigbee_table[j][2];\n        var zigbeeiddz = idx_zigbee_table[j][5];\n        var topicname = idx_zigbee_table[j][6];   \n   \n        if ( idxdz === msg.payload.idx ) {\n            msg.payload.idxdz = idxdz;\n            msg.payload.idxbat = idxbatdz;\n            msg.payload.zigbeeid = zigbeeiddz;\n            msg.payload.topicname = topicname;\n            if ( zigbeedevicedz === 5 ) {    \n                return [null, null, null, null, null, msg, null, null, null, null, null, null, null, null]; \n            }\n            else if ( zigbeedevicedz === 8 ) {\n                return [null, null, null, null, null, null, null, null, msg, null, null, null, null, null]; \n            }\n            else if ( zigbeedevicedz === 10 ) {\n                return [null, null, null, null, null, null, null, null, null, null, msg, null, null, null]; \n            }\n        }\n    }\n    return [msg, null, null, null, null, null, null, null, null, null, null, null, null, null]; \n}",
         "outputs": 14,
         "noerr": 0,
         "initialize": "",
@@ -1009,7 +1009,7 @@
         "logconfig": "f6ad6c620c7a1df8",
         "sendpane": "",
         "x": 2670,
-        "y": 640,
+        "y": 720,
         "wires": [
             []
         ]
@@ -1340,7 +1340,7 @@
         "name": "Xiaomi WSDCGQ11LM Temp sensor",
         "info": "Which domoticz dummy needed:\n- Temp+Hum+Baro\n\n\ntele/tasmota_9467D4/SENSOR : msg.payload : Object\nobject\nZbReceived: object\n0x4C81: object\nDevice: \"0x4C81\"\nName: \"Temp_woonkamer\"\nTemperature: 20.78\nHumidity: 59.98\nPressure: 995\nPressureScale: -1\nPressureScaledValue: 9957\nSeaPressure: 995\nEndpoint: 1\nLinkQuality: 149\n\n20.68;54.87;0;996;0\n\nhttps://www.domoticz.com/wiki/Domoticz_API/JSON_URL's#Temperature.2Fhumidity.2Fbarometer",
         "x": 3080,
-        "y": 440,
+        "y": 460,
         "wires": []
     },
     {
@@ -1348,15 +1348,21 @@
         "type": "function",
         "z": "32e6b1c785b786d2",
         "name": " Xiaomi WSDCGQ11LM temp sensor",
-        "func": "msg.topic = \"domoticz/in\";\nvar idx = msg.payload.ZbReceived.idx;\nvar idxbat = msg.payload.ZbReceived.idxbat;\nvar zigbeeid = msg.payload.ZbReceived.zigbeeid;\nif ( msg.payload.ZbReceived[zigbeeid] ) {    \n    if (msg.payload.ZbReceived[zigbeeid].hasOwnProperty(\"BatteryVoltage\")) {\n        var valuebat = msg.payload.ZbReceived[zigbeeid].BatteryVoltage;\n    }\n    if ( idxbat === 0 ) {\n        var batmsg = null\n    }\n    else {\n        var batmsg = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idxbat , \"svalue\": \"\" + valuebat + \"\", \"parse\": false}}; \n    }\n    \n    var temp = msg.payload.ZbReceived[zigbeeid].Temperature\n    var hum = msg.payload.ZbReceived[zigbeeid].Humidity\n    var humstat = 0\n    if ( hum < 30 ) {\n        humstat = 2\n    }\n    else if (( hum >= 30) && ( hum <= 45))  {\n        humstat = 0\n    }\n    else if (( hum >= 46) && ( hum <= 70))  {\n        humstat = 1\n    }\n    else {\n        humstat = 3\n    }\n    var bar = msg.payload.ZbReceived[zigbeeid].Pressure\n    msg = { \"topic\": \"domoticz/in\",\"payload\":{\"command\":\"udevice\", \"idx\": idx, \"svalue\": \"\" + temp + \";\" + hum + \";\" + humstat + \";\" + bar + \";0\"}};\n    if (valuebat !== undefined) {\n        return [msg, batmsg];\n    }   \n    return [msg, null];\n}",
-        "outputs": 2,
+        "func": "msg.topic = \"domoticz/in\";\nvar idx = msg.payload.ZbReceived.idx;\nvar idxbat = msg.payload.ZbReceived.idxbat;\nvar idxper = msg.payload.ZbReceived.idxper;\nvar idxlink = msg.payload.ZbReceived.idxlink;\nvar zigbeeid = msg.payload.ZbReceived.zigbeeid;\n\nvar batmsg;\nvar permsg;\nvar linkmsg;\n\nif ( msg.payload.ZbReceived[zigbeeid] ) {    \n    //Set value batterij voltage idx\n    if (msg.payload.ZbReceived[zigbeeid].hasOwnProperty(\"BatteryVoltage\")) {\n        var valuebat = msg.payload.ZbReceived[zigbeeid].BatteryVoltage;\n    }\n    //Set value batterij percentage idx\n    if (msg.payload.ZbReceived[zigbeeid].hasOwnProperty(\"BatteryPercentage\")) {\n        var valuebatperc = msg.payload.ZbReceived[zigbeeid].BatteryPercentage;\n    }\n    //Set value linkQuality idx\n    if (msg.payload.ZbReceived[zigbeeid].hasOwnProperty(\"LinkQuality\")) {\n        var valuelink = msg.payload.ZbReceived[zigbeeid].LinkQuality;\n    }\n    \n    var temp = msg.payload.ZbReceived[zigbeeid].Temperature\n    var hum = msg.payload.ZbReceived[zigbeeid].Humidity\n    var humstat = 0\n    if ( hum < 30 ) {\n        humstat = 2\n    }\n    else if (( hum >= 30) && ( hum <= 45))  {\n        humstat = 0\n    }\n    else if (( hum >= 46) && ( hum <= 70))  {\n        humstat = 1\n    }\n    else {\n        humstat = 3\n    }\n    var bar = msg.payload.ZbReceived[zigbeeid].Pressure\n    if (temp !== undefined && hum !== undefined && bar !== undefined) {\n        msg = { \"topic\": \"domoticz/in\",\"payload\":{\"command\":\"udevice\", \"idx\": idx, \"svalue\": \"\" + temp + \";\" + hum + \";\" + humstat + \";\" + bar + \";0\"}};\n    } else {\n        msg = null;\n    }    \n    if ( idxbat !== 0 ) {\n        if (valuebat !== undefined) {\n            batmsg = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idxbat , \"svalue\": \"\" + valuebat + \"\", \"parse\": false}}; \n        } else {\n            batmsg = null\n        }\n    }\n    if ( idxper !== 0 ) {\n        if (valuebatperc !== undefined) {\n            permsg = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idxper , \"svalue\": \"\" + valuebatperc + \"\", \"parse\": false}}; \n        } else {\n            permsg = null\n        }\n    }\n    if ( idxlink !== 0 ) {\n        if (valuelink !== undefined) {\n            linkmsg = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idxlink , \"svalue\": \"\" + valuelink + \"\", \"parse\": false}}; \n        } else {\n            linkmsg = null\n        }\n    }\n    return [msg, batmsg, permsg, linkmsg];\n}",
+        "outputs": 4,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
         "x": 2230,
-        "y": 440,
+        "y": 460,
         "wires": [
+            [
+                "3f1912b0dfd34a67"
+            ],
+            [
+                "3f1912b0dfd34a67"
+            ],
             [
                 "3f1912b0dfd34a67"
             ],
@@ -1370,7 +1376,7 @@
         "type": "debug",
         "z": "32e6b1c785b786d2",
         "name": "Xiaomi WSDCGQ11LM tempsensor",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -1379,7 +1385,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 2760,
-        "y": 440,
+        "y": 460,
         "wires": []
     },
     {
@@ -1392,7 +1398,7 @@
             "b3b7f479cadb8496"
         ],
         "x": 2555,
-        "y": 440,
+        "y": 460,
         "wires": [
             [
                 "b371b25fac84c93c"
@@ -1410,7 +1416,7 @@
             "e4ed3f9404692874"
         ],
         "x": 2495,
-        "y": 440,
+        "y": 460,
         "wires": []
     },
     {
@@ -1457,7 +1463,7 @@
         "type": "function",
         "z": "32e6b1c785b786d2",
         "name": "",
-        "func": "msg = {\"topic\":\"tele/tasmota_963592/SENSOR\",\"payload\":{\"ZbReceived\":{\"0xB275\":{\"Device\":\"0xB275\",\"Name\":\"Remote-Maaike\",\"BatteryVoltage\":3,\"BatteryPercentage\":100,\"Endpoint\":1,\"LinkQuality\":0}}}};\n//msg.payload = {\"ZbReceived\":{\"0xB275\":{\"Device\":\"0xB275\",\"Name\":\"Remote-Maaike\",\"BatteryVoltage\":3,\"BatteryPercentage\":100,\"Endpoint\":1,\"LinkQuality\":0}}};\nreturn msg;",
+        "func": "msg = {\"topic\":\"tele/tasmota_9EFAB0/SENSOR\",\"payload\":{\"ZbReceived\":{\"0x3752\":{\"Device\":\"0x3752\",\"Name\":\"Thermometer buiten\",\"BatteryVoltage\":2.96,\"BatteryPercentage\":80,\"Temperature\":7.7,\"Humidity\":96.03,\"Endpoint\":1,\"LinkQuality\":102}}}};\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -1507,7 +1513,7 @@
         "finalize": "",
         "libs": [],
         "x": 2160,
-        "y": 480,
+        "y": 520,
         "wires": [
             [
                 "5b1817084e40c724"
@@ -1529,7 +1535,7 @@
             "f2361df7a8546931"
         ],
         "x": 2495,
-        "y": 480,
+        "y": 520,
         "wires": []
     },
     {
@@ -1542,7 +1548,7 @@
             "0c713a7cfa8a5968"
         ],
         "x": 2555,
-        "y": 480,
+        "y": 520,
         "wires": [
             [
                 "2ae6865e6ac023ef"
@@ -1563,7 +1569,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 2700,
-        "y": 480,
+        "y": 520,
         "wires": []
     },
     {
@@ -1578,7 +1584,7 @@
         "finalize": "",
         "libs": [],
         "x": 2210,
-        "y": 520,
+        "y": 560,
         "wires": [
             [
                 "507ba46b5bd868d8"
@@ -1599,7 +1605,7 @@
             "e4ed3f9404692874"
         ],
         "x": 2495,
-        "y": 520,
+        "y": 560,
         "wires": []
     },
     {
@@ -1612,7 +1618,7 @@
             "577af1c346273217"
         ],
         "x": 2555,
-        "y": 520,
+        "y": 560,
         "wires": [
             [
                 "6dc6133320d04d9d"
@@ -1633,7 +1639,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 2750,
-        "y": 520,
+        "y": 560,
         "wires": []
     },
     {
@@ -1641,15 +1647,21 @@
         "type": "function",
         "z": "32e6b1c785b786d2",
         "name": " Xiaomi WSDCGQ01LM temp sensor",
-        "func": "msg.topic = \"domoticz/in\";\nvar idx = msg.payload.ZbReceived.idx;\nvar idxbat = msg.payload.ZbReceived.idxbat;\nvar zigbeeid = msg.payload.ZbReceived.zigbeeid;\nif ( msg.payload.ZbReceived[zigbeeid] ) {    \n    if (msg.payload.ZbReceived[zigbeeid].hasOwnProperty(\"BatteryVoltage\")) {\n        var valuebat = msg.payload.ZbReceived[zigbeeid].BatteryVoltage;\n    }\n    if ( idxbat === 0 ) {\n        var batmsg = null\n    }\n    else {\n        var batmsg = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idxbat , \"svalue\": \"\" + valuebat + \"\", \"parse\": false}}; \n    }\n    \n    var temp = msg.payload.ZbReceived[zigbeeid].Temperature\n    var hum = msg.payload.ZbReceived[zigbeeid].Humidity\n    var humstat = 0\n    if ( hum < 30 ) {\n        humstat = 2\n    }\n    else if (( hum >= 30) && ( hum <= 45))  {\n        humstat = 0\n    }\n    else if (( hum >= 46) && ( hum <= 70))  {\n        humstat = 1\n    }\n    else {\n        humstat = 3\n    }\n    msg = { \"topic\": \"domoticz/in\",\"payload\":{\"command\":\"udevice\", \"idx\": idx, \"svalue\": \"\" + temp + \";\" + hum + \";\" + humstat + \"\"}};\n\n    if (valuebat !== undefined) {\n        return [msg, batmsg];\n    }   \n    return [msg, null];\n}",
-        "outputs": 2,
+        "func": "msg.topic = \"domoticz/in\";\nvar idx = msg.payload.ZbReceived.idx;\nvar idxbat = msg.payload.ZbReceived.idxbat;\nvar idxper = msg.payload.ZbReceived.idxper;\nvar idxlink = msg.payload.ZbReceived.idxlink;\nvar zigbeeid = msg.payload.ZbReceived.zigbeeid;\n\nvar batmsg;\nvar permsg;\nvar linkmsg;\n\nif ( msg.payload.ZbReceived[zigbeeid] ) {    \n    //Set value batterij voltage idx\n    if (msg.payload.ZbReceived[zigbeeid].hasOwnProperty(\"BatteryVoltage\")) {\n        var valuebat = msg.payload.ZbReceived[zigbeeid].BatteryVoltage;\n    }\n    //Set value batterij percentage idx\n    if (msg.payload.ZbReceived[zigbeeid].hasOwnProperty(\"BatteryPercentage\")) {\n        var valuebatperc = msg.payload.ZbReceived[zigbeeid].BatteryPercentage;\n    }\n    //Set value linkQuality idx\n    if (msg.payload.ZbReceived[zigbeeid].hasOwnProperty(\"LinkQuality\")) {\n        var valuelink = msg.payload.ZbReceived[zigbeeid].LinkQuality;\n    }\n    \n    var temp = msg.payload.ZbReceived[zigbeeid].Temperature\n    var hum = msg.payload.ZbReceived[zigbeeid].Humidity\n    var humstat = 0\n    if ( hum < 30 ) {\n        humstat = 2\n    }\n    else if (( hum >= 30) && ( hum <= 45))  {\n        humstat = 0\n    }\n    else if (( hum >= 46) && ( hum <= 70))  {\n        humstat = 1\n    }\n    else {\n        humstat = 3\n    }\n    if (temp !== undefined && hum !== undefined) {\n        msg = { \"topic\": \"domoticz/in\",\"payload\":{\"command\":\"udevice\", \"idx\": idx, \"svalue\": \"\" + temp + \";\" + hum + \";\" + humstat + \"\"}};\n    } else {\n        msg = null;\n    }    \n    \n if ( idxbat !== 0 ) {\n        if (valuebat !== undefined) {\n            batmsg = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idxbat , \"svalue\": \"\" + valuebat + \"\", \"parse\": false}}; \n        } else {\n            batmsg = null\n        }\n    }\n    if ( idxper !== 0 ) {\n        if (valuebatperc !== undefined) {\n            permsg = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idxper , \"svalue\": \"\" + valuebatperc + \"\", \"parse\": false}}; \n        } else {\n            permsg = null\n        }\n    }\n    if ( idxlink !== 0 ) {\n        if (valuelink !== undefined) {\n            linkmsg = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idxlink , \"svalue\": \"\" + valuelink + \"\", \"parse\": false}}; \n        } else {\n            linkmsg = null\n        }\n    }\n    return [msg, batmsg, permsg, linkmsg];\n}",
+        "outputs": 4,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
         "x": 2230,
-        "y": 560,
+        "y": 620,
         "wires": [
+            [
+                "a4e976adce8e3559"
+            ],
+            [
+                "a4e976adce8e3559"
+            ],
             [
                 "a4e976adce8e3559"
             ],
@@ -1665,7 +1677,7 @@
         "name": "Xiaomi WSDCGQ01LM Temp sensor",
         "info": "Which domoticz dummy needed:\n- Temp+Hum",
         "x": 3080,
-        "y": 560,
+        "y": 620,
         "wires": []
     },
     {
@@ -1682,7 +1694,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 2760,
-        "y": 560,
+        "y": 620,
         "wires": []
     },
     {
@@ -1695,7 +1707,7 @@
             "a4e976adce8e3559"
         ],
         "x": 2555,
-        "y": 560,
+        "y": 620,
         "wires": [
             [
                 "27205c55fd92a391"
@@ -1713,7 +1725,7 @@
             "e4ed3f9404692874"
         ],
         "x": 2495,
-        "y": 560,
+        "y": 620,
         "wires": []
     },
     {
@@ -1723,7 +1735,7 @@
         "name": "Xiaomi GZCGQ01LM lux sensor",
         "info": "Which domoticz dummy needed:\n- Lux",
         "x": 3070,
-        "y": 520,
+        "y": 560,
         "wires": []
     },
     {
@@ -1733,7 +1745,7 @@
         "name": "Xiaomi Ikea Powerplug",
         "info": "Which domoticz dummy needed:\n- Switch (schakelaar)",
         "x": 3040,
-        "y": 480,
+        "y": 520,
         "wires": []
     },
     {
@@ -1987,7 +1999,7 @@
             "a3c1ee29665026e7"
         ],
         "x": 1975,
-        "y": 440,
+        "y": 460,
         "wires": []
     },
     {
@@ -1999,7 +2011,7 @@
             "b3b7f479cadb8496"
         ],
         "x": 2035,
-        "y": 440,
+        "y": 460,
         "wires": [
             [
                 "36acea7aea3e0385"
@@ -2017,7 +2029,7 @@
             "f2361df7a8546931"
         ],
         "x": 1975,
-        "y": 480,
+        "y": 520,
         "wires": []
     },
     {
@@ -2029,7 +2041,7 @@
             "0c713a7cfa8a5968"
         ],
         "x": 2035,
-        "y": 480,
+        "y": 520,
         "wires": [
             [
                 "39bf1ccf5b3a5faf"
@@ -2047,7 +2059,7 @@
             "620de55a7aed2e0c"
         ],
         "x": 1975,
-        "y": 520,
+        "y": 560,
         "wires": []
     },
     {
@@ -2059,7 +2071,7 @@
             "577af1c346273217"
         ],
         "x": 2035,
-        "y": 520,
+        "y": 560,
         "wires": [
             [
                 "60902a7262550dc1"
@@ -2077,7 +2089,7 @@
             "c35a66d7c5a69ec6"
         ],
         "x": 1975,
-        "y": 560,
+        "y": 620,
         "wires": []
     },
     {
@@ -2089,7 +2101,7 @@
             "1a8398e557c7f9dd"
         ],
         "x": 2035,
-        "y": 560,
+        "y": 620,
         "wires": [
             [
                 "6847bc92cfc5190c"
@@ -2105,7 +2117,7 @@
             "c9e73ce19c15f214"
         ],
         "x": 2555,
-        "y": 640,
+        "y": 720,
         "wires": [
             []
         ]
@@ -2122,7 +2134,7 @@
             "28f9407743c02b71"
         ],
         "x": 1975,
-        "y": 600,
+        "y": 680,
         "wires": []
     },
     {
@@ -2134,7 +2146,7 @@
             "c9e73ce19c15f214"
         ],
         "x": 2035,
-        "y": 600,
+        "y": 680,
         "wires": [
             []
         ]
@@ -2153,7 +2165,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 2720,
-        "y": 600,
+        "y": 680,
         "wires": []
     },
     {
@@ -2165,7 +2177,7 @@
             "c9e73ce19c15f214"
         ],
         "x": 2555,
-        "y": 600,
+        "y": 680,
         "wires": [
             [
                 "6fd9bd11843c641b"
