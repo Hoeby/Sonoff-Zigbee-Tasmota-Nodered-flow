@@ -404,7 +404,8 @@
             "a4e976adce8e3559",
             "f7a9bdcae6412aef",
             "32e21a68283df2bb",
-            "fff088000ef81383"
+            "fff088000ef81383",
+            "08ad024704865499"
         ],
         "x": 1575,
         "y": 700,
@@ -776,7 +777,7 @@
         "type": "debug",
         "z": "32e6b1c785b786d2",
         "name": "Ikea E1743 remote",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -1003,7 +1004,7 @@
         "logconfig": "f6ad6c620c7a1df8",
         "sendpane": "",
         "x": 2690,
-        "y": 1020,
+        "y": 1060,
         "wires": [
             []
         ]
@@ -1386,7 +1387,7 @@
         "type": "function",
         "z": "32e6b1c785b786d2",
         "name": "Ikea Powerplug",
-        "func": "if ( msg.src === 'tasmota' ) {\n    msg.topic = \"domoticz/in\";\n    var idx = msg.payload.ZbReceived.idx;\n    var idxlink = msg.payload.ZbReceived.idxlink;\n    var zigbeeid = msg.payload.ZbReceived.zigbeeid;\n\n    var linkmsg;\n    var valuelink;\n\n    if ( msg.payload.ZbReceived[zigbeeid] ) {    \n        //Set value linkQuality idx\n        if (msg.payload.ZbReceived[zigbeeid].hasOwnProperty(\"LinkQuality\")) {\n            valuelink = msg.payload.ZbReceived[zigbeeid].LinkQuality;\n        }\n  \n        if ( msg.payload.ZbReceived[zigbeeid] ) {    \n            if (msg.payload.ZbReceived[zigbeeid].Power === 1) {\n                msg.payload = {\"command\": \"udevice\" , \"idx\": idx , \"nvalue\": 1, \"svalue\": \"0\"};\n            }\n            else if (msg.payload.ZbReceived[zigbeeid].Power === 0) { \n                msg.payload = {\"command\": \"udevice\" , \"idx\": idx , \"nvalue\": 1, \"svalue\": \"0\"};\n            }\n\t\t    else {\n    \t\t    msg = null;\n\t\t    }\n            if ( idxlink !== 0 ) {\n                if (valuelink !== undefined) {\n                    linkmsg = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idxlink , \"svalue\": \"\" + valuelink + \"\", \"parse\": false}}; \n                } else {\n                    linkmsg = null;\n                }\n            } else {\n                linkmsg = null;\n            }\n            return [msg, linkmsg];\t\n        }\n    }\n}\n\nif ( msg.src === 'domoticz' ) {\n    var ZigbeeID = msg.payload.zigbeeid\n    var topicname = msg.payload.topicname;\n    if ( msg.payload.nvalue === 1) {\n        var msgpow1 = { \"topic\": \"cmnd/\" + topicname + \"/ZbSend\",\"payload\":{\"Device\":ZigbeeID,\"Send\":{\"Power\":1}}};\n        return [msgpow1, null];\n    } else if ( msg.payload.nvalue === 0) {\n        var msgpow0 = { \"topic\": \"cmnd/\" + topicname + \"/ZbSend\",\"payload\":{\"Device\":ZigbeeID,\"Send\":{\"Power\":0}}};\n        return [msgpow0, null];//\n    }\n    return [null, null];\n}",
+        "func": "if ( msg.src === 'tasmota' ) {\n    msg.topic = \"domoticz/in\";\n    var idx = msg.payload.ZbReceived.idx;\n    var idxlink = msg.payload.ZbReceived.idxlink;\n    var zigbeeid = msg.payload.ZbReceived.zigbeeid;\n\n    var linkmsg;\n    var valuelink;\n\n    if ( msg.payload.ZbReceived[zigbeeid] ) {    \n        //Set value linkQuality idx\n        if (msg.payload.ZbReceived[zigbeeid].hasOwnProperty(\"LinkQuality\")) {\n            valuelink = msg.payload.ZbReceived[zigbeeid].LinkQuality;\n        }\n  \n        if ( msg.payload.ZbReceived[zigbeeid] ) {    \n            if (msg.payload.ZbReceived[zigbeeid].Power === 1) {\n                msg.payload = {\"command\": \"udevice\" , \"idx\": idx , \"nvalue\": 1, \"svalue\": \"0\"};\n            }\n            else if (msg.payload.ZbReceived[zigbeeid].Power === 0) { \n                msg.payload = {\"command\": \"udevice\" , \"idx\": idx , \"nvalue\": 0, \"svalue\": \"0\"};\n            }\n\t\t    else {\n    \t\t    msg = null;\n\t\t    }\n            if ( idxlink !== 0 ) {\n                if (valuelink !== undefined) {\n                    linkmsg = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idxlink , \"svalue\": \"\" + valuelink + \"\", \"parse\": false}}; \n                } else {\n                    linkmsg = null;\n                }\n            } else {\n                linkmsg = null;\n            }\n            return [msg, linkmsg];\t\n        }\n    }\n}\n\nif ( msg.src === 'domoticz' ) {\n    var ZigbeeID = msg.payload.zigbeeid\n    var topicname = msg.payload.topicname;\n    if ( msg.payload.nvalue === 1) {\n        var msgpow1 = { \"topic\": \"cmnd/\" + topicname + \"/ZbSend\",\"payload\":{\"Device\":ZigbeeID,\"Send\":{\"Power\":1}}};\n        return [msgpow1, null];\n    } else if ( msg.payload.nvalue === 0) {\n        var msgpow0 = { \"topic\": \"cmnd/\" + topicname + \"/ZbSend\",\"payload\":{\"Device\":ZigbeeID,\"Send\":{\"Power\":0}}};\n        return [msgpow0, null];//\n    }\n    return [null, null];\n}",
         "outputs": 2,
         "noerr": 0,
         "initialize": "",
@@ -2002,7 +2003,7 @@
         "name": "Flogger link",
         "links": [],
         "x": 2575,
-        "y": 1020,
+        "y": 1060,
         "wires": [
             [
                 "c279eb08d2518c16"
@@ -2020,7 +2021,7 @@
             "898dc4b2f4e31ea8"
         ],
         "x": 1995,
-        "y": 980,
+        "y": 1000,
         "wires": []
     },
     {
@@ -2032,9 +2033,11 @@
             "c9e73ce19c15f214"
         ],
         "x": 2055,
-        "y": 980,
+        "y": 1000,
         "wires": [
-            []
+            [
+                "9926f5faf437f4c6"
+            ]
         ]
     },
     {
@@ -2051,7 +2054,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 2740,
-        "y": 980,
+        "y": 1000,
         "wires": []
     },
     {
@@ -2060,10 +2063,11 @@
         "z": "32e6b1c785b786d2",
         "name": "Xiaomi Watersensor in",
         "links": [
-            "c9e73ce19c15f214"
+            "c9e73ce19c15f214",
+            "08ad024704865499"
         ],
         "x": 2575,
-        "y": 980,
+        "y": 1000,
         "wires": [
             [
                 "6fd9bd11843c641b"
@@ -2289,7 +2293,7 @@
         "type": "function",
         "z": "32e6b1c785b786d2",
         "name": "E1743 bat+link",
-        "func": "var getflow = flow.keys();\nvar m_out=[]; //array for message objects\nvar topicname;\n\nfor ( var j = 0; j < getflow.length; j++ ) {\n    var zigbeedevice = getflow[j]; //geeft het zigbee ID\n    topicname = flow.get(zigbeedevice)[2]; //geeft array0\n    msg.topic = \"cmnd/\" + topicname + \"/ZbInfo\"\n    msg.payload = zigbeedevice;\n    m_out.push(msg);\n}\n\nreturn[m_out];\n",
+        "func": "var getflow = flow.keys();\nvar topicname;\n\nfor ( var i = 0; i < getflow.length; i++ ) {\n    var zigbeedevice = getflow[i]; //geeft het zigbee ID\n    topicname = flow.get(zigbeedevice)[2]; //geeft array0\n    msg.topic = \"cmnd/\" + topicname + \"/ZbInfo\"\n    msg.payload = zigbeedevice;\n    node.send(msg);\n}\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -2389,11 +2393,115 @@
         "id": "a2fceb2efb4f1b06",
         "type": "comment",
         "z": "32e6b1c785b786d2",
-        "name": "Versie 17-02-2022 release 1",
-        "info": "",
+        "name": "Versie 22-02-2022 release 1",
+        "info": "22-02-2022 R1: \n-node.send for ikea E1743 voor linkage updates\n-bug Ikea Powerplug opgelost, bij power 0 stuurt deze nu ook een 0 ipv 1\n19-02-2022 R1: Xiaomi Water sensor toegevoegd, niet getest\n17-02-2022 R1: Gestart met Versie nummers",
         "x": 360,
         "y": 280,
         "wires": []
+    },
+    {
+        "id": "9926f5faf437f4c6",
+        "type": "function",
+        "z": "32e6b1c785b786d2",
+        "name": "Xiaomi water sensor (niet getest)",
+        "func": "msg.topic = \"domoticz/in\";\nvar idx = msg.payload.ZbReceived.idx;\nvar idxbat = msg.payload.ZbReceived.idxbat;\nvar idxper = msg.payload.ZbReceived.idxper;\nvar idxlink = msg.payload.ZbReceived.idxlink;\nvar zigbeeid = msg.payload.ZbReceived.zigbeeid;\n\nvar batmsg;\nvar permsg;\nvar linkmsg;\nvar valuebat;\nvar valuebatdummy;\nvar valuebatperc;\nvar valuelink;\n\nif ( msg.payload.ZbReceived[zigbeeid] ) {    \n    //Set value battery voltage idx\n    if (msg.payload.ZbReceived[zigbeeid].hasOwnProperty(\"BatteryVoltage\")) {\n        valuebatdummy = msg.payload.ZbReceived[zigbeeid].BatteryVoltage;\n        valuebat = (Math.round(valuebatdummy * 10))/10.0;\n    }\n    //Set value battery percentage idx\n    if (msg.payload.ZbReceived[zigbeeid].hasOwnProperty(\"BatteryPercentage\")) {\n        valuebatperc = msg.payload.ZbReceived[zigbeeid].BatteryPercentage;\n    }\n    //Set value linkQuality idx\n    if (msg.payload.ZbReceived[zigbeeid].hasOwnProperty(\"LinkQuality\")) {\n        valuelink = msg.payload.ZbReceived[zigbeeid].LinkQuality;\n    }\n\n\tvar updmsg0 = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idx , \"nvalue\": 0, \"svalue\": \"0\" , \"parse\": false}}; \n    var updmsg1 = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idx , \"nvalue\": 1, \"svalue\": \"0\" , \"parse\": false}}; \n    \n\tif (context.get(zigbeeid) === undefined) {\n        context.set(zigbeeid, 3);\n    }\n    \n\tif (msg.payload.ZbReceived[zigbeeid].WATER === 1) {\n        if (context.get(zigbeeid) === 0 || context.get(zigbeeid) === 3) {\n            context.set(zigbeeid, 1);      \n            msg.payload = {\"command\": \"switchlight\", \"idx\": idx, \"switchcmd\": \"On\" };\n        } \n\t    else if (context.get(zigbeeid) === 1) {  \n            msg = updmsg1; \n        }\n    }\n\telse if (msg.payload.ZbReceived[zigbeeid].WATER === 0) {\n        if (context.get(zigbeeid) === 1 || context.get(zigbeeid) === 3) {\n            context.set(zigbeeid, 0);   \n            msg.payload = {\"command\": \"switchlight\", \"idx\": idx, \"switchcmd\": \"Off\" };\n        } \n        else if (context.get(zigbeeid) === 0) {  \n            msg = updmsg0; \n        }\n    }\n\telse {\n\t    msg = null; \n\t}\n\t\n\tif ( idxbat !== 0 ) {\n        if (valuebat !== undefined) {\n            batmsg = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idxbat , \"svalue\": \"\" + valuebat + \"\", \"parse\": false}}; \n        } else {\n            batmsg = null;\n        }\n\t} else {\n\t    batmsg = null;\n    }\n    if ( idxper !== 0 ) {\n        if (valuebatperc !== undefined) {\n            permsg = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idxper , \"svalue\": \"\" + valuebatperc + \"\", \"parse\": false}}; \n        } else {\n            permsg = null;\n        }\n    } else {\n        permsg = null;\n    }\n    if ( idxlink !== 0 ) {\n        if (valuelink !== undefined) {\n            linkmsg = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idxlink , \"svalue\": \"\" + valuelink + \"\", \"parse\": false}}; \n        } else {\n            linkmsg = null;\n        }\n    } else {\n        linkmsg = null;\n    }\n    return [msg, batmsg, permsg, linkmsg];\n}",
+        "outputs": 4,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2240,
+        "y": 1000,
+        "wires": [
+            [
+                "08ad024704865499"
+            ],
+            [
+                "08ad024704865499"
+            ],
+            [
+                "08ad024704865499"
+            ],
+            [
+                "08ad024704865499"
+            ]
+        ]
+    },
+    {
+        "id": "08ad024704865499",
+        "type": "link out",
+        "z": "32e6b1c785b786d2",
+        "name": "Xiaomi WSDCGQ11LM out",
+        "mode": "link",
+        "links": [
+            "898dc4b2f4e31ea8",
+            "e4ed3f9404692874"
+        ],
+        "x": 2515,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "135bbe3e1b66aca2",
+        "type": "inject",
+        "z": "32e6b1c785b786d2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 180,
+        "y": 780,
+        "wires": [
+            [
+                "749058221c88e34a"
+            ]
+        ]
+    },
+    {
+        "id": "749058221c88e34a",
+        "type": "function",
+        "z": "32e6b1c785b786d2",
+        "name": "",
+        "func": "//msg = {\"topic\":\"tele/tasmota_963592/SENSOR\",\"payload\":{\"ZbReceived\":{\"0xC7CB\":{\"Device\":\"0xC7CB\",\"Name\": \"Remote_kledingkast\", \"0006!00\": \"\", \"Power\": 0, \"Endpoint\": 1, \"LinkQuality\": 157}}}};\nmsg = {\"topic\":\"tele/tasmota_96373D/SENSOR\",\"payload\":{\"ZbReceived\":{\"0x48B9\":{\"Device\":\"0x48B9\",\"Name\": \"Remote_kledingkast\", \"0006!00\": \"\", \"Power\": 0, \"Endpoint\": 1, \"LinkQuality\": 157}}}};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 780,
+        "wires": [
+            [
+                "f5acc65f2453f2f1"
+            ]
+        ]
+    },
+    {
+        "id": "f5acc65f2453f2f1",
+        "type": "json",
+        "z": "32e6b1c785b786d2",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 450,
+        "y": 780,
+        "wires": [
+            []
+        ]
     },
     {
         "id": "b1bc1db1ae7424c0",
