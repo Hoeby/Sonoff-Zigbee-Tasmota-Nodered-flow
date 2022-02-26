@@ -100,7 +100,7 @@
             },
             {
                 "t": "cont",
-                "v": "STATE",
+                "v": "LWT",
                 "vt": "str"
             },
             {
@@ -130,7 +130,7 @@
             },
             {
                 "t": "cont",
-                "v": "LWT",
+                "v": "STATE",
                 "vt": "str"
             },
             {
@@ -147,7 +147,7 @@
                 "38309599e8c8d9e1"
             ],
             [
-                "d4a33985746fb725"
+                "57712e7cca74ee29"
             ],
             [
                 "7b575e0384d79c38"
@@ -165,7 +165,7 @@
                 "83166d5da37022e7"
             ],
             [
-                "57712e7cca74ee29"
+                "04659a5d4d4881df"
             ],
             [
                 "d49bd6378f71a628"
@@ -185,8 +185,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 950,
-        "y": 460,
+        "x": 1170,
+        "y": 740,
         "wires": []
     },
     {
@@ -228,7 +228,7 @@
         "type": "debug",
         "z": "32e6b1c785b786d2",
         "name": "Topic Info1",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -245,7 +245,7 @@
         "type": "debug",
         "z": "32e6b1c785b786d2",
         "name": "Topic Info3",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -262,7 +262,7 @@
         "type": "debug",
         "z": "32e6b1c785b786d2",
         "name": "Topic Info2",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -313,7 +313,7 @@
         "finalize": "",
         "libs": [],
         "x": 460,
-        "y": 540,
+        "y": 500,
         "wires": [
             [
                 "0f01862f36be38ab"
@@ -374,7 +374,7 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 1170,
+        "x": 1150,
         "y": 520,
         "wires": [
             [
@@ -430,7 +430,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 950,
-        "y": 700,
+        "y": 460,
         "wires": []
     },
     {
@@ -464,7 +464,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1220,
+        "x": 1200,
         "y": 480,
         "wires": []
     },
@@ -777,7 +777,7 @@
         "type": "debug",
         "z": "32e6b1c785b786d2",
         "name": "Ikea E1743 remote",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -833,7 +833,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1200,
+        "x": 1180,
         "y": 560,
         "wires": []
     },
@@ -934,8 +934,7 @@
         "links": [
             "0ded517531ee02b6",
             "38b2d29beeb9a423",
-            "b0b36a57add1ac04",
-            "5b1817084e40c724"
+            "b0b36a57add1ac04"
         ],
         "x": 895,
         "y": 380,
@@ -1411,7 +1410,6 @@
         "name": "Ikea powerplug out",
         "mode": "link",
         "links": [
-            "1d935a19c2d48baa",
             "e4ed3f9404692874",
             "f2361df7a8546931"
         ],
@@ -2235,7 +2233,7 @@
         "name": "Tasmota Json Receive",
         "mode": "link",
         "links": [],
-        "x": 1135,
+        "x": 1115,
         "y": 440,
         "wires": []
     },
@@ -2256,35 +2254,6 @@
         "wires": [
             [
                 "fff088000ef81383"
-            ]
-        ]
-    },
-    {
-        "id": "496252e1c4153215",
-        "type": "inject",
-        "z": "32e6b1c785b786d2",
-        "name": "Every 12 hours",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "43200",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payloadType": "date",
-        "x": 1160,
-        "y": 700,
-        "wires": [
-            [
-                "ccf0ce108a646aba",
-                "f381f56d1b97d99e"
             ]
         ]
     },
@@ -2341,11 +2310,14 @@
                 "t": "cont",
                 "v": "ZbInfo",
                 "vt": "str"
+            },
+            {
+                "t": "else"
             }
         ],
         "checkall": "true",
         "repair": false,
-        "outputs": 2,
+        "outputs": 3,
         "x": 300,
         "y": 560,
         "wires": [
@@ -2354,6 +2326,9 @@
             ],
             [
                 "7e50ad36620eb3e9"
+            ],
+            [
+                "0f01862f36be38ab"
             ]
         ]
     },
@@ -2369,7 +2344,7 @@
         "finalize": "",
         "libs": [],
         "x": 460,
-        "y": 580,
+        "y": 540,
         "wires": [
             [
                 "0f01862f36be38ab"
@@ -2394,7 +2369,7 @@
         "type": "comment",
         "z": "32e6b1c785b786d2",
         "name": "Versie 22-02-2022 release 1",
-        "info": "22-02-2022 R1: \n-node.send for ikea E1743 voor linkage updates\n-bug Ikea Powerplug opgelost, bij power 0 stuurt deze nu ook een 0 ipv 1\n19-02-2022 R1: Xiaomi Water sensor toegevoegd, niet getest\n17-02-2022 R1: Gestart met Versie nummers",
+        "info": "26-02-2022 R1: \n- Ikea powerplug, link naar gate verwijdert\n- Batterijtrigger voor E1743 aangepast, want deze stopte soms vanzelf.\n22-02-2022 R1: \n-node.send for ikea E1743 voor linkage updates\n-bug Ikea Powerplug opgelost, bij power 0 stuurt deze nu ook een 0 ipv 1\n19-02-2022 R1: Xiaomi Water sensor toegevoegd, niet getest\n17-02-2022 R1: Gestart met Versie nummers",
         "x": 360,
         "y": 280,
         "wires": []
@@ -2501,6 +2476,43 @@
         "y": 780,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "04659a5d4d4881df",
+        "type": "json",
+        "z": "32e6b1c785b786d2",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 930,
+        "y": 700,
+        "wires": [
+            [
+                "baeb620c32d87004",
+                "d4a33985746fb725"
+            ]
+        ]
+    },
+    {
+        "id": "baeb620c32d87004",
+        "type": "function",
+        "z": "32e6b1c785b786d2",
+        "name": "",
+        "func": "var minuts = msg.payload.Time\nvar array = minuts.split(\":\");\nvar value = parseFloat(array[1]);\nif (value < 57) {\n    msg.payload = value;\n} else {\n    return;\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1160,
+        "y": 700,
+        "wires": [
+            [
+                "ccf0ce108a646aba",
+                "f381f56d1b97d99e"
+            ]
         ]
     },
     {
