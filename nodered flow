@@ -2367,8 +2367,8 @@
         "id": "a2fceb2efb4f1b06",
         "type": "comment",
         "z": "32e6b1c785b786d2",
-        "name": "Versie 22-02-2022 release 1",
-        "info": "26-02-2022 R1: \n- Ikea powerplug, link naar gate verwijdert\n- Batterijtrigger voor E1743 aangepast, want deze stopte soms vanzelf.\n22-02-2022 R1: \n-node.send for ikea E1743 voor linkage updates\n-bug Ikea Powerplug opgelost, bij power 0 stuurt deze nu ook een 0 ipv 1\n19-02-2022 R1: Xiaomi Water sensor toegevoegd, niet getest\n17-02-2022 R1: Gestart met Versie nummers",
+        "name": "Versie 27-02-2022 release 1",
+        "info": "27-02-2022 R1:\n- Batterijtrigger aangepast van \"true\" naar \"false\", dit lijkt effect te hebben op het aantal response meldingen van het device\n26-02-2022 R1: \n- Ikea powerplug, link naar gate verwijdert\n- Batterijtrigger voor E1743 aangepast, want deze stopte soms vanzelf.\n22-02-2022 R1: \n-node.send for ikea E1743 voor linkage updates\n-bug Ikea Powerplug opgelost, bij power 0 stuurt deze nu ook een 0 ipv 1\n19-02-2022 R1: Xiaomi Water sensor toegevoegd, niet getest\n17-02-2022 R1: Gestart met Versie nummers",
         "x": 360,
         "y": 280,
         "wires": []
