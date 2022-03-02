@@ -21,58 +21,13 @@
             "ab4957c45c92c798",
             "2ae2420fae93fe5f",
             "2ee82fa6912e4647",
-            "d00839372add15f2",
-            "b6e455fe14a56f37"
+            "b6e455fe14a56f37",
+            "c2543eb2434ed034"
         ],
-        "x": 114,
-        "y": 1179,
+        "x": 2114,
+        "y": 479,
         "w": 622,
         "h": 142
-    },
-    {
-        "id": "d00839372add15f2",
-        "type": "ui_button",
-        "z": "32e6b1c785b786d2",
-        "g": "aa230766d58b72a8",
-        "name": "",
-        "group": "373ccf52.d5c97",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "Update",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "icon": "",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "",
-        "x": 220,
-        "y": 1260,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "373ccf52.d5c97",
-        "type": "ui_group",
-        "name": "Bericht naar alle bridges",
-        "tab": "abe3d4c.9322328",
-        "order": 2,
-        "disp": true,
-        "width": "8",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "abe3d4c.9322328",
-        "type": "ui_tab",
-        "name": "Tasmota Zigbee Admin",
-        "icon": "dashboard",
-        "order": 1,
-        "disabled": false,
-        "hidden": false
     },
     {
         "id": "812d066c811aa8db",
@@ -85,20 +40,18 @@
             "color": "#3f93cf"
         },
         "nodes": [
-            "520de2863bf342b0",
             "cecef8cc8c2c1193",
             "4f9f9724cbeb89b7",
             "5db5c3b67f4218b7",
             "b6ed5f4cd718bf9b",
-            "b5a2e68b2ecaa1f9",
-            "cb80ab4b8d230bd0",
-            "d41f574abdf8c5dd"
+            "d41f574abdf8c5dd",
+            "7f8b0447b2aab70c"
         ],
         "env": [],
-        "x": 114,
-        "y": 899,
-        "w": 412,
-        "h": 262
+        "x": 194,
+        "y": 1179,
+        "w": 472,
+        "h": 269.5
     },
     {
         "id": "05a2f116f05b8c19",
@@ -113,17 +66,16 @@
         "nodes": [
             "d33963f3ee2f7ef1",
             "39b828367fc868a1",
-            "4d3a4ccd6c419799",
             "202da5354877d0e8",
             "e42c3f20342ec925",
             "edea2f707eaa6c2e",
             "21a702d22e35399a",
-            "d1ba4237ef3c3242"
+            "99d5e38aa6a308f7"
         ],
         "env": [],
-        "x": 1034,
-        "y": 1299,
-        "w": 992,
+        "x": 1194,
+        "y": 599,
+        "w": 902,
         "h": 202
     },
     {
@@ -142,9 +94,9 @@
             "943de23188f1e72a"
         ],
         "env": [],
-        "x": 1034,
-        "y": 1199,
-        "w": 572,
+        "x": 1194,
+        "y": 819,
+        "w": 592,
         "h": 82
     },
     {
@@ -166,8 +118,8 @@
             "49984443b00b6a39",
             "93d507cb91268b43"
         ],
-        "x": 114,
-        "y": 1339,
+        "x": 2114,
+        "y": 639,
         "w": 892,
         "h": 162
     },
@@ -183,17 +135,16 @@
         },
         "nodes": [
             "738203cee5b7576e",
-            "5f0c4ecb4356aec6",
             "a876b2262d2d8972",
             "5a82ae65dd933d20",
             "d3729f0632afe0c5",
-            "457267156cd6a79d"
+            "70235a8b59920fe7"
         ],
         "env": [],
-        "x": 1034,
-        "y": 1019,
-        "w": 812,
-        "h": 162
+        "x": 1194,
+        "y": 1079,
+        "w": 922,
+        "h": 82
     },
     {
         "id": "054419e6dfea3c5a",
@@ -206,118 +157,89 @@
             "color": "#3f93cf"
         },
         "nodes": [
-            "58976e2c36dc1310",
             "f3db21b9723e0cfc",
             "7164e9ee53edfd3b",
             "c70e98768b4cdaf1",
             "37e55389157ed1ad",
-            "739e79715feeb4f0"
+            "f7c665cefb19670e",
+            "1b9c54730ad51654"
         ],
         "env": [],
-        "x": 1034,
-        "y": 859,
+        "x": 1194,
+        "y": 919,
         "w": 652,
         "h": 142
     },
     {
-        "id": "58976e2c36dc1310",
-        "type": "ui_table",
+        "id": "342e272fde205046",
+        "type": "group",
         "z": "32e6b1c785b786d2",
-        "g": "054419e6dfea3c5a",
-        "group": "373ccf52.d5c97",
-        "name": "Tasmota Devices",
-        "order": 2,
-        "width": "8",
-        "height": "3",
-        "columns": [
-            {
-                "field": "link",
-                "title": "Name",
-                "width": "35%",
-                "align": "left",
-                "formatter": "html",
-                "formatterParams": {
-                    "target": "_blank"
-                }
-            },
-            {
-                "field": "STATE.Wifi.RSSI",
-                "title": "RSSI",
-                "width": "10%",
-                "align": "left",
-                "formatter": "progress",
-                "formatterParams": {
-                    "target": "_blank"
-                }
-            },
-            {
-                "field": "STATUS2.StatusFWR.Version",
-                "title": "FW",
-                "width": "17%",
-                "align": "left",
-                "formatter": "plaintext",
-                "formatterParams": {
-                    "target": "_blank"
-                }
-            },
-            {
-                "field": "STATE.Uptime",
-                "title": "Uptime",
-                "width": "17%",
-                "align": "right",
-                "formatter": "plaintext",
-                "formatterParams": {
-                    "target": "_blank"
-                }
-            },
-            {
-                "field": "seen",
-                "title": "Last",
-                "width": "12%",
-                "align": "left",
-                "formatter": "plaintext",
-                "formatterParams": {
-                    "target": "_blank"
-                }
-            },
-            {
-                "field": "del",
-                "title": "Del",
-                "width": "3%",
-                "align": "right",
-                "formatter": "tickCross",
-                "formatterParams": {
-                    "target": "_blank"
-                }
-            }
+        "name": "IDX zigbee tabel",
+        "style": {
+            "label": true,
+            "stroke": "#3f93cf",
+            "color": "#3f93cf"
+        },
+        "nodes": [
+            "376768625db0b7b5",
+            "2c282dd1ec8d4503",
+            "81f07f96a45e1c0a",
+            "b78371b5ab34502d",
+            "da61aa56340660d7",
+            "24d22abc9e1ab60f",
+            "7bda4cc6084e4b4b",
+            "2bf44a259c619be9",
+            "90d3cd9a221a8d81",
+            "7d360ac1a9c0face",
+            "0dac2a94f75ffde2",
+            "8ecb1a7237e6ad5e",
+            "3ba3b3d5afc5b7df"
         ],
-        "outputs": 1,
-        "cts": true,
-        "x": 1150,
-        "y": 900,
-        "wires": [
-            []
-        ]
+        "env": [],
+        "x": 1194,
+        "y": 99,
+        "w": 1212,
+        "h": 362
     },
     {
-        "id": "a6a5a94e584da383",
-        "type": "mqtt in",
+        "id": "fc3ffea91c83f578",
+        "type": "group",
         "z": "32e6b1c785b786d2",
-        "name": "",
-        "topic": "tele/#",
-        "qos": "2",
-        "datatype": "auto",
-        "broker": "b1bc1db1ae7424c0",
-        "nl": false,
-        "rap": false,
-        "inputs": 0,
-        "x": 150,
-        "y": 560,
-        "wires": [
-            [
-                "7f8b0447b2aab70c"
-            ]
-        ]
+        "name": "leeg maken van flowget  t2ztest",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "e1417a024763e7fe",
+            "71c13e1afc67c07c",
+            "5dc9a5c207e8575c"
+        ],
+        "env": [],
+        "x": 394,
+        "y": 1679,
+        "w": 522,
+        "h": 82
+    },
+    {
+        "id": "2b14dd6ae297283b",
+        "type": "group",
+        "z": "32e6b1c785b786d2",
+        "name": "Set flow.get(tztest) na deploy",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "c5c4597ec7e244f2",
+            "21c95c5161e18956",
+            "56f447df100afcfa",
+            "481e845fe0a736c7",
+            "8323979a6ecc7569"
+        ],
+        "env": [],
+        "x": 2114,
+        "y": 819,
+        "w": 952,
+        "h": 82
     },
     {
         "id": "fcdf7fc73dd7af70",
@@ -333,8 +255,8 @@
         "correl": "",
         "expiry": "",
         "broker": "b1bc1db1ae7424c0",
-        "x": 1720,
-        "y": 720,
+        "x": 2040,
+        "y": 1580,
         "wires": []
     },
     {
@@ -343,8 +265,8 @@
         "z": "32e6b1c785b786d2",
         "name": "Tasmota commands",
         "info": "ZbPermitJoin 1 = pairing mode voor 60sec\n\nZbName = Friendly name invoeren\n   voorbeeld: ZbName 0x2590,Test_deurcontact\n   \nZbForget <device> = verwijderen device\n\nChange channel:\nZbConfig {\"Channel\":12}\n\nChange panid:\nZbConfig {\"PanID\":\"0x1A69\"}\nhttps://tasmota.github.io/docs/Commands/#zbconfig",
-        "x": 330,
-        "y": 320,
+        "x": 490,
+        "y": 940,
         "wires": []
     },
     {
@@ -353,8 +275,8 @@
         "z": "32e6b1c785b786d2",
         "name": "Xiaomi Deurcontact",
         "info": "Which domoticz dummy needed:\n- Switch (schakelaar)\n\nCode send by device:\nDevice: \"0x2590\"\nName: \"Test_deurcontact\"\nContact: 0  (0=contact dicht, 1=contact open)\nEndpoint: 1\nLinkQuality: 134",
-        "x": 3050,
-        "y": 160,
+        "x": 3370,
+        "y": 1020,
         "wires": []
     },
     {
@@ -363,8 +285,8 @@
         "z": "32e6b1c785b786d2",
         "name": "Xiaomi Beweging",
         "info": "Which domoticz dummy needed:\n- Switch motion (schakelaar beweging)\n\nCode send by device:\nDevice: \"0x11F0\"\nName: \"Test_beweging\"\nOccupancy: 1 (Occupancy 1 = motion, 0 = no motion)\nEndpoint: 1\nLinkQuality: 173",
-        "x": 3040,
-        "y": 240,
+        "x": 3360,
+        "y": 1100,
         "wires": []
     },
     {
@@ -373,8 +295,8 @@
         "z": "32e6b1c785b786d2",
         "name": "Xiaomi Rookmelder",
         "info": "Which domoticz dummy needed:\n- Switch (schakelaar)\n\nCode send by device:\n3 messages when pushing test button\n\n*** Bericht 1:***\nDevice: \"0x7460\"\nName: \"Test_rookmelder\"\nModelId: \"lumi.sensor_smoke\"\nEndpoint: 1\nLinkQuality: 157\n\n*** Bericht 2:***\nDevice: \"0x7460\"\nName: \"Test_rookmelder\"\n0500<00: 00000FF0000\nZoneStatusChange: 0\nFire: 0\nEndpoint: 1\nLinkQuality: 157\n\n*** Bericht 3:***\nDevice: \"0x7460\"\nName: \"Test_rookmelder\"\nBatteryVoltage: 3.05\nBatteryPercentage: 100\nSmokeDensity: 0\nEndpoint: 1\nLinkQuality: 157\n",
-        "x": 3050,
-        "y": 320,
+        "x": 3370,
+        "y": 1180,
         "wires": []
     },
     {
@@ -432,8 +354,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 9,
-        "x": 670,
-        "y": 580,
+        "x": 990,
+        "y": 1440,
         "wires": [
             [
                 "38309599e8c8d9e1"
@@ -477,8 +399,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1170,
-        "y": 740,
+        "x": 1490,
+        "y": 1600,
         "wires": []
     },
     {
@@ -494,8 +416,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 950,
-        "y": 420,
+        "x": 1270,
+        "y": 1280,
         "wires": []
     },
     {
@@ -511,8 +433,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 960,
-        "y": 740,
+        "x": 1280,
+        "y": 1600,
         "wires": []
     },
     {
@@ -528,8 +450,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 950,
-        "y": 580,
+        "x": 1270,
+        "y": 1440,
         "wires": []
     },
     {
@@ -545,8 +467,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 950,
-        "y": 660,
+        "x": 1270,
+        "y": 1520,
         "wires": []
     },
     {
@@ -562,8 +484,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 950,
-        "y": 620,
+        "x": 1270,
+        "y": 1480,
         "wires": []
     },
     {
@@ -572,8 +494,8 @@
         "z": "32e6b1c785b786d2",
         "name": "Osram Mini Switch",
         "info": "Which domoticz dummy needed:\n- Selector switch (keuzeschakelaar)\n\nSelector switch setup:\n0   = Off\n10  = Up\n20  = Up: hold\n30  = Up: release\n40  = Circle: click\n50  = Circle: hold\n60  = Circle: release\n70  = Down\n80  = Down: hold\n90  = Down: release\n100 = Standby\n\nCode send by device:\n*** Knop omhoog kort ***\nDevice: \"0x5FE5\"\nName: \"Test_osramswitch\"\n0006!01: \"\"\nPower: 1\nEndpoint: 1\nLinkQuality: 157\n\n*** Knop omhoog lang ***\nDevice: \"0x5FE5\"\nName: \"Test_osramswitch\"\n0008!03: \"\"\nDimmerStop: true\nEndpoint: 1\nLinkQuality: 157\n\n*** Knop midden kort bericht 1 ***\nDevice: \"0x5FE5\"\nName: \"Test_osramswitch\"\n0008!04: \"FE0A00\"\nDimmer: 254\nPower: 1\nEndpoint: 3\nLinkQuality: 157\n\n*** Knop midden kort bericht 2 ***\nDevice: \"0x5FE5\"\nName: \"Test_osramswitch\"\n0300!0A: \"72010A00\"\nCT:370\nEndpoint: 3\nLinkQuality: 157\n\n*** Knop midden lang bericht 1 ***\nDevice: \"0x5FE5\"\nName: \"Test_osramswitch\"\n0300!03: \"FE0200\"\nSat: 254\nEndpoint: 3\nLinkQuality: 157\n\n*** Knop midden lang bericht 2 ***\nDevice: \"0x5FE5\"\nName: \"Test_osramswitch\"\n0300!01: \"0119\"\nHueMove: 1\nEndpoint: 3\nLinkQuality: 157\n\n*** Knop midden lang bericht 3 ***\nDevice: \"0x5FE5\"\nName: \"Test_osramswitch\"\n0003!01: \"0000\"\nHueMove: 0\nEndpoint: 3\nLinkQuality: 157\n\n*** Knop omlaag kort ***\nDevice: \"0x5FE5\"\nName: \"Test_osramswitch\"\n0006!00: \"\"\nPower: 0\nEndpoint: 2\nLinkQuality: 157\n\n*** Knop omlaag lang ***\nDevice: \"0x5FE5\"\nName: \"Test_osramswitch\"\n0008!01: \"0126\"\nDimmerMove: 1\nEndpoint: 2\nLinkQuality: 157\n\n",
-        "x": 3050,
-        "y": 400,
+        "x": 3370,
+        "y": 1260,
         "wires": []
     },
     {
@@ -589,8 +511,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1720,
-        "y": 680,
+        "x": 2040,
+        "y": 1540,
         "wires": []
     },
     {
@@ -604,8 +526,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 460,
-        "y": 500,
+        "x": 780,
+        "y": 1360,
         "wires": [
             [
                 "0f01862f36be38ab"
@@ -618,8 +540,8 @@
         "z": "32e6b1c785b786d2",
         "name": "Lidl CCT bulb",
         "info": "Which domoticz dummy needed:\n- Switch (schakelaar)\n\nCode send by device:\nDevice: \"0xAF37\"\nName: \"Test_Lamp\"\nPower: 1\nDimmer: null\nHue: 0\nSat: 254\nX: 45874\nY: 19660\nCT: 153  // 153 = warm white, 500 = cold\nColorMode: 1\nRGB: \"FF0000\"\nRGBb: \"000000\"\nEndpoint: 1\nLinkQuality: 134",
-        "x": 3030,
-        "y": 460,
+        "x": 3350,
+        "y": 1320,
         "wires": []
     },
     {
@@ -632,8 +554,8 @@
         "datatype": "auto",
         "broker": "b1bc1db1ae7424c0",
         "inputs": 0,
-        "x": 170,
-        "y": 620,
+        "x": 450,
+        "y": 1480,
         "wires": [
             [
                 "7e37ed3f80e6353e"
@@ -650,8 +572,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 460,
-        "y": 620,
+        "x": 780,
+        "y": 1480,
         "wires": [
             [
                 "0f01862f36be38ab"
@@ -666,8 +588,8 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 1150,
-        "y": 520,
+        "x": 1470,
+        "y": 1380,
         "wires": [
             [
                 "269bdd93eaa30e8b"
@@ -697,10 +619,13 @@
             "f7a9bdcae6412aef",
             "32e21a68283df2bb",
             "fff088000ef81383",
-            "08ad024704865499"
+            "08ad024704865499",
+            "70235a8b59920fe7",
+            "1b9c54730ad51654",
+            "99d5e38aa6a308f7"
         ],
-        "x": 1575,
-        "y": 700,
+        "x": 1895,
+        "y": 1560,
         "wires": [
             [
                 "fcdf7fc73dd7af70",
@@ -721,8 +646,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 950,
-        "y": 460,
+        "x": 1270,
+        "y": 1320,
         "wires": []
     },
     {
@@ -733,8 +658,8 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 930,
-        "y": 500,
+        "x": 1250,
+        "y": 1360,
         "wires": [
             [
                 "273c9ce4a5f2a5fc",
@@ -756,8 +681,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1200,
-        "y": 480,
+        "x": 1520,
+        "y": 1340,
         "wires": []
     },
     {
@@ -766,8 +691,8 @@
         "z": "32e6b1c785b786d2",
         "name": "Todo list",
         "info": "- Voltage batterij voor alle devices checken\n- Heiman Co controlleren.\n- Xiaomi temperatuur\n    - voorspelling kijken\n    - batterij toevoegen",
-        "x": 300,
-        "y": 360,
+        "x": 460,
+        "y": 980,
         "wires": []
     },
     {
@@ -781,8 +706,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1720,
-        "y": 520,
+        "x": 2040,
+        "y": 1380,
         "wires": [
             [
                 "5754549a4a868ca2"
@@ -839,8 +764,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2190,
-        "y": 160,
+        "x": 2510,
+        "y": 1020,
         "wires": [
             [
                 "996c20a7f43bb922"
@@ -869,8 +794,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2730,
-        "y": 160,
+        "x": 3050,
+        "y": 1020,
         "wires": []
     },
     {
@@ -886,8 +811,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2740,
-        "y": 240,
+        "x": 3060,
+        "y": 1100,
         "wires": []
     },
     {
@@ -901,8 +826,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2200,
-        "y": 320,
+        "x": 2520,
+        "y": 1180,
         "wires": [
             [
                 "1f300e21c525ad4d"
@@ -931,8 +856,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2740,
-        "y": 320,
+        "x": 3060,
+        "y": 1180,
         "wires": []
     },
     {
@@ -948,8 +873,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2730,
-        "y": 400,
+        "x": 3050,
+        "y": 1260,
         "wires": []
     },
     {
@@ -963,8 +888,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2200,
-        "y": 460,
+        "x": 2520,
+        "y": 1320,
         "wires": [
             [
                 "38b2d29beeb9a423"
@@ -987,8 +912,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2740,
-        "y": 460,
+        "x": 3060,
+        "y": 1320,
         "wires": []
     },
     {
@@ -1002,8 +927,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2200,
-        "y": 520,
+        "x": 2520,
+        "y": 1380,
         "wires": [
             [
                 "b58fbdd1751a2cd8"
@@ -1032,8 +957,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2740,
-        "y": 520,
+        "x": 3060,
+        "y": 1380,
         "wires": []
     },
     {
@@ -1047,8 +972,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2190,
-        "y": 600,
+        "x": 2510,
+        "y": 1460,
         "wires": [
             [
                 "34ebad78371bfc78"
@@ -1077,8 +1002,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2730,
-        "y": 600,
+        "x": 3050,
+        "y": 1460,
         "wires": []
     },
     {
@@ -1101,8 +1026,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 2,
-        "x": 950,
-        "y": 540,
+        "x": 1270,
+        "y": 1400,
         "wires": [
             [
                 "bf65146bd8d167aa"
@@ -1125,8 +1050,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1180,
-        "y": 560,
+        "x": 1500,
+        "y": 1420,
         "wires": []
     },
     {
@@ -1135,8 +1060,8 @@
         "z": "32e6b1c785b786d2",
         "name": "",
         "info": "loop prevent idee\n\nneem idx, als idx hetzelde is, dan stop\n\n\nconst dimmerList = [\"dimmer1\",\"dimmer2\",\"dimmer3\",\"dimmer4\"];\nlet receiving = context.get(\"receiving\") || false;\nlet source = context.get(\"source\");\nfunction propagate (value, items, noSend) {\n    items.forEach(item => {\n        if (item !== noSend) {\n            node.send({payload:value, topic:`cmnd/lighting/${item}/dimmer`});\n        }\n    });\n}\nif (!receiving) {\n    context.set(\"receiving\", true);\n    const splitTopic = msg.topic.split(\"/\");\n    context.set(\"source\", splitTopic[2]);\n    const propTimeout = setTimeout(()=>{\n        context.set(\"receiving\",false);\n    },500);\n    context.set(\"propTimeout\", propTimeout);\n    propagate(msg.payload, dimmerList, splitTopic[2]);\n} else if (msg.topic === source) {\n    let propTimeout = context.get(\"propTimeout\");\n    clearTimeout(propTimeout);\n    propTimeout = setTimeout(()=>{\n        context.set(\"receiving\",false);\n    },500);\n    context.set(\"propTimeout\", propTimeout);\n    propagate(msg.payload, dimmerList, source);\n}\nreturn null;",
-        "x": 300,
-        "y": 400,
+        "x": 460,
+        "y": 1020,
         "wires": []
     },
     {
@@ -1151,8 +1076,8 @@
         "toggleCmd": "toggle",
         "defaultCmd": "default",
         "persist": false,
-        "x": 1470,
-        "y": 500,
+        "x": 1790,
+        "y": 1360,
         "wires": [
             [
                 "269bdd93eaa30e8b",
@@ -1186,8 +1111,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1010,
-        "y": 380,
+        "x": 1330,
+        "y": 1240,
         "wires": [
             [
                 "6f07890f180e41d6"
@@ -1210,8 +1135,8 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 1240,
-        "y": 380,
+        "x": 1560,
+        "y": 1240,
         "wires": [
             [
                 "1805c2bdbbc563df"
@@ -1228,8 +1153,8 @@
             "38b2d29beeb9a423",
             "b0b36a57add1ac04"
         ],
-        "x": 895,
-        "y": 380,
+        "x": 1215,
+        "y": 1240,
         "wires": [
             [
                 "3b9a33f80d8918c6"
@@ -1249,8 +1174,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1710,
-        "y": 380,
+        "x": 2030,
+        "y": 1240,
         "wires": []
     },
     {
@@ -1264,8 +1189,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2190,
-        "y": 400,
+        "x": 2510,
+        "y": 1260,
         "wires": [
             [
                 "4651c83ecce552f8"
@@ -1294,8 +1219,8 @@
         "loglevel": "INFO",
         "logconfig": "f6ad6c620c7a1df8",
         "sendpane": "",
-        "x": 2690,
-        "y": 1060,
+        "x": 3010,
+        "y": 1920,
         "wires": [
             []
         ]
@@ -1306,8 +1231,8 @@
         "z": "32e6b1c785b786d2",
         "name": "Ikea E1743",
         "info": "Which domoticz dummy needed:\n- Selector switch (keuzeschakelaar)\n\nWhich domoticz dummy for battery:\n- Percentage dummy (device CAN'T do voltage)\n\n\nSelector switch setup:\n0  = Off\n10 = On\n20 = On: hold\n30 = Off: hold\n40 = Hold: stop\n\nCode send by device:\n*** Knop streepje kort ***\nDevice: \"0x5D14\"\nName: \"Remote_kledingkast\"\n0006!01: \"\"\nPower: 1\nEndpoint: 1\nLinkQuality: 157\n\n*** Knop rondje kort ***\nDevice: \"0x5D14\"\nName: \"Remote_kledingkast\"\n0006!00: \"\"\nPower: 0\nEndpoint: 1\nLinkQuality: 157\n\n*** Knop streepje lang ***\nDevice: \"0x5D14\"\nName: \"Remote_kledingkast\"\n0008!05: \"0053\"\nDimmerMove: 0\nEndpoint: 1\nLinkQuality: 157\n\n*** Knop streepje lang release ***\nDevice: \"0x5D14\"\nName: \"Remote_kledingkast\n0008!07: \"\"\nDimmerStop: true\nEndpoint: 1\nLinkQuality: 157\n\n*** Knop rondje lang ***\nDevice: \"0x5D14\"\nName: \"Remote_kledingkast\"\n0008!01: \"01530000\"\nDimmermove: 1\nEndpoint: 1\nLinkQuality: 157\n\n*** Knop rondje lang release ***\nDevice: \"0x5D14\"\nName: \"Remote_kledingkast\"\n0008!07: \"\"\nDimmerStop: true\nEndpoint: 1\nLinkQuality: 157\n\n",
-        "x": 3030,
-        "y": 600,
+        "x": 3350,
+        "y": 1460,
         "wires": []
     },
     {
@@ -1323,8 +1248,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2750,
-        "y": 660,
+        "x": 3070,
+        "y": 1520,
         "wires": []
     },
     {
@@ -1337,8 +1262,8 @@
             "e4ed3f9404692874",
             "eb12fa8049a9c2f5"
         ],
-        "x": 2515,
-        "y": 160,
+        "x": 2835,
+        "y": 1020,
         "wires": []
     },
     {
@@ -1350,8 +1275,8 @@
             "4b827c89b5a138c4",
             "996c20a7f43bb922"
         ],
-        "x": 2575,
-        "y": 160,
+        "x": 2895,
+        "y": 1020,
         "wires": [
             [
                 "902db89cf58e7d4a"
@@ -1368,8 +1293,8 @@
             "d37266ca5003002f",
             "e4ed3f9404692874"
         ],
-        "x": 2515,
-        "y": 240,
+        "x": 2835,
+        "y": 1100,
         "wires": []
     },
     {
@@ -1381,8 +1306,8 @@
             "7c39b8f4766d8af2",
             "9ef3e2703e3d169b"
         ],
-        "x": 2575,
-        "y": 240,
+        "x": 2895,
+        "y": 1100,
         "wires": [
             [
                 "93278f76c19d10e5"
@@ -1398,8 +1323,8 @@
             "1f300e21c525ad4d",
             "0958e7f86a6f7cfa"
         ],
-        "x": 2575,
-        "y": 320,
+        "x": 2895,
+        "y": 1180,
         "wires": [
             [
                 "943f1135c3828226"
@@ -1416,8 +1341,8 @@
             "81b0bc5b842b0fd9",
             "e4ed3f9404692874"
         ],
-        "x": 2515,
-        "y": 320,
+        "x": 2835,
+        "y": 1180,
         "wires": []
     },
     {
@@ -1429,8 +1354,8 @@
             "4651c83ecce552f8",
             "fe7e9b046fafa46d"
         ],
-        "x": 2575,
-        "y": 400,
+        "x": 2895,
+        "y": 1260,
         "wires": [
             [
                 "b96a18aebbaf647b"
@@ -1447,8 +1372,8 @@
             "b5be4ef2c3766c16",
             "e4ed3f9404692874"
         ],
-        "x": 2515,
-        "y": 400,
+        "x": 2835,
+        "y": 1260,
         "wires": []
     },
     {
@@ -1460,8 +1385,8 @@
             "38b2d29beeb9a423",
             "a43480d97601b0b3"
         ],
-        "x": 2575,
-        "y": 460,
+        "x": 2895,
+        "y": 1320,
         "wires": [
             [
                 "29f4524a41c3bbe4"
@@ -1479,8 +1404,8 @@
             "7f8f8c048a5a9e50",
             "e4ed3f9404692874"
         ],
-        "x": 2515,
-        "y": 460,
+        "x": 2835,
+        "y": 1320,
         "wires": []
     },
     {
@@ -1492,8 +1417,8 @@
             "b58fbdd1751a2cd8",
             "2ccae554b0a0eb62"
         ],
-        "x": 2575,
-        "y": 520,
+        "x": 2895,
+        "y": 1380,
         "wires": [
             [
                 "d6291551d1852638"
@@ -1510,8 +1435,8 @@
             "6bf493cc359ec5a6",
             "e4ed3f9404692874"
         ],
-        "x": 2515,
-        "y": 520,
+        "x": 2835,
+        "y": 1380,
         "wires": []
     },
     {
@@ -1523,8 +1448,8 @@
             "34ebad78371bfc78",
             "f053a430dbc7af77"
         ],
-        "x": 2575,
-        "y": 600,
+        "x": 2895,
+        "y": 1460,
         "wires": [
             [
                 "54dd8d6bf95fde5b"
@@ -1541,8 +1466,8 @@
             "0140bb4b0c66e251",
             "e4ed3f9404692874"
         ],
-        "x": 2515,
-        "y": 600,
+        "x": 2835,
+        "y": 1460,
         "wires": []
     },
     {
@@ -1554,8 +1479,8 @@
             "b0b36a57add1ac04",
             "cc69481ddb4239d7"
         ],
-        "x": 2575,
-        "y": 660,
+        "x": 2895,
+        "y": 1520,
         "wires": [
             [
                 "40855101e292585d"
@@ -1573,8 +1498,8 @@
             "b80d54c068c87573",
             "e4ed3f9404692874"
         ],
-        "x": 2515,
-        "y": 660,
+        "x": 2835,
+        "y": 1520,
         "wires": []
     },
     {
@@ -1583,8 +1508,8 @@
         "z": "32e6b1c785b786d2",
         "name": "Xiaomi WSDCGQ11LM Temp sensor",
         "info": "Which domoticz dummy needed:\n- Temp+Hum+Baro\n\n\ntele/tasmota_9467D4/SENSOR : msg.payload : Object\nobject\nZbReceived: object\n0x4C81: object\nDevice: \"0x4C81\"\nName: \"Temp_woonkamer\"\nTemperature: 20.78\nHumidity: 59.98\nPressure: 995\nPressureScale: -1\nPressureScaledValue: 9957\nSeaPressure: 995\nEndpoint: 1\nLinkQuality: 149\n\n20.68;54.87;0;996;0\n\nhttps://www.domoticz.com/wiki/Domoticz_API/JSON_URL's#Temperature.2Fhumidity.2Fbarometer",
-        "x": 3100,
-        "y": 720,
+        "x": 3420,
+        "y": 1580,
         "wires": []
     },
     {
@@ -1598,8 +1523,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2250,
-        "y": 720,
+        "x": 2570,
+        "y": 1580,
         "wires": [
             [
                 "3f1912b0dfd34a67"
@@ -1628,8 +1553,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2780,
-        "y": 720,
+        "x": 3100,
+        "y": 1580,
         "wires": []
     },
     {
@@ -1641,8 +1566,8 @@
             "3f1912b0dfd34a67",
             "b3b7f479cadb8496"
         ],
-        "x": 2575,
-        "y": 720,
+        "x": 2895,
+        "y": 1580,
         "wires": [
             [
                 "b371b25fac84c93c"
@@ -1659,8 +1584,8 @@
             "a3c1ee29665026e7",
             "e4ed3f9404692874"
         ],
-        "x": 2515,
-        "y": 720,
+        "x": 2835,
+        "y": 1580,
         "wires": []
     },
     {
@@ -1669,8 +1594,8 @@
         "z": "32e6b1c785b786d2",
         "name": "Ikea ICPSHC24 led strip",
         "info": "Which domoticz dummy needed:\n- Switch dimmer (schakelaar dimmer)\n\nCode send by device:\nDevice: \"0x3743\"\nName: \"Lamp kleding\"\nDimmer: 25\nPower: 1 (or 0 when lamp off)\nEndpoint: 1\nLinkQuality: 134",
-        "x": 3070,
-        "y": 660,
+        "x": 3390,
+        "y": 1520,
         "wires": []
     },
     {
@@ -1684,8 +1609,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2180,
-        "y": 780,
+        "x": 2500,
+        "y": 1640,
         "wires": [
             [
                 "5b1817084e40c724"
@@ -1705,8 +1630,8 @@
             "e4ed3f9404692874",
             "f2361df7a8546931"
         ],
-        "x": 2515,
-        "y": 780,
+        "x": 2835,
+        "y": 1640,
         "wires": []
     },
     {
@@ -1718,8 +1643,8 @@
             "5b1817084e40c724",
             "0c713a7cfa8a5968"
         ],
-        "x": 2575,
-        "y": 780,
+        "x": 2895,
+        "y": 1640,
         "wires": [
             [
                 "2ae6865e6ac023ef"
@@ -1739,8 +1664,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2720,
-        "y": 780,
+        "x": 3040,
+        "y": 1640,
         "wires": []
     },
     {
@@ -1754,8 +1679,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2230,
-        "y": 840,
+        "x": 2550,
+        "y": 1700,
         "wires": [
             [
                 "507ba46b5bd868d8"
@@ -1781,8 +1706,8 @@
             "620de55a7aed2e0c",
             "e4ed3f9404692874"
         ],
-        "x": 2515,
-        "y": 840,
+        "x": 2835,
+        "y": 1700,
         "wires": []
     },
     {
@@ -1794,8 +1719,8 @@
             "507ba46b5bd868d8",
             "577af1c346273217"
         ],
-        "x": 2575,
-        "y": 840,
+        "x": 2895,
+        "y": 1700,
         "wires": [
             [
                 "6dc6133320d04d9d"
@@ -1815,8 +1740,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2770,
-        "y": 840,
+        "x": 3090,
+        "y": 1700,
         "wires": []
     },
     {
@@ -1830,8 +1755,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2250,
-        "y": 920,
+        "x": 2570,
+        "y": 1780,
         "wires": [
             [
                 "a4e976adce8e3559"
@@ -1853,8 +1778,8 @@
         "z": "32e6b1c785b786d2",
         "name": "Xiaomi WSDCGQ01LM Temp sensor",
         "info": "Which domoticz dummy needed:\n- Temp+Hum",
-        "x": 3100,
-        "y": 920,
+        "x": 3420,
+        "y": 1780,
         "wires": []
     },
     {
@@ -1870,8 +1795,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2780,
-        "y": 920,
+        "x": 3100,
+        "y": 1780,
         "wires": []
     },
     {
@@ -1883,8 +1808,8 @@
             "1a8398e557c7f9dd",
             "a4e976adce8e3559"
         ],
-        "x": 2575,
-        "y": 920,
+        "x": 2895,
+        "y": 1780,
         "wires": [
             [
                 "27205c55fd92a391"
@@ -1901,8 +1826,8 @@
             "c35a66d7c5a69ec6",
             "e4ed3f9404692874"
         ],
-        "x": 2515,
-        "y": 920,
+        "x": 2835,
+        "y": 1780,
         "wires": []
     },
     {
@@ -1911,8 +1836,8 @@
         "z": "32e6b1c785b786d2",
         "name": "Xiaomi GZCGQ01LM lux sensor",
         "info": "Which domoticz dummy needed:\n- Lux",
-        "x": 3090,
-        "y": 840,
+        "x": 3410,
+        "y": 1700,
         "wires": []
     },
     {
@@ -1921,8 +1846,8 @@
         "z": "32e6b1c785b786d2",
         "name": "Xiaomi Ikea Powerplug",
         "info": "Which domoticz dummy needed:\n- Switch (schakelaar)",
-        "x": 3060,
-        "y": 780,
+        "x": 3380,
+        "y": 1640,
         "wires": []
     },
     {
@@ -1935,8 +1860,8 @@
             "619657caaabed12e",
             "eb12fa8049a9c2f5"
         ],
-        "x": 1995,
-        "y": 160,
+        "x": 2315,
+        "y": 1020,
         "wires": []
     },
     {
@@ -1947,8 +1872,8 @@
         "links": [
             "4b827c89b5a138c4"
         ],
-        "x": 2055,
-        "y": 160,
+        "x": 2375,
+        "y": 1020,
         "wires": [
             [
                 "ad164d166565ab20"
@@ -1965,8 +1890,8 @@
             "8859e1626155ce50",
             "d37266ca5003002f"
         ],
-        "x": 1995,
-        "y": 240,
+        "x": 2315,
+        "y": 1100,
         "wires": []
     },
     {
@@ -1977,8 +1902,8 @@
         "links": [
             "9ef3e2703e3d169b"
         ],
-        "x": 2055,
-        "y": 240,
+        "x": 2375,
+        "y": 1100,
         "wires": [
             [
                 "036b4f949a146d7a"
@@ -1995,8 +1920,8 @@
             "81b0bc5b842b0fd9",
             "d9db49d0d2111c96"
         ],
-        "x": 1995,
-        "y": 320,
+        "x": 2315,
+        "y": 1180,
         "wires": []
     },
     {
@@ -2007,8 +1932,8 @@
         "links": [
             "0958e7f86a6f7cfa"
         ],
-        "x": 2055,
-        "y": 320,
+        "x": 2375,
+        "y": 1180,
         "wires": [
             [
                 "283b251afd36b91e"
@@ -2025,8 +1950,8 @@
             "96a9ba30ab4242d6",
             "b5be4ef2c3766c16"
         ],
-        "x": 1995,
-        "y": 400,
+        "x": 2315,
+        "y": 1260,
         "wires": []
     },
     {
@@ -2037,8 +1962,8 @@
         "links": [
             "fe7e9b046fafa46d"
         ],
-        "x": 2055,
-        "y": 400,
+        "x": 2375,
+        "y": 1260,
         "wires": [
             [
                 "e3ecd92d6e4b4333"
@@ -2055,8 +1980,8 @@
             "7f8f8c048a5a9e50",
             "cef06f729c47c34b"
         ],
-        "x": 1995,
-        "y": 460,
+        "x": 2315,
+        "y": 1320,
         "wires": []
     },
     {
@@ -2067,8 +1992,8 @@
         "links": [
             "a43480d97601b0b3"
         ],
-        "x": 2055,
-        "y": 460,
+        "x": 2375,
+        "y": 1320,
         "wires": [
             [
                 "74078727af5ee2e0"
@@ -2085,8 +2010,8 @@
             "273dbf580278d699",
             "6bf493cc359ec5a6"
         ],
-        "x": 1995,
-        "y": 520,
+        "x": 2315,
+        "y": 1380,
         "wires": []
     },
     {
@@ -2097,8 +2022,8 @@
         "links": [
             "2ccae554b0a0eb62"
         ],
-        "x": 2055,
-        "y": 520,
+        "x": 2375,
+        "y": 1380,
         "wires": [
             [
                 "a7f14c9f10b3d453"
@@ -2116,8 +2041,8 @@
             "e71c9c90170608a3",
             "372ad568c052f2cc"
         ],
-        "x": 1995,
-        "y": 600,
+        "x": 2315,
+        "y": 1460,
         "wires": []
     },
     {
@@ -2128,8 +2053,8 @@
         "links": [
             "f053a430dbc7af77"
         ],
-        "x": 2055,
-        "y": 600,
+        "x": 2375,
+        "y": 1460,
         "wires": [
             [
                 "e3c55ccb8b099b3c"
@@ -2146,8 +2071,8 @@
             "69e480d5a2306292",
             "b80d54c068c87573"
         ],
-        "x": 1995,
-        "y": 660,
+        "x": 2315,
+        "y": 1520,
         "wires": []
     },
     {
@@ -2158,8 +2083,8 @@
         "links": [
             "cc69481ddb4239d7"
         ],
-        "x": 2055,
-        "y": 660,
+        "x": 2375,
+        "y": 1520,
         "wires": [
             [
                 "f7a424fbfaeca8b8"
@@ -2176,8 +2101,8 @@
             "330e3c8d4d49643e",
             "a3c1ee29665026e7"
         ],
-        "x": 1995,
-        "y": 720,
+        "x": 2315,
+        "y": 1580,
         "wires": []
     },
     {
@@ -2188,8 +2113,8 @@
         "links": [
             "b3b7f479cadb8496"
         ],
-        "x": 2055,
-        "y": 720,
+        "x": 2375,
+        "y": 1580,
         "wires": [
             [
                 "36acea7aea3e0385"
@@ -2206,8 +2131,8 @@
             "a3b9cf15f168221e",
             "f2361df7a8546931"
         ],
-        "x": 1995,
-        "y": 780,
+        "x": 2315,
+        "y": 1640,
         "wires": []
     },
     {
@@ -2218,8 +2143,8 @@
         "links": [
             "0c713a7cfa8a5968"
         ],
-        "x": 2055,
-        "y": 780,
+        "x": 2375,
+        "y": 1640,
         "wires": [
             [
                 "39bf1ccf5b3a5faf"
@@ -2236,8 +2161,8 @@
             "26e569e6a1eb2867",
             "620de55a7aed2e0c"
         ],
-        "x": 1995,
-        "y": 840,
+        "x": 2315,
+        "y": 1700,
         "wires": []
     },
     {
@@ -2248,8 +2173,8 @@
         "links": [
             "577af1c346273217"
         ],
-        "x": 2055,
-        "y": 840,
+        "x": 2375,
+        "y": 1700,
         "wires": [
             [
                 "60902a7262550dc1"
@@ -2266,8 +2191,8 @@
             "74b5fa30a733b173",
             "c35a66d7c5a69ec6"
         ],
-        "x": 1995,
-        "y": 920,
+        "x": 2315,
+        "y": 1780,
         "wires": []
     },
     {
@@ -2278,8 +2203,8 @@
         "links": [
             "1a8398e557c7f9dd"
         ],
-        "x": 2055,
-        "y": 920,
+        "x": 2375,
+        "y": 1780,
         "wires": [
             [
                 "6847bc92cfc5190c"
@@ -2292,8 +2217,8 @@
         "z": "32e6b1c785b786d2",
         "name": "Flogger link",
         "links": [],
-        "x": 2575,
-        "y": 1060,
+        "x": 2895,
+        "y": 1920,
         "wires": [
             [
                 "c279eb08d2518c16"
@@ -2310,8 +2235,8 @@
             "561150ce2a02c788",
             "898dc4b2f4e31ea8"
         ],
-        "x": 1995,
-        "y": 1000,
+        "x": 2315,
+        "y": 1860,
         "wires": []
     },
     {
@@ -2322,8 +2247,8 @@
         "links": [
             "c9e73ce19c15f214"
         ],
-        "x": 2055,
-        "y": 1000,
+        "x": 2375,
+        "y": 1860,
         "wires": [
             [
                 "9926f5faf437f4c6"
@@ -2343,8 +2268,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2740,
-        "y": 1000,
+        "x": 3060,
+        "y": 1860,
         "wires": []
     },
     {
@@ -2356,8 +2281,8 @@
             "c9e73ce19c15f214",
             "08ad024704865499"
         ],
-        "x": 2575,
-        "y": 1000,
+        "x": 2895,
+        "y": 1860,
         "wires": [
             [
                 "6fd9bd11843c641b"
@@ -2381,8 +2306,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 2380,
-        "y": 620,
+        "x": 2700,
+        "y": 1480,
         "wires": [
             [
                 "34ebad78371bfc78"
@@ -2415,8 +2340,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1040,
-        "y": 340,
+        "x": 1360,
+        "y": 1200,
         "wires": [
             [
                 "5b88abafacecbe59"
@@ -2431,8 +2356,8 @@
         "links": [
             "f053a430dbc7af77"
         ],
-        "x": 895,
-        "y": 340,
+        "x": 1215,
+        "y": 1200,
         "wires": [
             [
                 "a7479fa3f6b2cba5"
@@ -2456,8 +2381,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 1240,
-        "y": 340,
+        "x": 1560,
+        "y": 1200,
         "wires": [
             [
                 "1805c2bdbbc563df"
@@ -2475,8 +2400,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2210,
-        "y": 660,
+        "x": 2530,
+        "y": 1520,
         "wires": [
             [
                 "b0b36a57add1ac04"
@@ -2497,8 +2422,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2200,
-        "y": 240,
+        "x": 2520,
+        "y": 1100,
         "wires": [
             [
                 "7c39b8f4766d8af2"
@@ -2524,8 +2449,8 @@
         "name": "Tasmota Json Receive",
         "mode": "link",
         "links": [],
-        "x": 1115,
-        "y": 440,
+        "x": 1435,
+        "y": 1300,
         "wires": []
     },
     {
@@ -2540,8 +2465,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1360,
-        "y": 680,
+        "x": 1680,
+        "y": 1540,
         "wires": [
             [
                 "fff088000ef81383"
@@ -2559,8 +2484,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1360,
-        "y": 720,
+        "x": 1680,
+        "y": 1580,
         "wires": [
             [
                 "fff088000ef81383"
@@ -2580,14 +2505,15 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2090,
-        "y": 100,
+        "x": 2410,
+        "y": 960,
         "wires": []
     },
     {
         "id": "7f8b0447b2aab70c",
         "type": "switch",
         "z": "32e6b1c785b786d2",
+        "g": "812d066c811aa8db",
         "name": "Filter data",
         "property": "payload",
         "propertyType": "msg",
@@ -2609,8 +2535,8 @@
         "checkall": "true",
         "repair": false,
         "outputs": 3,
-        "x": 300,
-        "y": 560,
+        "x": 580,
+        "y": 1400,
         "wires": [
             [
                 "ad071cf746fd4fd2"
@@ -2634,8 +2560,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 460,
-        "y": 540,
+        "x": 780,
+        "y": 1400,
         "wires": [
             [
                 "0f01862f36be38ab"
@@ -2651,8 +2577,8 @@
         "links": [
             "e4ed3f9404692874"
         ],
-        "x": 1515,
-        "y": 700,
+        "x": 1835,
+        "y": 1560,
         "wires": []
     },
     {
@@ -2661,8 +2587,8 @@
         "z": "32e6b1c785b786d2",
         "name": "Versie 28-02-2022 release 2",
         "info": "28-02-2022 R2:\n- Tasmota zigbee UI toegevoegd\n28-02-2022 R1:\n- Bug Ikea LED Strip opgelost, bij power 0 stuurt deze nu ook een 0 ipv 1\n27-02-2022 R1:\n- Batterijtrigger aangepast van \"true\" naar \"false\", dit lijkt effect te hebben op het aantal response meldingen van het device\n26-02-2022 R1: \n- Ikea powerplug, link naar gate verwijdert\n- Batterijtrigger voor E1743 aangepast, want deze stopte soms vanzelf.\n22-02-2022 R1: \n- Node.send for ikea E1743 voor linkage updates\n- Bug Ikea Powerplug opgelost, bij power 0 stuurt deze nu ook een 0 ipv 1\n19-02-2022 R1: \n- Xiaomi Water sensor toegevoegd, niet getest\n17-02-2022 R1: \n- Gestart met Versie nummers",
-        "x": 360,
-        "y": 280,
+        "x": 520,
+        "y": 900,
         "wires": []
     },
     {
@@ -2676,8 +2602,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2240,
-        "y": 1000,
+        "x": 2560,
+        "y": 1860,
         "wires": [
             [
                 "08ad024704865499"
@@ -2703,8 +2629,8 @@
             "898dc4b2f4e31ea8",
             "e4ed3f9404692874"
         ],
-        "x": 2515,
-        "y": 1000,
+        "x": 2835,
+        "y": 1860,
         "wires": []
     },
     {
@@ -2728,8 +2654,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 180,
-        "y": 780,
+        "x": 500,
+        "y": 1640,
         "wires": [
             [
                 "749058221c88e34a"
@@ -2747,8 +2673,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 320,
-        "y": 780,
+        "x": 640,
+        "y": 1640,
         "wires": [
             [
                 "f5acc65f2453f2f1"
@@ -2763,8 +2689,8 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 450,
-        "y": 780,
+        "x": 770,
+        "y": 1640,
         "wires": [
             []
         ]
@@ -2777,8 +2703,8 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 930,
-        "y": 700,
+        "x": 1250,
+        "y": 1560,
         "wires": [
             [
                 "baeb620c32d87004",
@@ -2797,8 +2723,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1160,
-        "y": 700,
+        "x": 1480,
+        "y": 1560,
         "wires": [
             [
                 "ccf0ce108a646aba",
@@ -2816,11 +2742,12 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 750,
-        "y": 880,
+        "x": 990,
+        "y": 1040,
         "wires": [
             [
-                "738203cee5b7576e"
+                "738203cee5b7576e",
+                "f7c665cefb19670e"
             ]
         ]
     },
@@ -2829,14 +2756,14 @@
         "type": "function",
         "z": "32e6b1c785b786d2",
         "name": "store zigbee sensors",
-        "func": "if (msg.payload.ZbReceived === undefined) return;\n\n// properties that should  show up in the status\nvar inStatus = [\"Contact\", \"Occupancy\", \"Power\", \"Power2\", \"Dimmer\", \"Hue\", \"CT\", \"ColorMode\", \"Sat\", \"RGB\", \"RGBb\", \"Temperature\", \"Humidity\", \"Pressure\", \"LocalTemperature\", \"OccupiedHeatingSetpoint\", \"PIHeatingDemand\", \"Illuminance\", \"AqaraVibrationMode\", \"AqaraVibrationsOrAngle\", \"AqaraVibration505\", \"ZoneStatusChange\", \"AqaraCube\", \"AqaraCubeSide\", \"AqaraCubeFromSide\", \"AqaraRotate\"];\n\n// properties that should not show up in the status\nvar notStatus = [\"Device\", \"Name\", \"BatteryVoltage\", \"BatteryPercentage\", \"LinkQuality\", \"Endpoint\", \"bridge\", \"lastTime\", \"seen\", \"label\", \"status\", \"EurotronicErrors\", \"0201/4008\", \"Xiaomi_64\"];\n\n//node.warn(msg.payload);\n\nvar devs = flow.get(\"t2zdevices\") || {};\n\nvar receivedSensors = []\nfor (var devN in msg.payload.ZbReceived) {\n    let devInfo = msg.payload.ZbReceived[devN];\n    let ID = devInfo.Device;\n    \n    // get dev by ID\n    let dev = devs[ID] || {};\n\n    for (let prop in devInfo) {\n        dev[prop] = devInfo[prop];\n    }\n    \n    if (devInfo.Name!==undefined) {\n        dev.label = devInfo.Name;\n    } else {\n        dev.label = ID; \n    }\n    dev.bridge = msg.topic.split(\"/\")[1];\n    dev.lastTime = new Date().getTime();\n    \n    // create status from properties\n    let status = \"\";\n    for (let prop in dev) {\n        if (inStatus.includes(prop)) {\n            status += \" \"+prop+\": \"+ dev[prop]; \n        }\n    }\n    if (status === \"\") {\n        for (let prop in dev) {\n            if (! notStatus.includes(prop)) {\n                status += \" \"+prop+\": \"+ dev[prop]; \n            }\n        }   \n    }\n    dev.status = status;\n    \n    // write back\n    devs[ID] = dev;\n    receivedSensors.push(dev);\n}\n\nObject.entries(devs).forEach(element => element[1].seen = Math.round((new Date().getTime()-element[1].lastTime)/60000)+\"m\");\n\nflow.set(\"t2zdevices\", devs);\n\nreturn [{payload:Object.values(devs)}, {payload:receivedSensors}];\n",
+        "func": "if (msg.payload.ZbReceived === undefined) return;\n\n// properties that should  show up in the status\nvar inStatus = [\"Contact\", \"Occupancy\", \"Power\", \"Power2\", \"Dimmer\", \"Hue\", \"CT\", \"ColorMode\", \"Sat\", \"RGB\", \"RGBb\", \"Temperature\", \"Humidity\", \"Pressure\", \"LocalTemperature\", \"OccupiedHeatingSetpoint\", \"PIHeatingDemand\", \"Illuminance\", \"AqaraVibrationMode\", \"AqaraVibrationsOrAngle\", \"AqaraVibration505\", \"ZoneStatusChange\", \"AqaraCube\", \"AqaraCubeSide\", \"AqaraCubeFromSide\", \"AqaraRotate\"];\n\n// properties that should not show up in the status\nvar notStatus = [\"Device\", \"Name\", \"BatteryVoltage\", \"BatteryPercentage\", \"LinkQuality\", \"Endpoint\", \"bridge\", \"lastTime\", \"seen\", \"label\", \"status\", \"EurotronicErrors\", \"0201/4008\", \"Xiaomi_64\"];\n\n//node.warn(msg.payload);\n\nvar devs = flow.get(\"t2zdevices\") || {};\n\nvar receivedSensors = []\nfor (var devN in msg.payload.ZbReceived) {\n    let devInfo = msg.payload.ZbReceived[devN];\n    let ID = devInfo.Device;\n    \n    // get dev by ID\n    let dev = devs[ID] || {};\n\n    for (let prop in devInfo) {\n        dev[prop] = devInfo[prop];\n    }\n    \n    if (devInfo.Name!==undefined) {\n        dev.label = devInfo.Name;\n    } else {\n        dev.label = ID; \n    }\n    dev.bridge = msg.topic.split(\"/\")[1];\n    dev.lastTime = new Date().getTime();\n    \n    // create status from properties\n    let status = \"\";\n    for (let prop in dev) {\n        if (inStatus.includes(prop)) {\n            status += \" \"+prop+\": \"+ dev[prop]; \n        }\n    }\n    if (status === \"\") {\n        for (let prop in dev) {\n            if (! notStatus.includes(prop)) {\n                status += \" \"+prop+\": \"+ dev[prop]; \n            }\n        }   \n    }\n    dev.status = status;\n    \n    // write back\n    devs[ID] = dev;\n    receivedSensors.push(dev);\n}\n\nObject.entries(devs).forEach(element => element[1].seen = Math.round((new Date().getTime()-element[1].lastTime)/60000)+\"m\");\n\nflow.set(\"t2zdevices\", devs);\n\n//return [{payload:Object.values(devs)}, {payload:receivedSensors}];\nreturn [{payload:Object.values(devs)}, {payload:Object.values(devs)}];\n",
         "outputs": 2,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 760,
-        "y": 1120,
+        "x": 1000,
+        "y": 760,
         "wires": [
             [
                 "e669c6020ec33ea2",
@@ -2854,8 +2781,8 @@
             "4f9f9724cbeb89b7"
         ],
         "uncaught": false,
-        "x": 810,
-        "y": 1300,
+        "x": 2810,
+        "y": 600,
         "wires": [
             []
         ]
@@ -2882,8 +2809,8 @@
         "topic": "ds",
         "payload": "",
         "payloadType": "str",
-        "x": 230,
-        "y": 1220,
+        "x": 2230,
+        "y": 520,
         "wires": [
             [
                 "2ae2420fae93fe5f"
@@ -2899,9 +2826,14 @@
         "topic": "",
         "qos": "",
         "retain": "",
-        "broker": "3c0dc680.cc0542",
-        "x": 590,
-        "y": 1220,
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "b1bc1db1ae7424c0",
+        "x": 2590,
+        "y": 520,
         "wires": []
     },
     {
@@ -2915,8 +2847,9 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 420,
-        "y": 1220,
+        "libs": [],
+        "x": 2420,
+        "y": 520,
         "wires": [
             [
                 "2ae2420fae93fe5f",
@@ -2937,25 +2870,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 620,
-        "y": 1280,
-        "wires": []
-    },
-    {
-        "id": "520de2863bf342b0",
-        "type": "debug",
-        "z": "32e6b1c785b786d2",
-        "g": "812d066c811aa8db",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 410,
-        "y": 980,
+        "x": 2620,
+        "y": 580,
         "wires": []
     },
     {
@@ -2967,14 +2883,16 @@
         "topic": "tele/#",
         "qos": "2",
         "datatype": "auto",
-        "broker": "3c0dc680.cc0542",
+        "broker": "b1bc1db1ae7424c0",
+        "nl": false,
+        "rap": false,
         "inputs": 0,
-        "x": 190,
-        "y": 940,
+        "x": 330,
+        "y": 1400,
         "wires": [
             [
                 "4f9f9724cbeb89b7",
-                "cb80ab4b8d230bd0"
+                "7f8b0447b2aab70c"
             ]
         ]
     },
@@ -2987,12 +2905,13 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 410,
-        "y": 1020,
+        "x": 590,
+        "y": 1300,
         "wires": [
             [
+                "d08da6060205cd88",
                 "09abadaf9cac5387",
-                "d08da6060205cd88"
+                "a7f044e8e2c649b1"
             ]
         ]
     },
@@ -3005,14 +2924,15 @@
         "topic": "stat/+/STATUS5",
         "qos": "2",
         "datatype": "auto",
-        "broker": "3c0dc680.cc0542",
+        "broker": "b1bc1db1ae7424c0",
+        "nl": false,
+        "rap": false,
         "inputs": 0,
-        "x": 220,
-        "y": 1000,
+        "x": 300,
+        "y": 1280,
         "wires": [
             [
-                "4f9f9724cbeb89b7",
-                "520de2863bf342b0"
+                "4f9f9724cbeb89b7"
             ]
         ]
     },
@@ -3025,51 +2945,17 @@
         "topic": "tele/+/INFO2",
         "qos": "2",
         "datatype": "auto",
-        "broker": "3c0dc680.cc0542",
+        "broker": "b1bc1db1ae7424c0",
+        "nl": false,
+        "rap": false,
         "inputs": 0,
-        "x": 210,
-        "y": 1120,
+        "x": 310,
+        "y": 1220,
         "wires": [
             [
-                "b5a2e68b2ecaa1f9",
                 "4f9f9724cbeb89b7"
             ]
         ]
-    },
-    {
-        "id": "b5a2e68b2ecaa1f9",
-        "type": "debug",
-        "z": "32e6b1c785b786d2",
-        "g": "812d066c811aa8db",
-        "name": "Info2",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 390,
-        "y": 1080,
-        "wires": []
-    },
-    {
-        "id": "cb80ab4b8d230bd0",
-        "type": "debug",
-        "z": "32e6b1c785b786d2",
-        "g": "812d066c811aa8db",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 410,
-        "y": 940,
-        "wires": []
     },
     {
         "id": "d41f574abdf8c5dd",
@@ -3080,14 +2966,15 @@
         "topic": "stat/+/STATUS2",
         "qos": "2",
         "datatype": "auto",
-        "broker": "3c0dc680.cc0542",
+        "broker": "b1bc1db1ae7424c0",
+        "nl": false,
+        "rap": false,
         "inputs": 0,
-        "x": 220,
-        "y": 1060,
+        "x": 300,
+        "y": 1340,
         "wires": [
             [
-                "4f9f9724cbeb89b7",
-                "b5a2e68b2ecaa1f9"
+                "4f9f9724cbeb89b7"
             ]
         ]
     },
@@ -3117,8 +3004,8 @@
         "topic": "oldname",
         "topicType": "str",
         "className": "",
-        "x": 1400,
-        "y": 1340,
+        "x": 1560,
+        "y": 640,
         "wires": [
             [
                 "edea2f707eaa6c2e"
@@ -3136,31 +3023,15 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 1160,
-        "y": 1340,
+        "libs": [],
+        "x": 1320,
+        "y": 640,
         "wires": [
             [
-                "d33963f3ee2f7ef1"
+                "d33963f3ee2f7ef1",
+                "376768625db0b7b5"
             ]
         ]
-    },
-    {
-        "id": "4d3a4ccd6c419799",
-        "type": "debug",
-        "z": "32e6b1c785b786d2",
-        "g": "05a2f116f05b8c19",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1930,
-        "y": 1440,
-        "wires": []
     },
     {
         "id": "202da5354877d0e8",
@@ -3183,8 +3054,8 @@
         "payloadType": "str",
         "topic": "rename",
         "topicType": "str",
-        "x": 1420,
-        "y": 1460,
+        "x": 1580,
+        "y": 760,
         "wires": [
             [
                 "edea2f707eaa6c2e"
@@ -3210,8 +3081,8 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "str",
-        "x": 1420,
-        "y": 1400,
+        "x": 1580,
+        "y": 700,
         "wires": [
             [
                 "edea2f707eaa6c2e"
@@ -3224,17 +3095,18 @@
         "z": "32e6b1c785b786d2",
         "g": "05a2f116f05b8c19",
         "name": "Rename Zigbee Dev.",
-        "func": "let rename = flow.get(\"renameZigbee\") || {};\nflow.set(\"renameZigbee\", rename);\n\nif (msg.topic === \"oldname\" && msg.payload !== \"\") {\n    let vars = msg.payload.split(\"/\");\n    rename.bridge = vars[0];\n    rename.device = vars[1];\n    flow.set(\"renameZigbee\", rename);\n    return;\n} else if (msg.topic === \"newname\") {\n    rename.newname = msg.payload;\n    flow.set(\"renameZigbee\", rename);\n    return;\n} else if (msg.topic === \"rename\") {\n    msg.topic = \"cmnd/\"+rename.bridge+\"/ZbName\";\n    msg.payload = rename.device + \",\" + rename.newname;\n}\n\n\n\nreturn msg;",
+        "func": "let rename = flow.get(\"renameZigbee\") || {};\nflow.set(\"renameZigbee\", rename);\n\nif (msg.topic === \"oldname\" && msg.payload !== \"\") {\n    //var string = \"{\" + \"_/\" + data1 + \"/_/}\"\n    //var array = string.split(\"/\")[2];\n    var string = \"{\" + \"_/\" + msg.payload + \"/_/}\";\n    let vars = string.split(\"/\");\n    //let vars = msg.payload.split(\"/\");\n    rename.bridge = vars[1];\n    rename.device = vars[2];\n    flow.set(\"renameZigbee\", rename);\n    return;\n} else if (msg.topic === \"newname\") {\n    rename.newname = msg.payload;\n    flow.set(\"renameZigbee\", rename);\n    return;\n} else if (msg.topic === \"rename\") {\n    msg.topic = \"cmnd/\"+rename.bridge+\"/ZbName\";\n    msg.payload = rename.device + \",\" + rename.newname;\n}\n\n\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 1720,
-        "y": 1360,
+        "libs": [],
+        "x": 1880,
+        "y": 660,
         "wires": [
             [
                 "21a702d22e35399a",
-                "d1ba4237ef3c3242"
+                "99d5e38aa6a308f7"
             ]
         ]
     },
@@ -3249,28 +3121,13 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 1670,
-        "y": 1440,
+        "x": 1830,
+        "y": 740,
         "wires": [
             [
-                "e42c3f20342ec925",
-                "4d3a4ccd6c419799"
+                "e42c3f20342ec925"
             ]
         ]
-    },
-    {
-        "id": "d1ba4237ef3c3242",
-        "type": "mqtt out",
-        "z": "32e6b1c785b786d2",
-        "g": "05a2f116f05b8c19",
-        "name": "",
-        "topic": "",
-        "qos": "",
-        "retain": "",
-        "broker": "3c0dc680.cc0542",
-        "x": 1930,
-        "y": 1360,
-        "wires": []
     },
     {
         "id": "e669c6020ec33ea2",
@@ -3280,7 +3137,7 @@
         "group": "d325c76.7444a38",
         "name": "Zigbee Devices",
         "order": 1,
-        "width": "22",
+        "width": "24",
         "height": "20",
         "columns": [
             {
@@ -3376,8 +3233,8 @@
         ],
         "outputs": 1,
         "cts": true,
-        "x": 1140,
-        "y": 1240,
+        "x": 1300,
+        "y": 860,
         "wires": [
             [
                 "82b014a353b034a7"
@@ -3395,8 +3252,9 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 1300,
-        "y": 1240,
+        "libs": [],
+        "x": 1480,
+        "y": 860,
         "wires": [
             [
                 "943de23188f1e72a"
@@ -3418,8 +3276,8 @@
         "raw": true,
         "topic": "",
         "name": "Zigbee Device Info",
-        "x": 1490,
-        "y": 1240,
+        "x": 1670,
+        "y": 860,
         "wires": [
             []
         ]
@@ -3446,8 +3304,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 290,
-        "y": 1380,
+        "x": 2290,
+        "y": 680,
         "wires": [
             [
                 "2dc045fd70544cb5",
@@ -3466,8 +3324,9 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 600,
-        "y": 1380,
+        "libs": [],
+        "x": 2600,
+        "y": 680,
         "wires": [
             [
                 "e157d9879540a216",
@@ -3490,8 +3349,8 @@
         "raw": true,
         "topic": "",
         "name": "Device Warning!",
-        "x": 900,
-        "y": 1380,
+        "x": 2900,
+        "y": 680,
         "wires": []
     },
     {
@@ -3501,8 +3360,8 @@
         "g": "bc769b1b3ab8db3f",
         "name": "Add your own notification service here:",
         "info": "",
-        "x": 530,
-        "y": 1460,
+        "x": 2530,
+        "y": 760,
         "wires": []
     },
     {
@@ -3516,8 +3375,8 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 570,
-        "y": 1420,
+        "x": 2570,
+        "y": 720,
         "wires": [
             [
                 "e157d9879540a216",
@@ -3542,8 +3401,8 @@
         "randomUnits": "seconds",
         "drop": false,
         "outputs": 1,
-        "x": 340,
-        "y": 1420,
+        "x": 2340,
+        "y": 720,
         "wires": [
             [
                 "3ca55e67a1a23c62"
@@ -3559,8 +3418,8 @@
         "links": [
             "764cb81e.ab379"
         ],
-        "x": 835,
-        "y": 1420,
+        "x": 2835,
+        "y": 720,
         "wires": []
     },
     {
@@ -3574,72 +3433,13 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 1160,
-        "y": 1060,
+        "x": 1320,
+        "y": 1120,
         "wires": [
             [
-                "5f0c4ecb4356aec6",
                 "5a82ae65dd933d20"
             ]
         ]
-    },
-    {
-        "id": "5f0c4ecb4356aec6",
-        "type": "ui_table",
-        "z": "32e6b1c785b786d2",
-        "g": "ddaee9b1391688ae",
-        "group": "5b9b9721.b33e6",
-        "name": "Zigbee Bridges",
-        "order": 1,
-        "width": "8",
-        "height": "3",
-        "columns": [
-            {
-                "field": "link",
-                "title": "Name",
-                "width": "28%",
-                "align": "left",
-                "formatter": "html",
-                "formatterParams": {
-                    "target": "_blank"
-                }
-            },
-            {
-                "field": "STATE.Wifi.RSSI",
-                "title": "RSSI",
-                "width": "12%",
-                "align": "left",
-                "formatter": "progress",
-                "formatterParams": {
-                    "target": "_blank"
-                }
-            },
-            {
-                "field": "seen",
-                "title": "Last",
-                "width": "15%",
-                "align": "left",
-                "formatter": "plaintext",
-                "formatterParams": {
-                    "target": "_blank"
-                }
-            },
-            {
-                "field": "ZbState.Message",
-                "title": "ZB Status",
-                "width": "45%",
-                "align": "left",
-                "formatter": "plaintext",
-                "formatterParams": {
-                    "target": "_blank"
-                }
-            }
-        ],
-        "outputs": 0,
-        "cts": false,
-        "x": 1420,
-        "y": 1060,
-        "wires": []
     },
     {
         "id": "a876b2262d2d8972",
@@ -3665,8 +3465,8 @@
         ],
         "payload": "",
         "topic": "oldname",
-        "x": 1430,
-        "y": 1140,
+        "x": 1770,
+        "y": 1120,
         "wires": [
             [
                 "d3729f0632afe0c5"
@@ -3679,13 +3479,14 @@
         "z": "32e6b1c785b786d2",
         "g": "ddaee9b1391688ae",
         "name": "extract devicenames",
-        "func": "\nmsg.options = msg.payload.map(obj => {\n   return obj.name;\n});\n\nmsg.payload = {};\nreturn msg;",
+        "func": "msg.options = msg.payload.map(obj => {\n   return obj.name;\n});\n\nmsg.payload = {};\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 1220,
-        "y": 1140,
+        "libs": [],
+        "x": 1560,
+        "y": 1120,
         "wires": [
             [
                 "a876b2262d2d8972"
@@ -3703,27 +3504,13 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 1610,
-        "y": 1140,
+        "x": 1950,
+        "y": 1120,
         "wires": [
             [
-                "457267156cd6a79d"
+                "70235a8b59920fe7"
             ]
         ]
-    },
-    {
-        "id": "457267156cd6a79d",
-        "type": "mqtt out",
-        "z": "32e6b1c785b786d2",
-        "g": "ddaee9b1391688ae",
-        "name": "",
-        "topic": "",
-        "qos": "",
-        "retain": "",
-        "broker": "3c0dc680.cc0542",
-        "x": 1770,
-        "y": 1140,
-        "wires": []
     },
     {
         "id": "f3db21b9723e0cfc",
@@ -3736,8 +3523,9 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 1340,
-        "y": 900,
+        "libs": [],
+        "x": 1500,
+        "y": 960,
         "wires": [
             [
                 "37e55389157ed1ad"
@@ -3752,7 +3540,7 @@
         "name": "",
         "label": "Stuur een bericht naar alle bridges",
         "group": "373ccf52.d5c97",
-        "order": 3,
+        "order": 1,
         "width": 0,
         "height": 0,
         "options": [
@@ -3782,8 +3570,8 @@
         "topicType": "str",
         "splitLayout": false,
         "className": "",
-        "x": 1200,
-        "y": 960,
+        "x": 1360,
+        "y": 1020,
         "wires": [
             [
                 "c70e98768b4cdaf1"
@@ -3801,11 +3589,11 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
-        "x": 1460,
-        "y": 960,
+        "x": 1620,
+        "y": 1020,
         "wires": [
             [
-                "739e79715feeb4f0"
+                "1b9c54730ad51654"
             ]
         ]
     },
@@ -3824,25 +3612,839 @@
         "raw": true,
         "topic": "",
         "name": "Tasmota Device Info",
-        "x": 1560,
-        "y": 900,
+        "x": 1720,
+        "y": 960,
         "wires": [
             []
         ]
     },
     {
-        "id": "739e79715feeb4f0",
-        "type": "mqtt out",
+        "id": "f7c665cefb19670e",
+        "type": "ui_table",
         "z": "32e6b1c785b786d2",
         "g": "054419e6dfea3c5a",
-        "name": "",
-        "topic": "",
-        "qos": "",
-        "retain": "",
-        "broker": "3c0dc680.cc0542",
-        "x": 1610,
+        "group": "5b9b9721.b33e6",
+        "name": "Tasmota Devices",
+        "order": 1,
+        "width": "8",
+        "height": "3",
+        "columns": [
+            {
+                "field": "link",
+                "title": "Name",
+                "width": "28%",
+                "align": "left",
+                "formatter": "html",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "STATE.Wifi.RSSI",
+                "title": "RSSI",
+                "width": "16%",
+                "align": "left",
+                "formatter": "progress",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "seen",
+                "title": "Last",
+                "width": "15%",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "ZbState.Message",
+                "title": "Zb Status",
+                "width": "42%",
+                "align": "right",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            }
+        ],
+        "outputs": 1,
+        "cts": true,
+        "x": 1310,
         "y": 960,
+        "wires": [
+            [
+                "f3db21b9723e0cfc"
+            ]
+        ]
+    },
+    {
+        "id": "c2543eb2434ed034",
+        "type": "ui_button",
+        "z": "32e6b1c785b786d2",
+        "g": "aa230766d58b72a8",
+        "name": "",
+        "group": "4d67a6b2.8bc0e",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Update bridges status",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "topicType": "str",
+        "x": 2260,
+        "y": 580,
+        "wires": [
+            [
+                "2ee82fa6912e4647"
+            ]
+        ]
+    },
+    {
+        "id": "8ecb1a7237e6ad5e",
+        "type": "json",
+        "z": "32e6b1c785b786d2",
+        "g": "342e272fde205046",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 2130,
+        "y": 420,
+        "wires": [
+            [
+                "3ba3b3d5afc5b7df"
+            ]
+        ]
+    },
+    {
+        "id": "3ba3b3d5afc5b7df",
+        "type": "file",
+        "z": "32e6b1c785b786d2",
+        "g": "342e272fde205046",
+        "name": "Save to file",
+        "filename": "/home/pi/domoticz/plugins/tasmota2zigbee/zigbeeidxtabel.txt",
+        "appendNewline": false,
+        "createDir": true,
+        "overwriteFile": "true",
+        "x": 2310,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c5c4597ec7e244f2",
+        "type": "file in",
+        "z": "32e6b1c785b786d2",
+        "g": "2b14dd6ae297283b",
+        "name": "Read file",
+        "filename": "/home/pi/domoticz/plugins/tasmota2zigbee/zigbeeidxtabel.txt",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 2400,
+        "y": 860,
+        "wires": [
+            [
+                "21c95c5161e18956"
+            ]
+        ]
+    },
+    {
+        "id": "21c95c5161e18956",
+        "type": "json",
+        "z": "32e6b1c785b786d2",
+        "g": "2b14dd6ae297283b",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 2570,
+        "y": 860,
+        "wires": [
+            [
+                "8323979a6ecc7569"
+            ]
+        ]
+    },
+    {
+        "id": "56f447df100afcfa",
+        "type": "inject",
+        "z": "32e6b1c785b786d2",
+        "g": "2b14dd6ae297283b",
+        "name": "Tijd sync",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payloadType": "date",
+        "x": 2220,
+        "y": 860,
+        "wires": [
+            [
+                "c5c4597ec7e244f2"
+            ]
+        ]
+    },
+    {
+        "id": "481e845fe0a736c7",
+        "type": "debug",
+        "z": "32e6b1c785b786d2",
+        "g": "2b14dd6ae297283b",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2950,
+        "y": 860,
         "wires": []
+    },
+    {
+        "id": "e1417a024763e7fe",
+        "type": "function",
+        "z": "32e6b1c785b786d2",
+        "g": "fc3ffea91c83f578",
+        "name": "",
+        "func": "flow.set(\"t2ztest\", \"\");\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 1720,
+        "wires": [
+            [
+                "5dc9a5c207e8575c"
+            ]
+        ]
+    },
+    {
+        "id": "71c13e1afc67c07c",
+        "type": "inject",
+        "z": "32e6b1c785b786d2",
+        "g": "fc3ffea91c83f578",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 500,
+        "y": 1720,
+        "wires": [
+            [
+                "e1417a024763e7fe"
+            ]
+        ]
+    },
+    {
+        "id": "5dc9a5c207e8575c",
+        "type": "debug",
+        "z": "32e6b1c785b786d2",
+        "g": "fc3ffea91c83f578",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 1720,
+        "wires": []
+    },
+    {
+        "id": "376768625db0b7b5",
+        "type": "ui_dropdown",
+        "z": "32e6b1c785b786d2",
+        "g": "342e272fde205046",
+        "name": "",
+        "label": "Apparaat",
+        "tooltip": "",
+        "place": "",
+        "group": "2849dc0dfedfa270",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "multiple": false,
+        "options": [
+            {
+                "label": "",
+                "value": "",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "device",
+        "topicType": "str",
+        "className": "",
+        "x": 1600,
+        "y": 420,
+        "wires": [
+            [
+                "24d22abc9e1ab60f"
+            ]
+        ]
+    },
+    {
+        "id": "2c282dd1ec8d4503",
+        "type": "ui_text_input",
+        "z": "32e6b1c785b786d2",
+        "g": "342e272fde205046",
+        "name": "",
+        "label": "IDX nummer",
+        "tooltip": "",
+        "group": "2849dc0dfedfa270",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": "0",
+        "topic": "idx",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "str",
+        "x": 1610,
+        "y": 180,
+        "wires": [
+            [
+                "24d22abc9e1ab60f"
+            ]
+        ]
+    },
+    {
+        "id": "81f07f96a45e1c0a",
+        "type": "ui_dropdown",
+        "z": "32e6b1c785b786d2",
+        "g": "342e272fde205046",
+        "name": "",
+        "label": "",
+        "tooltip": "",
+        "place": "Kies type device",
+        "group": "2849dc0dfedfa270",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "Xiaomi deursensor",
+                "value": "1",
+                "type": "str"
+            },
+            {
+                "label": "Xiaomi motion",
+                "value": "2",
+                "type": "str"
+            },
+            {
+                "label": "Xiaomi smoke",
+                "value": "3",
+                "type": "str"
+            },
+            {
+                "label": "Osram mini switch",
+                "value": "4",
+                "type": "str"
+            },
+            {
+                "label": "Lidl Livarno Bulb",
+                "value": "5",
+                "type": "str"
+            },
+            {
+                "label": "Heiman CO",
+                "value": "6",
+                "type": "str"
+            },
+            {
+                "label": "Ikea E1743",
+                "value": "7",
+                "type": "str"
+            },
+            {
+                "label": "Ikea Led strip",
+                "value": "8",
+                "type": "str"
+            },
+            {
+                "label": "Xiaomi WSDCFQ11LM",
+                "value": "9",
+                "type": "str"
+            },
+            {
+                "label": "Ikea Powerplug",
+                "value": "10",
+                "type": "str"
+            },
+            {
+                "label": "Xiaomi Lux sensor",
+                "value": "11",
+                "type": "str"
+            },
+            {
+                "label": "Xiaomi WSDCGQ01LM",
+                "value": "12",
+                "type": "str"
+            },
+            {
+                "label": "Xiaomi Water sensor",
+                "value": "13",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "type",
+        "topicType": "str",
+        "className": "",
+        "x": 1600,
+        "y": 140,
+        "wires": [
+            [
+                "24d22abc9e1ab60f"
+            ]
+        ]
+    },
+    {
+        "id": "b78371b5ab34502d",
+        "type": "ui_button",
+        "z": "32e6b1c785b786d2",
+        "g": "342e272fde205046",
+        "name": "",
+        "group": "2849dc0dfedfa270",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Set settings",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "submit",
+        "topicType": "str",
+        "x": 1610,
+        "y": 380,
+        "wires": [
+            [
+                "24d22abc9e1ab60f",
+                "7d360ac1a9c0face"
+            ]
+        ]
+    },
+    {
+        "id": "da61aa56340660d7",
+        "type": "function",
+        "z": "32e6b1c785b786d2",
+        "g": "342e272fde205046",
+        "name": "Clear",
+        "func": "flow.set(\"renameZigbee\", {});\ndelete msg.payload;\nmsg.payload =\"\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1270,
+        "y": 220,
+        "wires": [
+            [
+                "81f07f96a45e1c0a",
+                "2c282dd1ec8d4503",
+                "7bda4cc6084e4b4b",
+                "2bf44a259c619be9",
+                "90d3cd9a221a8d81",
+                "0dac2a94f75ffde2"
+            ]
+        ]
+    },
+    {
+        "id": "24d22abc9e1ab60f",
+        "type": "function",
+        "z": "32e6b1c785b786d2",
+        "g": "342e272fde205046",
+        "name": "Set Device settings",
+        "func": "var data1 = context.get(\"data1\") || 0; //get from context or default to 0\nvar data2 = context.get(\"data2\") || 0; //get from context or default to 0\nvar data3 = context.get(\"data3\") || 0; //get from context or default to 0\nvar data4 = context.get(\"data4\") || 0; //get from context or default to 0\nvar data5 = context.get(\"data5\") || 0; //get from context or default to 0\nvar data6 = context.get(\"data6\") || 0; //get from context or default to 0\nvar data7 = context.get(\"data7\") || 0; //get from context or default to 0\n\nvar reconfig = flow.get(\"t2ztest\") || {};\n\nswitch (msg.topic){\n\n    case \"device\":\n        data1 = msg.payload; \n        context.set(\"data1\", data1);//store in context for next time \n        return;\n    \n    case \"type\":\n        data2 = msg.payload; \n        context.set(\"data2\", data2);//store in context for next time \n        return;\n    \n    case \"idx\":\n        data3 = msg.payload; \n        context.set(\"data3\", data3);//store in context for next time \n        return;\n        \n    case \"idxbat\":\n        data4 = msg.payload;\n        context.set(\"data4\", data4); //store in context for next time \n        return;\n        \n    case \"idxper\":\n        data5 = msg.payload;\n        context.set(\"data5\", data5); //store in context for next time \n        return;\n    \n    case \"idxlink\":\n        data6 = msg.payload;\n        context.set(\"data6\", data6); //store in context for next time \n        return;\n    \n    case \"idxextra\":\n        data7 = msg.payload;\n        context.set(\"data7\", data7); //store in context for next time \n        return;\n        \n    case \"submit\":\n        msg.payload = \"Device: \"+ data1 +\" , type: \" + data2 +\" , idx: \" + data3 +\" , idxbat: \" + data4 +\" , idxper: \" + data5 + \", idxlink: \" + data6 + \", idxextra: \" + data7;\n        var string = \"{\" + \"_/\" + data1 + \"/_/}\"\n        var array = string.split(\"/\")[2];\n\n        var receivedSensors = []\n\n        let dev = reconfig[array] || {};\n    \n        dev.type = data2;\n        dev.idx = data3;\n        dev.idxbat = data4;\n        dev.idxper = data5;\n        dev.idxlink = data6;\n        dev.idxextra = data7;\n \n        // write back\n        reconfig[array] = dev;\n        receivedSensors.push(dev);\n \n        flow.set(\"t2ztest\", reconfig);\n    }\n\nreturn [{payload:Object.values(reconfig)}];\n//return msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1910,
+        "y": 420,
+        "wires": [
+            [
+                "466516d2d35d133a",
+                "8ecb1a7237e6ad5e"
+            ]
+        ]
+    },
+    {
+        "id": "7bda4cc6084e4b4b",
+        "type": "ui_text_input",
+        "z": "32e6b1c785b786d2",
+        "g": "342e272fde205046",
+        "name": "",
+        "label": "IDX batterij",
+        "tooltip": "",
+        "group": "2849dc0dfedfa270",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": "0",
+        "topic": "idxbat",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "str",
+        "x": 1610,
+        "y": 220,
+        "wires": [
+            [
+                "24d22abc9e1ab60f"
+            ]
+        ]
+    },
+    {
+        "id": "2bf44a259c619be9",
+        "type": "ui_text_input",
+        "z": "32e6b1c785b786d2",
+        "g": "342e272fde205046",
+        "name": "",
+        "label": "IDX percentage",
+        "tooltip": "",
+        "group": "2849dc0dfedfa270",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": "0",
+        "topic": "idxper",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "str",
+        "x": 1620,
+        "y": 260,
+        "wires": [
+            [
+                "24d22abc9e1ab60f"
+            ]
+        ]
+    },
+    {
+        "id": "90d3cd9a221a8d81",
+        "type": "ui_text_input",
+        "z": "32e6b1c785b786d2",
+        "g": "342e272fde205046",
+        "name": "",
+        "label": "IDX extra",
+        "tooltip": "",
+        "group": "2849dc0dfedfa270",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": "0",
+        "topic": "idxextra",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "str",
+        "x": 1600,
+        "y": 340,
+        "wires": [
+            [
+                "24d22abc9e1ab60f"
+            ]
+        ]
+    },
+    {
+        "id": "7d360ac1a9c0face",
+        "type": "delay",
+        "z": "32e6b1c785b786d2",
+        "g": "342e272fde205046",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "500",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1930,
+        "y": 380,
+        "wires": [
+            [
+                "da61aa56340660d7"
+            ]
+        ]
+    },
+    {
+        "id": "0dac2a94f75ffde2",
+        "type": "ui_text_input",
+        "z": "32e6b1c785b786d2",
+        "g": "342e272fde205046",
+        "name": "",
+        "label": "IDX link",
+        "tooltip": "",
+        "group": "2849dc0dfedfa270",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": "0",
+        "topic": "idxlink",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "str",
+        "x": 1600,
+        "y": 300,
+        "wires": [
+            [
+                "24d22abc9e1ab60f"
+            ]
+        ]
+    },
+    {
+        "id": "70235a8b59920fe7",
+        "type": "link out",
+        "z": "32e6b1c785b786d2",
+        "g": "ddaee9b1391688ae",
+        "name": "Manage zigbee bridge",
+        "mode": "link",
+        "links": [
+            "e4ed3f9404692874"
+        ],
+        "x": 2075,
+        "y": 1120,
+        "wires": []
+    },
+    {
+        "id": "1b9c54730ad51654",
+        "type": "link out",
+        "z": "32e6b1c785b786d2",
+        "g": "054419e6dfea3c5a",
+        "name": "To all zigbee bridges",
+        "mode": "link",
+        "links": [
+            "e4ed3f9404692874"
+        ],
+        "x": 1735,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "99d5e38aa6a308f7",
+        "type": "link out",
+        "z": "32e6b1c785b786d2",
+        "g": "05a2f116f05b8c19",
+        "name": "Herbenoem zigbee apparaat",
+        "mode": "link",
+        "links": [
+            "e4ed3f9404692874"
+        ],
+        "x": 2055,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "a7f044e8e2c649b1",
+        "type": "function",
+        "z": "32e6b1c785b786d2",
+        "name": "Voorbereiden voor device tabel",
+        "func": "if (msg.payload.ZbReceived === undefined) return;\n\nvar devs = flow.get(\"t2ztest\") || {};\n\nvar receivedSensors = []\nfor (var devN in msg.payload.ZbReceived) {\n    let devInfo = msg.payload.ZbReceived[devN];\n    let ID = devInfo.Device;\n    let Name = devInfo.Name;\n    \n    // get dev by ID\n    let dev = devs[ID] || {};\n    \n    if (dev.type===undefined) {\n        dev.type = \"onbekend\";\n    }\n    if (dev.idx===undefined) {\n        dev.idx = 0;\n    }\n    if (dev.idxbat===undefined) {\n        dev.idxbat = 0;\n    }\n    if (dev.idxper===undefined) {\n        dev.idxper = 0;\n    }\n    if (dev.idxlink===undefined) {\n        dev.idxlink = 0;\n    }\n    if (dev.idxextra===undefined) {\n        dev.idxextra = 0;\n    }\n\n    dev.zigbeeid = ID;\n    dev.bridge = msg.topic.split(\"/\")[1];\n    dev.name = Name;\n\n    // write back\n    devs[ID] = dev;\n    receivedSensors.push(dev);\n}\n\n//Object.entries(devs).forEach(element => element[1].seen = Math.round((new Date().getTime()-element[1].lastTime)/60000)+\"m\");\n\nflow.set(\"t2ztest\", devs);\n\n//return [{payload:Object.values(devs)}, {payload:receivedSensors}];\nreturn [{payload:Object.values(devs)}];\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1030,
+        "y": 560,
+        "wires": [
+            [
+                "466516d2d35d133a"
+            ]
+        ]
+    },
+    {
+        "id": "466516d2d35d133a",
+        "type": "ui_table",
+        "z": "32e6b1c785b786d2",
+        "group": "ce31945d33f64665",
+        "name": "Zigbee tabel",
+        "order": 1,
+        "width": "18",
+        "height": "8",
+        "columns": [
+            {
+                "field": "name",
+                "title": "Naam",
+                "width": "15%",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "type",
+                "title": "Apparaat type",
+                "width": "11%",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "zigbeeid",
+                "title": "Device",
+                "width": "8%",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "bridge",
+                "title": "Bridge",
+                "width": "12%",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "idx",
+                "title": "idx switch",
+                "width": "11%",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "idxbat",
+                "title": "idx batterij",
+                "width": "10%",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "idxper",
+                "title": "idx percentage",
+                "width": "12%",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "idxlink",
+                "title": "idx link",
+                "width": "11%",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "idxextra",
+                "title": "idx extra",
+                "width": "11%",
+                "align": "center",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            }
+        ],
+        "outputs": 1,
+        "cts": true,
+        "x": 1310,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8323979a6ecc7569",
+        "type": "function",
+        "z": "32e6b1c785b786d2",
+        "g": "2b14dd6ae297283b",
+        "name": "Set flow.get test",
+        "func": "var store =  msg.payload;\nflow.set(\"t2ztest\", store)\nmsg.payload = store;\nreturn[msg];",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2760,
+        "y": 860,
+        "wires": [
+            [
+                "481e845fe0a736c7"
+            ]
+        ]
     },
     {
         "id": "b1bc1db1ae7424c0",
@@ -3883,29 +4485,9 @@
         "logsize": "100"
     },
     {
-        "id": "3c0dc680.cc0542",
-        "type": "mqtt-broker",
-        "name": "homeserver localhost",
-        "broker": "localhost",
-        "port": "1883",
-        "clientid": "node-red",
-        "usetls": false,
-        "compatmode": true,
-        "keepalive": "60",
-        "cleansession": true,
-        "birthTopic": "",
-        "birthQos": "0",
-        "birthPayload": "",
-        "closeTopic": "",
-        "closePayload": "",
-        "willTopic": "",
-        "willQos": "0",
-        "willPayload": ""
-    },
-    {
         "id": "4d67a6b2.8bc0e",
         "type": "ui_group",
-        "name": "Herbenoem Zigbee Apparaat",
+        "name": "Verander naam Zigbee Apparaat",
         "tab": "abe3d4c.9322328",
         "order": 3,
         "disp": true,
@@ -3916,11 +4498,11 @@
     {
         "id": "d325c76.7444a38",
         "type": "ui_group",
-        "name": "Zigbee Apparaten",
+        "name": "Zigbee tabel",
         "tab": "abe3d4c.9322328",
-        "order": 5,
+        "order": 6,
         "disp": true,
-        "width": "22",
+        "width": "24",
         "collapse": false,
         "className": ""
     },
@@ -3933,5 +4515,47 @@
         "disp": true,
         "width": "8",
         "collapse": false
+    },
+    {
+        "id": "373ccf52.d5c97",
+        "type": "ui_group",
+        "name": "Bericht naar alle bridges",
+        "tab": "abe3d4c.9322328",
+        "order": 2,
+        "disp": true,
+        "width": "8",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "2849dc0dfedfa270",
+        "type": "ui_group",
+        "name": "Set idx nummers",
+        "tab": "abe3d4c.9322328",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "ce31945d33f64665",
+        "type": "ui_group",
+        "name": "IDX tabel",
+        "tab": "abe3d4c.9322328",
+        "order": 5,
+        "disp": true,
+        "width": "18",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "abe3d4c.9322328",
+        "type": "ui_tab",
+        "name": "Tasmota Zigbee Admin",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
     }
 ]
