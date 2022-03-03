@@ -25,7 +25,7 @@
             "c2543eb2434ed034"
         ],
         "x": 2114,
-        "y": 459,
+        "y": 419,
         "w": 622,
         "h": 142
     },
@@ -119,7 +119,7 @@
             "93d507cb91268b43"
         ],
         "x": 2114,
-        "y": 619,
+        "y": 579,
         "w": 892,
         "h": 162
     },
@@ -198,7 +198,7 @@
         ],
         "env": [],
         "x": 1194,
-        "y": 59,
+        "y": 19,
         "w": 1212,
         "h": 382
     },
@@ -243,7 +243,7 @@
         ],
         "env": [],
         "x": 2114,
-        "y": 799,
+        "y": 759,
         "w": 1372,
         "h": 122
     },
@@ -260,13 +260,16 @@
         "nodes": [
             "466516d2d35d133a",
             "2c3829ae941b05df",
-            "1a53da933bfd8c5d"
+            "1a53da933bfd8c5d",
+            "b078324fb7eaaff9",
+            "810c2c17eb1aa35d",
+            "52e4097a46ded523"
         ],
         "env": [],
         "x": 1194,
-        "y": 459,
-        "w": 572,
-        "h": 82
+        "y": 419,
+        "w": 832,
+        "h": 122
     },
     {
         "id": "fcdf7fc73dd7af70",
@@ -619,7 +622,8 @@
         "y": 1380,
         "wires": [
             [
-                "269bdd93eaa30e8b"
+                "269bdd93eaa30e8b",
+                "8e5afcb0f0640b08"
             ]
         ]
     },
@@ -2482,26 +2486,6 @@
         "wires": []
     },
     {
-        "id": "f381f56d1b97d99e",
-        "type": "function",
-        "z": "32e6b1c785b786d2",
-        "d": true,
-        "name": "E1743 last seen",
-        "func": "var getflow = flow.keys();\nvar m_out=[]; //array for message objects\nvar idx;\nvar level;\n\nfor ( var i = 0; i < getflow.length; i++ ) {\n    var zigbeedevice = getflow[i]; //geeft het zigbee ID\n    idx = flow.get(zigbeedevice)[0]; //geeft array0\n    level = flow.get(zigbeedevice)[1]; //geeft array1\n    msg.topic = \"domoticz/in\";\n    msg.payload = {\"command\": \"switchlight\", \"idx\": idx, \"switchcmd\": \"Set Level\", \"level\": level, \"parse\": false};\n    m_out.push(msg);\n}\n\nreturn[m_out];",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1680,
-        "y": 1540,
-        "wires": [
-            [
-                "fff088000ef81383"
-            ]
-        ]
-    },
-    {
         "id": "ccf0ce108a646aba",
         "type": "function",
         "z": "32e6b1c785b786d2",
@@ -2513,7 +2497,7 @@
         "finalize": "",
         "libs": [],
         "x": 1680,
-        "y": 1580,
+        "y": 1560,
         "wires": [
             [
                 "fff088000ef81383"
@@ -2755,8 +2739,7 @@
         "y": 1560,
         "wires": [
             [
-                "ccf0ce108a646aba",
-                "f381f56d1b97d99e"
+                "ccf0ce108a646aba"
             ]
         ]
     },
@@ -2810,7 +2793,7 @@
         ],
         "uncaught": false,
         "x": 1930,
-        "y": 500,
+        "y": 820,
         "wires": [
             []
         ]
@@ -2838,7 +2821,7 @@
         "payload": "",
         "payloadType": "str",
         "x": 2230,
-        "y": 500,
+        "y": 460,
         "wires": [
             [
                 "2ae2420fae93fe5f"
@@ -2861,7 +2844,7 @@
         "expiry": "",
         "broker": "b1bc1db1ae7424c0",
         "x": 2590,
-        "y": 500,
+        "y": 460,
         "wires": []
     },
     {
@@ -2877,7 +2860,7 @@
         "finalize": "",
         "libs": [],
         "x": 2420,
-        "y": 500,
+        "y": 460,
         "wires": [
             [
                 "2ae2420fae93fe5f",
@@ -2899,7 +2882,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 2620,
-        "y": 560,
+        "y": 520,
         "wires": []
     },
     {
@@ -3334,7 +3317,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 2290,
-        "y": 660,
+        "y": 620,
         "wires": [
             [
                 "2dc045fd70544cb5",
@@ -3355,7 +3338,7 @@
         "finalize": "",
         "libs": [],
         "x": 2600,
-        "y": 660,
+        "y": 620,
         "wires": [
             [
                 "e157d9879540a216",
@@ -3379,7 +3362,7 @@
         "topic": "",
         "name": "Device Warning!",
         "x": 2900,
-        "y": 660,
+        "y": 620,
         "wires": []
     },
     {
@@ -3390,7 +3373,7 @@
         "name": "Add your own notification service here:",
         "info": "",
         "x": 2530,
-        "y": 740,
+        "y": 700,
         "wires": []
     },
     {
@@ -3405,7 +3388,7 @@
         "initialize": "",
         "finalize": "",
         "x": 2570,
-        "y": 700,
+        "y": 660,
         "wires": [
             [
                 "e157d9879540a216",
@@ -3431,7 +3414,7 @@
         "drop": false,
         "outputs": 1,
         "x": 2340,
-        "y": 700,
+        "y": 660,
         "wires": [
             [
                 "3ca55e67a1a23c62"
@@ -3448,7 +3431,7 @@
             "764cb81e.ab379"
         ],
         "x": 2835,
-        "y": 700,
+        "y": 660,
         "wires": []
     },
     {
@@ -3731,7 +3714,7 @@
         "topic": "",
         "topicType": "str",
         "x": 2260,
-        "y": 560,
+        "y": 520,
         "wires": [
             [
                 "2ee82fa6912e4647"
@@ -3748,7 +3731,7 @@
         "action": "",
         "pretty": false,
         "x": 2130,
-        "y": 360,
+        "y": 320,
         "wires": [
             [
                 "3ba3b3d5afc5b7df"
@@ -3766,7 +3749,7 @@
         "createDir": true,
         "overwriteFile": "true",
         "x": 2310,
-        "y": 360,
+        "y": 320,
         "wires": [
             []
         ]
@@ -3784,7 +3767,7 @@
         "encoding": "none",
         "allProps": false,
         "x": 2360,
-        "y": 840,
+        "y": 800,
         "wires": [
             [
                 "21c95c5161e18956"
@@ -3801,7 +3784,7 @@
         "action": "",
         "pretty": false,
         "x": 2490,
-        "y": 840,
+        "y": 800,
         "wires": [
             [
                 "7473e02c36c330c9"
@@ -3830,7 +3813,7 @@
         "topic": "",
         "payloadType": "date",
         "x": 2220,
-        "y": 840,
+        "y": 800,
         "wires": [
             [
                 "c5c4597ec7e244f2"
@@ -3851,7 +3834,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 3370,
-        "y": 840,
+        "y": 800,
         "wires": []
     },
     {
@@ -3948,7 +3931,7 @@
         "topicType": "str",
         "className": "",
         "x": 1600,
-        "y": 380,
+        "y": 340,
         "wires": [
             [
                 "24d22abc9e1ab60f"
@@ -3975,7 +3958,7 @@
         "className": "",
         "topicType": "str",
         "x": 1610,
-        "y": 140,
+        "y": 100,
         "wires": [
             [
                 "24d22abc9e1ab60f"
@@ -4069,7 +4052,7 @@
         "topicType": "str",
         "className": "",
         "x": 1600,
-        "y": 100,
+        "y": 60,
         "wires": [
             [
                 "24d22abc9e1ab60f"
@@ -4098,7 +4081,7 @@
         "topic": "submit",
         "topicType": "str",
         "x": 1610,
-        "y": 340,
+        "y": 300,
         "wires": [
             [
                 "24d22abc9e1ab60f",
@@ -4118,7 +4101,7 @@
         "initialize": "",
         "finalize": "",
         "x": 1270,
-        "y": 180,
+        "y": 140,
         "wires": [
             [
                 "81f07f96a45e1c0a",
@@ -4143,7 +4126,7 @@
         "finalize": "",
         "libs": [],
         "x": 1910,
-        "y": 380,
+        "y": 340,
         "wires": [
             [
                 "8ecb1a7237e6ad5e"
@@ -4173,7 +4156,7 @@
         "className": "",
         "topicType": "str",
         "x": 1610,
-        "y": 180,
+        "y": 140,
         "wires": [
             [
                 "24d22abc9e1ab60f"
@@ -4200,7 +4183,7 @@
         "className": "",
         "topicType": "str",
         "x": 1620,
-        "y": 220,
+        "y": 180,
         "wires": [
             [
                 "24d22abc9e1ab60f"
@@ -4227,7 +4210,7 @@
         "className": "",
         "topicType": "str",
         "x": 1600,
-        "y": 300,
+        "y": 260,
         "wires": [
             [
                 "24d22abc9e1ab60f"
@@ -4253,7 +4236,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 1930,
-        "y": 340,
+        "y": 300,
         "wires": [
             [
                 "da61aa56340660d7"
@@ -4280,7 +4263,7 @@
         "className": "",
         "topicType": "str",
         "x": 1600,
-        "y": 260,
+        "y": 220,
         "wires": [
             [
                 "24d22abc9e1ab60f"
@@ -4463,7 +4446,7 @@
         "outputs": 1,
         "cts": true,
         "x": 1290,
-        "y": 500,
+        "y": 460,
         "wires": [
             [
                 "2c3829ae941b05df"
@@ -4483,7 +4466,7 @@
         "finalize": "",
         "libs": [],
         "x": 3180,
-        "y": 840,
+        "y": 800,
         "wires": [
             [
                 "481e845fe0a736c7",
@@ -4552,10 +4535,12 @@
         "finalize": "",
         "libs": [],
         "x": 1460,
-        "y": 500,
+        "y": 460,
         "wires": [
             [
-                "1a53da933bfd8c5d"
+                "1a53da933bfd8c5d",
+                "b078324fb7eaaff9",
+                "41a4f1d59a1d6403"
             ]
         ]
     },
@@ -4576,7 +4561,7 @@
         "topic": "",
         "name": "Zigbee Device Info",
         "x": 1650,
-        "y": 500,
+        "y": 460,
         "wires": [
             []
         ]
@@ -4594,7 +4579,7 @@
         "finalize": "",
         "libs": [],
         "x": 2620,
-        "y": 840,
+        "y": 800,
         "wires": [
             [
                 "59c69e3ca4cad7cb"
@@ -4614,7 +4599,7 @@
         "stream": false,
         "addname": "",
         "x": 2750,
-        "y": 840,
+        "y": 800,
         "wires": [
             [
                 "9d9cc3cc6fa57133"
@@ -4634,7 +4619,7 @@
         "finalize": "",
         "libs": [],
         "x": 2880,
-        "y": 840,
+        "y": 800,
         "wires": [
             [
                 "20ef08116235f529"
@@ -4663,7 +4648,7 @@
         "reduceInitType": "",
         "reduceFixup": "",
         "x": 3010,
-        "y": 840,
+        "y": 800,
         "wires": [
             [
                 "8323979a6ecc7569"
@@ -4681,7 +4666,7 @@
             "7348ab76bf1cbc93"
         ],
         "x": 2095,
-        "y": 400,
+        "y": 360,
         "wires": []
     },
     {
@@ -4692,7 +4677,8 @@
         "links": [
             "39038a9d2681bd20",
             "11cf87a7201afe52",
-            "081b4575f60f755b"
+            "081b4575f60f755b",
+            "41a4f1d59a1d6403"
         ],
         "x": 595,
         "y": 520,
@@ -4713,7 +4699,7 @@
             "7348ab76bf1cbc93"
         ],
         "x": 3315,
-        "y": 880,
+        "y": 840,
         "wires": []
     },
     {
@@ -4803,7 +4789,7 @@
         "type": "function",
         "z": "32e6b1c785b786d2",
         "name": "Tasmota ID filter",
-        "func": "if ( msg.src === 'tasmota' ) {\n    var devs = flow.get(\"t2ztable\") || {};\n    var storepayload = msg.payload;\n    var zigbeedevice\n\n    for (var devN in msg.payload.ZbReceived) {\n        let devInfo = msg.payload.ZbReceived[devN];\n        let ID = devInfo.Device;\n\n        // get dev by ID\n        var dev = devs[ID] || {};\n\n        zigbeedevice = parseInt(dev.type);\n        storepayload[\"ZbReceived\"].idx = parseInt(dev.idx);\n        storepayload[\"ZbReceived\"].idxbat = parseInt(dev.idxbat);\n\t    storepayload[\"ZbReceived\"].idxper = parseInt(dev.idxper);\n\t    storepayload[\"ZbReceived\"].idxlink = parseInt(dev.idxlink);\n\t    storepayload[\"ZbReceived\"].idxextra = parseInt(dev.idxextra);\n\t    storepayload[\"ZbReceived\"].zigbeeid = dev.zigbeeid;\n        storepayload[\"ZbReceived\"].topicname = dev.bridge;\n            \n        //msg.payload = zigbeedevice;\n        //return [msg]\n    }\n    msg.payload = storepayload;\n    if ( zigbeedevice === 1 ) {\n        return [null, msg, null, null, null, null, null, null, null, null, null, null, null, null]; \n    } \n    else if ( zigbeedevice === 2 ) {\n        return [null, null, msg, null, null, null, null, null, null, null, null, null, null, null]; \n    }\n    else if ( zigbeedevice === 3 ) {\n        return [null, null, null, msg, null, null, null, null, null, null, null, null, null, null]; \n    }\n    else if ( zigbeedevice === 4 ) {\n        return [null, null, null, null, msg, null, null, null, null, null, null, null, null, null]; \n    }\n    else if ( zigbeedevice === 5 ) {\n        return [null, null, null, null, null, msg, null, null, null, null, null, null, null, null]; \n    }\n    else if ( zigbeedevice === 6 ) {\n        return [null, null, null, null, null, null, msg, null, null, null, null, null, null, null]; \n    }\n    else if ( zigbeedevice === 7 ) {\n        return [null, null, null, null, null, null, null, msg, null, null, null, null, null, null]; \n    }\n    else if ( zigbeedevice === 8 ) {\n        return [null, null, null, null, null, null, null, null, msg, null, null, null, null, null]; \n    }\n    else if ( zigbeedevice === 9 ) {\n        return [null, null, null, null, null, null, null, null, null, msg, null, null, null, null]; \n    }\n    else if ( zigbeedevice === 10 ) {\n        return [null, null, null, null, null, null, null, null, null, null, msg, null, null, null]; \n    }\n    else if ( zigbeedevice === 11 ) {\n        return [null, null, null, null, null, null, null, null, null, null, null, msg, null, null]; \n    }\n    else if ( zigbeedevice === 12 ) {\n        return [null, null, null, null, null, null, null, null, null, null, null, null, msg, null]; \n    }\n    else if ( zigbeedevice === 13 ) {\n        return [null, null, null, null, null, null, null, null, null, null, null, null, null, msg]; \n    }\n    var getflow = flow.keys();\n    var getNodeID = (Object.keys(msg.payload.ZbReceived)[0]);\n    for ( var h = 0; h < getflow.length; h++ ) {\n        var zigbeeflowdevice = getflow[h];\n        if (zigbeeflowdevice === getNodeID){\n          flow.set(getNodeID, undefined);\n        }\n        \n    }\n    return [msg, null, null, null, null, null, null, null, null, null, null, null, null];\n}",
+        "func": "if ( msg.src === 'tasmota' ) {\n    var devs = flow.get(\"t2ztable\") || {};\n    var storepayload = msg.payload;\n    var zigbeedevice\n\n    for (var devN in msg.payload.ZbReceived) {\n        let devInfo = msg.payload.ZbReceived[devN];\n        let ID = devInfo.Device;\n\n        // get dev by ID\n        var dev = devs[ID] || {};\n\n        zigbeedevice = parseInt(dev.type);\n        storepayload[\"ZbReceived\"].idx = parseInt(dev.idx);\n        storepayload[\"ZbReceived\"].idxbat = parseInt(dev.idxbat);\n\t    storepayload[\"ZbReceived\"].idxper = parseInt(dev.idxper);\n\t    storepayload[\"ZbReceived\"].idxlink = parseInt(dev.idxlink);\n\t    storepayload[\"ZbReceived\"].idxextra = parseInt(dev.idxextra);\n\t    storepayload[\"ZbReceived\"].zigbeeid = dev.zigbeeid;\n        storepayload[\"ZbReceived\"].topicname = dev.bridge;\n            \n        //msg.payload = zigbeedevice;\n        //return [msg]\n    }\n    msg.payload = storepayload;\n    if ( zigbeedevice === 1 ) {\n        return [null, msg, null, null, null, null, null, null, null, null, null, null, null, null]; \n    } \n    else if ( zigbeedevice === 2 ) {\n        return [null, null, msg, null, null, null, null, null, null, null, null, null, null, null]; \n    }\n    else if ( zigbeedevice === 3 ) {\n        return [null, null, null, msg, null, null, null, null, null, null, null, null, null, null]; \n    }\n    else if ( zigbeedevice === 4 ) {\n        return [null, null, null, null, msg, null, null, null, null, null, null, null, null, null]; \n    }\n    else if ( zigbeedevice === 5 ) {\n        return [null, null, null, null, null, msg, null, null, null, null, null, null, null, null]; \n    }\n    else if ( zigbeedevice === 6 ) {\n        return [null, null, null, null, null, null, msg, null, null, null, null, null, null, null]; \n    }\n    else if ( zigbeedevice === 7 ) {\n        return [null, null, null, null, null, null, null, msg, null, null, null, null, null, null]; \n    }\n    else if ( zigbeedevice === 8 ) {\n        return [null, null, null, null, null, null, null, null, msg, null, null, null, null, null]; \n    }\n    else if ( zigbeedevice === 9 ) {\n        return [null, null, null, null, null, null, null, null, null, msg, null, null, null, null]; \n    }\n    else if ( zigbeedevice === 10 ) {\n        return [null, null, null, null, null, null, null, null, null, null, msg, null, null, null]; \n    }\n    else if ( zigbeedevice === 11 ) {\n        return [null, null, null, null, null, null, null, null, null, null, null, msg, null, null]; \n    }\n    else if ( zigbeedevice === 12 ) {\n        return [null, null, null, null, null, null, null, null, null, null, null, null, msg, null]; \n    }\n    else if ( zigbeedevice === 13 ) {\n        return [null, null, null, null, null, null, null, null, null, null, null, null, null, msg]; \n    }\n    var getflow = flow.keys();\n    var getNodeID = (Object.keys(msg.payload.ZbReceived)[0]);\n    for ( var h = 0; h < getflow.length; h++ ) {\n        var zigbeeflowdevice = getflow[h];\n        if (zigbeeflowdevice === getNodeID){\n          flow.set(getNodeID, undefined);\n        }\n        \n    }\n    return [msg, null, null, null, null, null, null, null, null, null, null, null, null];\n}\n\nif ( msg.src === 'tasmotainfo' ) {\n    var devsinfo = flow.get(\"t2ztable\") || {};\n    var storepayloadinfo = msg.payload;\n    var zigbeedeviceinfo\n\n    for (var devNinfo in msg.payload.ZbInfo) {\n        let devInfoinfo = msg.payload.ZbInfo[devNinfo];\n        let IDinfo = devInfoinfo.Device;\n\n        // get dev by ID\n        var devinfo = devsinfo[IDinfo] || {};\n\n        zigbeedeviceinfo = parseInt(devinfo.type);\n        storepayloadinfo[\"ZbInfo\"].idx = parseInt(devinfo.idx);\n        storepayloadinfo[\"ZbInfo\"].idxbat = parseInt(devinfo.idxbat);\n\t    storepayloadinfo[\"ZbInfo\"].idxper = parseInt(devinfo.idxper);\n\t    storepayloadinfo[\"ZbInfo\"].idxlink = parseInt(devinfo.idxlink);\n\t    storepayloadinfo[\"ZbInfo\"].idxextra = parseInt(devinfo.idxextra);\n\t    storepayloadinfo[\"ZbInfo\"].zigbeeid = devinfo.zigbeeid;\n        storepayloadinfo[\"ZbInfo\"].topicname = devinfo.bridge;\n            \n        //msg.payload = zigbeedevice;\n        //return [msg]\n    }\n    msg.payload = storepayloadinfo;\n    if ( zigbeedeviceinfo === 7 ) {\n        return [null, null, null, null, null, null, null, msg, null, null, null, null, null, null]; \n    }\n    return [msg, null, null, null, null, null, null, null, null, null, null, null, null];\n}\n\nif ( msg.src === 'domoticz' ) {\n    var devsdomoticz = flow.get(\"t2ztable\") || {};\n    var storepayloaddomoticz = msg.payload;\n    var zigbeedevicedomoticz;\n    var idxnumber = msg.payload.idx;\n    var length = Object.keys(devsdomoticz).length;\n\n    for ( var i = 0; i < length; i++ ) {\n        var keys = Object.keys(devsdomoticz);\n        var IDkey = keys[i];\n        var message = devsdomoticz[IDkey];\n        var messageidx = parseInt(devsdomoticz[IDkey].idx);\n        \n        if ( messageidx === idxnumber) {\n            zigbeedevicedomoticz = parseInt(message.type);\n            storepayloaddomoticz.idxdz = message.idx;\n            storepayloaddomoticz.idxbat = message.idxbat;\n            storepayloaddomoticz.zigbeeid = message.zigbeeid;\n            storepayloaddomoticz.topicname = message.bridge;\n        }\n        msg.payload = storepayloaddomoticz;\n        if ( zigbeedevicedomoticz === 5 ) {    \n            return [null, null, null, null, null, msg, null, null, null, null, null, null, null, null]; \n        }\n        else if ( zigbeedevicedomoticz === 8 ) {\n            return [null, null, null, null, null, null, null, null, msg, null, null, null, null, null]; \n        }\n        else if ( zigbeedevicedomoticz === 10 ) {\n            return [null, null, null, null, null, null, null, null, null, null, msg, null, null, null]; \n        }\n    }\n    return [msg, null, null, null, null, null, null, null, null, null, null, null, null, null]; \n}",
         "outputs": 14,
         "noerr": 0,
         "initialize": "",
@@ -5159,90 +5145,70 @@
         ]
     },
     {
-        "id": "1f60b5e6e42c7e1c",
-        "type": "inject",
+        "id": "b078324fb7eaaff9",
+        "type": "function",
         "z": "32e6b1c785b786d2",
+        "g": "5145f22353cd7b61",
         "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
+        "func": "var reconfig = flow.get(\"t2ztable\") || {};\nreturn [{payload:Object.values(reconfig)},msg];",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1620,
+        "y": 500,
+        "wires": [
+            [
+                "810c2c17eb1aa35d"
+            ]
+        ]
+    },
+    {
+        "id": "810c2c17eb1aa35d",
+        "type": "json",
+        "z": "32e6b1c785b786d2",
+        "g": "5145f22353cd7b61",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 1770,
+        "y": 500,
+        "wires": [
+            [
+                "52e4097a46ded523"
+            ]
+        ]
+    },
+    {
+        "id": "52e4097a46ded523",
+        "type": "file",
+        "z": "32e6b1c785b786d2",
+        "g": "5145f22353cd7b61",
+        "name": "Save to file",
+        "filename": "/home/pi/domoticz/plugins/tasmota2zigbee/zigbeeidxtabel.txt",
+        "appendNewline": false,
+        "createDir": true,
+        "overwriteFile": "true",
+        "x": 1930,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "41a4f1d59a1d6403",
+        "type": "link out",
+        "z": "32e6b1c785b786d2",
+        "name": "Restore in (zigbee tabel)",
+        "mode": "link",
+        "links": [
+            "7348ab76bf1cbc93"
         ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payloadType": "date",
-        "x": 1120,
-        "y": 1900,
-        "wires": [
-            [
-                "ed3d77cd32f24f21"
-            ]
-        ]
-    },
-    {
-        "id": "ed3d77cd32f24f21",
-        "type": "function",
-        "z": "32e6b1c785b786d2",
-        "name": "",
-        "func": "//msg = {\"topic\":\"tele/tasmota_963592/SENSOR\",\"payload\":{\"ZbReceived\":{\"0xC7CB\":{\"Device\":\"0xC7CB\",\"Name\": \"Remote_kledingkast\", \"0006!00\": \"\", \"Power\": 0, \"Endpoint\": 1, \"LinkQuality\": 157}}}};\nmsg = {\"topic\":\"tele/tasmota_96373D/SENSOR\",\"payload\":{\"ZbReceived\":{\"0xB275\":{\"Device\":\"0xB275\",\"Name\": \"Remote_kledingkast\", \"0006!00\": \"\", \"Power\": 0, \"Endpoint\": 1, \"LinkQuality\": 157}}}};\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1280,
-        "y": 1900,
-        "wires": [
-            [
-                "53fed56d10889636"
-            ]
-        ]
-    },
-    {
-        "id": "53fed56d10889636",
-        "type": "function",
-        "z": "32e6b1c785b786d2",
-        "name": "add src",
-        "func": "msg.src = 'tasmota';\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1420,
-        "y": 1900,
-        "wires": [
-            [
-                "8e5afcb0f0640b08",
-                "e312add737858962"
-            ]
-        ]
-    },
-    {
-        "id": "e312add737858962",
-        "type": "function",
-        "z": "32e6b1c785b786d2",
-        "name": "Tasmota ID filter",
-        "func": "if ( msg.src === 'tasmota' ) {\n    var devs = flow.get(\"t2ztable\") || {};\n    var storepayload = msg.payload;\n    var zigbeedevice\n\n    for (var devN in msg.payload.ZbReceived) {\n        let devInfo = msg.payload.ZbReceived[devN];\n        let ID = devInfo.Device;\n\n        // get dev by ID\n        var dev = devs[ID] || {};\n\n        zigbeedevice = parseInt(dev.type);\n        storepayload[\"ZbReceived\"].idx = parseInt(dev.idx);\n        storepayload[\"ZbReceived\"].idxbat = parseInt(dev.idxbat);\n\t    storepayload[\"ZbReceived\"].idxper = parseInt(dev.idxper);\n\t    storepayload[\"ZbReceived\"].idxlink = parseInt(dev.idxlink);\n\t    storepayload[\"ZbReceived\"].idxextra = parseInt(dev.idxextra);\n\t    storepayload[\"ZbReceived\"].zigbeeid = dev.zigbeeid;\n        storepayload[\"ZbReceived\"].topicname = dev.bridge;\n            \n        //msg.payload = zigbeedevice;\n        //return [msg]\n    }\n    msg.payload = storepayload;\n    if ( zigbeedevice === 1 ) {\n        return [null, msg, null, null, null, null, null, null, null, null, null, null, null, null]; \n    } \n    else if ( zigbeedevice === 2 ) {\n        return [null, null, msg, null, null, null, null, null, null, null, null, null, null, null]; \n    }\n    else if ( zigbeedevice === 3 ) {\n        return [null, null, null, msg, null, null, null, null, null, null, null, null, null, null]; \n    }\n    else if ( zigbeedevice === 4 ) {\n        return [null, null, null, null, msg, null, null, null, null, null, null, null, null, null]; \n    }\n    else if ( zigbeedevice === 5 ) {\n        return [null, null, null, null, null, msg, null, null, null, null, null, null, null, null]; \n    }\n    else if ( zigbeedevice === 6 ) {\n        return [null, null, null, null, null, null, msg, null, null, null, null, null, null, null]; \n    }\n    else if ( zigbeedevice === 7 ) {\n        return [null, null, null, null, null, null, null, msg, null, null, null, null, null, null]; \n    }\n    else if ( zigbeedevice === 8 ) {\n        return [null, null, null, null, null, null, null, null, msg, null, null, null, null, null]; \n    }\n    else if ( zigbeedevice === 9 ) {\n        return [null, null, null, null, null, null, null, null, null, msg, null, null, null, null]; \n    }\n    else if ( zigbeedevice === 10 ) {\n        return [null, null, null, null, null, null, null, null, null, null, msg, null, null, null]; \n    }\n    else if ( zigbeedevice === 11 ) {\n        return [null, null, null, null, null, null, null, null, null, null, null, msg, null, null]; \n    }\n    else if ( zigbeedevice === 12 ) {\n        return [null, null, null, null, null, null, null, null, null, null, null, null, msg, null]; \n    }\n    else if ( zigbeedevice === 13 ) {\n        return [null, null, null, null, null, null, null, null, null, null, null, null, null, msg]; \n    }\n    var getflow = flow.keys();\n    var getNodeID = (Object.keys(msg.payload.ZbReceived)[0]);\n    for ( var h = 0; h < getflow.length; h++ ) {\n        var zigbeeflowdevice = getflow[h];\n        if (zigbeeflowdevice === getNodeID){\n          flow.set(getNodeID, undefined);\n        }\n        \n    }\n    return [msg, null, null, null, null, null, null, null, null, null, null, null, null];\n}",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1540,
-        "y": 2080,
-        "wires": [
-            [
-                "2de3e4d37d88ae66"
-            ]
-        ]
+        "x": 1875,
+        "y": 480,
+        "wires": []
     },
     {
         "id": "b1bc1db1ae7424c0",
