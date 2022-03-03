@@ -25,7 +25,7 @@
             "c2543eb2434ed034"
         ],
         "x": 2114,
-        "y": 479,
+        "y": 459,
         "w": 622,
         "h": 142
     },
@@ -74,7 +74,7 @@
         ],
         "env": [],
         "x": 1194,
-        "y": 599,
+        "y": 559,
         "w": 902,
         "h": 202
     },
@@ -95,7 +95,7 @@
         ],
         "env": [],
         "x": 1194,
-        "y": 819,
+        "y": 779,
         "w": 592,
         "h": 82
     },
@@ -119,7 +119,7 @@
             "93d507cb91268b43"
         ],
         "x": 2114,
-        "y": 639,
+        "y": 619,
         "w": 892,
         "h": 162
     },
@@ -142,7 +142,7 @@
         ],
         "env": [],
         "x": 1194,
-        "y": 1079,
+        "y": 1039,
         "w": 922,
         "h": 82
     },
@@ -166,7 +166,7 @@
         ],
         "env": [],
         "x": 1194,
-        "y": 919,
+        "y": 879,
         "w": 652,
         "h": 142
     },
@@ -193,13 +193,14 @@
             "7d360ac1a9c0face",
             "0dac2a94f75ffde2",
             "8ecb1a7237e6ad5e",
-            "3ba3b3d5afc5b7df"
+            "3ba3b3d5afc5b7df",
+            "39038a9d2681bd20"
         ],
         "env": [],
         "x": 1194,
-        "y": 99,
+        "y": 59,
         "w": 1212,
-        "h": 362
+        "h": 382
     },
     {
         "id": "fc3ffea91c83f578",
@@ -233,12 +234,38 @@
             "21c95c5161e18956",
             "56f447df100afcfa",
             "481e845fe0a736c7",
-            "8323979a6ecc7569"
+            "8323979a6ecc7569",
+            "7473e02c36c330c9",
+            "59c69e3ca4cad7cb",
+            "9d9cc3cc6fa57133",
+            "20ef08116235f529",
+            "081b4575f60f755b"
         ],
         "env": [],
         "x": 2114,
-        "y": 819,
-        "w": 952,
+        "y": 799,
+        "w": 1332,
+        "h": 122
+    },
+    {
+        "id": "5145f22353cd7b61",
+        "type": "group",
+        "z": "32e6b1c785b786d2",
+        "name": "Zigbee tabel idx",
+        "style": {
+            "stroke": "#7fb7df",
+            "label": true,
+            "color": "#7fb7df"
+        },
+        "nodes": [
+            "466516d2d35d133a",
+            "2c3829ae941b05df",
+            "1a53da933bfd8c5d"
+        ],
+        "env": [],
+        "x": 1194,
+        "y": 459,
+        "w": 572,
         "h": 82
     },
     {
@@ -554,7 +581,7 @@
         "datatype": "auto",
         "broker": "b1bc1db1ae7424c0",
         "inputs": 0,
-        "x": 450,
+        "x": 470,
         "y": 1480,
         "wires": [
             [
@@ -2689,7 +2716,7 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 770,
+        "x": 850,
         "y": 1640,
         "wires": [
             []
@@ -2743,7 +2770,7 @@
         "initialize": "",
         "finalize": "",
         "x": 990,
-        "y": 1040,
+        "y": 1000,
         "wires": [
             [
                 "738203cee5b7576e",
@@ -2756,20 +2783,19 @@
         "type": "function",
         "z": "32e6b1c785b786d2",
         "name": "store zigbee sensors",
-        "func": "if (msg.payload.ZbReceived === undefined) return;\n\n// properties that should  show up in the status\nvar inStatus = [\"Contact\", \"Occupancy\", \"Power\", \"Power2\", \"Dimmer\", \"Hue\", \"CT\", \"ColorMode\", \"Sat\", \"RGB\", \"RGBb\", \"Temperature\", \"Humidity\", \"Pressure\", \"LocalTemperature\", \"OccupiedHeatingSetpoint\", \"PIHeatingDemand\", \"Illuminance\", \"AqaraVibrationMode\", \"AqaraVibrationsOrAngle\", \"AqaraVibration505\", \"ZoneStatusChange\", \"AqaraCube\", \"AqaraCubeSide\", \"AqaraCubeFromSide\", \"AqaraRotate\"];\n\n// properties that should not show up in the status\nvar notStatus = [\"Device\", \"Name\", \"BatteryVoltage\", \"BatteryPercentage\", \"LinkQuality\", \"Endpoint\", \"bridge\", \"lastTime\", \"seen\", \"label\", \"status\", \"EurotronicErrors\", \"0201/4008\", \"Xiaomi_64\"];\n\n//node.warn(msg.payload);\n\nvar devs = flow.get(\"t2zdevices\") || {};\n\nvar receivedSensors = []\nfor (var devN in msg.payload.ZbReceived) {\n    let devInfo = msg.payload.ZbReceived[devN];\n    let ID = devInfo.Device;\n    \n    // get dev by ID\n    let dev = devs[ID] || {};\n\n    for (let prop in devInfo) {\n        dev[prop] = devInfo[prop];\n    }\n    \n    if (devInfo.Name!==undefined) {\n        dev.label = devInfo.Name;\n    } else {\n        dev.label = ID; \n    }\n    dev.bridge = msg.topic.split(\"/\")[1];\n    dev.lastTime = new Date().getTime();\n    \n    // create status from properties\n    let status = \"\";\n    for (let prop in dev) {\n        if (inStatus.includes(prop)) {\n            status += \" \"+prop+\": \"+ dev[prop]; \n        }\n    }\n    if (status === \"\") {\n        for (let prop in dev) {\n            if (! notStatus.includes(prop)) {\n                status += \" \"+prop+\": \"+ dev[prop]; \n            }\n        }   \n    }\n    dev.status = status;\n    \n    // write back\n    devs[ID] = dev;\n    receivedSensors.push(dev);\n}\n\nObject.entries(devs).forEach(element => element[1].seen = Math.round((new Date().getTime()-element[1].lastTime)/60000)+\"m\");\n\nflow.set(\"t2zdevices\", devs);\n\n//return [{payload:Object.values(devs)}, {payload:receivedSensors}];\nreturn [{payload:Object.values(devs)}, {payload:Object.values(devs)}];\n",
-        "outputs": 2,
+        "func": "if (msg.payload.ZbReceived === undefined) return;\n\n// properties that should  show up in the status\nvar inStatus = [\"Contact\", \"Occupancy\", \"Power\", \"Power2\", \"Dimmer\", \"Hue\", \"CT\", \"ColorMode\", \"Sat\", \"RGB\", \"RGBb\", \"Temperature\", \"Humidity\", \"Pressure\", \"LocalTemperature\", \"OccupiedHeatingSetpoint\", \"PIHeatingDemand\", \"Illuminance\", \"AqaraVibrationMode\", \"AqaraVibrationsOrAngle\", \"AqaraVibration505\", \"ZoneStatusChange\", \"AqaraCube\", \"AqaraCubeSide\", \"AqaraCubeFromSide\", \"AqaraRotate\"];\n\n// properties that should not show up in the status\nvar notStatus = [\"Device\", \"Name\", \"BatteryVoltage\", \"BatteryPercentage\", \"LinkQuality\", \"Endpoint\", \"bridge\", \"lastTime\", \"seen\", \"label\", \"status\", \"EurotronicErrors\", \"0201/4008\", \"Xiaomi_64\"];\n\n//node.warn(msg.payload);\n\nvar devs = flow.get(\"t2zdevices\") || {};\n\nvar receivedSensors = []\nfor (var devN in msg.payload.ZbReceived) {\n    let devInfo = msg.payload.ZbReceived[devN];\n    let ID = devInfo.Device;\n    \n    // get dev by ID\n    let dev = devs[ID] || {};\n\n    for (let prop in devInfo) {\n        dev[prop] = devInfo[prop];\n    }\n    \n    if (devInfo.Name!==undefined) {\n        dev.label = devInfo.Name;\n    } else {\n        dev.label = ID; \n    }\n    dev.bridge = msg.topic.split(\"/\")[1];\n    dev.lastTime = new Date().getTime();\n    \n    // create status from properties\n    let status = \"\";\n    for (let prop in dev) {\n        if (inStatus.includes(prop)) {\n            status += \" \"+prop+\": \"+ dev[prop]; \n        }\n    }\n    if (status === \"\") {\n        for (let prop in dev) {\n            if (! notStatus.includes(prop)) {\n                status += \" \"+prop+\": \"+ dev[prop]; \n            }\n        }   \n    }\n    dev.status = status;\n    \n    // write back\n    devs[ID] = dev;\n    receivedSensors.push(dev);\n}\n\nObject.entries(devs).forEach(element => element[1].seen = Math.round((new Date().getTime()-element[1].lastTime)/60000)+\"m\");\n\nflow.set(\"t2zdevices\", devs);\n\n//return [{payload:Object.values(devs)}, {payload:receivedSensors}];\nreturn [{payload:Object.values(devs)}];\n\n",
+        "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
         "x": 1000,
-        "y": 760,
+        "y": 700,
         "wires": [
             [
                 "e669c6020ec33ea2",
                 "39b828367fc868a1"
-            ],
-            []
+            ]
         ]
     },
     {
@@ -2781,8 +2807,8 @@
             "4f9f9724cbeb89b7"
         ],
         "uncaught": false,
-        "x": 2810,
-        "y": 600,
+        "x": 1930,
+        "y": 500,
         "wires": [
             []
         ]
@@ -2810,7 +2836,7 @@
         "payload": "",
         "payloadType": "str",
         "x": 2230,
-        "y": 520,
+        "y": 500,
         "wires": [
             [
                 "2ae2420fae93fe5f"
@@ -2833,7 +2859,7 @@
         "expiry": "",
         "broker": "b1bc1db1ae7424c0",
         "x": 2590,
-        "y": 520,
+        "y": 500,
         "wires": []
     },
     {
@@ -2849,7 +2875,7 @@
         "finalize": "",
         "libs": [],
         "x": 2420,
-        "y": 520,
+        "y": 500,
         "wires": [
             [
                 "2ae2420fae93fe5f",
@@ -2871,7 +2897,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 2620,
-        "y": 580,
+        "y": 560,
         "wires": []
     },
     {
@@ -3005,7 +3031,7 @@
         "topicType": "str",
         "className": "",
         "x": 1560,
-        "y": 640,
+        "y": 600,
         "wires": [
             [
                 "edea2f707eaa6c2e"
@@ -3025,7 +3051,7 @@
         "finalize": "",
         "libs": [],
         "x": 1320,
-        "y": 640,
+        "y": 600,
         "wires": [
             [
                 "d33963f3ee2f7ef1",
@@ -3055,7 +3081,7 @@
         "topic": "rename",
         "topicType": "str",
         "x": 1580,
-        "y": 760,
+        "y": 720,
         "wires": [
             [
                 "edea2f707eaa6c2e"
@@ -3082,7 +3108,7 @@
         "className": "",
         "topicType": "str",
         "x": 1580,
-        "y": 700,
+        "y": 660,
         "wires": [
             [
                 "edea2f707eaa6c2e"
@@ -3102,7 +3128,7 @@
         "finalize": "",
         "libs": [],
         "x": 1880,
-        "y": 660,
+        "y": 620,
         "wires": [
             [
                 "21a702d22e35399a",
@@ -3122,7 +3148,7 @@
         "initialize": "",
         "finalize": "",
         "x": 1830,
-        "y": 740,
+        "y": 700,
         "wires": [
             [
                 "e42c3f20342ec925"
@@ -3234,7 +3260,7 @@
         "outputs": 1,
         "cts": true,
         "x": 1300,
-        "y": 860,
+        "y": 820,
         "wires": [
             [
                 "82b014a353b034a7"
@@ -3254,7 +3280,7 @@
         "finalize": "",
         "libs": [],
         "x": 1480,
-        "y": 860,
+        "y": 820,
         "wires": [
             [
                 "943de23188f1e72a"
@@ -3274,10 +3300,11 @@
         "ok": "Close",
         "cancel": "",
         "raw": true,
+        "className": "",
         "topic": "",
         "name": "Zigbee Device Info",
         "x": 1670,
-        "y": 860,
+        "y": 820,
         "wires": [
             []
         ]
@@ -3305,7 +3332,7 @@
         "payload": "",
         "payloadType": "date",
         "x": 2290,
-        "y": 680,
+        "y": 660,
         "wires": [
             [
                 "2dc045fd70544cb5",
@@ -3326,7 +3353,7 @@
         "finalize": "",
         "libs": [],
         "x": 2600,
-        "y": 680,
+        "y": 660,
         "wires": [
             [
                 "e157d9879540a216",
@@ -3350,7 +3377,7 @@
         "topic": "",
         "name": "Device Warning!",
         "x": 2900,
-        "y": 680,
+        "y": 660,
         "wires": []
     },
     {
@@ -3361,7 +3388,7 @@
         "name": "Add your own notification service here:",
         "info": "",
         "x": 2530,
-        "y": 760,
+        "y": 740,
         "wires": []
     },
     {
@@ -3376,7 +3403,7 @@
         "initialize": "",
         "finalize": "",
         "x": 2570,
-        "y": 720,
+        "y": 700,
         "wires": [
             [
                 "e157d9879540a216",
@@ -3402,7 +3429,7 @@
         "drop": false,
         "outputs": 1,
         "x": 2340,
-        "y": 720,
+        "y": 700,
         "wires": [
             [
                 "3ca55e67a1a23c62"
@@ -3419,7 +3446,7 @@
             "764cb81e.ab379"
         ],
         "x": 2835,
-        "y": 720,
+        "y": 700,
         "wires": []
     },
     {
@@ -3434,7 +3461,7 @@
         "initialize": "",
         "finalize": "",
         "x": 1320,
-        "y": 1120,
+        "y": 1080,
         "wires": [
             [
                 "5a82ae65dd933d20"
@@ -3466,7 +3493,7 @@
         "payload": "",
         "topic": "oldname",
         "x": 1770,
-        "y": 1120,
+        "y": 1080,
         "wires": [
             [
                 "d3729f0632afe0c5"
@@ -3486,7 +3513,7 @@
         "finalize": "",
         "libs": [],
         "x": 1560,
-        "y": 1120,
+        "y": 1080,
         "wires": [
             [
                 "a876b2262d2d8972"
@@ -3505,7 +3532,7 @@
         "initialize": "",
         "finalize": "",
         "x": 1950,
-        "y": 1120,
+        "y": 1080,
         "wires": [
             [
                 "70235a8b59920fe7"
@@ -3525,7 +3552,7 @@
         "finalize": "",
         "libs": [],
         "x": 1500,
-        "y": 960,
+        "y": 920,
         "wires": [
             [
                 "37e55389157ed1ad"
@@ -3571,7 +3598,7 @@
         "splitLayout": false,
         "className": "",
         "x": 1360,
-        "y": 1020,
+        "y": 980,
         "wires": [
             [
                 "c70e98768b4cdaf1"
@@ -3590,7 +3617,7 @@
         "initialize": "",
         "finalize": "",
         "x": 1620,
-        "y": 1020,
+        "y": 980,
         "wires": [
             [
                 "1b9c54730ad51654"
@@ -3613,7 +3640,7 @@
         "topic": "",
         "name": "Tasmota Device Info",
         "x": 1720,
-        "y": 960,
+        "y": 920,
         "wires": [
             []
         ]
@@ -3673,7 +3700,7 @@
         "outputs": 1,
         "cts": true,
         "x": 1310,
-        "y": 960,
+        "y": 920,
         "wires": [
             [
                 "f3db21b9723e0cfc"
@@ -3702,7 +3729,7 @@
         "topic": "",
         "topicType": "str",
         "x": 2260,
-        "y": 580,
+        "y": 560,
         "wires": [
             [
                 "2ee82fa6912e4647"
@@ -3719,7 +3746,7 @@
         "action": "",
         "pretty": false,
         "x": 2130,
-        "y": 420,
+        "y": 360,
         "wires": [
             [
                 "3ba3b3d5afc5b7df"
@@ -3737,7 +3764,7 @@
         "createDir": true,
         "overwriteFile": "true",
         "x": 2310,
-        "y": 420,
+        "y": 360,
         "wires": [
             []
         ]
@@ -3754,8 +3781,8 @@
         "sendError": false,
         "encoding": "none",
         "allProps": false,
-        "x": 2400,
-        "y": 860,
+        "x": 2360,
+        "y": 840,
         "wires": [
             [
                 "21c95c5161e18956"
@@ -3771,11 +3798,11 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 2570,
-        "y": 860,
+        "x": 2490,
+        "y": 840,
         "wires": [
             [
-                "8323979a6ecc7569"
+                "7473e02c36c330c9"
             ]
         ]
     },
@@ -3801,7 +3828,7 @@
         "topic": "",
         "payloadType": "date",
         "x": 2220,
-        "y": 860,
+        "y": 840,
         "wires": [
             [
                 "c5c4597ec7e244f2"
@@ -3814,15 +3841,15 @@
         "z": "32e6b1c785b786d2",
         "g": "2b14dd6ae297283b",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2950,
-        "y": 860,
+        "x": 3330,
+        "y": 840,
         "wires": []
     },
     {
@@ -3919,7 +3946,7 @@
         "topicType": "str",
         "className": "",
         "x": 1600,
-        "y": 420,
+        "y": 380,
         "wires": [
             [
                 "24d22abc9e1ab60f"
@@ -3946,7 +3973,7 @@
         "className": "",
         "topicType": "str",
         "x": 1610,
-        "y": 180,
+        "y": 140,
         "wires": [
             [
                 "24d22abc9e1ab60f"
@@ -4040,7 +4067,7 @@
         "topicType": "str",
         "className": "",
         "x": 1600,
-        "y": 140,
+        "y": 100,
         "wires": [
             [
                 "24d22abc9e1ab60f"
@@ -4069,7 +4096,7 @@
         "topic": "submit",
         "topicType": "str",
         "x": 1610,
-        "y": 380,
+        "y": 340,
         "wires": [
             [
                 "24d22abc9e1ab60f",
@@ -4089,7 +4116,7 @@
         "initialize": "",
         "finalize": "",
         "x": 1270,
-        "y": 220,
+        "y": 180,
         "wires": [
             [
                 "81f07f96a45e1c0a",
@@ -4107,18 +4134,20 @@
         "z": "32e6b1c785b786d2",
         "g": "342e272fde205046",
         "name": "Set Device settings",
-        "func": "var data1 = context.get(\"data1\") || 0; //get from context or default to 0\nvar data2 = context.get(\"data2\") || 0; //get from context or default to 0\nvar data3 = context.get(\"data3\") || 0; //get from context or default to 0\nvar data4 = context.get(\"data4\") || 0; //get from context or default to 0\nvar data5 = context.get(\"data5\") || 0; //get from context or default to 0\nvar data6 = context.get(\"data6\") || 0; //get from context or default to 0\nvar data7 = context.get(\"data7\") || 0; //get from context or default to 0\n\nvar reconfig = flow.get(\"t2ztest\") || {};\n\nswitch (msg.topic){\n\n    case \"device\":\n        data1 = msg.payload; \n        context.set(\"data1\", data1);//store in context for next time \n        return;\n    \n    case \"type\":\n        data2 = msg.payload; \n        context.set(\"data2\", data2);//store in context for next time \n        return;\n    \n    case \"idx\":\n        data3 = msg.payload; \n        context.set(\"data3\", data3);//store in context for next time \n        return;\n        \n    case \"idxbat\":\n        data4 = msg.payload;\n        context.set(\"data4\", data4); //store in context for next time \n        return;\n        \n    case \"idxper\":\n        data5 = msg.payload;\n        context.set(\"data5\", data5); //store in context for next time \n        return;\n    \n    case \"idxlink\":\n        data6 = msg.payload;\n        context.set(\"data6\", data6); //store in context for next time \n        return;\n    \n    case \"idxextra\":\n        data7 = msg.payload;\n        context.set(\"data7\", data7); //store in context for next time \n        return;\n        \n    case \"submit\":\n        msg.payload = \"Device: \"+ data1 +\" , type: \" + data2 +\" , idx: \" + data3 +\" , idxbat: \" + data4 +\" , idxper: \" + data5 + \", idxlink: \" + data6 + \", idxextra: \" + data7;\n        var string = \"{\" + \"_/\" + data1 + \"/_/}\"\n        var array = string.split(\"/\")[2];\n\n        var receivedSensors = []\n\n        let dev = reconfig[array] || {};\n    \n        dev.type = data2;\n        dev.idx = data3;\n        dev.idxbat = data4;\n        dev.idxper = data5;\n        dev.idxlink = data6;\n        dev.idxextra = data7;\n \n        // write back\n        reconfig[array] = dev;\n        receivedSensors.push(dev);\n \n        flow.set(\"t2ztest\", reconfig);\n    }\n\nreturn [{payload:Object.values(reconfig)}];\n//return msg;\n",
-        "outputs": 1,
+        "func": "var data1 = context.get(\"data1\") || null; //get from context or default to 0\nvar data2 = context.get(\"data2\") || 0; //get from context or default to 0\nvar data3 = context.get(\"data3\") || 0; //get from context or default to 0\nvar data4 = context.get(\"data4\") || 0; //get from context or default to 0\nvar data5 = context.get(\"data5\") || 0; //get from context or default to 0\nvar data6 = context.get(\"data6\") || 0; //get from context or default to 0\nvar data7 = context.get(\"data7\") || 0; //get from context or default to 0\n\nvar reconfig = flow.get(\"t2ztest\") || {};\n\nswitch (msg.topic){\n\n    case \"device\":\n        data1 = msg.payload; \n        context.set(\"data1\", data1);//store in context for next time \n        return;\n    \n    case \"type\":\n        data2 = msg.payload; \n        context.set(\"data2\", data2);//store in context for next time \n        return;\n    \n    case \"idx\":\n        data3 = msg.payload; \n        context.set(\"data3\", data3);//store in context for next time \n        return;\n        \n    case \"idxbat\":\n        data4 = msg.payload;\n        context.set(\"data4\", data4); //store in context for next time \n        return;\n        \n    case \"idxper\":\n        data5 = msg.payload;\n        context.set(\"data5\", data5); //store in context for next time \n        return;\n    \n    case \"idxlink\":\n        data6 = msg.payload;\n        context.set(\"data6\", data6); //store in context for next time \n        return;\n    \n    case \"idxextra\":\n        data7 = msg.payload;\n        context.set(\"data7\", data7); //store in context for next time \n        return;\n        \n    case \"submit\":\n        if (data1 !== null ) {\n            //msg.payload = \"Device: \"+ data1 +\" , type: \" + data2 +\" , idx: \" + data3 +\" , idxbat: \" + data4 +\" , idxper: \" + data5 + \", idxlink: \" + data6 + \", idxextra: \" + data7;\n            var string = \"{\" + \"_/\" + data1 + \"/_/}\"\n            var array = string.split(\"/\")[2];\n            var receivedSensors = []\n            //return msg; \n        \n            let dev = reconfig[array] || {};\n            dev.type = data2;\n            dev.idx = data3;\n            dev.idxbat = data4;\n            dev.idxper = data5;\n            dev.idxlink = data6;\n            dev.idxextra = data7;\n      \n            // write back\n            reconfig[array] = dev;\n            receivedSensors.push(dev);\n \n            flow.set(\"t2ztest\", reconfig);\n            context.set(\"data1\", null)\n        } else {\n            return;\n        }\n    }\n\nreturn [{payload:Object.values(reconfig)},msg];\n//return msg;\n//return;",
+        "outputs": 2,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
         "x": 1910,
-        "y": 420,
+        "y": 380,
         "wires": [
             [
-                "466516d2d35d133a",
                 "8ecb1a7237e6ad5e"
+            ],
+            [
+                "39038a9d2681bd20"
             ]
         ]
     },
@@ -4142,7 +4171,7 @@
         "className": "",
         "topicType": "str",
         "x": 1610,
-        "y": 220,
+        "y": 180,
         "wires": [
             [
                 "24d22abc9e1ab60f"
@@ -4169,7 +4198,7 @@
         "className": "",
         "topicType": "str",
         "x": 1620,
-        "y": 260,
+        "y": 220,
         "wires": [
             [
                 "24d22abc9e1ab60f"
@@ -4196,7 +4225,7 @@
         "className": "",
         "topicType": "str",
         "x": 1600,
-        "y": 340,
+        "y": 300,
         "wires": [
             [
                 "24d22abc9e1ab60f"
@@ -4222,7 +4251,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 1930,
-        "y": 380,
+        "y": 340,
         "wires": [
             [
                 "da61aa56340660d7"
@@ -4249,7 +4278,7 @@
         "className": "",
         "topicType": "str",
         "x": 1600,
-        "y": 300,
+        "y": 260,
         "wires": [
             [
                 "24d22abc9e1ab60f"
@@ -4267,7 +4296,7 @@
             "e4ed3f9404692874"
         ],
         "x": 2075,
-        "y": 1120,
+        "y": 1080,
         "wires": []
     },
     {
@@ -4281,7 +4310,7 @@
             "e4ed3f9404692874"
         ],
         "x": 1735,
-        "y": 1020,
+        "y": 980,
         "wires": []
     },
     {
@@ -4295,7 +4324,7 @@
             "e4ed3f9404692874"
         ],
         "x": 2055,
-        "y": 660,
+        "y": 620,
         "wires": []
     },
     {
@@ -4303,14 +4332,14 @@
         "type": "function",
         "z": "32e6b1c785b786d2",
         "name": "Voorbereiden voor device tabel",
-        "func": "if (msg.payload.ZbReceived === undefined) return;\n\nvar devs = flow.get(\"t2ztest\") || {};\n\nvar receivedSensors = []\nfor (var devN in msg.payload.ZbReceived) {\n    let devInfo = msg.payload.ZbReceived[devN];\n    let ID = devInfo.Device;\n    let Name = devInfo.Name;\n    \n    // get dev by ID\n    let dev = devs[ID] || {};\n    \n    if (dev.type===undefined) {\n        dev.type = \"onbekend\";\n    }\n    if (dev.idx===undefined) {\n        dev.idx = 0;\n    }\n    if (dev.idxbat===undefined) {\n        dev.idxbat = 0;\n    }\n    if (dev.idxper===undefined) {\n        dev.idxper = 0;\n    }\n    if (dev.idxlink===undefined) {\n        dev.idxlink = 0;\n    }\n    if (dev.idxextra===undefined) {\n        dev.idxextra = 0;\n    }\n\n    dev.zigbeeid = ID;\n    dev.bridge = msg.topic.split(\"/\")[1];\n    dev.name = Name;\n\n    // write back\n    devs[ID] = dev;\n    receivedSensors.push(dev);\n}\n\n//Object.entries(devs).forEach(element => element[1].seen = Math.round((new Date().getTime()-element[1].lastTime)/60000)+\"m\");\n\nflow.set(\"t2ztest\", devs);\n\n//return [{payload:Object.values(devs)}, {payload:receivedSensors}];\nreturn [{payload:Object.values(devs)}];\n",
+        "func": "var devs; \n\nif ( msg.src === 'restore' ) {\n    devs = flow.get(\"t2ztest\") || {};\n    return [{payload:Object.values(devs)}];\n} else if (msg.payload.ZbReceived === undefined) {\n    return;\n} else {\n\n    devs = flow.get(\"t2ztest\") || {};\n    var receivedSensors = []\n\n    for (var devN in msg.payload.ZbReceived) {\n        let devInfo = msg.payload.ZbReceived[devN];\n        let ID = devInfo.Device;\n        let Name = devInfo.Name;\n     \n        // get dev by ID\n        let dev = devs[ID] || {};\n     \n        if (dev.type===undefined) {\n            dev.type = \"onbekend\";\n        }\n        if (dev.idx===undefined) {\n            dev.idx = 0;\n        }\n        if (dev.idxbat===undefined) {\n            dev.idxbat = 0;\n        }\n        if (dev.idxper===undefined) {\n            dev.idxper = 0;\n        }\n        if (dev.idxlink===undefined) {\n            dev.idxlink = 0;\n        }\n        if (dev.idxextra===undefined) {\n            dev.idxextra = 0;\n        }\n\n        dev.label = ID; \n        dev.zigbeeid = ID;\n        dev.bridge = msg.topic.split(\"/\")[1];\n        dev.name = Name;\n    \n        // write back\n        devs[ID] = dev;\n        receivedSensors.push(dev);\n    }\n    flow.set(\"t2ztest\", devs);\n}\nreturn [{payload:Object.values(devs)}];",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
         "x": 1030,
-        "y": 560,
+        "y": 520,
         "wires": [
             [
                 "466516d2d35d133a"
@@ -4321,6 +4350,7 @@
         "id": "466516d2d35d133a",
         "type": "ui_table",
         "z": "32e6b1c785b786d2",
+        "g": "5145f22353cd7b61",
         "group": "ce31945d33f64665",
         "name": "Zigbee tabel",
         "order": 1,
@@ -4416,14 +4446,26 @@
                 "formatterParams": {
                     "target": "_blank"
                 }
+            },
+            {
+                "field": "del",
+                "title": "Delete",
+                "width": "10%",
+                "align": "center",
+                "formatter": "tickCross",
+                "formatterParams": {
+                    "target": "_blank"
+                }
             }
         ],
         "outputs": 1,
         "cts": true,
-        "x": 1310,
-        "y": 560,
+        "x": 1290,
+        "y": 500,
         "wires": [
-            []
+            [
+                "2c3829ae941b05df"
+            ]
         ]
     },
     {
@@ -4432,19 +4474,245 @@
         "z": "32e6b1c785b786d2",
         "g": "2b14dd6ae297283b",
         "name": "Set flow.get test",
-        "func": "var store =  msg.payload;\nflow.set(\"t2ztest\", store)\nmsg.payload = store;\nreturn[msg];",
+        "func": "var store =  msg.payload;\nflow.set(\"t2ztest\", store);\nreturn [{payload:Object.values(store)}];",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2760,
-        "y": 860,
+        "x": 3160,
+        "y": 840,
         "wires": [
             [
-                "481e845fe0a736c7"
+                "481e845fe0a736c7",
+                "081b4575f60f755b"
             ]
         ]
+    },
+    {
+        "id": "72bdc0ab2c271c67",
+        "type": "inject",
+        "z": "32e6b1c785b786d2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 740,
+        "y": 560,
+        "wires": [
+            [
+                "a7f044e8e2c649b1"
+            ]
+        ]
+    },
+    {
+        "id": "247a4e546ff06812",
+        "type": "function",
+        "z": "32e6b1c785b786d2",
+        "name": "add src",
+        "func": "msg.src = 'restore';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 720,
+        "y": 520,
+        "wires": [
+            [
+                "a7f044e8e2c649b1"
+            ]
+        ]
+    },
+    {
+        "id": "2c3829ae941b05df",
+        "type": "function",
+        "z": "32e6b1c785b786d2",
+        "g": "5145f22353cd7b61",
+        "name": "",
+        "func": "if (msg.topic === \"del\") {\n    var devs = flow.get(\"t2ztest\") || {};\n    delete devs[msg.payload.zigbeeid];\n    return;\n}\n\nmsg.topic = msg.payload.name;\n\nlet str = JSON.stringify(msg.payload, null, 2);\ndelete msg.payload;\nmsg.payload = \"<pre>\" + str + \"</pre>\";\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1460,
+        "y": 500,
+        "wires": [
+            [
+                "1a53da933bfd8c5d"
+            ]
+        ]
+    },
+    {
+        "id": "1a53da933bfd8c5d",
+        "type": "ui_toast",
+        "z": "32e6b1c785b786d2",
+        "g": "5145f22353cd7b61",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": false,
+        "outputs": 1,
+        "ok": "Close",
+        "cancel": "",
+        "raw": true,
+        "className": "",
+        "topic": "",
+        "name": "Zigbee Device Info",
+        "x": 1650,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7473e02c36c330c9",
+        "type": "function",
+        "z": "32e6b1c785b786d2",
+        "g": "2b14dd6ae297283b",
+        "name": "",
+        "func": "//var test = flow.get(\"t2ztest\") || {};\nvar store = msg.payload;\nmsg2 = Object.assign({}, store);\nreturn [{payload:(msg2)}];",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2620,
+        "y": 840,
+        "wires": [
+            [
+                "59c69e3ca4cad7cb"
+            ]
+        ]
+    },
+    {
+        "id": "59c69e3ca4cad7cb",
+        "type": "split",
+        "z": "32e6b1c785b786d2",
+        "g": "2b14dd6ae297283b",
+        "name": "",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "x": 2750,
+        "y": 840,
+        "wires": [
+            [
+                "9d9cc3cc6fa57133"
+            ]
+        ]
+    },
+    {
+        "id": "9d9cc3cc6fa57133",
+        "type": "function",
+        "z": "32e6b1c785b786d2",
+        "g": "2b14dd6ae297283b",
+        "name": "",
+        "func": "var value = msg.payload.zigbeeid\nmsg.topic = value;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2880,
+        "y": 840,
+        "wires": [
+            [
+                "20ef08116235f529"
+            ]
+        ]
+    },
+    {
+        "id": "20ef08116235f529",
+        "type": "join",
+        "z": "32e6b1c785b786d2",
+        "g": "2b14dd6ae297283b",
+        "name": "",
+        "mode": "custom",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": false,
+        "timeout": "",
+        "count": "",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 3010,
+        "y": 840,
+        "wires": [
+            [
+                "8323979a6ecc7569"
+            ]
+        ]
+    },
+    {
+        "id": "39038a9d2681bd20",
+        "type": "link out",
+        "z": "32e6b1c785b786d2",
+        "g": "342e272fde205046",
+        "name": "Restore in (zigbee tabel)",
+        "mode": "link",
+        "links": [
+            "7348ab76bf1cbc93"
+        ],
+        "x": 2095,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "7348ab76bf1cbc93",
+        "type": "link in",
+        "z": "32e6b1c785b786d2",
+        "name": "restore out",
+        "links": [
+            "39038a9d2681bd20",
+            "11cf87a7201afe52",
+            "081b4575f60f755b"
+        ],
+        "x": 595,
+        "y": 520,
+        "wires": [
+            [
+                "247a4e546ff06812"
+            ]
+        ]
+    },
+    {
+        "id": "081b4575f60f755b",
+        "type": "link out",
+        "z": "32e6b1c785b786d2",
+        "g": "2b14dd6ae297283b",
+        "name": "Restore in (read file)",
+        "mode": "link",
+        "links": [
+            "7348ab76bf1cbc93"
+        ],
+        "x": 3275,
+        "y": 880,
+        "wires": []
     },
     {
         "id": "b1bc1db1ae7424c0",
