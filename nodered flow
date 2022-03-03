@@ -244,7 +244,7 @@
         "env": [],
         "x": 2114,
         "y": 799,
-        "w": 1332,
+        "w": 1372,
         "h": 122
     },
     {
@@ -691,7 +691,8 @@
             [
                 "273c9ce4a5f2a5fc",
                 "1805c2bdbbc563df",
-                "397d1f72ee768ae0"
+                "397d1f72ee768ae0",
+                "8e5afcb0f0640b08"
             ]
         ]
     },
@@ -2612,9 +2613,9 @@
         "id": "a2fceb2efb4f1b06",
         "type": "comment",
         "z": "32e6b1c785b786d2",
-        "name": "Versie 28-02-2022 release 2",
-        "info": "28-02-2022 R2:\n- Tasmota zigbee UI toegevoegd\n28-02-2022 R1:\n- Bug Ikea LED Strip opgelost, bij power 0 stuurt deze nu ook een 0 ipv 1\n27-02-2022 R1:\n- Batterijtrigger aangepast van \"true\" naar \"false\", dit lijkt effect te hebben op het aantal response meldingen van het device\n26-02-2022 R1: \n- Ikea powerplug, link naar gate verwijdert\n- Batterijtrigger voor E1743 aangepast, want deze stopte soms vanzelf.\n22-02-2022 R1: \n- Node.send for ikea E1743 voor linkage updates\n- Bug Ikea Powerplug opgelost, bij power 0 stuurt deze nu ook een 0 ipv 1\n19-02-2022 R1: \n- Xiaomi Water sensor toegevoegd, niet getest\n17-02-2022 R1: \n- Gestart met Versie nummers",
-        "x": 520,
+        "name": "Versie 03-03-2022 release 1 BETA",
+        "info": "03-03-2022 R1 Beta:\n- Toevoegen van nodered UI tbx idx tabel\n28-02-2022 R2:\n- Tasmota zigbee UI toegevoegd\n28-02-2022 R1:\n- Bug Ikea LED Strip opgelost, bij power 0 stuurt deze nu ook een 0 ipv 1\n27-02-2022 R1:\n- Batterijtrigger aangepast van \"true\" naar \"false\", dit lijkt effect te hebben op het aantal response meldingen van het device\n26-02-2022 R1: \n- Ikea powerplug, link naar gate verwijdert\n- Batterijtrigger voor E1743 aangepast, want deze stopte soms vanzelf.\n22-02-2022 R1: \n- Node.send for ikea E1743 voor linkage updates\n- Bug Ikea Powerplug opgelost, bij power 0 stuurt deze nu ook een 0 ipv 1\n19-02-2022 R1: \n- Xiaomi Water sensor toegevoegd, niet getest\n17-02-2022 R1: \n- Gestart met Versie nummers",
+        "x": 540,
         "y": 900,
         "wires": []
     },
@@ -2769,6 +2770,7 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
+        "libs": [],
         "x": 990,
         "y": 1000,
         "wires": [
@@ -3848,7 +3850,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 3330,
+        "x": 3370,
         "y": 840,
         "wires": []
     },
@@ -3858,7 +3860,7 @@
         "z": "32e6b1c785b786d2",
         "g": "fc3ffea91c83f578",
         "name": "",
-        "func": "flow.set(\"t2ztest\", \"\");\nreturn msg;",
+        "func": "flow.set(\"t2ztable\", \"\");\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -3997,8 +3999,43 @@
         "multiple": false,
         "options": [
             {
+                "label": "Heiman CO",
+                "value": "6",
+                "type": "str"
+            },
+            {
+                "label": "Ikea E1743",
+                "value": "7",
+                "type": "str"
+            },
+            {
+                "label": "Ikea Powerplug",
+                "value": "10",
+                "type": "str"
+            },
+            {
+                "label": "Ikea Led strip",
+                "value": "8",
+                "type": "str"
+            },
+            {
+                "label": "Lidl Livarno Bulb",
+                "value": "5",
+                "type": "str"
+            },
+            {
+                "label": "Osram mini switch",
+                "value": "4",
+                "type": "str"
+            },
+            {
                 "label": "Xiaomi deursensor",
                 "value": "1",
+                "type": "str"
+            },
+            {
+                "label": "Xiaomi Lux sensor",
+                "value": "11",
                 "type": "str"
             },
             {
@@ -4012,43 +4049,8 @@
                 "type": "str"
             },
             {
-                "label": "Osram mini switch",
-                "value": "4",
-                "type": "str"
-            },
-            {
-                "label": "Lidl Livarno Bulb",
-                "value": "5",
-                "type": "str"
-            },
-            {
-                "label": "Heiman CO",
-                "value": "6",
-                "type": "str"
-            },
-            {
-                "label": "Ikea E1743",
-                "value": "7",
-                "type": "str"
-            },
-            {
-                "label": "Ikea Led strip",
-                "value": "8",
-                "type": "str"
-            },
-            {
-                "label": "Xiaomi WSDCFQ11LM",
-                "value": "9",
-                "type": "str"
-            },
-            {
-                "label": "Ikea Powerplug",
-                "value": "10",
-                "type": "str"
-            },
-            {
-                "label": "Xiaomi Lux sensor",
-                "value": "11",
+                "label": "Xiaomi Water sensor",
+                "value": "13",
                 "type": "str"
             },
             {
@@ -4057,8 +4059,8 @@
                 "type": "str"
             },
             {
-                "label": "Xiaomi Water sensor",
-                "value": "13",
+                "label": "Xiaomi WSDCFQ11LM",
+                "value": "9",
                 "type": "str"
             }
         ],
@@ -4134,7 +4136,7 @@
         "z": "32e6b1c785b786d2",
         "g": "342e272fde205046",
         "name": "Set Device settings",
-        "func": "var data1 = context.get(\"data1\") || null; //get from context or default to 0\nvar data2 = context.get(\"data2\") || 0; //get from context or default to 0\nvar data3 = context.get(\"data3\") || 0; //get from context or default to 0\nvar data4 = context.get(\"data4\") || 0; //get from context or default to 0\nvar data5 = context.get(\"data5\") || 0; //get from context or default to 0\nvar data6 = context.get(\"data6\") || 0; //get from context or default to 0\nvar data7 = context.get(\"data7\") || 0; //get from context or default to 0\n\nvar reconfig = flow.get(\"t2ztest\") || {};\n\nswitch (msg.topic){\n\n    case \"device\":\n        data1 = msg.payload; \n        context.set(\"data1\", data1);//store in context for next time \n        return;\n    \n    case \"type\":\n        data2 = msg.payload; \n        context.set(\"data2\", data2);//store in context for next time \n        return;\n    \n    case \"idx\":\n        data3 = msg.payload; \n        context.set(\"data3\", data3);//store in context for next time \n        return;\n        \n    case \"idxbat\":\n        data4 = msg.payload;\n        context.set(\"data4\", data4); //store in context for next time \n        return;\n        \n    case \"idxper\":\n        data5 = msg.payload;\n        context.set(\"data5\", data5); //store in context for next time \n        return;\n    \n    case \"idxlink\":\n        data6 = msg.payload;\n        context.set(\"data6\", data6); //store in context for next time \n        return;\n    \n    case \"idxextra\":\n        data7 = msg.payload;\n        context.set(\"data7\", data7); //store in context for next time \n        return;\n        \n    case \"submit\":\n        if (data1 !== null ) {\n            //msg.payload = \"Device: \"+ data1 +\" , type: \" + data2 +\" , idx: \" + data3 +\" , idxbat: \" + data4 +\" , idxper: \" + data5 + \", idxlink: \" + data6 + \", idxextra: \" + data7;\n            var string = \"{\" + \"_/\" + data1 + \"/_/}\"\n            var array = string.split(\"/\")[2];\n            var receivedSensors = []\n            //return msg; \n        \n            let dev = reconfig[array] || {};\n            dev.type = data2;\n            dev.idx = data3;\n            dev.idxbat = data4;\n            dev.idxper = data5;\n            dev.idxlink = data6;\n            dev.idxextra = data7;\n      \n            // write back\n            reconfig[array] = dev;\n            receivedSensors.push(dev);\n \n            flow.set(\"t2ztest\", reconfig);\n            context.set(\"data1\", null)\n        } else {\n            return;\n        }\n    }\n\nreturn [{payload:Object.values(reconfig)},msg];\n//return msg;\n//return;",
+        "func": "var data1 = context.get(\"data1\") || null; //get from context or default to 0\nvar data2 = context.get(\"data2\") || 0; //get from context or default to 0\nvar data3 = context.get(\"data3\") || 0; //get from context or default to 0\nvar data4 = context.get(\"data4\") || 0; //get from context or default to 0\nvar data5 = context.get(\"data5\") || 0; //get from context or default to 0\nvar data6 = context.get(\"data6\") || 0; //get from context or default to 0\nvar data7 = context.get(\"data7\") || 0; //get from context or default to 0\n\nvar reconfig = flow.get(\"t2ztable\") || {};\n\nswitch (msg.topic){\n\n    case \"device\":\n        data1 = msg.payload; \n        context.set(\"data1\", data1);//store in context for next time \n        return;\n    \n    case \"type\":\n        data2 = msg.payload; \n        context.set(\"data2\", data2);//store in context for next time \n        return;\n    \n    case \"idx\":\n        data3 = msg.payload; \n        context.set(\"data3\", data3);//store in context for next time \n        return;\n        \n    case \"idxbat\":\n        data4 = msg.payload;\n        context.set(\"data4\", data4); //store in context for next time \n        return;\n        \n    case \"idxper\":\n        data5 = msg.payload;\n        context.set(\"data5\", data5); //store in context for next time \n        return;\n    \n    case \"idxlink\":\n        data6 = msg.payload;\n        context.set(\"data6\", data6); //store in context for next time \n        return;\n    \n    case \"idxextra\":\n        data7 = msg.payload;\n        context.set(\"data7\", data7); //store in context for next time \n        return;\n        \n    case \"submit\":\n        if (data1 !== null ) {\n            //msg.payload = \"Device: \"+ data1 +\" , type: \" + data2 +\" , idx: \" + data3 +\" , idxbat: \" + data4 +\" , idxper: \" + data5 + \", idxlink: \" + data6 + \", idxextra: \" + data7;\n            var string = \"{\" + \"_/\" + data1 + \"/_/}\"\n            var array = string.split(\"/\")[2];\n            var receivedSensors = []\n            //return msg; \n        \n            let dev = reconfig[array] || {};\n            dev.type = data2;\n            dev.idx = data3;\n            dev.idxbat = data4;\n            dev.idxper = data5;\n            dev.idxlink = data6;\n            dev.idxextra = data7;\n      \n            // write back\n            reconfig[array] = dev;\n            receivedSensors.push(dev);\n \n            flow.set(\"t2ztable\", reconfig);\n            context.set(\"data1\", null)\n        } else {\n            return;\n        }\n    }\n\nreturn [{payload:Object.values(reconfig)},msg];\n//return msg;\n//return;",
         "outputs": 2,
         "noerr": 0,
         "initialize": "",
@@ -4332,7 +4334,7 @@
         "type": "function",
         "z": "32e6b1c785b786d2",
         "name": "Voorbereiden voor device tabel",
-        "func": "var devs; \n\nif ( msg.src === 'restore' ) {\n    devs = flow.get(\"t2ztest\") || {};\n    return [{payload:Object.values(devs)}];\n} else if (msg.payload.ZbReceived === undefined) {\n    return;\n} else {\n\n    devs = flow.get(\"t2ztest\") || {};\n    var receivedSensors = []\n\n    for (var devN in msg.payload.ZbReceived) {\n        let devInfo = msg.payload.ZbReceived[devN];\n        let ID = devInfo.Device;\n        let Name = devInfo.Name;\n     \n        // get dev by ID\n        let dev = devs[ID] || {};\n     \n        if (dev.type===undefined) {\n            dev.type = \"onbekend\";\n        }\n        if (dev.idx===undefined) {\n            dev.idx = 0;\n        }\n        if (dev.idxbat===undefined) {\n            dev.idxbat = 0;\n        }\n        if (dev.idxper===undefined) {\n            dev.idxper = 0;\n        }\n        if (dev.idxlink===undefined) {\n            dev.idxlink = 0;\n        }\n        if (dev.idxextra===undefined) {\n            dev.idxextra = 0;\n        }\n\n        dev.label = ID; \n        dev.zigbeeid = ID;\n        dev.bridge = msg.topic.split(\"/\")[1];\n        dev.name = Name;\n    \n        // write back\n        devs[ID] = dev;\n        receivedSensors.push(dev);\n    }\n    flow.set(\"t2ztest\", devs);\n}\nreturn [{payload:Object.values(devs)}];",
+        "func": "var devs; \n\nif ( msg.src === 'restore' ) {\n    devs = flow.get(\"t2ztable\") || {};\n    return [{payload:Object.values(devs)}];\n} else if (msg.payload.ZbReceived === undefined) {\n    return;\n} else {\n\n    devs = flow.get(\"t2ztable\") || {};\n    var receivedSensors = []\n\n    for (var devN in msg.payload.ZbReceived) {\n        let devInfo = msg.payload.ZbReceived[devN];\n        let ID = devInfo.Device;\n        let Name = devInfo.Name;\n     \n        // get dev by ID\n        let dev = devs[ID] || {};\n     \n        if (dev.type===undefined) {\n            dev.type = \"onbekend\";\n        }\n        if (dev.idx===undefined) {\n            dev.idx = 0;\n        }\n        if (dev.idxbat===undefined) {\n            dev.idxbat = 0;\n        }\n        if (dev.idxper===undefined) {\n            dev.idxper = 0;\n        }\n        if (dev.idxlink===undefined) {\n            dev.idxlink = 0;\n        }\n        if (dev.idxextra===undefined) {\n            dev.idxextra = 0;\n        }\n\n        dev.label = ID; \n        dev.zigbeeid = ID;\n        dev.bridge = msg.topic.split(\"/\")[1];\n        dev.name = Name;\n    \n        // write back\n        devs[ID] = dev;\n        receivedSensors.push(dev);\n    }\n    flow.set(\"t2ztable\", devs);\n}\nreturn [{payload:Object.values(devs)}];",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -4474,13 +4476,13 @@
         "z": "32e6b1c785b786d2",
         "g": "2b14dd6ae297283b",
         "name": "Set flow.get test",
-        "func": "var store =  msg.payload;\nflow.set(\"t2ztest\", store);\nreturn [{payload:Object.values(store)}];",
+        "func": "var store =  msg.payload;\nflow.set(\"t2ztable\", store);\nreturn [{payload:Object.values(store)}];",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 3160,
+        "x": 3180,
         "y": 840,
         "wires": [
             [
@@ -4543,7 +4545,7 @@
         "z": "32e6b1c785b786d2",
         "g": "5145f22353cd7b61",
         "name": "",
-        "func": "if (msg.topic === \"del\") {\n    var devs = flow.get(\"t2ztest\") || {};\n    delete devs[msg.payload.zigbeeid];\n    return;\n}\n\nmsg.topic = msg.payload.name;\n\nlet str = JSON.stringify(msg.payload, null, 2);\ndelete msg.payload;\nmsg.payload = \"<pre>\" + str + \"</pre>\";\n\nreturn msg;",
+        "func": "if (msg.topic === \"del\") {\n    var devs = flow.get(\"t2ztable\") || {};\n    delete devs[msg.payload.zigbeeid];\n    \n    var reconfig = flow.get(\"t2ztable\") || {}\n    return [{payload:Object.values(reconfig)}];\n    \n}\n\nmsg.topic = msg.payload.name;\n\nlet str = JSON.stringify(msg.payload, null, 2);\ndelete msg.payload;\nmsg.payload = \"<pre>\" + str + \"</pre>\";\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -4710,9 +4712,537 @@
         "links": [
             "7348ab76bf1cbc93"
         ],
-        "x": 3275,
+        "x": 3315,
         "y": 880,
         "wires": []
+    },
+    {
+        "id": "a811414e66489895",
+        "type": "function",
+        "z": "32e6b1c785b786d2",
+        "name": "",
+        "func": "var createtable\nvar array = [];\n    \n//createtable = \"[\"\n\nvar store = msg.payload;\n\nfor ( var i = 0; i < store.length; i++ ) {\n    var zigbeedevice = store[i].type;\n    var idx = store[i].idx;\n    var idxbat = store[i].idxbat;\n\tvar idxper = store[i].idxper;\n\tvar idxlink = store[i].idxlink;\n\tvar idxextra = store[i].idxextra;\n    var zigbeeid = store[i].zigbeeid;\n    var topicname = store[i].bridge; \n    \n    //createtable = (createtable + \"{\" + zigbeedevice + \", \" + idx + \", \" + idxbat + \", \" + idxper + \", \" + idxlink + \", \" + idxextra + \", \" + zigbeeid + \", \" + topicname + \"},\")\n    array = (\"{\" + zigbeedevice + \", \" + idx + \", \" + idxbat + \", \" + idxper + \", \" + idxlink + \", \" + idxextra + \", \" + zigbeeid + \", \" + topicname + \"},\")\n\n}\n//createtable = (createtable + \"]\");\n//flow.set(\"t2zidxtable\", createtable);\n//msg.payload = createtable;\nflow.set(\"t2zidxtable\", array);\nmsg.payload = array;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2960,
+        "y": 280,
+        "wires": [
+            [
+                "3452c41b24c5af9f"
+            ]
+        ]
+    },
+    {
+        "id": "3452c41b24c5af9f",
+        "type": "debug",
+        "z": "32e6b1c785b786d2",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 3130,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "add6784fda8821c0",
+        "type": "split",
+        "z": "32e6b1c785b786d2",
+        "name": "",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "x": 2680,
+        "y": 280,
+        "wires": [
+            [
+                "f2d683a7790f4a10"
+            ]
+        ]
+    },
+    {
+        "id": "f2d683a7790f4a10",
+        "type": "join",
+        "z": "32e6b1c785b786d2",
+        "name": "",
+        "mode": "custom",
+        "build": "array",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": false,
+        "timeout": "",
+        "count": "",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 2810,
+        "y": 280,
+        "wires": [
+            [
+                "a811414e66489895"
+            ]
+        ]
+    },
+    {
+        "id": "8e5afcb0f0640b08",
+        "type": "function",
+        "z": "32e6b1c785b786d2",
+        "name": "Tasmota ID filter",
+        "func": "if ( msg.src === 'tasmota' ) {\n    var devs = flow.get(\"t2ztable\") || {};\n    var storepayload = msg.payload;\n    var zigbeedevice\n\n    for (var devN in msg.payload.ZbReceived) {\n        let devInfo = msg.payload.ZbReceived[devN];\n        let ID = devInfo.Device;\n\n        // get dev by ID\n        var dev = devs[ID] || {};\n\n        zigbeedevice = parseInt(dev.type);\n        storepayload[\"ZbReceived\"].idx = parseInt(dev.idx);\n        storepayload[\"ZbReceived\"].idxbat = parseInt(dev.idxbat);\n\t    storepayload[\"ZbReceived\"].idxper = parseInt(dev.idxper);\n\t    storepayload[\"ZbReceived\"].idxlink = parseInt(dev.idxlink);\n\t    storepayload[\"ZbReceived\"].idxextra = parseInt(dev.idxextra);\n\t    storepayload[\"ZbReceived\"].zigbeeid = dev.zigbeeid;\n        storepayload[\"ZbReceived\"].topicname = dev.bridge;\n            \n        //msg.payload = zigbeedevice;\n        //return [msg]\n    }\n    msg.payload = storepayload;\n    if ( zigbeedevice === 1 ) {\n        return [null, msg, null, null, null, null, null, null, null, null, null, null, null, null]; \n    } \n    else if ( zigbeedevice === 2 ) {\n        return [null, null, msg, null, null, null, null, null, null, null, null, null, null, null]; \n    }\n    else if ( zigbeedevice === 3 ) {\n        return [null, null, null, msg, null, null, null, null, null, null, null, null, null, null]; \n    }\n    else if ( zigbeedevice === 4 ) {\n        return [null, null, null, null, msg, null, null, null, null, null, null, null, null, null]; \n    }\n    else if ( zigbeedevice === 5 ) {\n        return [null, null, null, null, null, msg, null, null, null, null, null, null, null, null]; \n    }\n    else if ( zigbeedevice === 6 ) {\n        return [null, null, null, null, null, null, msg, null, null, null, null, null, null, null]; \n    }\n    else if ( zigbeedevice === 7 ) {\n        return [null, null, null, null, null, null, null, msg, null, null, null, null, null, null]; \n    }\n    else if ( zigbeedevice === 8 ) {\n        return [null, null, null, null, null, null, null, null, msg, null, null, null, null, null]; \n    }\n    else if ( zigbeedevice === 9 ) {\n        return [null, null, null, null, null, null, null, null, null, msg, null, null, null, null]; \n    }\n    else if ( zigbeedevice === 10 ) {\n        return [null, null, null, null, null, null, null, null, null, null, msg, null, null, null]; \n    }\n    else if ( zigbeedevice === 11 ) {\n        return [null, null, null, null, null, null, null, null, null, null, null, msg, null, null]; \n    }\n    else if ( zigbeedevice === 12 ) {\n        return [null, null, null, null, null, null, null, null, null, null, null, null, msg, null]; \n    }\n    else if ( zigbeedevice === 13 ) {\n        return [null, null, null, null, null, null, null, null, null, null, null, null, null, msg]; \n    }\n    var getflow = flow.keys();\n    var getNodeID = (Object.keys(msg.payload.ZbReceived)[0]);\n    for ( var h = 0; h < getflow.length; h++ ) {\n        var zigbeeflowdevice = getflow[h];\n        if (zigbeeflowdevice === getNodeID){\n          flow.set(getNodeID, undefined);\n        }\n        \n    }\n    return [msg, null, null, null, null, null, null, null, null, null, null, null, null];\n}",
+        "outputs": 14,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1740,
+        "y": 1900,
+        "wires": [
+            [
+                "2de3e4d37d88ae66"
+            ],
+            [
+                "aac2324a41d93548"
+            ],
+            [
+                "ee79a6ebfb401f0d"
+            ],
+            [
+                "cca66a9f7d261dc3"
+            ],
+            [
+                "2e27c288e4040fe1"
+            ],
+            [
+                "a2a444f8d9fd99a7"
+            ],
+            [
+                "1bc4fe5e6e528902"
+            ],
+            [
+                "86682b7f622340c8"
+            ],
+            [
+                "a70f4ecc39fcb161"
+            ],
+            [
+                "faabd4db19b912f6"
+            ],
+            [
+                "b9540248c8536d2d"
+            ],
+            [
+                "22154ed66113e6f4"
+            ],
+            [
+                "bf9022ab3b00f22d"
+            ],
+            [
+                "d9e95d9f3a0a65d4"
+            ]
+        ]
+    },
+    {
+        "id": "aac2324a41d93548",
+        "type": "debug",
+        "z": "32e6b1c785b786d2",
+        "name": "Xiaomi deur test ui",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2050,
+        "y": 1680,
+        "wires": []
+    },
+    {
+        "id": "ee79a6ebfb401f0d",
+        "type": "debug",
+        "z": "32e6b1c785b786d2",
+        "name": "Xiaomi motion test uit",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2060,
+        "y": 1720,
+        "wires": []
+    },
+    {
+        "id": "cca66a9f7d261dc3",
+        "type": "debug",
+        "z": "32e6b1c785b786d2",
+        "name": "Xiaomi smoke test ui",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2060,
+        "y": 1760,
+        "wires": []
+    },
+    {
+        "id": "2e27c288e4040fe1",
+        "type": "debug",
+        "z": "32e6b1c785b786d2",
+        "name": "Osram switch test ui",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2060,
+        "y": 1800,
+        "wires": []
+    },
+    {
+        "id": "a2a444f8d9fd99a7",
+        "type": "debug",
+        "z": "32e6b1c785b786d2",
+        "name": "lidl livarno test ui",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2040,
+        "y": 1840,
+        "wires": []
+    },
+    {
+        "id": "1bc4fe5e6e528902",
+        "type": "debug",
+        "z": "32e6b1c785b786d2",
+        "name": "Heiman co test ui",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2050,
+        "y": 1880,
+        "wires": []
+    },
+    {
+        "id": "86682b7f622340c8",
+        "type": "debug",
+        "z": "32e6b1c785b786d2",
+        "name": "ikea E1743 test ui",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2050,
+        "y": 1920,
+        "wires": []
+    },
+    {
+        "id": "a70f4ecc39fcb161",
+        "type": "debug",
+        "z": "32e6b1c785b786d2",
+        "name": "ikea led strip test ui",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2050,
+        "y": 1960,
+        "wires": []
+    },
+    {
+        "id": "faabd4db19b912f6",
+        "type": "debug",
+        "z": "32e6b1c785b786d2",
+        "name": "Xiaomi temp test uit",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2050,
+        "y": 2000,
+        "wires": []
+    },
+    {
+        "id": "b9540248c8536d2d",
+        "type": "debug",
+        "z": "32e6b1c785b786d2",
+        "name": "ikea powerplug test ui",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2060,
+        "y": 2040,
+        "wires": []
+    },
+    {
+        "id": "22154ed66113e6f4",
+        "type": "debug",
+        "z": "32e6b1c785b786d2",
+        "name": "Xiaomi lux sensor test ui",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2070,
+        "y": 2080,
+        "wires": []
+    },
+    {
+        "id": "bf9022ab3b00f22d",
+        "type": "debug",
+        "z": "32e6b1c785b786d2",
+        "name": "Xiaomi temp2 test uit",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2060,
+        "y": 2120,
+        "wires": []
+    },
+    {
+        "id": "d9e95d9f3a0a65d4",
+        "type": "debug",
+        "z": "32e6b1c785b786d2",
+        "name": "Xiaomi water test uit",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2060,
+        "y": 2160,
+        "wires": []
+    },
+    {
+        "id": "2de3e4d37d88ae66",
+        "type": "debug",
+        "z": "32e6b1c785b786d2",
+        "name": "not in table test ui",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2050,
+        "y": 1640,
+        "wires": []
+    },
+    {
+        "id": "acf64402df590090",
+        "type": "function",
+        "z": "32e6b1c785b786d2",
+        "name": "",
+        "func": "\nmsg.payload = \"0x0000\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2890,
+        "y": 180,
+        "wires": [
+            [
+                "52619df2b0737f37"
+            ]
+        ]
+    },
+    {
+        "id": "52619df2b0737f37",
+        "type": "debug",
+        "z": "32e6b1c785b786d2",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 3120,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "f6f1b1c9615ed88d",
+        "type": "inject",
+        "z": "32e6b1c785b786d2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 2670,
+        "y": 180,
+        "wires": [
+            [
+                "acf64402df590090"
+            ]
+        ]
+    },
+    {
+        "id": "1f60b5e6e42c7e1c",
+        "type": "inject",
+        "z": "32e6b1c785b786d2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "date",
+        "x": 1120,
+        "y": 1900,
+        "wires": [
+            [
+                "ed3d77cd32f24f21"
+            ]
+        ]
+    },
+    {
+        "id": "ed3d77cd32f24f21",
+        "type": "function",
+        "z": "32e6b1c785b786d2",
+        "name": "",
+        "func": "//msg = {\"topic\":\"tele/tasmota_963592/SENSOR\",\"payload\":{\"ZbReceived\":{\"0xC7CB\":{\"Device\":\"0xC7CB\",\"Name\": \"Remote_kledingkast\", \"0006!00\": \"\", \"Power\": 0, \"Endpoint\": 1, \"LinkQuality\": 157}}}};\nmsg = {\"topic\":\"tele/tasmota_96373D/SENSOR\",\"payload\":{\"ZbReceived\":{\"0xB275\":{\"Device\":\"0xB275\",\"Name\": \"Remote_kledingkast\", \"0006!00\": \"\", \"Power\": 0, \"Endpoint\": 1, \"LinkQuality\": 157}}}};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1280,
+        "y": 1900,
+        "wires": [
+            [
+                "53fed56d10889636"
+            ]
+        ]
+    },
+    {
+        "id": "53fed56d10889636",
+        "type": "function",
+        "z": "32e6b1c785b786d2",
+        "name": "add src",
+        "func": "msg.src = 'tasmota';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1420,
+        "y": 1900,
+        "wires": [
+            [
+                "8e5afcb0f0640b08",
+                "e312add737858962"
+            ]
+        ]
+    },
+    {
+        "id": "e312add737858962",
+        "type": "function",
+        "z": "32e6b1c785b786d2",
+        "name": "Tasmota ID filter",
+        "func": "if ( msg.src === 'tasmota' ) {\n    var devs = flow.get(\"t2ztable\") || {};\n    var storepayload = msg.payload;\n    var zigbeedevice\n\n    for (var devN in msg.payload.ZbReceived) {\n        let devInfo = msg.payload.ZbReceived[devN];\n        let ID = devInfo.Device;\n\n        // get dev by ID\n        var dev = devs[ID] || {};\n\n        zigbeedevice = parseInt(dev.type);\n        storepayload[\"ZbReceived\"].idx = parseInt(dev.idx);\n        storepayload[\"ZbReceived\"].idxbat = parseInt(dev.idxbat);\n\t    storepayload[\"ZbReceived\"].idxper = parseInt(dev.idxper);\n\t    storepayload[\"ZbReceived\"].idxlink = parseInt(dev.idxlink);\n\t    storepayload[\"ZbReceived\"].idxextra = parseInt(dev.idxextra);\n\t    storepayload[\"ZbReceived\"].zigbeeid = dev.zigbeeid;\n        storepayload[\"ZbReceived\"].topicname = dev.bridge;\n            \n        //msg.payload = zigbeedevice;\n        //return [msg]\n    }\n    msg.payload = storepayload;\n    if ( zigbeedevice === 1 ) {\n        return [null, msg, null, null, null, null, null, null, null, null, null, null, null, null]; \n    } \n    else if ( zigbeedevice === 2 ) {\n        return [null, null, msg, null, null, null, null, null, null, null, null, null, null, null]; \n    }\n    else if ( zigbeedevice === 3 ) {\n        return [null, null, null, msg, null, null, null, null, null, null, null, null, null, null]; \n    }\n    else if ( zigbeedevice === 4 ) {\n        return [null, null, null, null, msg, null, null, null, null, null, null, null, null, null]; \n    }\n    else if ( zigbeedevice === 5 ) {\n        return [null, null, null, null, null, msg, null, null, null, null, null, null, null, null]; \n    }\n    else if ( zigbeedevice === 6 ) {\n        return [null, null, null, null, null, null, msg, null, null, null, null, null, null, null]; \n    }\n    else if ( zigbeedevice === 7 ) {\n        return [null, null, null, null, null, null, null, msg, null, null, null, null, null, null]; \n    }\n    else if ( zigbeedevice === 8 ) {\n        return [null, null, null, null, null, null, null, null, msg, null, null, null, null, null]; \n    }\n    else if ( zigbeedevice === 9 ) {\n        return [null, null, null, null, null, null, null, null, null, msg, null, null, null, null]; \n    }\n    else if ( zigbeedevice === 10 ) {\n        return [null, null, null, null, null, null, null, null, null, null, msg, null, null, null]; \n    }\n    else if ( zigbeedevice === 11 ) {\n        return [null, null, null, null, null, null, null, null, null, null, null, msg, null, null]; \n    }\n    else if ( zigbeedevice === 12 ) {\n        return [null, null, null, null, null, null, null, null, null, null, null, null, msg, null]; \n    }\n    else if ( zigbeedevice === 13 ) {\n        return [null, null, null, null, null, null, null, null, null, null, null, null, null, msg]; \n    }\n    var getflow = flow.keys();\n    var getNodeID = (Object.keys(msg.payload.ZbReceived)[0]);\n    for ( var h = 0; h < getflow.length; h++ ) {\n        var zigbeeflowdevice = getflow[h];\n        if (zigbeeflowdevice === getNodeID){\n          flow.set(getNodeID, undefined);\n        }\n        \n    }\n    return [msg, null, null, null, null, null, null, null, null, null, null, null, null];\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1540,
+        "y": 2080,
+        "wires": [
+            [
+                "2de3e4d37d88ae66"
+            ]
+        ]
     },
     {
         "id": "b1bc1db1ae7424c0",
