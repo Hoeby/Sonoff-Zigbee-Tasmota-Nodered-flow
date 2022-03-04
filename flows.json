@@ -21,61 +21,12 @@
             "ab4957c45c92c798",
             "2ae2420fae93fe5f",
             "2ee82fa6912e4647",
-            "b6e455fe14a56f37",
-            "c2543eb2434ed034"
+            "b6e455fe14a56f37"
         ],
         "x": 2114,
         "y": 419,
         "w": 622,
         "h": 142
-    },
-    {
-        "id": "c2543eb2434ed034",
-        "type": "ui_button",
-        "z": "32e6b1c785b786d2",
-        "d": true,
-        "g": "aa230766d58b72a8",
-        "name": "",
-        "group": "4d67a6b2.8bc0e",
-        "order": 5,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "Update bridges status",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "",
-        "topicType": "str",
-        "x": 2260,
-        "y": 520,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "4d67a6b2.8bc0e",
-        "type": "ui_group",
-        "name": "Verander naam Zigbee Apparaat",
-        "tab": "abe3d4c.9322328",
-        "order": 3,
-        "disp": true,
-        "width": "8",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "abe3d4c.9322328",
-        "type": "ui_tab",
-        "name": "Tasmota Zigbee Admin",
-        "icon": "dashboard",
-        "order": 1,
-        "disabled": false,
-        "hidden": false
     },
     {
         "id": "812d066c811aa8db",
@@ -792,16 +743,6 @@
         "wires": []
     },
     {
-        "id": "c870e39f002e4de2",
-        "type": "comment",
-        "z": "32e6b1c785b786d2",
-        "name": "Todo list",
-        "info": "- Voltage batterij voor alle devices checken\n- Heiman Co controlleren.\n- Xiaomi temperatuur\n    - voorspelling kijken\n    - batterij toevoegen",
-        "x": 260,
-        "y": 220,
-        "wires": []
-    },
-    {
         "id": "269bdd93eaa30e8b",
         "type": "function",
         "z": "32e6b1c785b786d2",
@@ -1158,16 +1099,6 @@
         "statusType": "auto",
         "x": 1500,
         "y": 1560,
-        "wires": []
-    },
-    {
-        "id": "0adbc247aab5c6ef",
-        "type": "comment",
-        "z": "32e6b1c785b786d2",
-        "name": "",
-        "info": "loop prevent idee\n\nneem idx, als idx hetzelde is, dan stop\n\n\nconst dimmerList = [\"dimmer1\",\"dimmer2\",\"dimmer3\",\"dimmer4\"];\nlet receiving = context.get(\"receiving\") || false;\nlet source = context.get(\"source\");\nfunction propagate (value, items, noSend) {\n    items.forEach(item => {\n        if (item !== noSend) {\n            node.send({payload:value, topic:`cmnd/lighting/${item}/dimmer`});\n        }\n    });\n}\nif (!receiving) {\n    context.set(\"receiving\", true);\n    const splitTopic = msg.topic.split(\"/\");\n    context.set(\"source\", splitTopic[2]);\n    const propTimeout = setTimeout(()=>{\n        context.set(\"receiving\",false);\n    },500);\n    context.set(\"propTimeout\", propTimeout);\n    propagate(msg.payload, dimmerList, splitTopic[2]);\n} else if (msg.topic === source) {\n    let propTimeout = context.get(\"propTimeout\");\n    clearTimeout(propTimeout);\n    propTimeout = setTimeout(()=>{\n        context.set(\"receiving\",false);\n    },500);\n    context.set(\"propTimeout\", propTimeout);\n    propagate(msg.payload, dimmerList, source);\n}\nreturn null;",
-        "x": 260,
-        "y": 260,
         "wires": []
     },
     {
@@ -4716,7 +4647,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2050,
+        "x": 2040,
         "y": 1980,
         "wires": []
     },
@@ -5298,6 +5229,16 @@
         ]
     },
     {
+        "id": "9af985a7a1629ced",
+        "type": "comment",
+        "z": "32e6b1c785b786d2",
+        "name": "Wat instellen bij een nieuw device",
+        "info": "Wat allemaal instellen bij een nieuw device\n\n* Tasmota ID filter on ui table\n  - In tab \"Setup\" de \"Outputs\" met 1 verhogen.\n  - In tab \"On Message\" de returns bij werken ivm 1 extra output. Let op, voor tasmota, tasmotainfo en domoticz zijn 3 aparte blocken\n  - Achter de ID filter natuurlijk de nieuwe functie node voor het device maken en toevoegen\n \n* Drop Down node voor webpagina\n  - Bij options een extra block aanmaken. De naam moet identiek zijn aan wat je bij de tasmota ID filter hebt ingevoerd.",
+        "x": 330,
+        "y": 220,
+        "wires": []
+    },
+    {
         "id": "b1bc1db1ae7424c0",
         "type": "mqtt-broker",
         "name": "",
@@ -5334,6 +5275,17 @@
         "logcompress": false,
         "logrotatecount": "15",
         "logsize": "100"
+    },
+    {
+        "id": "4d67a6b2.8bc0e",
+        "type": "ui_group",
+        "name": "Verander naam Zigbee Apparaat",
+        "tab": "abe3d4c.9322328",
+        "order": 3,
+        "disp": true,
+        "width": "8",
+        "collapse": false,
+        "className": ""
     },
     {
         "id": "5b9b9721.b33e6",
@@ -5388,5 +5340,14 @@
         "width": "24",
         "collapse": false,
         "className": ""
+    },
+    {
+        "id": "abe3d4c.9322328",
+        "type": "ui_tab",
+        "name": "Tasmota Zigbee Admin",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
     }
 ]
