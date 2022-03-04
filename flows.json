@@ -30,6 +30,54 @@
         "h": 142
     },
     {
+        "id": "c2543eb2434ed034",
+        "type": "ui_button",
+        "z": "32e6b1c785b786d2",
+        "d": true,
+        "g": "aa230766d58b72a8",
+        "name": "",
+        "group": "4d67a6b2.8bc0e",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Update bridges status",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "topicType": "str",
+        "x": 2260,
+        "y": 520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4d67a6b2.8bc0e",
+        "type": "ui_group",
+        "name": "Verander naam Zigbee Apparaat",
+        "tab": "abe3d4c.9322328",
+        "order": 3,
+        "disp": true,
+        "width": "8",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "abe3d4c.9322328",
+        "type": "ui_tab",
+        "name": "Tasmota Zigbee Admin",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
         "id": "812d066c811aa8db",
         "type": "group",
         "z": "32e6b1c785b786d2",
@@ -2818,8 +2866,8 @@
             "4f9f9724cbeb89b7"
         ],
         "uncaught": false,
-        "x": 1930,
-        "y": 820,
+        "x": 1990,
+        "y": 840,
         "wires": [
             []
         ]
@@ -3572,36 +3620,6 @@
         "wires": [
             [
                 "f3db21b9723e0cfc"
-            ]
-        ]
-    },
-    {
-        "id": "c2543eb2434ed034",
-        "type": "ui_button",
-        "z": "32e6b1c785b786d2",
-        "d": true,
-        "g": "aa230766d58b72a8",
-        "name": "",
-        "group": "4d67a6b2.8bc0e",
-        "order": 5,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "Update bridges status",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "",
-        "topicType": "str",
-        "x": 2260,
-        "y": 520,
-        "wires": [
-            [
-                "2ee82fa6912e4647"
             ]
         ]
     },
@@ -4622,7 +4640,7 @@
         "type": "debug",
         "z": "32e6b1c785b786d2",
         "name": "Xiaomi deur test ui",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -4639,7 +4657,7 @@
         "type": "debug",
         "z": "32e6b1c785b786d2",
         "name": "Xiaomi motion test uit",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -4656,7 +4674,7 @@
         "type": "debug",
         "z": "32e6b1c785b786d2",
         "name": "Xiaomi smoke test ui",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -4673,7 +4691,7 @@
         "type": "debug",
         "z": "32e6b1c785b786d2",
         "name": "Osram switch test ui",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -4690,7 +4708,7 @@
         "type": "debug",
         "z": "32e6b1c785b786d2",
         "name": "lidl livarno test ui",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -4698,7 +4716,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 2040,
+        "x": 2050,
         "y": 1980,
         "wires": []
     },
@@ -4707,7 +4725,7 @@
         "type": "debug",
         "z": "32e6b1c785b786d2",
         "name": "Heiman co test ui",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -4724,7 +4742,7 @@
         "type": "debug",
         "z": "32e6b1c785b786d2",
         "name": "ikea E1743 test ui",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -4741,7 +4759,7 @@
         "type": "debug",
         "z": "32e6b1c785b786d2",
         "name": "ikea led strip test ui",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -4758,7 +4776,7 @@
         "type": "debug",
         "z": "32e6b1c785b786d2",
         "name": "Xiaomi temp test uit",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -4775,7 +4793,7 @@
         "type": "debug",
         "z": "32e6b1c785b786d2",
         "name": "ikea powerplug test ui",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -4792,7 +4810,7 @@
         "type": "debug",
         "z": "32e6b1c785b786d2",
         "name": "Xiaomi lux sensor test ui",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -4809,7 +4827,7 @@
         "type": "debug",
         "z": "32e6b1c785b786d2",
         "name": "Xiaomi temp2 test uit",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -4826,7 +4844,7 @@
         "type": "debug",
         "z": "32e6b1c785b786d2",
         "name": "Xiaomi water test uit",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -4843,7 +4861,7 @@
         "type": "debug",
         "z": "32e6b1c785b786d2",
         "name": "not in table test ui",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -4980,7 +4998,7 @@
         "name": "Zigbee Devices",
         "order": 1,
         "width": 24,
-        "height": 20,
+        "height": "11",
         "columns": [
             {
                 "field": "label",
@@ -5204,7 +5222,7 @@
         "order": 4,
         "width": 0,
         "height": 0,
-        "format": "<style>\n.button {\n  background-color: #0A8085;\n  border: none;\n  color: white;\n  padding: 15px 13%;\n  text-align: center;\n  text-decoration: none;\n  display: inline-block;\n  font-size: 16px;\n  margin: 4px 2px;\n  cursor: pointer;\n}\n</style>\n<form action=\"/flows.json\" method=\"get\">\n    <input type=\"submit\" class=\"button\" value=\"Download laatste flows.json file van github\" \n         name=\"Submit\" id=\"frm1_submit\" />\n</form>",
+        "format": "<style>\n.button {\n  background-color: #0A8085;\n  border: none;\n  color: #FFF7E0; \n  padding: 15px 5%;\n  text-align: center;\n  text-decoration: none;\n  display: inline-block;\n  font-size: 14px;\n  font-weight:600;\n  font-family:arial\n  margin: 4px 2px;\n  cursor: pointer\n  \n}\n</style>\n<form action=\"/flows.json\" method=\"get\">\n    <input type=\"submit\" class=\"button\" value=\"DOWNLOAD LAATSTE FLOWS.JSON FILE VAN GITHUB\" \n         name=\"Submit\" id=\"frm1_submit\" />\n</form>",
         "storeOutMessages": true,
         "fwdInMessages": false,
         "resendOnRefresh": false,
@@ -5318,17 +5336,6 @@
         "logsize": "100"
     },
     {
-        "id": "4d67a6b2.8bc0e",
-        "type": "ui_group",
-        "name": "Verander naam Zigbee Apparaat",
-        "tab": "abe3d4c.9322328",
-        "order": 3,
-        "disp": true,
-        "width": "8",
-        "collapse": false,
-        "className": ""
-    },
-    {
         "id": "5b9b9721.b33e6",
         "type": "ui_group",
         "name": "Tasmota Zigbee Bridges",
@@ -5381,14 +5388,5 @@
         "width": "24",
         "collapse": false,
         "className": ""
-    },
-    {
-        "id": "abe3d4c.9322328",
-        "type": "ui_tab",
-        "name": "Tasmota Zigbee Admin",
-        "icon": "dashboard",
-        "order": 1,
-        "disabled": false,
-        "hidden": false
     }
 ]
