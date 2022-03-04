@@ -5147,7 +5147,7 @@
         "order": 4,
         "width": 0,
         "height": 0,
-        "format": "<style>\n.button {\n  background-color: #0A8085;\n  border: none;\n  color: #FFF7E0; \n  padding: 15px 5%;\n  text-align: center;\n  text-decoration: none;\n  display: inline-block;\n  font-size: 14px;\n  font-weight:600;\n  font-family:arial\n  margin: 4px 2px;\n  cursor: pointer\n  \n}\n</style>\n<form action=\"/flows.json\" method=\"get\">\n    <input type=\"submit\" class=\"button\" value=\"DOWNLOAD LAATSTE FLOWS.JSON FILE VAN GITHUB\" \n         name=\"Submit\" id=\"frm1_submit\" />\n</form>",
+        "format": "<style>\n.button {\n  background-color: #0A8085;\n  border: none;\n  color: #FFF7E0; \n  padding: 15px 8%;\n  text-align: center;\n  text-decoration: none;\n  display: inline-block;\n  font-size: 13px;\n  font-weight:550;\n  font-family:arial\n  margin: 4px 2px;\n  cursor: pointer\n  \n}\n</style>\n<form action=\"/flows.json\" method=\"get\">\n    <input type=\"submit\" class=\"button\" value=\"DOWNLOAD LAATSTE FLOWS.JSON FILE VAN GITHUB\" \n         name=\"Submit\" id=\"frm1_submit\" />\n</form>",
         "storeOutMessages": true,
         "fwdInMessages": false,
         "resendOnRefresh": false,
