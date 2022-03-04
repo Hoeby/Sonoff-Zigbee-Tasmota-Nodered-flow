@@ -19,9 +19,9 @@
         },
         "nodes": [
             "ab4957c45c92c798",
-            "2ae2420fae93fe5f",
             "2ee82fa6912e4647",
-            "b6e455fe14a56f37"
+            "b6e455fe14a56f37",
+            "456f85a85253b02e"
         ],
         "x": 2114,
         "y": 419,
@@ -44,13 +44,17 @@
             "5db5c3b67f4218b7",
             "b6ed5f4cd718bf9b",
             "d41f574abdf8c5dd",
-            "7f8b0447b2aab70c"
+            "7f8b0447b2aab70c",
+            "2ecc0c65e522d6ab",
+            "7e37ed3f80e6353e",
+            "7e50ad36620eb3e9",
+            "ad071cf746fd4fd2"
         ],
         "env": [],
         "x": 194,
         "y": 1319,
-        "w": 472,
-        "h": 269.5
+        "w": 672,
+        "h": 342
     },
     {
         "id": "05a2f116f05b8c19",
@@ -574,6 +578,7 @@
         "id": "ad071cf746fd4fd2",
         "type": "function",
         "z": "32e6b1c785b786d2",
+        "g": "812d066c811aa8db",
         "name": "add src",
         "func": "msg.src = 'tasmota';\nreturn msg;",
         "outputs": 1,
@@ -603,13 +608,14 @@
         "id": "2ecc0c65e522d6ab",
         "type": "mqtt in",
         "z": "32e6b1c785b786d2",
+        "g": "812d066c811aa8db",
         "name": "",
         "topic": "domoticz/out",
         "qos": "2",
         "datatype": "auto",
         "broker": "b1bc1db1ae7424c0",
         "inputs": 0,
-        "x": 470,
+        "x": 310,
         "y": 1620,
         "wires": [
             [
@@ -621,6 +627,7 @@
         "id": "7e37ed3f80e6353e",
         "type": "function",
         "z": "32e6b1c785b786d2",
+        "g": "812d066c811aa8db",
         "name": "add src",
         "func": "msg.src = 'domoticz';\nreturn msg;",
         "outputs": 1,
@@ -678,7 +685,8 @@
             "08ad024704865499",
             "70235a8b59920fe7",
             "1b9c54730ad51654",
-            "99d5e38aa6a308f7"
+            "99d5e38aa6a308f7",
+            "456f85a85253b02e"
         ],
         "x": 1895,
         "y": 1700,
@@ -2570,6 +2578,7 @@
         "id": "7e50ad36620eb3e9",
         "type": "function",
         "z": "32e6b1c785b786d2",
+        "g": "812d066c811aa8db",
         "name": "add src",
         "func": "msg.src = 'tasmotainfo';\nreturn msg;",
         "outputs": 1,
@@ -2829,28 +2838,9 @@
         "y": 460,
         "wires": [
             [
-                "2ae2420fae93fe5f"
+                "456f85a85253b02e"
             ]
         ]
-    },
-    {
-        "id": "2ae2420fae93fe5f",
-        "type": "mqtt out",
-        "z": "32e6b1c785b786d2",
-        "g": "aa230766d58b72a8",
-        "name": "",
-        "topic": "",
-        "qos": "",
-        "retain": "",
-        "respTopic": "",
-        "contentType": "",
-        "userProps": "",
-        "correl": "",
-        "expiry": "",
-        "broker": "b1bc1db1ae7424c0",
-        "x": 2590,
-        "y": 460,
-        "wires": []
     },
     {
         "id": "2ee82fa6912e4647",
@@ -2868,8 +2858,8 @@
         "y": 460,
         "wires": [
             [
-                "2ae2420fae93fe5f",
-                "b6e455fe14a56f37"
+                "b6e455fe14a56f37",
+                "456f85a85253b02e"
             ]
         ]
     },
@@ -5236,6 +5226,20 @@
         "info": "Wat allemaal instellen bij een nieuw device\n\n* Tasmota ID filter on ui table\n  - In tab \"Setup\" de \"Outputs\" met 1 verhogen.\n  - In tab \"On Message\" de returns bij werken ivm 1 extra output. Let op, voor tasmota, tasmotainfo en domoticz zijn 3 aparte blocken\n  - Achter de ID filter natuurlijk de nieuwe functie node voor het device maken en toevoegen\n \n* Drop Down node voor webpagina\n  - Bij options een extra block aanmaken. De naam moet identiek zijn aan wat je bij de tasmota ID filter hebt ingevoerd.",
         "x": 330,
         "y": 220,
+        "wires": []
+    },
+    {
+        "id": "456f85a85253b02e",
+        "type": "link out",
+        "z": "32e6b1c785b786d2",
+        "g": "aa230766d58b72a8",
+        "name": "Probe to get IP out",
+        "mode": "link",
+        "links": [
+            "e4ed3f9404692874"
+        ],
+        "x": 2575,
+        "y": 460,
         "wires": []
     },
     {
