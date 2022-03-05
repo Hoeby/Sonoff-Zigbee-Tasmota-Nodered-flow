@@ -231,7 +231,7 @@
         "env": [],
         "x": 2254,
         "y": 399,
-        "w": 1372,
+        "w": 1222,
         "h": 122
     },
     {
@@ -328,7 +328,7 @@
         "z": "32e6b1c785b786d2",
         "name": "Tasmota commands",
         "info": "ZbPermitJoin 1 = pairing mode voor 60sec\n\nZbName = Friendly name invoeren\n   voorbeeld: ZbName 0x2590,Test_deurcontact\n   \nZbForget <device> = verwijderen device\n\nChange channel:\nZbConfig {\"Channel\":12}\n\nChange panid:\nZbConfig {\"PanID\":\"0x1A69\"}\nhttps://tasmota.github.io/docs/Commands/#zbconfig",
-        "x": 150,
+        "x": 110,
         "y": 120,
         "wires": []
     },
@@ -1025,7 +1025,7 @@
         "type": "function",
         "z": "32e6b1c785b786d2",
         "name": "Ikea E1743 remote",
-        "func": "if ( msg.src === 'tasmota' ) {\n    msg.topic = \"domoticz/in\";\n    var idx = msg.payload.ZbReceived.idx;\n    var idxper = msg.payload.ZbReceived.idxper;\n    var idxlink = msg.payload.ZbReceived.idxlink;\n    var zigbeeid = msg.payload.ZbReceived.zigbeeid;\n    var topicname = msg.payload.ZbReceived.topicname;\n\n    var level;\n    var percmsg;\n    var linkmsg;\n    var askbat;\n    var valuebatperc;\n    var valuelink;\n\n    function askbatidxlink() {\n        var array = [];\n        array[0] = idx;\n        array[1] = level;\n        array[2] = topicname;\n        flow.set(zigbeeid, array);\n        askbat = { \"topic\": \"cmnd/\" + topicname + \"/ZbSend\",\"payload\":{\"Device\": zigbeeid,\"Read\":{\"BatteryPercentage\":false}}};\n        //askbat = null;\n        if ( idxlink !== 0 ) {\n            if (valuelink !== undefined) {\n                linkmsg = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idxlink , \"svalue\": \"\" + valuelink + \"\", \"parse\": false}}; \n            } else {\n                linkmsg = null;\n            }\n        } else {\n            linkmsg = null;\n        }\n    }\n    \n    if ( msg.payload.ZbReceived[zigbeeid] ) {    \n        if (msg.payload.ZbReceived[zigbeeid].hasOwnProperty(\"BatteryPercentage\")) {\n            valuebatperc = msg.payload.ZbReceived[zigbeeid].BatteryPercentage;\n            //askbat = { \"topic\": \"cmnd/\" + topicname + \"/ZbSend\",\"payload\":{\"Device\": zigbeeid,\"Read\":{\"BatteryPercentage\":false}}};\n        //} else {\n            //askbat = { \"topic\": \"cmnd/\" + topicname + \"/ZbSend\",\"payload\":{\"Device\": zigbeeid,\"Read\":{\"BatteryPercentage\":true}}};\n        }\n        if (msg.payload.ZbReceived[zigbeeid].hasOwnProperty(\"LinkQuality\")) {\n            valuelink = msg.payload.ZbReceived[zigbeeid].LinkQuality;\n        }\n            \n        if (msg.payload.ZbReceived[zigbeeid].Power === 0) {\n            msg.payload = {\"command\": \"switchlight\", \"idx\": idx, \"switchcmd\": \"Set Level\", \"level\":\"0\"};\n            level = \"0\";\n            askbatidxlink();\n        }\n        else if (msg.payload.ZbReceived[zigbeeid].Power === 1) {\n            msg.payload = {\"command\": \"switchlight\", \"idx\": idx, \"switchcmd\": \"Set Level\", \"level\":\"10\"};\n            level = \"10\";\n            askbatidxlink();    \n        } \n        else if (msg.payload.ZbReceived[zigbeeid].DimmerMove === 0) {\n            msg.payload = {\"command\": \"switchlight\", \"idx\": idx, \"switchcmd\": \"Set Level\", \"level\":\"20\"};\n            level = \"20\";\n            askbatidxlink();    \n        }\n        else if (msg.payload.ZbReceived[zigbeeid].DimmerMove === 1) {\n            msg.payload = {\"command\": \"switchlight\", \"idx\": idx, \"switchcmd\": \"Set Level\", \"level\":\"30\"};\n            level = \"30\";\n            askbatidxlink();    \n        }\n        else if (msg.payload.ZbReceived[zigbeeid].DimmerStop === true) {\n            msg.payload = {\"command\": \"switchlight\", \"idx\": idx, \"switchcmd\": \"Set Level\", \"level\":\"40\"};\n            level = \"40\";\n            askbatidxlink();   \n        } \n        else {\n         \tmsg = null;\n        }\n    \n        if ( idxper !== 0 ) {\n            if (valuebatperc !== undefined) {\n                percmsg = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idxper , \"svalue\": \"\" + valuebatperc + \"\", \"parse\": false}}; \n                msg = null;\n                askbat = null;\n                linkmsg = null;\n            } else {\n                percmsg = null;\n            }\n        } else {\n            percmsg = null;\n        }\n        return [msg, percmsg, linkmsg, askbat];\n    }\n}\n\nif ( msg.src === 'tasmotainfo' ) {\n    msg.topic = \"domoticz/in\";\n    var idxperinfo = msg.payload.ZbInfo.idxper;\n    var idxlinkinfo = msg.payload.ZbInfo.idxlink;\n    var zigbeeidinfo = msg.payload.ZbInfo.zigbeeid;\n    \n    var percmsginfo;\n    var linkmsginfo;\n    var valuebatpercinfo;\n    var valuelinkinfo;\n    \n    if ( msg.payload.ZbInfo[zigbeeidinfo] ) {\n        if (msg.payload.ZbInfo[zigbeeidinfo].hasOwnProperty(\"BatteryPercentage\")) {\n            valuebatpercinfo = msg.payload.ZbInfo[zigbeeidinfo].BatteryPercentage;\n        }\n        if (msg.payload.ZbInfo[zigbeeidinfo].hasOwnProperty(\"LinkQuality\")) {\n            valuelinkinfo = msg.payload.ZbInfo[zigbeeidinfo].LinkQuality;\n        }\n        \n        if ( idxperinfo !== 0 ) {\n            if (valuebatpercinfo !== undefined) {\n                percmsginfo = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idxperinfo , \"svalue\": \"\" + valuebatpercinfo + \"\", \"parse\": false}}; \n            } else {\n                percmsginfo = null;\n            }\n        } else {\n            percmsginfo = null;\n        }\n        if ( idxlinkinfo !== 0 ) {\n            if (valuelinkinfo !== undefined) {\n                linkmsginfo = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idxlinkinfo , \"svalue\": \"\" + valuelinkinfo + \"\", \"parse\": false}}; \n            } else {\n                linkmsginfo = null;\n            }\n        } else {\n            linkmsginfo = null;\n        }\n        return [null, percmsginfo, linkmsginfo, null];\n    }\n}",
+        "func": "if ( msg.src === 'tasmota' ) {\n    msg.topic = \"domoticz/in\";\n    var idx = msg.payload.ZbReceived.idx;\n    var idxper = msg.payload.ZbReceived.idxper;\n    var idxlink = msg.payload.ZbReceived.idxlink;\n    var zigbeeid = msg.payload.ZbReceived.zigbeeid;\n    var topicname = msg.payload.ZbReceived.topicname;\n\n    var level;\n    var percmsg;\n    var linkmsg;\n    var askbat;\n    var valuebatperc;\n    var valuelink;\n\n    function askbatidxlink() {\n        var array = [];\n        array[0] = idx;\n        array[1] = topicname;\n        flow.set(zigbeeid, array);\n        askbat = { \"topic\": \"cmnd/\" + topicname + \"/ZbSend\",\"payload\":{\"Device\": zigbeeid,\"Read\":{\"BatteryPercentage\":false}}};\n        //askbat = null;\n        if ( idxlink !== 0 ) {\n            if (valuelink !== undefined) {\n                linkmsg = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idxlink , \"svalue\": \"\" + valuelink + \"\", \"parse\": false}}; \n            } else {\n                linkmsg = null;\n            }\n        } else {\n            linkmsg = null;\n        }\n    }\n    \n    if ( msg.payload.ZbReceived[zigbeeid] ) {    \n        if (msg.payload.ZbReceived[zigbeeid].hasOwnProperty(\"BatteryPercentage\")) {\n            valuebatperc = msg.payload.ZbReceived[zigbeeid].BatteryPercentage;\n            //askbat = { \"topic\": \"cmnd/\" + topicname + \"/ZbSend\",\"payload\":{\"Device\": zigbeeid,\"Read\":{\"BatteryPercentage\":false}}};\n        //} else {\n            //askbat = { \"topic\": \"cmnd/\" + topicname + \"/ZbSend\",\"payload\":{\"Device\": zigbeeid,\"Read\":{\"BatteryPercentage\":true}}};\n        }\n        if (msg.payload.ZbReceived[zigbeeid].hasOwnProperty(\"LinkQuality\")) {\n            valuelink = msg.payload.ZbReceived[zigbeeid].LinkQuality;\n        }\n            \n        if (msg.payload.ZbReceived[zigbeeid].Power === 0) {\n            msg.payload = {\"command\": \"switchlight\", \"idx\": idx, \"switchcmd\": \"Set Level\", \"level\":\"0\"};\n            level = \"0\";\n            askbatidxlink();\n        }\n        else if (msg.payload.ZbReceived[zigbeeid].Power === 1) {\n            msg.payload = {\"command\": \"switchlight\", \"idx\": idx, \"switchcmd\": \"Set Level\", \"level\":\"10\"};\n            level = \"10\";\n            askbatidxlink();    \n        } \n        else if (msg.payload.ZbReceived[zigbeeid].DimmerMove === 0) {\n            msg.payload = {\"command\": \"switchlight\", \"idx\": idx, \"switchcmd\": \"Set Level\", \"level\":\"20\"};\n            level = \"20\";\n            askbatidxlink();    \n        }\n        else if (msg.payload.ZbReceived[zigbeeid].DimmerMove === 1) {\n            msg.payload = {\"command\": \"switchlight\", \"idx\": idx, \"switchcmd\": \"Set Level\", \"level\":\"30\"};\n            level = \"30\";\n            askbatidxlink();    \n        }\n        else if (msg.payload.ZbReceived[zigbeeid].DimmerStop === true) {\n            msg.payload = {\"command\": \"switchlight\", \"idx\": idx, \"switchcmd\": \"Set Level\", \"level\":\"40\"};\n            level = \"40\";\n            askbatidxlink();   \n        } \n        else {\n         \tmsg = null;\n        }\n    \n        if ( idxper !== 0 ) {\n            if (valuebatperc !== undefined) {\n                percmsg = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idxper , \"svalue\": \"\" + valuebatperc + \"\", \"parse\": false}}; \n                msg = null;\n                askbat = null;\n                linkmsg = null;\n            } else {\n                percmsg = null;\n            }\n        } else {\n            percmsg = null;\n        }\n        return [msg, percmsg, linkmsg, askbat];\n    }\n}\n\nif ( msg.src === 'tasmotainfo' ) {\n    msg.topic = \"domoticz/in\";\n    var idxperinfo = msg.payload.ZbInfo.idxper;\n    var idxlinkinfo = msg.payload.ZbInfo.idxlink;\n    var zigbeeidinfo = msg.payload.ZbInfo.zigbeeid;\n    \n    var percmsginfo;\n    var linkmsginfo;\n    var valuebatpercinfo;\n    var valuelinkinfo;\n    \n    if ( msg.payload.ZbInfo[zigbeeidinfo] ) {\n        if (msg.payload.ZbInfo[zigbeeidinfo].hasOwnProperty(\"BatteryPercentage\")) {\n            valuebatpercinfo = msg.payload.ZbInfo[zigbeeidinfo].BatteryPercentage;\n        }\n        if (msg.payload.ZbInfo[zigbeeidinfo].hasOwnProperty(\"LinkQuality\")) {\n            valuelinkinfo = msg.payload.ZbInfo[zigbeeidinfo].LinkQuality;\n        }\n        \n        if ( idxperinfo !== 0 ) {\n            if (valuebatpercinfo !== undefined) {\n                percmsginfo = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idxperinfo , \"svalue\": \"\" + valuebatpercinfo + \"\", \"parse\": false}}; \n            } else {\n                percmsginfo = null;\n            }\n        } else {\n            percmsginfo = null;\n        }\n        if ( idxlinkinfo !== 0 ) {\n            if (valuelinkinfo !== undefined) {\n                linkmsginfo = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idxlinkinfo , \"svalue\": \"\" + valuelinkinfo + \"\", \"parse\": false}}; \n            } else {\n                linkmsginfo = null;\n            }\n        } else {\n            linkmsginfo = null;\n        }\n        return [null, percmsginfo, linkmsginfo, null];\n    }\n}",
         "outputs": 4,
         "noerr": 0,
         "initialize": "",
@@ -2507,7 +2507,7 @@
         "type": "function",
         "z": "32e6b1c785b786d2",
         "name": "E1743 bat+link",
-        "func": "var getflow = flow.keys();\nvar topicname;\n\nfor ( var i = 0; i < getflow.length; i++ ) {\n    var zigbeedevice = getflow[i]; //geeft het zigbee ID\n    var digits = (zigbeedevice.substring(0,2));\n    if (digits == \"0x\") {\n      topicname = flow.get(zigbeedevice)[2]; //geeft array0\n      msg.topic = \"cmnd/\" + topicname + \"/ZbInfo\"\n      msg.payload = zigbeedevice;\n      node.send(msg);\n    }\n}\nreturn;",
+        "func": "var getflow = flow.keys();\nvar topicname;\n\nfor ( var i = 0; i < getflow.length; i++ ) {\n    var zigbeedevice = getflow[i]; //geeft het zigbee ID\n    var digits = (zigbeedevice.substring(0,2));\n    if (digits == \"0x\") {\n      topicname = flow.get(zigbeedevice)[1]; //geeft array0\n      msg.topic = \"cmnd/\" + topicname + \"/ZbInfo\"\n      msg.payload = zigbeedevice;\n      node.send(msg);\n    }\n}\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -2517,7 +2517,8 @@
         "y": 1560,
         "wires": [
             [
-                "fff088000ef81383"
+                "fff088000ef81383",
+                "d8909462c488fb49"
             ]
         ]
     },
@@ -2617,7 +2618,7 @@
         "z": "32e6b1c785b786d2",
         "name": "Versie 04-03-2022 release 1 BETA ivm webpagina",
         "info": "04-03-2022 R1 Beta:\n- Toevoegen van nodered UI tbx idx tabel\n28-02-2022 R2:\n- Tasmota zigbee UI toegevoegd\n28-02-2022 R1:\n- Bug Ikea LED Strip opgelost, bij power 0 stuurt deze nu ook een 0 ipv 1\n27-02-2022 R1:\n- Batterijtrigger aangepast van \"true\" naar \"false\", dit lijkt effect te hebben op het aantal response meldingen van het device\n26-02-2022 R1: \n- Ikea powerplug, link naar gate verwijdert\n- Batterijtrigger voor E1743 aangepast, want deze stopte soms vanzelf.\n22-02-2022 R1: \n- Node.send for ikea E1743 voor linkage updates\n- Bug Ikea Powerplug opgelost, bij power 0 stuurt deze nu ook een 0 ipv 1\n19-02-2022 R1: \n- Xiaomi Water sensor toegevoegd, niet getest\n17-02-2022 R1: \n- Gestart met Versie nummers",
-        "x": 250,
+        "x": 210,
         "y": 80,
         "wires": []
     },
@@ -3653,15 +3654,15 @@
         "z": "32e6b1c785b786d2",
         "g": "2b14dd6ae297283b",
         "name": "",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 3510,
-        "y": 440,
+        "x": 3310,
+        "y": 480,
         "wires": []
     },
     {
@@ -4151,7 +4152,7 @@
         "finalize": "",
         "libs": [],
         "x": 890,
-        "y": 160,
+        "y": 100,
         "wires": [
             [
                 "466516d2d35d133a"
@@ -4296,7 +4297,6 @@
         "y": 440,
         "wires": [
             [
-                "481e845fe0a736c7",
                 "081b4575f60f755b"
             ]
         ]
@@ -4313,7 +4313,7 @@
         "finalize": "",
         "libs": [],
         "x": 580,
-        "y": 160,
+        "y": 100,
         "wires": [
             [
                 "a7f044e8e2c649b1"
@@ -4326,7 +4326,7 @@
         "z": "32e6b1c785b786d2",
         "g": "5145f22353cd7b61",
         "name": "",
-        "func": "if (msg.topic === \"del\") {\n    var devs = flow.get(\"t2ztable\") || {};\n    var flowdeltype = msg.payload.type;\n    var flowdelid = msg.payload.zigbeeid;\n    delete devs[msg.payload.zigbeeid];\n    if (flowdeltype === \"Ikea E1743\") {\n        flow.set(flowdelid, undefined);\n    }\n}\n    \n    msg.topic = \"IDX tabel: \" + msg.payload.name + \", \" + msg.payload.zigbeeid + \" is verwijdert.\";\n    msg.payload = \"Device is niet verwijdert in de sonoff bridge, alleen op deze webpagina.\"\n    var reconfig = flow.get(\"t2ztable\") || {}\n    return [msg,{payload:Object.values(reconfig)}];\n}\n\nmsg.topic = msg.payload.name;\n\nlet str = JSON.stringify(msg.payload, null, 2);\ndelete msg.payload;\nmsg.payload = \"<pre>\" + str + \"</pre>\";\n\nreturn msg;",
+        "func": "if (msg.topic === \"del\") {\n    var devs = flow.get(\"t2ztable\") || {};\n    var flowdeltype = msg.payload.type;\n    var flowdelid = msg.payload.zigbeeid;\n    delete devs[msg.payload.zigbeeid];\n    if (flowdeltype === \"Ikea E1743\") {\n        flow.set(flowdelid, undefined);\n    }\n    \n    msg.topic = \"IDX tabel: \" + msg.payload.name + \", \" + msg.payload.zigbeeid + \" is verwijdert.\";\n    msg.payload = \"Device is niet verwijdert in de sonoff bridge, alleen op deze webpagina.\"\n    var reconfig = flow.get(\"t2ztable\") || {}\n    return [msg,{payload:Object.values(reconfig)}];\n}\n\nmsg.topic = msg.payload.name;\n\nlet str = JSON.stringify(msg.payload, null, 2);\ndelete msg.payload;\nmsg.payload = \"<pre>\" + str + \"</pre>\";\n\nreturn msg;",
         "outputs": 2,
         "noerr": 0,
         "initialize": "",
@@ -4451,7 +4451,9 @@
         "y": 440,
         "wires": [
             [
-                "8323979a6ecc7569"
+                "8323979a6ecc7569",
+                "481e845fe0a736c7",
+                "589b204a53bdbefa"
             ]
         ]
     },
@@ -4481,7 +4483,7 @@
             "f9c4038fea73b0cf"
         ],
         "x": 455,
-        "y": 160,
+        "y": 100,
         "wires": [
             [
                 "247a4e546ff06812"
@@ -4498,8 +4500,8 @@
         "links": [
             "7348ab76bf1cbc93"
         ],
-        "x": 3455,
-        "y": 480,
+        "x": 3435,
+        "y": 440,
         "wires": []
     },
     {
@@ -4927,7 +4929,7 @@
         "columns": [
             {
                 "field": "label",
-                "title": "Label",
+                "title": "Naam",
                 "width": "15%",
                 "align": "left",
                 "formatter": "html",
@@ -5228,7 +5230,7 @@
         "z": "32e6b1c785b786d2",
         "name": "Wat instellen bij een nieuw device",
         "info": "Wat allemaal instellen bij een nieuw device\n\n* Tasmota ID filter on ui table\n  - In tab \"Setup\" de \"Outputs\" met 1 verhogen.\n  - In tab \"On Message\" de returns bij werken ivm 1 extra output. Let op, voor tasmota, tasmotainfo en domoticz zijn 3 aparte blocken\n  - Achter de ID filter natuurlijk de nieuwe functie node voor het device maken en toevoegen\n \n* Drop Down node voor webpagina\n  - Bij options een extra block aanmaken. De naam moet identiek zijn aan wat je bij de tasmota ID filter hebt ingevoerd.",
-        "x": 190,
+        "x": 150,
         "y": 160,
         "wires": []
     },
@@ -5276,6 +5278,57 @@
                 "376768625db0b7b5"
             ]
         ]
+    },
+    {
+        "id": "589b204a53bdbefa",
+        "type": "function",
+        "z": "32e6b1c785b786d2",
+        "name": "",
+        "func": "var devsdomoticz = flow.get(\"t2ztable\") || {};\nvar length = Object.keys(devsdomoticz).length;\n\nfor ( var i = 0; i < length; i++ ) {\n    var keys = Object.keys(devsdomoticz);\n    var IDkey = keys[i];\n    var message = devsdomoticz[IDkey];\n    var messagetype = devsdomoticz[IDkey].type;\n    var messageidx = parseInt(devsdomoticz[IDkey].idx);\n    var messagezigbeeid = devsdomoticz[IDkey].zigbeeid;\n    var messagebridge = devsdomoticz[IDkey].bridge;\n    \n    if ( messagetype === \"Ikea E1743\") {\n        var array = [];\n        array[0] = messageidx;\n        array[1] = messagebridge;\n        flow.set(messagezigbeeid, array);\n        msg.payload = \"Flow.set for device id \" + messagezigbeeid + \", idx: \" + messageidx + \", bridge: \" + messagebridge + \"\";\n        return msg\n    }\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3360,
+        "y": 340,
+        "wires": [
+            [
+                "c0dd3b2da21e23f7"
+            ]
+        ]
+    },
+    {
+        "id": "c0dd3b2da21e23f7",
+        "type": "debug",
+        "z": "32e6b1c785b786d2",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 3550,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "d8909462c488fb49",
+        "type": "debug",
+        "z": "32e6b1c785b786d2",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1640,
+        "y": 1680,
+        "wires": []
     },
     {
         "id": "b1bc1db1ae7424c0",
