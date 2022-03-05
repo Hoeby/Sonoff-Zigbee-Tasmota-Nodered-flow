@@ -226,13 +226,15 @@
             "59c69e3ca4cad7cb",
             "9d9cc3cc6fa57133",
             "20ef08116235f529",
-            "081b4575f60f755b"
+            "081b4575f60f755b",
+            "589b204a53bdbefa",
+            "c0dd3b2da21e23f7"
         ],
         "env": [],
         "x": 2254,
         "y": 399,
-        "w": 1222,
-        "h": 122
+        "w": 1312,
+        "h": 162
     },
     {
         "id": "5145f22353cd7b61",
@@ -300,7 +302,7 @@
         ],
         "env": [],
         "x": 2254,
-        "y": 539,
+        "y": 579,
         "w": 932,
         "h": 122
     },
@@ -2812,7 +2814,7 @@
         ],
         "uncaught": false,
         "x": 2310,
-        "y": 700,
+        "y": 740,
         "wires": [
             []
         ]
@@ -3595,7 +3597,7 @@
         "encoding": "none",
         "allProps": false,
         "x": 2500,
-        "y": 440,
+        "y": 480,
         "wires": [
             [
                 "21c95c5161e18956"
@@ -3612,7 +3614,7 @@
         "action": "",
         "pretty": false,
         "x": 2630,
-        "y": 440,
+        "y": 480,
         "wires": [
             [
                 "7473e02c36c330c9"
@@ -3641,7 +3643,7 @@
         "topic": "",
         "payloadType": "date",
         "x": 2360,
-        "y": 440,
+        "y": 480,
         "wires": [
             [
                 "c5c4597ec7e244f2"
@@ -3654,7 +3656,7 @@
         "z": "32e6b1c785b786d2",
         "g": "2b14dd6ae297283b",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -3662,7 +3664,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 3310,
-        "y": 480,
+        "y": 520,
         "wires": []
     },
     {
@@ -4294,7 +4296,7 @@
         "finalize": "",
         "libs": [],
         "x": 3320,
-        "y": 440,
+        "y": 480,
         "wires": [
             [
                 "081b4575f60f755b"
@@ -4379,7 +4381,7 @@
         "finalize": "",
         "libs": [],
         "x": 2760,
-        "y": 440,
+        "y": 480,
         "wires": [
             [
                 "59c69e3ca4cad7cb"
@@ -4399,7 +4401,7 @@
         "stream": false,
         "addname": "",
         "x": 2890,
-        "y": 440,
+        "y": 480,
         "wires": [
             [
                 "9d9cc3cc6fa57133"
@@ -4419,7 +4421,7 @@
         "finalize": "",
         "libs": [],
         "x": 3020,
-        "y": 440,
+        "y": 480,
         "wires": [
             [
                 "20ef08116235f529"
@@ -4448,7 +4450,7 @@
         "reduceInitType": "",
         "reduceFixup": "",
         "x": 3150,
-        "y": 440,
+        "y": 480,
         "wires": [
             [
                 "8323979a6ecc7569",
@@ -4501,7 +4503,7 @@
             "7348ab76bf1cbc93"
         ],
         "x": 3435,
-        "y": 440,
+        "y": 480,
         "wires": []
     },
     {
@@ -5132,7 +5134,7 @@
         "upload": false,
         "swaggerDoc": "",
         "x": 2360,
-        "y": 620,
+        "y": 660,
         "wires": [
             [
                 "b3b34d23fc262cfc"
@@ -5156,7 +5158,7 @@
         "templateScope": "local",
         "className": "",
         "x": 2380,
-        "y": 580,
+        "y": 620,
         "wires": [
             []
         ]
@@ -5170,7 +5172,7 @@
         "statusCode": "",
         "headers": {},
         "x": 3110,
-        "y": 620,
+        "y": 660,
         "wires": []
     },
     {
@@ -5189,7 +5191,7 @@
         "authType": "",
         "senderr": false,
         "x": 2570,
-        "y": 620,
+        "y": 660,
         "wires": [
             [
                 "8da4a2615b0f9736"
@@ -5217,7 +5219,7 @@
         "to": "",
         "reg": false,
         "x": 2850,
-        "y": 620,
+        "y": 660,
         "wires": [
             [
                 "b34469817cdf7cdc"
@@ -5283,6 +5285,7 @@
         "id": "589b204a53bdbefa",
         "type": "function",
         "z": "32e6b1c785b786d2",
+        "g": "2b14dd6ae297283b",
         "name": "",
         "func": "var devsdomoticz = flow.get(\"t2ztable\") || {};\nvar length = Object.keys(devsdomoticz).length;\n\nfor ( var i = 0; i < length; i++ ) {\n    var keys = Object.keys(devsdomoticz);\n    var IDkey = keys[i];\n    var message = devsdomoticz[IDkey];\n    var messagetype = devsdomoticz[IDkey].type;\n    var messageidx = parseInt(devsdomoticz[IDkey].idx);\n    var messagezigbeeid = devsdomoticz[IDkey].zigbeeid;\n    var messagebridge = devsdomoticz[IDkey].bridge;\n    \n    if ( messagetype === \"Ikea E1743\") {\n        var array = [];\n        array[0] = messageidx;\n        array[1] = messagebridge;\n        flow.set(messagezigbeeid, array);\n        msg.payload = \"Flow.set for device id \" + messagezigbeeid + \", idx: \" + messageidx + \", bridge: \" + messagebridge + \"\";\n        return msg\n    }\n}",
         "outputs": 1,
@@ -5290,8 +5293,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 3360,
-        "y": 340,
+        "x": 3300,
+        "y": 440,
         "wires": [
             [
                 "c0dd3b2da21e23f7"
@@ -5302,16 +5305,17 @@
         "id": "c0dd3b2da21e23f7",
         "type": "debug",
         "z": "32e6b1c785b786d2",
+        "g": "2b14dd6ae297283b",
         "name": "",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 3550,
-        "y": 340,
+        "x": 3450,
+        "y": 440,
         "wires": []
     },
     {
