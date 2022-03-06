@@ -57,32 +57,6 @@
         "h": 342
     },
     {
-        "id": "05a2f116f05b8c19",
-        "type": "group",
-        "z": "32e6b1c785b786d2",
-        "name": "Herbenoem Zigbee apparaten",
-        "style": {
-            "stroke": "#3f93cf",
-            "label": true,
-            "color": "#3f93cf"
-        },
-        "nodes": [
-            "d33963f3ee2f7ef1",
-            "39b828367fc868a1",
-            "202da5354877d0e8",
-            "e42c3f20342ec925",
-            "edea2f707eaa6c2e",
-            "21a702d22e35399a",
-            "99d5e38aa6a308f7",
-            "44be3c4f17a3ac08"
-        ],
-        "env": [],
-        "x": 1054,
-        "y": 199,
-        "w": 912,
-        "h": 202
-    },
-    {
         "id": "bc769b1b3ab8db3f",
         "type": "group",
         "z": "32e6b1c785b786d2",
@@ -125,7 +99,7 @@
         ],
         "env": [],
         "x": 1054,
-        "y": 679,
+        "y": 739,
         "w": 913,
         "h": 82
     },
@@ -133,7 +107,7 @@
         "id": "054419e6dfea3c5a",
         "type": "group",
         "z": "32e6b1c785b786d2",
-        "name": "Stuur naar alle zigbee bridges",
+        "name": "Stuur naar zigbee bridge",
         "style": {
             "stroke": "#3f93cf",
             "label": true,
@@ -141,18 +115,26 @@
         },
         "nodes": [
             "f3db21b9723e0cfc",
-            "7164e9ee53edfd3b",
-            "c70e98768b4cdaf1",
             "37e55389157ed1ad",
             "f7c665cefb19670e",
-            "1b9c54730ad51654",
-            "202c7dd66b1fedba"
+            "202c7dd66b1fedba",
+            "460d09788346164d",
+            "1d35990521f7c49c",
+            "dc0f5dbb0855a505",
+            "bfd99529b3e29427",
+            "7a270006242bbfc0",
+            "ff5e4e68237fd483",
+            "695720e4296db2e6",
+            "90ff06fb83d4e97b",
+            "b01db5d10adf0ad6",
+            "832e62f4a6a7caf9",
+            "4d29c691a74b2673"
         ],
         "env": [],
         "x": 1054,
         "y": 519,
         "w": 913,
-        "h": 142
+        "h": 202
     },
     {
         "id": "342e272fde205046",
@@ -228,7 +210,8 @@
             "20ef08116235f529",
             "081b4575f60f755b",
             "589b204a53bdbefa",
-            "c0dd3b2da21e23f7"
+            "c0dd3b2da21e23f7",
+            "36574a90b5c65556"
         ],
         "env": [],
         "x": 2254,
@@ -295,16 +278,46 @@
         },
         "nodes": [
             "2b85d6ecfe7216e8",
-            "25a5db19143b2d49",
             "b34469817cdf7cdc",
             "b3b34d23fc262cfc",
-            "8da4a2615b0f9736"
+            "8da4a2615b0f9736",
+            "8d7042a134b77af5",
+            "7e7e2210239d3b41",
+            "7bd15898e6b36ca9",
+            "b1ebfc868c273cdb"
         ],
         "env": [],
-        "x": 2254,
+        "x": 2294,
         "y": 579,
         "w": 932,
         "h": 122
+    },
+    {
+        "id": "05a2f116f05b8c19",
+        "type": "group",
+        "z": "32e6b1c785b786d2",
+        "name": "Herbenoem Zigbee apparaten",
+        "style": {
+            "stroke": "#3f93cf",
+            "label": true,
+            "color": "#3f93cf"
+        },
+        "nodes": [
+            "d33963f3ee2f7ef1",
+            "39b828367fc868a1",
+            "202da5354877d0e8",
+            "e42c3f20342ec925",
+            "edea2f707eaa6c2e",
+            "21a702d22e35399a",
+            "99d5e38aa6a308f7",
+            "44be3c4f17a3ac08",
+            "07b49abc2e756953"
+        ],
+        "env": [],
+        "x": 1054,
+        "y": 199,
+        "w": 912,
+        "h": 202
     },
     {
         "id": "fcdf7fc73dd7af70",
@@ -692,7 +705,10 @@
             "70235a8b59920fe7",
             "1b9c54730ad51654",
             "99d5e38aa6a308f7",
-            "456f85a85253b02e"
+            "456f85a85253b02e",
+            "dc0f5dbb0855a505",
+            "14102d5fc55821a7",
+            "714592ea394fdf89"
         ],
         "x": 1755,
         "y": 1560,
@@ -734,8 +750,7 @@
             [
                 "273c9ce4a5f2a5fc",
                 "1805c2bdbbc563df",
-                "397d1f72ee768ae0",
-                "8e5afcb0f0640b08"
+                "397d1f72ee768ae0"
             ]
         ]
     },
@@ -767,51 +782,23 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1900,
-        "y": 1380,
+        "x": 1860,
+        "y": 1060,
         "wires": [
-            [
-                "5754549a4a868ca2"
-            ],
-            [
-                "4b827c89b5a138c4"
-            ],
-            [
-                "9ef3e2703e3d169b"
-            ],
-            [
-                "0958e7f86a6f7cfa"
-            ],
-            [
-                "fe7e9b046fafa46d"
-            ],
-            [
-                "a43480d97601b0b3"
-            ],
-            [
-                "2ccae554b0a0eb62"
-            ],
-            [
-                "f053a430dbc7af77"
-            ],
-            [
-                "cc69481ddb4239d7"
-            ],
-            [
-                "b3b7f479cadb8496"
-            ],
-            [
-                "0c713a7cfa8a5968"
-            ],
-            [
-                "577af1c346273217"
-            ],
-            [
-                "1a8398e557c7f9dd"
-            ],
-            [
-                "c9e73ce19c15f214"
-            ]
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            []
         ]
     },
     {
@@ -1027,7 +1014,7 @@
         "type": "function",
         "z": "32e6b1c785b786d2",
         "name": "Ikea E1743 remote",
-        "func": "if ( msg.src === 'tasmota' ) {\n    msg.topic = \"domoticz/in\";\n    var idx = msg.payload.ZbReceived.idx;\n    var idxper = msg.payload.ZbReceived.idxper;\n    var idxlink = msg.payload.ZbReceived.idxlink;\n    var zigbeeid = msg.payload.ZbReceived.zigbeeid;\n    var topicname = msg.payload.ZbReceived.topicname;\n\n    var level;\n    var percmsg;\n    var linkmsg;\n    var askbat;\n    var valuebatperc;\n    var valuelink;\n\n    function askbatidxlink() {\n        var array = [];\n        array[0] = idx;\n        array[1] = topicname;\n        flow.set(zigbeeid, array);\n        askbat = { \"topic\": \"cmnd/\" + topicname + \"/ZbSend\",\"payload\":{\"Device\": zigbeeid,\"Read\":{\"BatteryPercentage\":false}}};\n        //askbat = null;\n        if ( idxlink !== 0 ) {\n            if (valuelink !== undefined) {\n                linkmsg = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idxlink , \"svalue\": \"\" + valuelink + \"\", \"parse\": false}}; \n            } else {\n                linkmsg = null;\n            }\n        } else {\n            linkmsg = null;\n        }\n    }\n    \n    if ( msg.payload.ZbReceived[zigbeeid] ) {    \n        if (msg.payload.ZbReceived[zigbeeid].hasOwnProperty(\"BatteryPercentage\")) {\n            valuebatperc = msg.payload.ZbReceived[zigbeeid].BatteryPercentage;\n            //askbat = { \"topic\": \"cmnd/\" + topicname + \"/ZbSend\",\"payload\":{\"Device\": zigbeeid,\"Read\":{\"BatteryPercentage\":false}}};\n        //} else {\n            //askbat = { \"topic\": \"cmnd/\" + topicname + \"/ZbSend\",\"payload\":{\"Device\": zigbeeid,\"Read\":{\"BatteryPercentage\":true}}};\n        }\n        if (msg.payload.ZbReceived[zigbeeid].hasOwnProperty(\"LinkQuality\")) {\n            valuelink = msg.payload.ZbReceived[zigbeeid].LinkQuality;\n        }\n            \n        if (msg.payload.ZbReceived[zigbeeid].Power === 0) {\n            msg.payload = {\"command\": \"switchlight\", \"idx\": idx, \"switchcmd\": \"Set Level\", \"level\":\"0\"};\n            level = \"0\";\n            askbatidxlink();\n        }\n        else if (msg.payload.ZbReceived[zigbeeid].Power === 1) {\n            msg.payload = {\"command\": \"switchlight\", \"idx\": idx, \"switchcmd\": \"Set Level\", \"level\":\"10\"};\n            level = \"10\";\n            askbatidxlink();    \n        } \n        else if (msg.payload.ZbReceived[zigbeeid].DimmerMove === 0) {\n            msg.payload = {\"command\": \"switchlight\", \"idx\": idx, \"switchcmd\": \"Set Level\", \"level\":\"20\"};\n            level = \"20\";\n            askbatidxlink();    \n        }\n        else if (msg.payload.ZbReceived[zigbeeid].DimmerMove === 1) {\n            msg.payload = {\"command\": \"switchlight\", \"idx\": idx, \"switchcmd\": \"Set Level\", \"level\":\"30\"};\n            level = \"30\";\n            askbatidxlink();    \n        }\n        else if (msg.payload.ZbReceived[zigbeeid].DimmerStop === true) {\n            msg.payload = {\"command\": \"switchlight\", \"idx\": idx, \"switchcmd\": \"Set Level\", \"level\":\"40\"};\n            level = \"40\";\n            askbatidxlink();   \n        } \n        else {\n         \tmsg = null;\n        }\n    \n        if ( idxper !== 0 ) {\n            if (valuebatperc !== undefined) {\n                percmsg = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idxper , \"svalue\": \"\" + valuebatperc + \"\", \"parse\": false}}; \n                msg = null;\n                askbat = null;\n                linkmsg = null;\n            } else {\n                percmsg = null;\n            }\n        } else {\n            percmsg = null;\n        }\n        return [msg, percmsg, linkmsg, askbat];\n    }\n}\n\nif ( msg.src === 'tasmotainfo' ) {\n    msg.topic = \"domoticz/in\";\n    var idxperinfo = msg.payload.ZbInfo.idxper;\n    var idxlinkinfo = msg.payload.ZbInfo.idxlink;\n    var zigbeeidinfo = msg.payload.ZbInfo.zigbeeid;\n    \n    var percmsginfo;\n    var linkmsginfo;\n    var valuebatpercinfo;\n    var valuelinkinfo;\n    \n    if ( msg.payload.ZbInfo[zigbeeidinfo] ) {\n        if (msg.payload.ZbInfo[zigbeeidinfo].hasOwnProperty(\"BatteryPercentage\")) {\n            valuebatpercinfo = msg.payload.ZbInfo[zigbeeidinfo].BatteryPercentage;\n        }\n        if (msg.payload.ZbInfo[zigbeeidinfo].hasOwnProperty(\"LinkQuality\")) {\n            valuelinkinfo = msg.payload.ZbInfo[zigbeeidinfo].LinkQuality;\n        }\n        \n        if ( idxperinfo !== 0 ) {\n            if (valuebatpercinfo !== undefined) {\n                percmsginfo = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idxperinfo , \"svalue\": \"\" + valuebatpercinfo + \"\", \"parse\": false}}; \n            } else {\n                percmsginfo = null;\n            }\n        } else {\n            percmsginfo = null;\n        }\n        if ( idxlinkinfo !== 0 ) {\n            if (valuelinkinfo !== undefined) {\n                linkmsginfo = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idxlinkinfo , \"svalue\": \"\" + valuelinkinfo + \"\", \"parse\": false}}; \n            } else {\n                linkmsginfo = null;\n            }\n        } else {\n            linkmsginfo = null;\n        }\n        return [null, percmsginfo, linkmsginfo, null];\n    }\n}",
+        "func": "if ( msg.src === 'tasmota' ) {\n    msg.topic = \"domoticz/in\";\n    var idx = msg.payload.ZbReceived.idx;\n    var idxper = msg.payload.ZbReceived.idxper;\n    var idxlink = msg.payload.ZbReceived.idxlink;\n    var zigbeeid = msg.payload.ZbReceived.zigbeeid;\n    var topicname = msg.payload.ZbReceived.topicname;\n\n    var level;\n    var percmsg;\n    var linkmsg;\n    var askbat;\n    var valuebatperc;\n    var valuelink;\n\n    function askbatidxlink() {\n        //var array = [];\n        //array[0] = idx;\n        //array[1] = topicname;\n        //flow.set(zigbeeid, array);\n        askbat = { \"topic\": \"cmnd/\" + topicname + \"/ZbSend\",\"payload\":{\"Device\": zigbeeid,\"Read\":{\"BatteryPercentage\":false}}};\n        //askbat = null;\n        if ( idxlink !== 0 ) {\n            if (valuelink !== undefined) {\n                linkmsg = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idxlink , \"svalue\": \"\" + valuelink + \"\", \"parse\": false}}; \n            } else {\n                linkmsg = null;\n            }\n        } else {\n            linkmsg = null;\n        }\n    }\n    \n    if ( msg.payload.ZbReceived[zigbeeid] ) {    \n        if (msg.payload.ZbReceived[zigbeeid].hasOwnProperty(\"BatteryPercentage\")) {\n            valuebatperc = msg.payload.ZbReceived[zigbeeid].BatteryPercentage;\n            //askbat = { \"topic\": \"cmnd/\" + topicname + \"/ZbSend\",\"payload\":{\"Device\": zigbeeid,\"Read\":{\"BatteryPercentage\":false}}};\n        //} else {\n            //askbat = { \"topic\": \"cmnd/\" + topicname + \"/ZbSend\",\"payload\":{\"Device\": zigbeeid,\"Read\":{\"BatteryPercentage\":true}}};\n        }\n        if (msg.payload.ZbReceived[zigbeeid].hasOwnProperty(\"LinkQuality\")) {\n            valuelink = msg.payload.ZbReceived[zigbeeid].LinkQuality;\n        }\n            \n        if (msg.payload.ZbReceived[zigbeeid].Power === 0) {\n            msg.payload = {\"command\": \"switchlight\", \"idx\": idx, \"switchcmd\": \"Set Level\", \"level\":\"0\"};\n            level = \"0\";\n            askbatidxlink();\n        }\n        else if (msg.payload.ZbReceived[zigbeeid].Power === 1) {\n            msg.payload = {\"command\": \"switchlight\", \"idx\": idx, \"switchcmd\": \"Set Level\", \"level\":\"10\"};\n            level = \"10\";\n            askbatidxlink();    \n        } \n        else if (msg.payload.ZbReceived[zigbeeid].DimmerMove === 0) {\n            msg.payload = {\"command\": \"switchlight\", \"idx\": idx, \"switchcmd\": \"Set Level\", \"level\":\"20\"};\n            level = \"20\";\n            askbatidxlink();    \n        }\n        else if (msg.payload.ZbReceived[zigbeeid].DimmerMove === 1) {\n            msg.payload = {\"command\": \"switchlight\", \"idx\": idx, \"switchcmd\": \"Set Level\", \"level\":\"30\"};\n            level = \"30\";\n            askbatidxlink();    \n        }\n        else if (msg.payload.ZbReceived[zigbeeid].DimmerStop === true) {\n            msg.payload = {\"command\": \"switchlight\", \"idx\": idx, \"switchcmd\": \"Set Level\", \"level\":\"40\"};\n            level = \"40\";\n            askbatidxlink();   \n        } \n        else {\n         \tmsg = null;\n        }\n    \n        if ( idxper !== 0 ) {\n            if (valuebatperc !== undefined) {\n                percmsg = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idxper , \"svalue\": \"\" + valuebatperc + \"\", \"parse\": false}}; \n                msg = null;\n                askbat = null;\n                linkmsg = null;\n            } else {\n                percmsg = null;\n            }\n        } else {\n            percmsg = null;\n        }\n        return [msg, percmsg, linkmsg, askbat];\n    }\n}\n\nif ( msg.src === 'tasmotainfo' ) {\n    msg.topic = \"domoticz/in\";\n    var idxperinfo = msg.payload.ZbInfo.idxper;\n    var idxlinkinfo = msg.payload.ZbInfo.idxlink;\n    var zigbeeidinfo = msg.payload.ZbInfo.zigbeeid;\n    \n    var percmsginfo;\n    var linkmsginfo;\n    var valuebatpercinfo;\n    var valuelinkinfo;\n    \n    if ( msg.payload.ZbInfo[zigbeeidinfo] ) {\n        if (msg.payload.ZbInfo[zigbeeidinfo].hasOwnProperty(\"BatteryPercentage\")) {\n            valuebatpercinfo = msg.payload.ZbInfo[zigbeeidinfo].BatteryPercentage;\n        }\n        if (msg.payload.ZbInfo[zigbeeidinfo].hasOwnProperty(\"LinkQuality\")) {\n            valuelinkinfo = msg.payload.ZbInfo[zigbeeidinfo].LinkQuality;\n        }\n        \n        if ( idxperinfo !== 0 ) {\n            if (valuebatpercinfo !== undefined) {\n                percmsginfo = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idxperinfo , \"svalue\": \"\" + valuebatpercinfo + \"\", \"parse\": false}}; \n            } else {\n                percmsginfo = null;\n            }\n        } else {\n            percmsginfo = null;\n        }\n        if ( idxlinkinfo !== 0 ) {\n            if (valuelinkinfo !== undefined) {\n                linkmsginfo = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idxlinkinfo , \"svalue\": \"\" + valuelinkinfo + \"\", \"parse\": false}}; \n            } else {\n                linkmsginfo = null;\n            }\n        } else {\n            linkmsginfo = null;\n        }\n        return [null, percmsginfo, linkmsginfo, null];\n    }\n}",
         "outputs": 4,
         "noerr": 0,
         "initialize": "",
@@ -1132,7 +1119,8 @@
         "wires": [
             [
                 "269bdd93eaa30e8b",
-                "d3750fa1f4bdc266"
+                "d3750fa1f4bdc266",
+                "8e5afcb0f0640b08"
             ]
         ]
     },
@@ -2519,8 +2507,7 @@
         "y": 1560,
         "wires": [
             [
-                "fff088000ef81383",
-                "d8909462c488fb49"
+                "fff088000ef81383"
             ]
         ]
     },
@@ -2618,8 +2605,8 @@
         "id": "a2fceb2efb4f1b06",
         "type": "comment",
         "z": "32e6b1c785b786d2",
-        "name": "Versie 04-03-2022 release 1 BETA ivm webpagina",
-        "info": "04-03-2022 R1 Beta:\n- Toevoegen van nodered UI tbx idx tabel\n28-02-2022 R2:\n- Tasmota zigbee UI toegevoegd\n28-02-2022 R1:\n- Bug Ikea LED Strip opgelost, bij power 0 stuurt deze nu ook een 0 ipv 1\n27-02-2022 R1:\n- Batterijtrigger aangepast van \"true\" naar \"false\", dit lijkt effect te hebben op het aantal response meldingen van het device\n26-02-2022 R1: \n- Ikea powerplug, link naar gate verwijdert\n- Batterijtrigger voor E1743 aangepast, want deze stopte soms vanzelf.\n22-02-2022 R1: \n- Node.send for ikea E1743 voor linkage updates\n- Bug Ikea Powerplug opgelost, bij power 0 stuurt deze nu ook een 0 ipv 1\n19-02-2022 R1: \n- Xiaomi Water sensor toegevoegd, niet getest\n17-02-2022 R1: \n- Gestart met Versie nummers",
+        "name": "Versie 05-03-2022 release 2 BETA ivm webpagina",
+        "info": "05-03-2022 R2 Beta:\n- Je kan nu per zigbee bridge een command sturen\n- Kleur/text verandert bij een beschikbare update\n05-03-2022 R1 Beta:\n- Ikea 1743 doet nu auto update flow.set na import nieuwe flow of idx set\n04-03-2022 R1 Beta:\n- Toevoegen van nodered UI tbx idx tabel\n28-02-2022 R2:\n- Tasmota zigbee UI toegevoegd\n28-02-2022 R1:\n- Bug Ikea LED Strip opgelost, bij power 0 stuurt deze nu ook een 0 ipv 1\n27-02-2022 R1:\n- Batterijtrigger aangepast van \"true\" naar \"false\", dit lijkt effect te hebben op het aantal response meldingen van het device\n26-02-2022 R1: \n- Ikea powerplug, link naar gate verwijdert\n- Batterijtrigger voor E1743 aangepast, want deze stopte soms vanzelf.\n22-02-2022 R1: \n- Node.send for ikea E1743 voor linkage updates\n- Bug Ikea Powerplug opgelost, bij power 0 stuurt deze nu ook een 0 ipv 1\n19-02-2022 R1: \n- Xiaomi Water sensor toegevoegd, niet getest\n17-02-2022 R1: \n- Gestart met Versie nummers",
         "x": 210,
         "y": 80,
         "wires": []
@@ -2799,8 +2786,8 @@
         "y": 340,
         "wires": [
             [
-                "39b828367fc868a1",
-                "e669c6020ec33ea2"
+                "e669c6020ec33ea2",
+                "39b828367fc868a1"
             ]
         ]
     },
@@ -2834,18 +2821,17 @@
                 "vt": "str"
             }
         ],
-        "repeat": "1800",
+        "repeat": "14400",
         "crontab": "",
         "once": true,
         "onceDelay": "",
         "topic": "ds",
-        "payload": "",
         "payloadType": "str",
         "x": 2370,
         "y": 100,
         "wires": [
             [
-                "456f85a85253b02e"
+                "2ee82fa6912e4647"
             ]
         ]
     },
@@ -2861,7 +2847,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2560,
+        "x": 2570,
         "y": 100,
         "wires": [
             [
@@ -2988,157 +2974,6 @@
         "wires": [
             [
                 "4f9f9724cbeb89b7"
-            ]
-        ]
-    },
-    {
-        "id": "d33963f3ee2f7ef1",
-        "type": "ui_dropdown",
-        "z": "32e6b1c785b786d2",
-        "g": "05a2f116f05b8c19",
-        "name": "",
-        "label": "Apparaat",
-        "tooltip": "",
-        "place": "",
-        "group": "4d67a6b2.8bc0e",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "multiple": false,
-        "options": [
-            {
-                "label": "",
-                "value": "",
-                "type": "str"
-            }
-        ],
-        "payload": "",
-        "topic": "oldname",
-        "topicType": "str",
-        "className": "",
-        "x": 1420,
-        "y": 240,
-        "wires": [
-            [
-                "edea2f707eaa6c2e"
-            ]
-        ]
-    },
-    {
-        "id": "39b828367fc868a1",
-        "type": "function",
-        "z": "32e6b1c785b786d2",
-        "g": "05a2f116f05b8c19",
-        "name": "extract devicenames",
-        "func": "\nmsg.options = msg.payload.map(obj => {\n   var rObj = {};\n   rObj[obj.label] = obj.bridge+\"/\"+obj.Device;\n   return rObj;\n});\n\nmsg.payload = {};\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1180,
-        "y": 240,
-        "wires": [
-            [
-                "d33963f3ee2f7ef1",
-                "44be3c4f17a3ac08"
-            ]
-        ]
-    },
-    {
-        "id": "202da5354877d0e8",
-        "type": "ui_button",
-        "z": "32e6b1c785b786d2",
-        "g": "05a2f116f05b8c19",
-        "name": "",
-        "group": "4d67a6b2.8bc0e",
-        "order": 3,
-        "width": 0,
-        "height": 0,
-        "passthru": false,
-        "label": "Verander naam",
-        "tooltip": "",
-        "color": "",
-        "bgcolor": "",
-        "className": "",
-        "icon": "",
-        "payload": "",
-        "payloadType": "str",
-        "topic": "rename",
-        "topicType": "str",
-        "x": 1440,
-        "y": 360,
-        "wires": [
-            [
-                "edea2f707eaa6c2e"
-            ]
-        ]
-    },
-    {
-        "id": "e42c3f20342ec925",
-        "type": "ui_text_input",
-        "z": "32e6b1c785b786d2",
-        "g": "05a2f116f05b8c19",
-        "name": "",
-        "label": "Nieuwe naam",
-        "tooltip": "",
-        "group": "4d67a6b2.8bc0e",
-        "order": 2,
-        "width": 0,
-        "height": 0,
-        "passthru": true,
-        "mode": "text",
-        "delay": 300,
-        "topic": "newname",
-        "sendOnBlur": true,
-        "className": "",
-        "topicType": "str",
-        "x": 1440,
-        "y": 300,
-        "wires": [
-            [
-                "edea2f707eaa6c2e"
-            ]
-        ]
-    },
-    {
-        "id": "edea2f707eaa6c2e",
-        "type": "function",
-        "z": "32e6b1c785b786d2",
-        "g": "05a2f116f05b8c19",
-        "name": "Rename Zigbee Dev.",
-        "func": "let rename = flow.get(\"renameZigbee\") || {};\nflow.set(\"renameZigbee\", rename);\n\nif (msg.topic === \"oldname\" && msg.payload !== \"\") {\n    //var string = \"{\" + \"_/\" + data1 + \"/_/}\"\n    //var array = string.split(\"/\")[2];\n    var string = \"{\" + \"_/\" + msg.payload + \"/_/}\";\n    let vars = string.split(\"/\");\n    //let vars = msg.payload.split(\"/\");\n    rename.bridge = vars[1];\n    rename.device = vars[2];\n    flow.set(\"renameZigbee\", rename);\n    return;\n} else if (msg.topic === \"newname\") {\n    rename.newname = msg.payload;\n    flow.set(\"renameZigbee\", rename);\n    return;\n} else if (msg.topic === \"rename\") {\n    msg.topic = \"cmnd/\"+rename.bridge+\"/ZbName\";\n    msg.payload = rename.device + \",\" + rename.newname;\n}\n\n\n\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1740,
-        "y": 260,
-        "wires": [
-            [
-                "21a702d22e35399a",
-                "99d5e38aa6a308f7"
-            ]
-        ]
-    },
-    {
-        "id": "21a702d22e35399a",
-        "type": "function",
-        "z": "32e6b1c785b786d2",
-        "g": "05a2f116f05b8c19",
-        "name": "Clear",
-        "func": "flow.set(\"renameZigbee\", {});\ndelete msg.payload;\nmsg.payload =\"\";\nreturn msg;",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "x": 1690,
-        "y": 340,
-        "wires": [
-            [
-                "e42c3f20342ec925"
             ]
         ]
     },
@@ -3294,7 +3129,7 @@
         "initialize": "",
         "finalize": "",
         "x": 1180,
-        "y": 720,
+        "y": 780,
         "wires": [
             [
                 "5a82ae65dd933d20"
@@ -3325,8 +3160,10 @@
         ],
         "payload": "",
         "topic": "oldname",
+        "topicType": "str",
+        "className": "",
         "x": 1630,
-        "y": 720,
+        "y": 780,
         "wires": [
             [
                 "d3729f0632afe0c5"
@@ -3346,10 +3183,11 @@
         "finalize": "",
         "libs": [],
         "x": 1420,
-        "y": 720,
+        "y": 780,
         "wires": [
             [
-                "a876b2262d2d8972"
+                "a876b2262d2d8972",
+                "460d09788346164d"
             ]
         ]
     },
@@ -3364,8 +3202,9 @@
         "noerr": 0,
         "initialize": "",
         "finalize": "",
+        "libs": [],
         "x": 1810,
-        "y": 720,
+        "y": 780,
         "wires": [
             [
                 "70235a8b59920fe7"
@@ -3390,71 +3229,6 @@
             [
                 "37e55389157ed1ad",
                 "202c7dd66b1fedba"
-            ]
-        ]
-    },
-    {
-        "id": "7164e9ee53edfd3b",
-        "type": "ui_form",
-        "z": "32e6b1c785b786d2",
-        "g": "054419e6dfea3c5a",
-        "name": "",
-        "label": "Stuur een bericht naar alle bridges",
-        "group": "373ccf52.d5c97",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "options": [
-            {
-                "label": "Command",
-                "value": "command",
-                "type": "text",
-                "required": true,
-                "rows": null
-            },
-            {
-                "label": "Parameters",
-                "value": "params",
-                "type": "text",
-                "required": true,
-                "rows": null
-            }
-        ],
-        "formValue": {
-            "command": "",
-            "params": ""
-        },
-        "payload": "",
-        "submit": "Versturen",
-        "cancel": "Leeg maken",
-        "topic": "",
-        "topicType": "str",
-        "splitLayout": false,
-        "className": "",
-        "x": 1220,
-        "y": 620,
-        "wires": [
-            [
-                "c70e98768b4cdaf1"
-            ]
-        ]
-    },
-    {
-        "id": "c70e98768b4cdaf1",
-        "type": "function",
-        "z": "32e6b1c785b786d2",
-        "g": "054419e6dfea3c5a",
-        "name": "",
-        "func": "\nlet msg1 = {};\nmsg1.topic = \"cmnd/sonoffs/\"+msg.payload.command;\nmsg1.payload = msg.payload.params;\n\nlet msg2 = {};\nmsg2.topic = \"cmnd/tasmotas/\"+msg.payload.command;\nmsg2.payload = msg.payload.params;\n\nreturn [[msg1, msg2]];",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "x": 1480,
-        "y": 620,
-        "wires": [
-            [
-                "1b9c54730ad51654"
             ]
         ]
     },
@@ -3485,7 +3259,7 @@
         "z": "32e6b1c785b786d2",
         "g": "054419e6dfea3c5a",
         "group": "5b9b9721.b33e6",
-        "name": "Tasmota Devices",
+        "name": "Tasmota bridges",
         "order": 1,
         "width": 8,
         "height": 3,
@@ -3543,7 +3317,7 @@
         ],
         "outputs": 1,
         "cts": true,
-        "x": 1170,
+        "x": 1160,
         "y": 560,
         "wires": [
             [
@@ -3743,10 +3517,10 @@
         "label": "Apparaat",
         "tooltip": "",
         "place": "",
-        "group": "2849dc0dfedfa270",
-        "order": 2,
-        "width": 0,
-        "height": 0,
+        "group": "9493153c6a285be5",
+        "order": 1,
+        "width": 6,
+        "height": 1,
         "passthru": false,
         "multiple": false,
         "options": [
@@ -3776,13 +3550,13 @@
         "name": "",
         "label": "IDX nummer",
         "tooltip": "",
-        "group": "2849dc0dfedfa270",
+        "group": "9493153c6a285be5",
         "order": 4,
-        "width": 0,
-        "height": 0,
+        "width": 6,
+        "height": 1,
         "passthru": true,
         "mode": "text",
-        "delay": "0",
+        "delay": "250",
         "topic": "idx",
         "sendOnBlur": true,
         "className": "",
@@ -3804,10 +3578,10 @@
         "label": "",
         "tooltip": "",
         "place": "Kies type device",
-        "group": "2849dc0dfedfa270",
+        "group": "9493153c6a285be5",
         "order": 3,
-        "width": 0,
-        "height": 0,
+        "width": 6,
+        "height": 1,
         "passthru": true,
         "multiple": false,
         "options": [
@@ -3895,10 +3669,10 @@
         "z": "32e6b1c785b786d2",
         "g": "342e272fde205046",
         "name": "",
-        "group": "2849dc0dfedfa270",
+        "group": "9493153c6a285be5",
         "order": 9,
-        "width": 0,
-        "height": 0,
+        "width": 6,
+        "height": 1,
         "passthru": false,
         "label": "Set settings",
         "tooltip": "",
@@ -3974,13 +3748,13 @@
         "name": "",
         "label": "IDX batterij",
         "tooltip": "",
-        "group": "2849dc0dfedfa270",
+        "group": "9493153c6a285be5",
         "order": 5,
-        "width": 0,
-        "height": 0,
+        "width": 6,
+        "height": 1,
         "passthru": true,
         "mode": "text",
-        "delay": "0",
+        "delay": "250",
         "topic": "idxbat",
         "sendOnBlur": true,
         "className": "",
@@ -4001,13 +3775,13 @@
         "name": "",
         "label": "IDX percentage",
         "tooltip": "",
-        "group": "2849dc0dfedfa270",
+        "group": "9493153c6a285be5",
         "order": 6,
-        "width": 0,
-        "height": 0,
+        "width": 6,
+        "height": 1,
         "passthru": true,
         "mode": "text",
-        "delay": "0",
+        "delay": "250",
         "topic": "idxper",
         "sendOnBlur": true,
         "className": "",
@@ -4028,13 +3802,13 @@
         "name": "",
         "label": "IDX extra",
         "tooltip": "",
-        "group": "2849dc0dfedfa270",
+        "group": "9493153c6a285be5",
         "order": 8,
-        "width": 0,
-        "height": 0,
+        "width": 6,
+        "height": 1,
         "passthru": true,
         "mode": "text",
-        "delay": "0",
+        "delay": "250",
         "topic": "idxextra",
         "sendOnBlur": true,
         "className": "",
@@ -4081,13 +3855,13 @@
         "name": "",
         "label": "IDX link",
         "tooltip": "",
-        "group": "2849dc0dfedfa270",
+        "group": "9493153c6a285be5",
         "order": 7,
-        "width": 0,
-        "height": 0,
+        "width": 6,
+        "height": 1,
         "passthru": true,
         "mode": "text",
-        "delay": "0",
+        "delay": "250",
         "topic": "idxlink",
         "sendOnBlur": true,
         "className": "",
@@ -4111,35 +3885,7 @@
             "e4ed3f9404692874"
         ],
         "x": 1926,
-        "y": 720,
-        "wires": []
-    },
-    {
-        "id": "1b9c54730ad51654",
-        "type": "link out",
-        "z": "32e6b1c785b786d2",
-        "g": "054419e6dfea3c5a",
-        "name": "To all zigbee bridges",
-        "mode": "link",
-        "links": [
-            "e4ed3f9404692874"
-        ],
-        "x": 1595,
-        "y": 620,
-        "wires": []
-    },
-    {
-        "id": "99d5e38aa6a308f7",
-        "type": "link out",
-        "z": "32e6b1c785b786d2",
-        "g": "05a2f116f05b8c19",
-        "name": "Herbenoem zigbee apparaat",
-        "mode": "link",
-        "links": [
-            "e4ed3f9404692874"
-        ],
-        "x": 1925,
-        "y": 260,
+        "y": 780,
         "wires": []
     },
     {
@@ -4166,9 +3912,9 @@
         "type": "ui_table",
         "z": "32e6b1c785b786d2",
         "g": "5145f22353cd7b61",
-        "group": "ce31945d33f64665",
+        "group": "9493153c6a285be5",
         "name": "Zigbee tabel",
-        "order": 1,
+        "order": 2,
         "width": 18,
         "height": 8,
         "columns": [
@@ -4467,6 +4213,7 @@
         "name": "Restore idx table (zigbee tabel)",
         "mode": "link",
         "links": [
+            "36574a90b5c65556",
             "7348ab76bf1cbc93"
         ],
         "x": 2095,
@@ -4517,290 +4264,52 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1580,
-        "y": 1920,
+        "x": 1900,
+        "y": 1380,
         "wires": [
             [
-                "2de3e4d37d88ae66"
+                "5754549a4a868ca2"
             ],
             [
-                "aac2324a41d93548"
+                "4b827c89b5a138c4"
             ],
             [
-                "ee79a6ebfb401f0d"
+                "9ef3e2703e3d169b"
             ],
             [
-                "cca66a9f7d261dc3"
+                "0958e7f86a6f7cfa"
             ],
             [
-                "2e27c288e4040fe1"
+                "fe7e9b046fafa46d"
             ],
             [
-                "a2a444f8d9fd99a7"
+                "a43480d97601b0b3"
             ],
             [
-                "1bc4fe5e6e528902"
+                "2ccae554b0a0eb62"
             ],
             [
-                "86682b7f622340c8"
+                "f053a430dbc7af77"
             ],
             [
-                "a70f4ecc39fcb161"
+                "cc69481ddb4239d7"
             ],
             [
-                "faabd4db19b912f6"
+                "b3b7f479cadb8496"
             ],
             [
-                "b9540248c8536d2d"
+                "0c713a7cfa8a5968"
             ],
             [
-                "22154ed66113e6f4"
+                "577af1c346273217"
             ],
             [
-                "bf9022ab3b00f22d"
+                "1a8398e557c7f9dd"
             ],
             [
-                "d9e95d9f3a0a65d4"
+                "c9e73ce19c15f214"
             ]
         ]
-    },
-    {
-        "id": "aac2324a41d93548",
-        "type": "debug",
-        "z": "32e6b1c785b786d2",
-        "name": "Xiaomi deur test ui",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1910,
-        "y": 1680,
-        "wires": []
-    },
-    {
-        "id": "ee79a6ebfb401f0d",
-        "type": "debug",
-        "z": "32e6b1c785b786d2",
-        "name": "Xiaomi motion test uit",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1920,
-        "y": 1720,
-        "wires": []
-    },
-    {
-        "id": "cca66a9f7d261dc3",
-        "type": "debug",
-        "z": "32e6b1c785b786d2",
-        "name": "Xiaomi smoke test ui",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1920,
-        "y": 1760,
-        "wires": []
-    },
-    {
-        "id": "2e27c288e4040fe1",
-        "type": "debug",
-        "z": "32e6b1c785b786d2",
-        "name": "Osram switch test ui",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1920,
-        "y": 1800,
-        "wires": []
-    },
-    {
-        "id": "a2a444f8d9fd99a7",
-        "type": "debug",
-        "z": "32e6b1c785b786d2",
-        "name": "lidl livarno test ui",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1900,
-        "y": 1840,
-        "wires": []
-    },
-    {
-        "id": "1bc4fe5e6e528902",
-        "type": "debug",
-        "z": "32e6b1c785b786d2",
-        "name": "Heiman co test ui",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1910,
-        "y": 1880,
-        "wires": []
-    },
-    {
-        "id": "86682b7f622340c8",
-        "type": "debug",
-        "z": "32e6b1c785b786d2",
-        "name": "ikea E1743 test ui",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1910,
-        "y": 1920,
-        "wires": []
-    },
-    {
-        "id": "a70f4ecc39fcb161",
-        "type": "debug",
-        "z": "32e6b1c785b786d2",
-        "name": "ikea led strip test ui",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1910,
-        "y": 1960,
-        "wires": []
-    },
-    {
-        "id": "faabd4db19b912f6",
-        "type": "debug",
-        "z": "32e6b1c785b786d2",
-        "name": "Xiaomi temp test uit",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1910,
-        "y": 2000,
-        "wires": []
-    },
-    {
-        "id": "b9540248c8536d2d",
-        "type": "debug",
-        "z": "32e6b1c785b786d2",
-        "name": "ikea powerplug test ui",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1920,
-        "y": 2040,
-        "wires": []
-    },
-    {
-        "id": "22154ed66113e6f4",
-        "type": "debug",
-        "z": "32e6b1c785b786d2",
-        "name": "Xiaomi lux sensor test ui",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1930,
-        "y": 2080,
-        "wires": []
-    },
-    {
-        "id": "bf9022ab3b00f22d",
-        "type": "debug",
-        "z": "32e6b1c785b786d2",
-        "name": "Xiaomi temp2 test uit",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1920,
-        "y": 2120,
-        "wires": []
-    },
-    {
-        "id": "d9e95d9f3a0a65d4",
-        "type": "debug",
-        "z": "32e6b1c785b786d2",
-        "name": "Xiaomi water test uit",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1920,
-        "y": 2160,
-        "wires": []
-    },
-    {
-        "id": "2de3e4d37d88ae66",
-        "type": "debug",
-        "z": "32e6b1c785b786d2",
-        "name": "not in table test ui",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1910,
-        "y": 1640,
-        "wires": []
     },
     {
         "id": "b078324fb7eaaff9",
@@ -4927,7 +4436,7 @@
         "name": "Zigbee Devices",
         "order": 1,
         "width": 24,
-        "height": "11",
+        "height": 11,
         "columns": [
             {
                 "field": "label",
@@ -5133,34 +4642,12 @@
         "method": "get",
         "upload": false,
         "swaggerDoc": "",
-        "x": 2360,
+        "x": 2400,
         "y": 660,
         "wires": [
             [
                 "b3b34d23fc262cfc"
             ]
-        ]
-    },
-    {
-        "id": "25a5db19143b2d49",
-        "type": "ui_template",
-        "z": "32e6b1c785b786d2",
-        "g": "54c30edf1af25e1f",
-        "group": "4d67a6b2.8bc0e",
-        "name": "Download flows.json",
-        "order": 4,
-        "width": 0,
-        "height": 0,
-        "format": "<style>\n.button {\n  background-color: #0A8085;\n  border: none;\n  color: #FFF7E0; \n  padding: 15px 8%;\n  text-align: center;\n  text-decoration: none;\n  display: inline-block;\n  font-size: 13px;\n  font-weight:550;\n  font-family:arial\n  margin: 4px 2px;\n  cursor: pointer\n  \n}\n</style>\n<form action=\"/flows.json\" method=\"get\">\n    <input type=\"submit\" class=\"button\" value=\"DOWNLOAD LAATSTE FLOWS.JSON FILE VAN GITHUB\" \n         name=\"Submit\" id=\"frm1_submit\" />\n</form>",
-        "storeOutMessages": true,
-        "fwdInMessages": false,
-        "resendOnRefresh": false,
-        "templateScope": "local",
-        "className": "",
-        "x": 2380,
-        "y": 620,
-        "wires": [
-            []
         ]
     },
     {
@@ -5171,7 +4658,7 @@
         "name": "",
         "statusCode": "",
         "headers": {},
-        "x": 3110,
+        "x": 3150,
         "y": 660,
         "wires": []
     },
@@ -5190,7 +4677,7 @@
         "proxy": "",
         "authType": "",
         "senderr": false,
-        "x": 2570,
+        "x": 2610,
         "y": 660,
         "wires": [
             [
@@ -5203,13 +4690,13 @@
         "type": "change",
         "z": "32e6b1c785b786d2",
         "g": "54c30edf1af25e1f",
-        "name": "",
+        "name": "Download files name",
         "rules": [
             {
                 "t": "set",
                 "p": "headers['Content-Disposition']",
                 "pt": "msg",
-                "to": "attachment; filename=flows.json",
+                "to": "attachment; filename=V05-03-2022_R2_Beta.json",
                 "tot": "str"
             }
         ],
@@ -5218,7 +4705,7 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2850,
+        "x": 2840,
         "y": 660,
         "wires": [
             [
@@ -5248,20 +4735,6 @@
         ],
         "x": 2715,
         "y": 100,
-        "wires": []
-    },
-    {
-        "id": "44be3c4f17a3ac08",
-        "type": "link out",
-        "z": "32e6b1c785b786d2",
-        "g": "05a2f116f05b8c19",
-        "name": "Zigbee Apparaat out",
-        "mode": "link",
-        "links": [
-            "c729eedde8321077"
-        ],
-        "x": 1335,
-        "y": 260,
         "wires": []
     },
     {
@@ -5319,20 +4792,613 @@
         "wires": []
     },
     {
-        "id": "d8909462c488fb49",
-        "type": "debug",
+        "id": "1d35990521f7c49c",
+        "type": "function",
         "z": "32e6b1c785b786d2",
+        "g": "054419e6dfea3c5a",
+        "name": "Send command to bridge",
+        "func": "var send1;\nvar send2;\nvar send3;\n//var send1 = context.get(\"send1\") || \"empty\"; //get from context or default to 0\n//var send2 = context.get(\"send2\") || \"empty\"; //get from context or default to 0\n//var send3 = context.get(\"send3\") || \"empty\"; //get from context or default to 0\n\nswitch (msg.topic){\n\n    case \"bridge\":\n        send1 = msg.payload; \n        if (send1 == \"\") {\n            return;\n        } else {\n            context.set(\"send1\", send1);//store in context for next time \n        }\n        return;\n    \n    case \"command\":\n        send2 = msg.payload; \n        if (send2 == \"\") {\n            return;\n        } else {\n            context.set(\"send2\", send2);//store in context for next time \n        }\n        return;\n    \n    case \"parameter\":\n        send3 = msg.payload; \n        if (send1 == \"\") {\n            return;\n        } else {\n            context.set(\"send3\", send3);//store in context for next time \n        }\n        return;\n        \n    case \"submit\":\n        send1 = context.get(\"send1\")\n        send2 = context.get(\"send2\")\n        send3 = context.get(\"send3\")\n        if (send1 !== \"empty\" && send2 !== \"empty\" && send3 !== \"empty\" ) {\n            msg.payload = send1 + \" \" + send2 + \" \" + send3;\n            msg.topic = \"cmnd/\"+send1+\"/\"+send2;\n            msg.payload = send3;\n            context.set(\"send1\", \"empty\");\n            context.set(\"send1\", \"empty\");\n            context.set(\"send1\", \"empty\");\n            return msg;\n        } else {\n            return;\n        }\n    }\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1650,
+        "y": 620,
+        "wires": [
+            [
+                "dc0f5dbb0855a505"
+            ]
+        ]
+    },
+    {
+        "id": "460d09788346164d",
+        "type": "ui_dropdown",
+        "z": "32e6b1c785b786d2",
+        "g": "054419e6dfea3c5a",
         "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1640,
-        "y": 1680,
+        "label": "Bridge",
+        "tooltip": "",
+        "place": "",
+        "group": "e148838288e198eb",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "multiple": false,
+        "options": [
+            {
+                "label": "",
+                "value": "",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "bridge",
+        "topicType": "str",
+        "className": "",
+        "x": 1230,
+        "y": 600,
+        "wires": [
+            [
+                "1d35990521f7c49c"
+            ]
+        ]
+    },
+    {
+        "id": "bfd99529b3e29427",
+        "type": "ui_text_input",
+        "z": "32e6b1c785b786d2",
+        "g": "054419e6dfea3c5a",
+        "name": "",
+        "label": "Command",
+        "tooltip": "",
+        "group": "e148838288e198eb",
+        "order": 2,
+        "width": 8,
+        "height": 1,
+        "passthru": true,
+        "mode": "text",
+        "delay": "250",
+        "topic": "command",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "str",
+        "x": 1390,
+        "y": 600,
+        "wires": [
+            [
+                "1d35990521f7c49c"
+            ]
+        ]
+    },
+    {
+        "id": "7a270006242bbfc0",
+        "type": "ui_text_input",
+        "z": "32e6b1c785b786d2",
+        "g": "054419e6dfea3c5a",
+        "name": "",
+        "label": "Parameter",
+        "tooltip": "",
+        "group": "e148838288e198eb",
+        "order": 3,
+        "width": 8,
+        "height": 1,
+        "passthru": true,
+        "mode": "text",
+        "delay": "250",
+        "topic": "parameter",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "str",
+        "x": 1390,
+        "y": 640,
+        "wires": [
+            [
+                "1d35990521f7c49c"
+            ]
+        ]
+    },
+    {
+        "id": "695720e4296db2e6",
+        "type": "function",
+        "z": "32e6b1c785b786d2",
+        "g": "054419e6dfea3c5a",
+        "name": "Clear",
+        "func": "//delete msg.payload;\nmsg.payload =\"\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1230,
+        "y": 640,
+        "wires": [
+            [
+                "7a270006242bbfc0",
+                "bfd99529b3e29427"
+            ]
+        ]
+    },
+    {
+        "id": "90ff06fb83d4e97b",
+        "type": "delay",
+        "z": "32e6b1c785b786d2",
+        "g": "054419e6dfea3c5a",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "500",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1210,
+        "y": 680,
+        "wires": [
+            [
+                "695720e4296db2e6"
+            ]
+        ]
+    },
+    {
+        "id": "ff5e4e68237fd483",
+        "type": "ui_button",
+        "z": "32e6b1c785b786d2",
+        "g": "054419e6dfea3c5a",
+        "name": "",
+        "group": "e148838288e198eb",
+        "order": 4,
+        "width": 4,
+        "height": 1,
+        "passthru": false,
+        "label": "Verstuur",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "submit",
+        "topicType": "str",
+        "x": 1400,
+        "y": 680,
+        "wires": [
+            [
+                "1d35990521f7c49c",
+                "90ff06fb83d4e97b"
+            ]
+        ]
+    },
+    {
+        "id": "dc0f5dbb0855a505",
+        "type": "link out",
+        "z": "32e6b1c785b786d2",
+        "g": "054419e6dfea3c5a",
+        "name": "Send command to bridge",
+        "mode": "link",
+        "links": [
+            "e4ed3f9404692874"
+        ],
+        "x": 1925,
+        "y": 620,
         "wires": []
+    },
+    {
+        "id": "b01db5d10adf0ad6",
+        "type": "ui_button",
+        "z": "32e6b1c785b786d2",
+        "g": "054419e6dfea3c5a",
+        "name": "",
+        "group": "e148838288e198eb",
+        "order": 5,
+        "width": 4,
+        "height": 1,
+        "passthru": false,
+        "label": "Help",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "help",
+        "topicType": "str",
+        "x": 1550,
+        "y": 680,
+        "wires": [
+            [
+                "832e62f4a6a7caf9"
+            ]
+        ]
+    },
+    {
+        "id": "832e62f4a6a7caf9",
+        "type": "function",
+        "z": "32e6b1c785b786d2",
+        "g": "054419e6dfea3c5a",
+        "name": "",
+        "func": "msg.topic = \"Help functie, verstuur bridge command\"\n\nmsg.payload = [\n  {\n    \"Command     \": \"Parameter                    \",\n    \"            \": \"                             \",\n    \"ZbPermitJoin\": \"parameter 1 is enabled permit\",\n  }\n]\n\nlet str = JSON.stringify(msg.payload, null, 2);\ndelete msg.payload;\nmsg.payload = \"<pre>\" + str + \"</pre>\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1680,
+        "y": 680,
+        "wires": [
+            [
+                "4d29c691a74b2673"
+            ]
+        ]
+    },
+    {
+        "id": "4d29c691a74b2673",
+        "type": "ui_toast",
+        "z": "32e6b1c785b786d2",
+        "g": "054419e6dfea3c5a",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": false,
+        "outputs": 1,
+        "ok": "Close",
+        "cancel": "",
+        "raw": true,
+        "className": "",
+        "topic": "",
+        "name": "Zigbee Device Info",
+        "x": 1850,
+        "y": 680,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8d7042a134b77af5",
+        "type": "inject",
+        "z": "32e6b1c785b786d2",
+        "g": "54c30edf1af25e1f",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "21600",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "5",
+        "topic": "",
+        "payloadType": "date",
+        "x": 2410,
+        "y": 620,
+        "wires": [
+            [
+                "7e7e2210239d3b41"
+            ]
+        ]
+    },
+    {
+        "id": "7e7e2210239d3b41",
+        "type": "http request",
+        "z": "32e6b1c785b786d2",
+        "g": "54c30edf1af25e1f",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://raw.githubusercontent.com/Hoeby/Sonoff-Zigbee-Tasmota-Nodered-flow/main/version",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "senderr": false,
+        "x": 2610,
+        "y": 620,
+        "wires": [
+            [
+                "7bd15898e6b36ca9"
+            ]
+        ]
+    },
+    {
+        "id": "7bd15898e6b36ca9",
+        "type": "function",
+        "z": "32e6b1c785b786d2",
+        "g": "54c30edf1af25e1f",
+        "name": "UPDATE RELEASE",
+        "func": "oldStr = msg.payload\nvar newStr = oldStr.slice(0, oldStr.length-1);\nvar store = newStr;\nvar html = \"\";\nif (store === \"Versie_05-03-2022_release_2_BETA\") {\n    html = html + '<style>.button {background-color: #0A8085;border: none;color: #FFF7E0; padding: 15px 23%;text-align: center;text-decoration: none;display: inline-block;font-size: 13px;font-weight:550;font-family:arial;margin: 4px 2px;cursor: pointer;}</style><form action=\"/flows.json\" method=\"get\"><input type=\"submit\" class=\"button\" value=\"FLOW IS UP TO DATE MET GITHUB\" name=\"Submit\" id=\"frm1_submit\" /></form>'\n    //html = html + '<style>.button {background-color: #0A8085;border: none;color: #FFF7E0; padding: 15px 8%;text-align: center;text-decoration: none;display: inline-block;font-size: 13px;font-weight:550;font-family:arial;margin: 4px 2px;cursor: pointer;}</style><button class=\"button\">UP TO DATE MET GITHUB</button>';\n    msg.template = html;\n    return [msg, null];\n} else {\n    html = html + '<style>.button {background-color: #8C101C;border: none;color: #FFF7E0; padding: 15px 6%;text-align: center;text-decoration: none;display: inline-block;font-size: 13px;font-weight:550;font-family:arial;margin: 4px 2px;cursor: pointer;}</style><form action=\"/flows.json\" method=\"get\"><input type=\"submit\" class=\"button\" value=\"ER IS EEN UPDATE, DOWNLOAD FLOW FILE VAN GITHUB\" name=\"Submit\" id=\"frm1_submit\" /></form>'\n    msg.template = html;\n    return [null, msg];\n}\nreturn msg;",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2840,
+        "y": 620,
+        "wires": [
+            [
+                "b1ebfc868c273cdb"
+            ],
+            [
+                "b1ebfc868c273cdb"
+            ]
+        ]
+    },
+    {
+        "id": "b1ebfc868c273cdb",
+        "type": "ui_template",
+        "z": "32e6b1c785b786d2",
+        "g": "54c30edf1af25e1f",
+        "group": "4d67a6b2.8bc0e",
+        "name": "Download flows.json",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "format": "",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 3100,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4e88330a1b823043",
+        "type": "comment",
+        "z": "32e6b1c785b786d2",
+        "name": "Wat aanpassen bij een nieuwe release",
+        "info": "- De \"comment\" node van de release notes.\n- Node \"UPDATE RELEASE\", de versie in aanpassen.\n- In node \"Download files name\", de download naam aanpassen\n- Op github de \"version\" file aanpassen.",
+        "x": 170,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "d33963f3ee2f7ef1",
+        "type": "ui_dropdown",
+        "z": "32e6b1c785b786d2",
+        "g": "05a2f116f05b8c19",
+        "name": "",
+        "label": "Apparaat",
+        "tooltip": "",
+        "place": "",
+        "group": "4d67a6b2.8bc0e",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "multiple": false,
+        "options": [
+            {
+                "label": "",
+                "value": "",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "oldname",
+        "topicType": "str",
+        "className": "",
+        "x": 1420,
+        "y": 240,
+        "wires": [
+            [
+                "edea2f707eaa6c2e"
+            ]
+        ]
+    },
+    {
+        "id": "39b828367fc868a1",
+        "type": "function",
+        "z": "32e6b1c785b786d2",
+        "g": "05a2f116f05b8c19",
+        "name": "extract devicenames",
+        "func": "\nmsg.options = msg.payload.map(obj => {\n   var rObj = {};\n   rObj[obj.label] = obj.bridge+\"/\"+obj.Device;\n   return rObj;\n});\n\nmsg.payload = {};\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1180,
+        "y": 240,
+        "wires": [
+            [
+                "d33963f3ee2f7ef1",
+                "44be3c4f17a3ac08"
+            ]
+        ]
+    },
+    {
+        "id": "202da5354877d0e8",
+        "type": "ui_button",
+        "z": "32e6b1c785b786d2",
+        "g": "05a2f116f05b8c19",
+        "name": "",
+        "group": "4d67a6b2.8bc0e",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Verander naam",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "rename",
+        "topicType": "str",
+        "x": 1440,
+        "y": 360,
+        "wires": [
+            [
+                "edea2f707eaa6c2e"
+            ]
+        ]
+    },
+    {
+        "id": "e42c3f20342ec925",
+        "type": "ui_text_input",
+        "z": "32e6b1c785b786d2",
+        "g": "05a2f116f05b8c19",
+        "name": "",
+        "label": "Nieuwe naam",
+        "tooltip": "",
+        "group": "4d67a6b2.8bc0e",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "newname",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "str",
+        "x": 1440,
+        "y": 300,
+        "wires": [
+            [
+                "edea2f707eaa6c2e"
+            ]
+        ]
+    },
+    {
+        "id": "edea2f707eaa6c2e",
+        "type": "function",
+        "z": "32e6b1c785b786d2",
+        "g": "05a2f116f05b8c19",
+        "name": "Rename Zigbee Dev.",
+        "func": "let rename = flow.get(\"renameZigbee\") || {};\nflow.set(\"renameZigbee\", rename);\n\nif (msg.topic === \"oldname\" && msg.payload !== \"\") {\n    //var string = \"{\" + \"_/\" + data1 + \"/_/}\"\n    //var array = string.split(\"/\")[2];\n    var string = \"{\" + \"_/\" + msg.payload + \"/_/}\";\n    let vars = string.split(\"/\");\n    //let vars = msg.payload.split(\"/\");\n    rename.bridge = vars[1];\n    rename.device = vars[2];\n    flow.set(\"renameZigbee\", rename);\n    return;\n} else if (msg.topic === \"newname\") {\n    rename.newname = msg.payload;\n    flow.set(\"renameZigbee\", rename);\n    return;\n} else if (msg.topic === \"rename\") {\n    msg.topic = \"cmnd/\"+rename.bridge+\"/ZbName\";\n    msg.payload = rename.device + \",\" + rename.newname;\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1740,
+        "y": 260,
+        "wires": [
+            [
+                "21a702d22e35399a",
+                "99d5e38aa6a308f7"
+            ]
+        ]
+    },
+    {
+        "id": "21a702d22e35399a",
+        "type": "function",
+        "z": "32e6b1c785b786d2",
+        "g": "05a2f116f05b8c19",
+        "name": "Clear",
+        "func": "flow.set(\"renameZigbee\", {});\ndelete msg.payload;\nmsg.payload =\"\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1730,
+        "y": 340,
+        "wires": [
+            [
+                "e42c3f20342ec925"
+            ]
+        ]
+    },
+    {
+        "id": "99d5e38aa6a308f7",
+        "type": "link out",
+        "z": "32e6b1c785b786d2",
+        "g": "05a2f116f05b8c19",
+        "name": "Herbenoem zigbee apparaat",
+        "mode": "link",
+        "links": [
+            "e4ed3f9404692874"
+        ],
+        "x": 1925,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "44be3c4f17a3ac08",
+        "type": "link out",
+        "z": "32e6b1c785b786d2",
+        "g": "05a2f116f05b8c19",
+        "name": "Zigbee Apparaat out",
+        "mode": "link",
+        "links": [
+            "c729eedde8321077"
+        ],
+        "x": 1335,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "07b49abc2e756953",
+        "type": "delay",
+        "z": "32e6b1c785b786d2",
+        "g": "05a2f116f05b8c19",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 1740,
+        "y": 300,
+        "wires": [
+            [
+                "99d5e38aa6a308f7"
+            ]
+        ]
+    },
+    {
+        "id": "36574a90b5c65556",
+        "type": "link in",
+        "z": "32e6b1c785b786d2",
+        "g": "2b14dd6ae297283b",
+        "name": "Check E1743 after setting settings",
+        "links": [
+            "39038a9d2681bd20"
+        ],
+        "x": 3175,
+        "y": 440,
+        "wires": [
+            [
+                "589b204a53bdbefa"
+            ]
+        ]
+    },
+    {
+        "id": "e82f16f2d7456839",
+        "type": "ui_spacer",
+        "z": "32e6b1c785b786d2",
+        "name": "spacer",
+        "group": "9a96a8b1.92db78",
+        "order": 2,
+        "width": 1,
+        "height": 1
     },
     {
         "id": "b1bc1db1ae7424c0",
@@ -5373,56 +5439,24 @@
         "logsize": "100"
     },
     {
-        "id": "4d67a6b2.8bc0e",
-        "type": "ui_group",
-        "name": "Verander naam Zigbee Apparaat",
-        "tab": "abe3d4c.9322328",
-        "order": 3,
-        "disp": true,
-        "width": "8",
-        "collapse": false,
-        "className": ""
-    },
-    {
         "id": "5b9b9721.b33e6",
         "type": "ui_group",
-        "name": "Tasmota Zigbee Bridges",
+        "name": "Tasmota zigbee bridges",
         "tab": "abe3d4c.9322328",
         "order": 1,
         "disp": true,
         "width": "8",
-        "collapse": false
-    },
-    {
-        "id": "373ccf52.d5c97",
-        "type": "ui_group",
-        "name": "Bericht naar alle bridges",
-        "tab": "abe3d4c.9322328",
-        "order": 2,
-        "disp": true,
-        "width": "8",
         "collapse": false,
         "className": ""
     },
     {
-        "id": "2849dc0dfedfa270",
+        "id": "9493153c6a285be5",
         "type": "ui_group",
-        "name": "Set idx nummers",
-        "tab": "abe3d4c.9322328",
-        "order": 4,
-        "disp": true,
-        "width": "6",
-        "collapse": false,
-        "className": ""
-    },
-    {
-        "id": "ce31945d33f64665",
-        "type": "ui_group",
-        "name": "IDX tabel",
+        "name": "Set idx nummers en idx tabel",
         "tab": "abe3d4c.9322328",
         "order": 5,
         "disp": true,
-        "width": "18",
+        "width": "24",
         "collapse": false,
         "className": ""
     },
@@ -5438,6 +5472,37 @@
         "className": ""
     },
     {
+        "id": "e148838288e198eb",
+        "type": "ui_group",
+        "name": "Stuur bericht naar zigbee bridge",
+        "tab": "abe3d4c.9322328",
+        "order": 2,
+        "disp": true,
+        "width": "8",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "4d67a6b2.8bc0e",
+        "type": "ui_group",
+        "name": "Verander naam zigbee apparaat",
+        "tab": "abe3d4c.9322328",
+        "order": 4,
+        "disp": true,
+        "width": "8",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "9a96a8b1.92db78",
+        "type": "ui_group",
+        "name": "Col2",
+        "tab": "c3173234.2636e",
+        "order": 2,
+        "disp": false,
+        "width": "6"
+    },
+    {
         "id": "abe3d4c.9322328",
         "type": "ui_tab",
         "name": "Tasmota Zigbee Admin",
@@ -5445,5 +5510,12 @@
         "order": 1,
         "disabled": false,
         "hidden": false
+    },
+    {
+        "id": "c3173234.2636e",
+        "type": "ui_tab",
+        "name": "RPi Control",
+        "icon": "dashboard",
+        "order": 2
     }
 ]
