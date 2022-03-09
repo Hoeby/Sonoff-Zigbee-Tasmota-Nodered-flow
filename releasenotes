@@ -1,0 +1,27 @@
+<b>07-03-2022 R1 Beta:</b><br>
+Check van versienummer controleert op response 200 of 201, anders retun false <br>
+<b>06-03-2022 R1 Beta:</b><br>
+- Download flows.json wordt nu opgeslagen met versie naam <br>
+<b>05-03-2022 R2 Beta:</b><br>
+- Je kan nu per zigbee bridge een command sturen <br>
+- Kleur/text verandert bij een beschikbare update <br>
+<b>05-03-2022 R1 Beta:</b><br>
+- Ikea 1743 doet nu auto update flow.set na import nieuwe flow of idx set <br>
+<b>04-03-2022 R1 Beta:</b><br>
+- Toevoegen van nodered UI tbx idx tabel <br>
+<b>28-02-2022 R2:</b><br>
+- Tasmota zigbee UI toegevoegd <br>
+<b>28-02-2022 R1:</b><br>
+- Bug Ikea LED Strip opgelost, bij power 0 stuurt deze nu ook een 0 ipv 1 <br>
+<b>27-02-2022 R1:</b><br>
+- Batterijtrigger aangepast van "true" naar "false", dit lijkt effect te hebben op het aantal response meldingen van het device <br>
+<b>26-02-2022 R1:</b><br> 
+- Ikea powerplug, link naar gate verwijdert <br>
+- Batterijtrigger voor E1743 aangepast, want deze stopte soms vanzelf. <br>
+<b>22-02-2022 R1:</b><br> 
+- Node.send for ikea E1743 voor linkage updates <br>
+- Bug Ikea Powerplug opgelost, bij power 0 stuurt deze nu ook een 0 ipv 1 <br>
+<b>19-02-2022 R1:</b><br> 
+- Xiaomi Water sensor toegevoegd, niet getest <br>
+<b>17-02-2022 R1:</b><br>
+- Gestart met Versie nummers <br>
