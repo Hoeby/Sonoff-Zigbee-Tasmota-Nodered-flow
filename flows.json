@@ -282,14 +282,16 @@
             "b3b34d23fc262cfc",
             "8d7042a134b77af5",
             "7e7e2210239d3b41",
-            "7bd15898e6b36ca9",
-            "b1ebfc868c273cdb",
-            "8da96a20e8d1784e"
+            "8da96a20e8d1784e",
+            "e2d336891879b581",
+            "8aa74c6a8e77e370",
+            "5a7d611fb820f67f",
+            "19a535f96f40be94"
         ],
         "env": [],
-        "x": 2294,
+        "x": 2254,
         "y": 579,
-        "w": 932,
+        "w": 1032,
         "h": 122
     },
     {
@@ -2573,9 +2575,9 @@
         "id": "a2fceb2efb4f1b06",
         "type": "comment",
         "z": "32e6b1c785b786d2",
-        "name": "V-07-03-2022 R1 Beta",
-        "info": "07-03-2022 R1 Beta:\nCheck van versienummer controleert op response 200 of 201, anders retun false\n06-03-2022 R1 Beta:\n- Download flows.json wordt nu opgeslagen met versie naam\n05-03-2022 R2 Beta:\n- Je kan nu per zigbee bridge een command sturen\n- Kleur/text verandert bij een beschikbare update\n05-03-2022 R1 Beta:\n- Ikea 1743 doet nu auto update flow.set na import nieuwe flow of idx set\n04-03-2022 R1 Beta:\n- Toevoegen van nodered UI tbx idx tabel\n28-02-2022 R2:\n- Tasmota zigbee UI toegevoegd\n28-02-2022 R1:\n- Bug Ikea LED Strip opgelost, bij power 0 stuurt deze nu ook een 0 ipv 1\n27-02-2022 R1:\n- Batterijtrigger aangepast van \"true\" naar \"false\", dit lijkt effect te hebben op het aantal response meldingen van het device\n26-02-2022 R1: \n- Ikea powerplug, link naar gate verwijdert\n- Batterijtrigger voor E1743 aangepast, want deze stopte soms vanzelf.\n22-02-2022 R1: \n- Node.send for ikea E1743 voor linkage updates\n- Bug Ikea Powerplug opgelost, bij power 0 stuurt deze nu ook een 0 ipv 1\n19-02-2022 R1: \n- Xiaomi Water sensor toegevoegd, niet getest\n17-02-2022 R1: \n- Gestart met Versie nummers",
-        "x": 120,
+        "name": "V_10-03-2022_R1",
+        "info": "10-03-2022 R1:\n- Beta versie is verwijdert, we zijn live\n- Release notes functie toegevoegd in UI\n- Bug voor automatisch toevoegen ikea E1743 opgelost\n07-03-2022 R1 Beta:\n- Check van versienummer controleert op response 200 of 201, anders return false\n06-03-2022 R1 Beta:\n- Download flows.json wordt nu opgeslagen met versie naam\n05-03-2022 R2 Beta:\n- Je kan nu per zigbee bridge een command sturen\n- Kleur/text verandert bij een beschikbare update\n05-03-2022 R1 Beta:\n- Ikea 1743 doet nu auto update flow.set na import nieuwe flow of idx set\n04-03-2022 R1 Beta:\n- Toevoegen van nodered UI tbx idx tabel\n28-02-2022 R2:\n- Tasmota zigbee UI toegevoegd\n28-02-2022 R1:\n- Bug Ikea LED Strip opgelost, bij power 0 stuurt deze nu ook een 0 ipv 1\n27-02-2022 R1:\n- Batterijtrigger aangepast van \"true\" naar \"false\", dit lijkt effect te hebben op het aantal response meldingen van het device\n26-02-2022 R1: \n- Ikea powerplug, link naar gate verwijdert\n- Batterijtrigger voor E1743 aangepast, want deze stopte soms vanzelf.\n22-02-2022 R1: \n- Node.send for ikea E1743 voor linkage updates\n- Bug Ikea Powerplug opgelost, bij power 0 stuurt deze nu ook een 0 ipv 1\n19-02-2022 R1: \n- Xiaomi Water sensor toegevoegd, niet getest\n17-02-2022 R1: \n- Gestart met Versie nummers",
+        "x": 110,
         "y": 80,
         "wires": []
     },
@@ -4610,7 +4612,7 @@
         "method": "get",
         "upload": false,
         "swaggerDoc": "",
-        "x": 2400,
+        "x": 2360,
         "y": 660,
         "wires": [
             [
@@ -4626,7 +4628,7 @@
         "name": "",
         "statusCode": "",
         "headers": {},
-        "x": 3150,
+        "x": 3210,
         "y": 660,
         "wires": []
     },
@@ -4645,7 +4647,7 @@
         "proxy": "",
         "authType": "",
         "senderr": false,
-        "x": 2610,
+        "x": 2650,
         "y": 660,
         "wires": [
             [
@@ -4700,7 +4702,7 @@
         "z": "32e6b1c785b786d2",
         "g": "2b14dd6ae297283b",
         "name": "",
-        "func": "var devsdomoticz = flow.get(\"t2ztable\") || {};\nvar length = Object.keys(devsdomoticz).length;\n\nfor ( var i = 0; i < length; i++ ) {\n    var keys = Object.keys(devsdomoticz);\n    var IDkey = keys[i];\n    var message = devsdomoticz[IDkey];\n    var messagetype = devsdomoticz[IDkey].type;\n    var messageidx = parseInt(devsdomoticz[IDkey].idx);\n    var messagezigbeeid = devsdomoticz[IDkey].zigbeeid;\n    var messagebridge = devsdomoticz[IDkey].bridge;\n    \n    if ( messagetype === \"Ikea E1743\") {\n        var array = [];\n        array[0] = messageidx;\n        array[1] = messagebridge;\n        flow.set(messagezigbeeid, array);\n        msg.payload = \"Flow.set for device id \" + messagezigbeeid + \", idx: \" + messageidx + \", bridge: \" + messagebridge + \"\";\n        return msg\n    }\n}",
+        "func": "var devsdomoticz = flow.get(\"t2ztable\") || {};\nvar length = Object.keys(devsdomoticz).length;\n\nfor ( var i = 0; i < length; i++ ) {\n    var keys = Object.keys(devsdomoticz);\n    var IDkey = keys[i];\n    var message = devsdomoticz[IDkey];\n    var messagetype = devsdomoticz[IDkey].type;\n    var messageidx = parseInt(devsdomoticz[IDkey].idx);\n    var messagezigbeeid = devsdomoticz[IDkey].zigbeeid;\n    var messagebridge = devsdomoticz[IDkey].bridge;\n    \n    if ( messagetype === \"Ikea E1743\") {\n        var array = [];\n        array[0] = messageidx;\n        array[1] = messagebridge;\n        flow.set(messagezigbeeid, array);\n        msg.payload = \"Flow.set for device id \" + messagezigbeeid + \", idx: \" + messageidx + \", bridge: \" + messagebridge + \"\";\n        node.send(msg);\n    }\n}\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -4996,13 +4998,13 @@
                 "vt": "str"
             }
         ],
-        "repeat": "14",
+        "repeat": "14400",
         "crontab": "",
         "once": true,
         "onceDelay": "5",
         "topic": "",
         "payloadType": "date",
-        "x": 2410,
+        "x": 2370,
         "y": 620,
         "wires": [
             [
@@ -5025,57 +5027,12 @@
         "proxy": "",
         "authType": "",
         "senderr": false,
-        "x": 2610,
+        "x": 2530,
         "y": 620,
         "wires": [
             [
-                "7bd15898e6b36ca9"
+                "e2d336891879b581"
             ]
-        ]
-    },
-    {
-        "id": "7bd15898e6b36ca9",
-        "type": "function",
-        "z": "32e6b1c785b786d2",
-        "g": "54c30edf1af25e1f",
-        "name": "UPDATE RELEASE",
-        "func": "var version = \"V_07-03-2022_R1_Beta\"\nvar beta = true;\noldStr = msg.payload;\nvar newStr = oldStr.slice(0, oldStr.length-1);\nvar store = newStr;\nflow.set(\"version\", newStr);\nvar html = \"\";\nif (msg.statusCode === 200 || 201) {\n    if (store === version) {\n        if (beta === true) {\n            html = html + '<style>.button {background-color: #0A8085;border: none;color: #FFF7E0; padding: 15px 4.5%;text-align: center;text-decoration: none;display: inline-block;font-size: 13px;font-weight:550;font-family:arial;margin: 4px 2px;cursor: pointer;}</style><form action=\"/flows.json\" method=\"get\"><input type=\"submit\" class=\"button\" value=\"FLOW IS UP TO DATE MET GITHUB (' + version + ')\" name=\"Submit\" id=\"frm1_submit\" /></form>'\n            msg.template = html;\n            return [msg, null];\n        } else {\n            html = html + '<style>.button {background-color: #0A8085;border: none;color: #FFF7E0; padding: 15px 8.75%;text-align: center;text-decoration: none;display: inline-block;font-size: 13px;font-weight:550;font-family:arial;margin: 4px 2px;cursor: pointer;}</style><form action=\"/flows.json\" method=\"get\"><input type=\"submit\" class=\"button\" value=\"FLOW IS UP TO DATE MET GITHUB (' + version + ')\" name=\"Submit\" id=\"frm1_submit\" /></form>'\n            msg.template = html;\n            return [msg, null];\n        }\n    } else {\n        html = html + '<style>.button {background-color: #8C101C;border: none;color: #FFF7E0; padding: 15px 6%;text-align: center;text-decoration: none;display: inline-block;font-size: 13px;font-weight:550;font-family:arial;margin: 4px 2px;cursor: pointer;}</style><form action=\"/flows.json\" method=\"get\"><input type=\"submit\" class=\"button\" value=\"ER IS EEN UPDATE, DOWNLOAD FLOW FILE VAN GITHUB\" name=\"Submit\" id=\"frm1_submit\" /></form>'\n        msg.template = html;\n        return [null, msg];\n    }\n}\nreturn msg;",
-        "outputs": 2,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 2840,
-        "y": 620,
-        "wires": [
-            [
-                "b1ebfc868c273cdb"
-            ],
-            [
-                "b1ebfc868c273cdb"
-            ]
-        ]
-    },
-    {
-        "id": "b1ebfc868c273cdb",
-        "type": "ui_template",
-        "z": "32e6b1c785b786d2",
-        "g": "54c30edf1af25e1f",
-        "group": "4d67a6b2.8bc0e",
-        "name": "Download flows.json",
-        "order": 4,
-        "width": 0,
-        "height": 0,
-        "format": "",
-        "storeOutMessages": true,
-        "fwdInMessages": true,
-        "resendOnRefresh": true,
-        "templateScope": "local",
-        "className": "",
-        "x": 3100,
-        "y": 620,
-        "wires": [
-            []
         ]
     },
     {
@@ -5083,7 +5040,7 @@
         "type": "comment",
         "z": "32e6b1c785b786d2",
         "name": "Wat aanpassen bij een nieuwe release",
-        "info": "- De \"comment\" node van de release notes.\n- Node \"UPDATE RELEASE\", de versie in aanpassen.\n- Op github de \"version\" file aanpassen.",
+        "info": "- De \"comment\" node van de release notes.\n- Node \"UPDATE RELEASE\", de versie in aanpassen.\n- Als het een beta versie is, dan true/false aanpassen in \"UPDATE RELEASE\" node.\n- Op github de \"version\" file aanpassen.\n- Op github de \"releasenotes\" file aanpassen.",
         "x": 170,
         "y": 200,
         "wires": []
@@ -5342,12 +5299,109 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2840,
+        "x": 2940,
         "y": 660,
         "wires": [
             [
                 "b34469817cdf7cdc"
             ]
+        ]
+    },
+    {
+        "id": "e2d336891879b581",
+        "type": "function",
+        "z": "32e6b1c785b786d2",
+        "g": "54c30edf1af25e1f",
+        "name": "UPDATE RELEASE",
+        "func": "var version = \"V_10-03-2022_R1\"\noldStr = msg.payload;\nvar newStr = oldStr.slice(0, oldStr.length-1);\nvar store = newStr;\nflow.set(\"version\", newStr);\nvar html = \"\";\nif (msg.statusCode === 200 || 201) {\n    if (store === version) {\n        msg.text = \"FLOW IS UP TO DATE MET GITHUB (\" + version + \")\"\n        msg.background = \"#0A8085\";\n        msg.topic = \"Release notes\";\n        return [msg, null];\n    } else {\n        msg.text = \"ER IS EEN UPDATE, DOWNLOAD FLOW FILE VAN GITHUB\"\n        msg.background = \"#8C101C\";\n        msg.topic = \"Release notes\";\n        return [null, msg];\n    }\n}\nreturn;",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2720,
+        "y": 620,
+        "wires": [
+            [
+                "8aa74c6a8e77e370"
+            ],
+            [
+                "8aa74c6a8e77e370"
+            ]
+        ]
+    },
+    {
+        "id": "8aa74c6a8e77e370",
+        "type": "ui_button",
+        "z": "32e6b1c785b786d2",
+        "g": "54c30edf1af25e1f",
+        "name": "",
+        "group": "4d67a6b2.8bc0e",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "{{text}}",
+        "tooltip": "",
+        "color": "white",
+        "bgcolor": "{{background}}",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "show",
+        "topicType": "str",
+        "x": 2910,
+        "y": 620,
+        "wires": [
+            [
+                "5a7d611fb820f67f"
+            ]
+        ]
+    },
+    {
+        "id": "5a7d611fb820f67f",
+        "type": "http request",
+        "z": "32e6b1c785b786d2",
+        "g": "54c30edf1af25e1f",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://raw.githubusercontent.com/Hoeby/Sonoff-Zigbee-Tasmota-Nodered-flow/main/releasenotes",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "senderr": false,
+        "x": 3050,
+        "y": 620,
+        "wires": [
+            [
+                "19a535f96f40be94"
+            ]
+        ]
+    },
+    {
+        "id": "19a535f96f40be94",
+        "type": "ui_template",
+        "z": "32e6b1c785b786d2",
+        "g": "54c30edf1af25e1f",
+        "group": "9e91865c0e53e9f2",
+        "name": "",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "format": "<div ng-init=\"init()\" id=\"pin_insert\" class=\"dialog\">\n    \n    <div class=\"dialog_content\">\n        \n        <div class=\"dialog_header\">\n            <h2 style=\"margin:10px\">Release notes</h2>\n        </div>\n        \n        <div class=\"dialog_body\">\n            <div ng-bind-html=\"msg.payload\" style=\"height:400px;width:100%;margin: 4px 2px;overflow:auto;\"></div>\n            <!--<div ng-bind-html=\"msg.payload\"></div>-->\n            <form action=\"/flows.json\" method=\"get\"><input type=\"submit\" class=\"buttons\" value=\"Download\" name=\"Submit\" id=\"frm1_submit\"/></form>\n            <button class=\"buttoncl\" id=\"myCls\" ng-click=\"closeDialog()\">Close</button>\n        </div> \n    </div> \n</div> \n\n<style>\n\n/* The Dialog (background) */\n.dialog {\n    display: none; /* Hidden by default */\n    position: fixed; /* Stay in place */\n    z-index: 9999; /* Sit on top */\n    left: 0;\n    top: 0;\n    width: 100%; /* Full width */\n    height: 100%; /* Full height */\n    overflow: auto; /* Enable scroll if needed */\n    color : rgb(255,255,255);\n\tbackground-color: rgb(0,0,0); /* Fallback color */\n    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */\n    -webkit-transform: translateZ(0px);\n    -webkit-transform: translate3d(0,0,0);\n    -webkit-perspective: 1000;\n}\n\n.dialog_content {\n\tposition: absolute;\n    background-color: rgb(51,51,51);\n    left: 25%;\n    top: 30px;\n    border-radius: 3px;\n    padding: 0;\n    width: 50%;\n    height: 70%;\n    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);\n    -webkit-animation-name: animatetop;\n    animation-name: animatetop;\n    animation-duration: 0.4s;\n}\n\n/* Dialog Header */\n.dialog_header {\n    padding: 2px 16px;\n    background-color: rgb(20,117,120);\n    border-radius: 3px 3px 0 0;\n    color: white;\n}\n\n/* Dialog Body */\n.dialog_body {padding: 5px;}\n\n/* The Close Button */\n.close {\n    color: #fff;\n    float: right;\n    font-size: 28px;\n    font-weight: bold;\n    cursor: pointer;\n}\n\n.close:hover,\n.close:focus {\n    color: #1565C0;\n    text-decoration: none;\n    cursor: pointer;\n}\n\n\n.btn1 {\n  color : rgb(255,255,255);\n  background-color: rgb(20,117,120);\n  border-radius: 3px 3px 3px 3px;\n  font-size: 16px;\n}\n\n/* Button style */\n    .buttoncl {\n        position: absolute;\n        border: none;\n        /*border-radius: 2px;*/\n        padding: 15px 4.4%;\n        font-size: 16px;\n        font-weight:550;\n        font-family:arial;\n        margin: 4px 2px;\n        /*text-transform: uppercase;*/\n        display: inline-block;\n        cursor: pointer;\n        color: white;\n        background-color:  #0A8085;\n        outline: none;\n        left: 85%;\n        top: 88%;\n    } \n    \n    .buttons {\n        position: absolute;\n        background-color: #0A8085;\n        border: none;\n        color: #FFF7E0; \n        padding: 15px 4.4%;\n        text-align: center;\n        text-decoration: none;\n        display: inline-block;\n        font-size: 16px;\n        font-weight:550;\n        font-family:arial;\n        margin: 4px 2px;\n        cursor: pointer;\n        left: 65%;\n        top: 88%;\n    }\n\n</style>\n\n<script>\nvar dialog;\n\n\n/* ==== */\n(function(scope) {\n    \n    scope.passcode = \"\";\n    \n    scope.init = function() {\n        scope.send({payload : \"init\"});\n\t\tscope.passcode = \"\";\n        //Hide the md-panel\n        $('#pin_insert').parent().parent().css(\"display\", \"none\");\n        //This trick make it works on smartphones too :)\n        dialog = $('#pin_insert').detach();\n        //dialog.appendTo(document.body); // This leaves ghost numpads if pinpad is not opened!\n    }\n    \n    scope.showDialog = function() {\n        dialog.appendTo(document.body); // better to add the body only when the numpad is displayed (seams to be removed automatically)\n        dialog.css(\"display\", \"block\");\n    }\n    \n    scope.closeDialog = function(){\n        dialog.css(\"display\", \"none\");\n\t\tscope.send({payload : scope.passcode});\n    }\n     \n\n    scope.$watch('msg', function(data) {\n        if(data && data.topic){\n            switch(data.topic){\n               case \"show\":\n\t\t\t\t\t\tscope.passcode = \"\";\n                        scope.showDialog();\n                break;\n                case \"close\": \n                    dialog.css(\"display\", \"none\");\n                break;\n            }\n        }\n    });\n})(scope);\n\n</script>\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 3200,
+        "y": 620,
+        "wires": [
+            []
         ]
     },
     {
@@ -5450,6 +5504,17 @@
         "order": 4,
         "disp": true,
         "width": "8",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "9e91865c0e53e9f2",
+        "type": "ui_group",
+        "name": "",
+        "tab": "abe3d4c.9322328",
+        "order": 7,
+        "disp": true,
+        "width": "24",
         "collapse": false,
         "className": ""
     },
