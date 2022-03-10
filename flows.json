@@ -286,12 +286,13 @@
             "e2d336891879b581",
             "8aa74c6a8e77e370",
             "5a7d611fb820f67f",
-            "19a535f96f40be94"
+            "19a535f96f40be94",
+            "9c27a2105dd41e6b"
         ],
         "env": [],
-        "x": 2254,
+        "x": 2334,
         "y": 579,
-        "w": 1032,
+        "w": 1172,
         "h": 122
     },
     {
@@ -4612,7 +4613,7 @@
         "method": "get",
         "upload": false,
         "swaggerDoc": "",
-        "x": 2360,
+        "x": 2440,
         "y": 660,
         "wires": [
             [
@@ -4628,7 +4629,7 @@
         "name": "",
         "statusCode": "",
         "headers": {},
-        "x": 3210,
+        "x": 3290,
         "y": 660,
         "wires": []
     },
@@ -4647,7 +4648,7 @@
         "proxy": "",
         "authType": "",
         "senderr": false,
-        "x": 2650,
+        "x": 2730,
         "y": 660,
         "wires": [
             [
@@ -5004,7 +5005,7 @@
         "onceDelay": "5",
         "topic": "",
         "payloadType": "date",
-        "x": 2370,
+        "x": 2450,
         "y": 620,
         "wires": [
             [
@@ -5027,7 +5028,7 @@
         "proxy": "",
         "authType": "",
         "senderr": false,
-        "x": 2530,
+        "x": 2610,
         "y": 620,
         "wires": [
             [
@@ -5299,7 +5300,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2940,
+        "x": 3020,
         "y": 660,
         "wires": [
             [
@@ -5319,7 +5320,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2720,
+        "x": 2800,
         "y": 620,
         "wires": [
             [
@@ -5351,7 +5352,7 @@
         "payloadType": "str",
         "topic": "show",
         "topicType": "str",
-        "x": 2910,
+        "x": 2990,
         "y": 620,
         "wires": [
             [
@@ -5374,11 +5375,11 @@
         "proxy": "",
         "authType": "",
         "senderr": false,
-        "x": 3050,
+        "x": 3130,
         "y": 620,
         "wires": [
             [
-                "19a535f96f40be94"
+                "9c27a2105dd41e6b"
             ]
         ]
     },
@@ -5398,10 +5399,30 @@
         "resendOnRefresh": false,
         "templateScope": "local",
         "className": "",
-        "x": 3200,
+        "x": 3420,
         "y": 620,
         "wires": [
             []
+        ]
+    },
+    {
+        "id": "9c27a2105dd41e6b",
+        "type": "function",
+        "z": "32e6b1c785b786d2",
+        "g": "54c30edf1af25e1f",
+        "name": "",
+        "func": "if (msg.statusCode === 200 || 201) {\n    return msg;\n} else {\n    msg.payload = '<p style=\"color:red;\">Fout bij laden release notes van github</p><br><a href=\"https://raw.githubusercontent.com/Hoeby/Sonoff-Zigbee-Tasmota-Nodered-flow/main/releasenotes\" target=\"_blank\">Link naar github, voor release notes</a>'\n    return msg;\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3280,
+        "y": 620,
+        "wires": [
+            [
+                "19a535f96f40be94"
+            ]
         ]
     },
     {
