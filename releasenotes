@@ -1,6 +1,6 @@
-"<b>"07-03-2022 R1 Beta:"</b><br> \n"
-"Check van versienummer controleert op response 200 of 201, anders retun false <br>\n"\n
-<b>'06-03-2022 R1 Beta:'</b><br>
+<b>07-03-2022 R1 Beta:</b><br>
+Check van versienummer controleert op response 200 of 201, anders retun false <br>
+<b>06-03-2022 R1 Beta:</b><br>
 - Download flows.json wordt nu opgeslagen met versie naam <br>
 <b>05-03-2022 R2 Beta:</b><br>
 - Je kan nu per zigbee bridge een command sturen <br>
