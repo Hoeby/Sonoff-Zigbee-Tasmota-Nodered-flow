@@ -1,3 +1,15 @@
+<b>19-03-2022 R1:</b><br>
+<br>
+<font color="red">NIET ZOMAAR UPDATEN, LEES AANPASSING 1 VAN DEZE RELEASE</font><br>
+<br>
+- Device aanduiding uit elkaar gehaald, was voorheen 1 veld met merk+type, dit zijn nu 2 losse velden. <br>
+  <font color="red">HIERDOOR KAN JE NIET ZOMAAR UPDATEN, JE BACKUP ZAL FOUTIEF WORDEN INGELEZEN</font><br>
+  Of alles opnieuw invoeren, of de backup handmatig aanpassen. <br>
+<br>
+- Versie balk in UI toegevoegd <br>
+- Ikea Powerplug Wordt nu ook gefaked voor link quality waarden <br>
+- Flogger file wordt nu ook in de map opgeslagen waar de data file met idx nummer staat <br>
+- Sonoff SNZB-01 switch toegevoegd <br>
 <b>10-03-2022 R1:</b><br>
 - Beta versie is verwijdert, we zijn live <br>
 - Release notes functie toegevoegd in UI <br>
