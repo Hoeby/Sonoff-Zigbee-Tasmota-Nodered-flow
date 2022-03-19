@@ -6,7 +6,7 @@
   <font color="red">HIERDOOR KAN JE NIET ZOMAAR UPDATEN, JE BACKUP ZAL FOUTIEF WORDEN INGELEZEN</font><br>
   Of alles opnieuw invoeren, of de backup handmatig aanpassen. <br>
 <br>
-- Versie balk in UI toegevoegd <br>
+- Actuele versie balk in UI toegevoegd <br>
 - Ikea Powerplug Wordt nu ook gefaked voor link quality waarden <br>
 - Flogger file wordt nu ook in de map opgeslagen waar de data file met idx nummer staat <br>
 - Sonoff SNZB-01 switch toegevoegd <br>
