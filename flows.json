@@ -2873,8 +2873,8 @@
         "id": "a2fceb2efb4f1b06",
         "type": "comment",
         "z": "32e6b1c785b786d2",
-        "name": "V_22-03-2022_R1",
-        "info": "22-03-2022 R1:\n- Finetuning van de aanpassing van 19-03-2022 R1\n19-03-2022 R1:\n\nNIET ZOMAAR UPDATEN, LEES AANPASSING 1 VAN DEZE RELEASE\n\n- Device aanduiding uit elkaar gehaald, was voorheen 1 veld met merk+type, dit zijn nu 2 losse velden. \n  HIERDOOR KAN JE NIET ZOMAAR UPDATEN, JE BACKUP ZAL FOUTIEF WORDEN INGELEZEN\n  Of alles opnieuw invoeren, of de backup handmatig aanpassen. \n\n- Actuele versie balk in UI toegevoegd\n- Ikea Powerplug Wordt nu ook gefaked voor link quality waarden\n- Flogger file wordt nu ook in de map opgeslagen waar de data file met idx nummer staat\n- Sonoff SNZB-01 switch toegevoegd\n10-03-2022 R1:\n- Beta versie is verwijdert, we zijn live\n- Release notes functie toegevoegd in UI\n- Bug voor automatisch toevoegen ikea E1743 opgelost\n07-03-2022 R1 Beta:\n- Check van versienummer controleert op response 200 of 201, anders return false\n06-03-2022 R1 Beta:\n- Download flows.json wordt nu opgeslagen met versie naam\n05-03-2022 R2 Beta:\n- Je kan nu per zigbee bridge een command sturen\n- Kleur/text verandert bij een beschikbare update\n05-03-2022 R1 Beta:\n- Ikea 1743 doet nu auto update flow.set na import nieuwe flow of idx set\n04-03-2022 R1 Beta:\n- Toevoegen van nodered UI tbx idx tabel\n28-02-2022 R2:\n- Tasmota zigbee UI toegevoegd\n28-02-2022 R1:\n- Bug Ikea LED Strip opgelost, bij power 0 stuurt deze nu ook een 0 ipv 1\n27-02-2022 R1:\n- Batterijtrigger aangepast van \"true\" naar \"false\", dit lijkt effect te hebben op het aantal response meldingen van het device\n26-02-2022 R1: \n- Ikea powerplug, link naar gate verwijdert\n- Batterijtrigger voor E1743 aangepast, want deze stopte soms vanzelf.\n22-02-2022 R1: \n- Node.send for ikea E1743 voor linkage updates\n- Bug Ikea Powerplug opgelost, bij power 0 stuurt deze nu ook een 0 ipv 1\n19-02-2022 R1: \n- Xiaomi Water sensor toegevoegd, niet getest\n17-02-2022 R1: \n- Gestart met Versie nummers",
+        "name": "V_01-04-2022_R1",
+        "info": "01-04-2022 R1:\n- Optie om de custom domoticz pagina in te stellen toegevoegd\n22-03-2022 R1:\n- Finetuning van de aanpassing van 19-03-2022 R1\n19-03-2022 R1:\n\nNIET ZOMAAR UPDATEN, LEES AANPASSING 1 VAN DEZE RELEASE\n\n- Device aanduiding uit elkaar gehaald, was voorheen 1 veld met merk+type, dit zijn nu 2 losse velden. \n  HIERDOOR KAN JE NIET ZOMAAR UPDATEN, JE BACKUP ZAL FOUTIEF WORDEN INGELEZEN\n  Of alles opnieuw invoeren, of de backup handmatig aanpassen. \n\n- Actuele versie balk in UI toegevoegd\n- Ikea Powerplug Wordt nu ook gefaked voor link quality waarden\n- Flogger file wordt nu ook in de map opgeslagen waar de data file met idx nummer staat\n- Sonoff SNZB-01 switch toegevoegd\n10-03-2022 R1:\n- Beta versie is verwijdert, we zijn live\n- Release notes functie toegevoegd in UI\n- Bug voor automatisch toevoegen ikea E1743 opgelost\n07-03-2022 R1 Beta:\n- Check van versienummer controleert op response 200 of 201, anders return false\n06-03-2022 R1 Beta:\n- Download flows.json wordt nu opgeslagen met versie naam\n05-03-2022 R2 Beta:\n- Je kan nu per zigbee bridge een command sturen\n- Kleur/text verandert bij een beschikbare update\n05-03-2022 R1 Beta:\n- Ikea 1743 doet nu auto update flow.set na import nieuwe flow of idx set\n04-03-2022 R1 Beta:\n- Toevoegen van nodered UI tbx idx tabel\n28-02-2022 R2:\n- Tasmota zigbee UI toegevoegd\n28-02-2022 R1:\n- Bug Ikea LED Strip opgelost, bij power 0 stuurt deze nu ook een 0 ipv 1\n27-02-2022 R1:\n- Batterijtrigger aangepast van \"true\" naar \"false\", dit lijkt effect te hebben op het aantal response meldingen van het device\n26-02-2022 R1: \n- Ikea powerplug, link naar gate verwijdert\n- Batterijtrigger voor E1743 aangepast, want deze stopte soms vanzelf.\n22-02-2022 R1: \n- Node.send for ikea E1743 voor linkage updates\n- Bug Ikea Powerplug opgelost, bij power 0 stuurt deze nu ook een 0 ipv 1\n19-02-2022 R1: \n- Xiaomi Water sensor toegevoegd, niet getest\n17-02-2022 R1: \n- Gestart met Versie nummers",
         "x": 110,
         "y": 80,
         "wires": []
@@ -4132,7 +4132,7 @@
         "type": "function",
         "z": "32e6b1c785b786d2",
         "name": "Voorbereiden voor device tabel",
-        "func": "var devs; \n\nif ( msg.src === 'restore' ) {\n    devs = flow.get(\"t2ztable\") || {};\n    return [{payload:Object.values(devs)}];\n} else if (msg.payload.ZbReceived === undefined) {\n    return;\n} else {\n\n    devs = flow.get(\"t2ztable\") || {};\n    var receivedSensors = []\n\n    for (var devN in msg.payload.ZbReceived) {\n        let devInfo = msg.payload.ZbReceived[devN];\n        let ID = devInfo.Device;\n        let Name = devInfo.Name;\n     \n        // get dev by ID\n        let dev = devs[ID] || {};\n     \n        if (dev.vendors===undefined) {\n            dev.vendors = \"onbekend\";\n        }\n        if (dev.type===undefined) {\n            dev.type = \"onbekend\";\n        }\n        if (dev.idx===undefined) {\n            dev.idx = 0;\n        }\n        if (dev.idxbat===undefined) {\n            dev.idxbat = 0;\n        }\n        if (dev.idxper===undefined) {\n            dev.idxper = 0;\n        }\n        if (dev.idxlink===undefined) {\n            dev.idxlink = 0;\n        }\n        if (dev.idxextra===undefined) {\n            dev.idxextra = 0;\n        }\n\n        dev.label = ID; \n        dev.zigbeeid = ID;\n        dev.bridge = msg.topic.split(\"/\")[1];\n        dev.name = Name;\n    \n        // write back\n        devs[ID] = dev;\n        receivedSensors.push(dev);\n    }\n    flow.set(\"t2ztable\", devs);\n}\nreturn [{payload:Object.values(devs)}];",
+        "func": "var devs; \n\nif ( msg.src === 'restore' ) {\n    devs = flow.get(\"t2ztable\") || {};\n    return [{payload:Object.values(devs)}];\n} else if (msg.payload.ZbReceived === undefined) {\n    return;\n} else {\n\n    devs = flow.get(\"t2ztable\") || {};\n    var receivedSensors = []\n\n    for (var devN in msg.payload.ZbReceived) {\n        let devInfo = msg.payload.ZbReceived[devN];\n        let ID = devInfo.Device;\n        let Name = devInfo.Name;\n     \n        // get dev by ID\n        let dev = devs[ID] || {};\n     \n        if (dev.vendors===undefined) {\n            dev.vendors = \"onbekend\";\n        }\n        if (dev.type===undefined) {\n            dev.type = \"onbekend\";\n        }\n        if (dev.idx===undefined) {\n            dev.idx = 0;\n        }\n        if (dev.idxbat===undefined) {\n            dev.idxbat = 0;\n        }\n        if (dev.idxper===undefined) {\n            dev.idxper = 0;\n        }\n        if (dev.idxlink===undefined) {\n            dev.idxlink = 0;\n        }\n        if (dev.idxextra===undefined) {\n            dev.idxextra = 0;\n        }\n\n        //dev.label = ID; \n        dev.zigbeeid = ID;\n        dev.bridge = msg.topic.split(\"/\")[1];\n        dev.name = Name;\n    \n        // write back\n        devs[ID] = dev;\n        receivedSensors.push(dev);\n    }\n    flow.set(\"t2ztable\", devs);\n}\nreturn [{payload:Object.values(devs)}];",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -4626,7 +4626,7 @@
         "group": "d325c76.7444a38",
         "name": "Zigbee Devices",
         "order": 1,
-        "width": "30",
+        "width": 30,
         "height": 11,
         "columns": [
             {
@@ -5651,7 +5651,7 @@
         "width": 0,
         "height": 0,
         "name": "",
-        "label": "Actuele versie: V_22-03-2022_R1",
+        "label": "Actuele versie: V_01-04-2022_R1",
         "format": "{{msg.payload}}",
         "layout": "row-center",
         "className": "",
@@ -5972,7 +5972,7 @@
         "type": "function",
         "z": "32e6b1c785b786d2",
         "name": "Lidl devices",
-        "func": "if (msg.payload.ZbInfo) {\n    if (msg.payload.ZbInfo.type === \"Light (HG06492C)\") {\n        return [msg];\n    }\n}\n\nif (msg.padload.ZbReceived) {\n    if (msg.payload.ZbReceived.type === \"Light (HG06492C)\") {\n        return [msg];\n    }\n}\n\nif ( msg.src === 'domoticz' ) {\n    if (msg.payload.type === \"Light (HG06492C)\") {\n        return [msg];\n    }\n}",
+        "func": "if (msg.payload.ZbInfo) {\n    if (msg.payload.ZbInfo.type === \"Light (HG06492C)\") {\n        return [msg];\n    }\n}\n\nif (msg.payload.ZbReceived) {\n    if (msg.payload.ZbReceived.type === \"Light (HG06492C)\") {\n        return [msg];\n    }\n}\n\nif ( msg.src === 'domoticz' ) {\n    if (msg.payload.type === \"Light (HG06492C)\") {\n        return [msg];\n    }\n}",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -6108,6 +6108,460 @@
         "wires": []
     },
     {
+        "id": "cc43c168095abbf7",
+        "type": "comment",
+        "z": "32e6b1c785b786d2",
+        "name": "",
+        "info": "if (msg.payload.ZbInfo) {\n    if (msg.payload.ZbInfo.type === \"Light (ICPSHC24-10EU-IL-1)\") {\n        return [msg, null, null, null, null]\n    }\n    else if (msg.payload.ZbInfo.type === \"Plug (E1603)\") {\n        return [null, msg, null, null, null]\n    }\n    else if (msg.payload.ZbInfo.type === \"Plug (E1702)\") {\n        return [null, null, msg, null, null]\n    }\n    else if (msg.payload.ZbInfo.type === \"Plug (E1708)\") {\n        return [null, null, null, msg, null]\n    }\n    else if (msg.payload.ZbInfo.type === \"Remote (E1743)\") {\n        return [null, null, null, null, msg]\n    }\n}\n\nif (msg.payload.ZbReceived) {\n    if (msg.payload.ZbReceived.type === \"Light (ICPSHC24-10EU-IL-1)\") {\n        return [msg, null, null, null, null]\n    }\n    else if (msg.payload.ZbReceived.type === \"Plug (E1603)\") {\n        return [null, msg, null, null, null]\n    }\n    else if (msg.payload.ZbReceived.type === \"Plug (E1702)\") {\n        return [null, null, msg, null, null]\n    }\n    else if (msg.payload.ZbReceived.type === \"Plug (E1708)\") {\n        return [null, null, null, msg, null]\n    }\n    else if (msg.payload.ZbReceived.type === \"Remote (E1743)\") {\n        return [null, null, null, null, msg]\n    }\n}\n\nif ( msg.src === 'domoticz' ) {\n    if (msg.payload.type === \"Light (ICPSHC24-10EU-IL-1)\") {\n        return [msg, null, null, null, null]\n    }\n    else if (msg.payload.type === \"Plug (E1603)\") {\n        return [null, msg, null, null, null]\n    }\n    else if (msg.payload.type === \"Plug (E1702)\") {\n        return [null, null, msg, null, null]\n    }\n    else if (msg.payload.type === \"Plug (E1708)\") {\n        return [null, null, null, msg, null]\n    }\n    else if (msg.payload.type === \"Remote (E1743)\") {\n        return [null, null, null, null, msg]\n    }\n}",
+        "x": 2150,
+        "y": 2100,
+        "wires": []
+    },
+    {
+        "id": "79ec8237220e308b",
+        "type": "function",
+        "z": "32e6b1c785b786d2",
+        "name": "Make custom page domoticz",
+        "func": "var ipnodered = flow.get(\"ipnodered\") //|| null; //get from context or default to 0\nvar portnodered = flow.get(\"portnodered\")// || 0; //get from context or default to 0\nvar filelocation = flow.get(\"filelocation\")\n\nswitch (msg.topic){\n\n    case \"ipnodered\":\n        ipnodered = msg.payload; \n        flow.set(\"ipnodered\", ipnodered);//store in context for next time \n        return;\n    \n    case \"portnodered\":\n        portnodered = msg.payload; \n        flow.set(\"portnodered\", portnodered);//store in context for next time \n        return;\n        \n    case \"filelocation\":\n        var filelocationexcl = msg.payload; \n        filelocation = filelocationexl + \"/tasmota_sonoff_bridge.html\"\n        flow.set(\"filelocation\", filelocation);//store in context for next time \n        return;\n        \n    case \"Submit\":\n        if (ipnodered !== null ) {\n            var file = flow.get(\"filelocation\");\n            msg.filename = file; \n            msg.payload = '<IFRAME SRC=\"http://' + ipnodered + ':' + portnodered + '/ui\" height=\"800\" width=\"100%\"></IFRAME>';\n            return msg;\n        } else {\n            return;\n        }\n    }\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 4400,
+        "y": 140,
+        "wires": [
+            [
+                "358856e6a5e45040",
+                "db9ca20934bba080"
+            ]
+        ]
+    },
+    {
+        "id": "b55545ae93e5847f",
+        "type": "ui_text_input",
+        "z": "32e6b1c785b786d2",
+        "name": "",
+        "label": "Port address nodered host",
+        "tooltip": "",
+        "group": "d0a2461924835075",
+        "order": 2,
+        "width": 10,
+        "height": 1,
+        "passthru": true,
+        "mode": "text",
+        "delay": "1000",
+        "topic": "portnodered",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "str",
+        "x": 4000,
+        "y": 140,
+        "wires": [
+            [
+                "79ec8237220e308b"
+            ]
+        ]
+    },
+    {
+        "id": "accf1a11dc0b6389",
+        "type": "ui_text_input",
+        "z": "32e6b1c785b786d2",
+        "name": "",
+        "label": "IP address nodered host",
+        "tooltip": "",
+        "group": "d0a2461924835075",
+        "order": 1,
+        "width": 10,
+        "height": 1,
+        "passthru": true,
+        "mode": "text",
+        "delay": "250",
+        "topic": "ipnodered",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "str",
+        "x": 3990,
+        "y": 60,
+        "wires": [
+            [
+                "79ec8237220e308b"
+            ]
+        ]
+    },
+    {
+        "id": "d9d831879af67d08",
+        "type": "ui_button",
+        "z": "32e6b1c785b786d2",
+        "name": "",
+        "group": "d0a2461924835075",
+        "order": 4,
+        "width": 30,
+        "height": 1,
+        "passthru": false,
+        "label": "Save custom pagina domoticz",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "OPMERKING!",
+        "topicType": "str",
+        "x": 3430,
+        "y": 300,
+        "wires": [
+            [
+                "966012a70158302b"
+            ]
+        ]
+    },
+    {
+        "id": "10e661c6c7ded4e7",
+        "type": "ui_text_input",
+        "z": "32e6b1c785b786d2",
+        "name": "",
+        "label": "Domoticz template location",
+        "tooltip": "",
+        "group": "d0a2461924835075",
+        "order": 3,
+        "width": 10,
+        "height": 1,
+        "passthru": true,
+        "mode": "text",
+        "delay": "250",
+        "topic": "filelocation",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "str",
+        "x": 4000,
+        "y": 220,
+        "wires": [
+            [
+                "79ec8237220e308b"
+            ]
+        ]
+    },
+    {
+        "id": "a74aaef0e4828296",
+        "type": "inject",
+        "z": "32e6b1c785b786d2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "1880",
+        "payloadType": "str",
+        "x": 3390,
+        "y": 160,
+        "wires": [
+            [
+                "b55545ae93e5847f",
+                "19b3dfadf146aac7"
+            ]
+        ]
+    },
+    {
+        "id": "da5f9cc95705b51b",
+        "type": "inject",
+        "z": "32e6b1c785b786d2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "/home/pi/domoticz/www/templates",
+        "payloadType": "str",
+        "x": 3390,
+        "y": 240,
+        "wires": [
+            [
+                "10e661c6c7ded4e7",
+                "b52b89d5417db470"
+            ]
+        ]
+    },
+    {
+        "id": "b21db43ffd5c5597",
+        "type": "function",
+        "z": "32e6b1c785b786d2",
+        "name": "Store ip details",
+        "func": "if ( msg.src === 'ipnodered' ) {\n        var ipnodered = msg.payload; \n        flow.set(\"ipnodered\", ipnodered);//store in context for next time \n        return;\n}\n\nif ( msg.src === 'portnodered' ) {\n        var portnodered = msg.payload; \n        flow.set(\"portnodered\", portnodered);//store in context for next time \n        return;\n}\n\nif ( msg.src === 'filelocation' ) {\n        var filelocationexcl = msg.payload; \n        var filelocation = \"\" + filelocationexcl + \"/tasmota_sonoff_bridge.html\"\n        flow.set(\"filelocation\", filelocation);//store in context for next time \n        return;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 4360,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "60bd45cb4182b4c0",
+        "type": "function",
+        "z": "32e6b1c785b786d2",
+        "name": "",
+        "func": "msg.src = 'ipnodered';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3940,
+        "y": 100,
+        "wires": [
+            [
+                "b21db43ffd5c5597"
+            ]
+        ]
+    },
+    {
+        "id": "19b3dfadf146aac7",
+        "type": "function",
+        "z": "32e6b1c785b786d2",
+        "name": "",
+        "func": "msg.src = 'portnodered';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3940,
+        "y": 180,
+        "wires": [
+            [
+                "b21db43ffd5c5597"
+            ]
+        ]
+    },
+    {
+        "id": "b52b89d5417db470",
+        "type": "function",
+        "z": "32e6b1c785b786d2",
+        "name": "",
+        "func": "msg.src = 'filelocation';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3940,
+        "y": 260,
+        "wires": [
+            [
+                "b21db43ffd5c5597"
+            ]
+        ]
+    },
+    {
+        "id": "a8017b293b4c44e4",
+        "type": "exec",
+        "z": "32e6b1c785b786d2",
+        "command": "/sbin/ip -4 -o addr show dev eth0| /usr/bin/awk '{split($4,a,\"/\");print a[1]}'",
+        "addpay": false,
+        "append": "",
+        "useSpawn": "false",
+        "timer": "20",
+        "winHide": false,
+        "oldrc": false,
+        "name": "GetIp",
+        "x": 3550,
+        "y": 80,
+        "wires": [
+            [
+                "f0bc9f21faf5a78a"
+            ],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "9dc84db28ef78e49",
+        "type": "inject",
+        "z": "32e6b1c785b786d2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payloadType": "date",
+        "x": 3370,
+        "y": 80,
+        "wires": [
+            [
+                "a8017b293b4c44e4"
+            ]
+        ]
+    },
+    {
+        "id": "f0bc9f21faf5a78a",
+        "type": "function",
+        "z": "32e6b1c785b786d2",
+        "name": "",
+        "func": "oldIP = msg.payload;\nvar newIP = oldIP.slice(0, oldIP.length-1);\nmsg.payload = newIP;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3720,
+        "y": 80,
+        "wires": [
+            [
+                "accf1a11dc0b6389",
+                "60bd45cb4182b4c0"
+            ]
+        ]
+    },
+    {
+        "id": "358856e6a5e45040",
+        "type": "file",
+        "z": "32e6b1c785b786d2",
+        "name": "",
+        "filename": "",
+        "appendNewline": false,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 4640,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d6c69e413ec1890c",
+        "type": "exec",
+        "z": "32e6b1c785b786d2",
+        "command": "sudo /etc/init.d/domoticz.sh",
+        "addpay": false,
+        "append": "restart",
+        "useSpawn": "false",
+        "timer": "30",
+        "winHide": false,
+        "oldrc": false,
+        "name": "Domoticz restart",
+        "x": 4820,
+        "y": 160,
+        "wires": [
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "db9ca20934bba080",
+        "type": "delay",
+        "z": "32e6b1c785b786d2",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 4640,
+        "y": 160,
+        "wires": [
+            [
+                "d6c69e413ec1890c"
+            ]
+        ]
+    },
+    {
+        "id": "966012a70158302b",
+        "type": "template",
+        "z": "32e6b1c785b786d2",
+        "name": "opmerking tekst",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "plain",
+        "template": "LET OP, lees goed wat er staat.<br>\n<br>\nAls er op \"SUBMIT\" wordt geklikt, zal domoticz over 5 seconden herstarten.<br>\nWil je dit niet, klik dan op \"CANCEL\".<br>",
+        "output": "str",
+        "x": 3660,
+        "y": 300,
+        "wires": [
+            [
+                "77e88446e1293af1"
+            ]
+        ]
+    },
+    {
+        "id": "77e88446e1293af1",
+        "type": "ui_toast",
+        "z": "32e6b1c785b786d2",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": false,
+        "outputs": 1,
+        "ok": "Cancel",
+        "cancel": "Submit",
+        "raw": true,
+        "className": "",
+        "topic": "",
+        "name": "Herstart domoticz",
+        "x": 3850,
+        "y": 300,
+        "wires": [
+            [
+                "81bf1074f9edc0f3"
+            ]
+        ]
+    },
+    {
+        "id": "81bf1074f9edc0f3",
+        "type": "function",
+        "z": "32e6b1c785b786d2",
+        "name": "",
+        "func": "msg.topic = msg.payload;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 4020,
+        "y": 300,
+        "wires": [
+            [
+                "79ec8237220e308b"
+            ]
+        ]
+    },
+    {
         "id": "e82f16f2d7456839",
         "type": "ui_spacer",
         "z": "32e6b1c785b786d2",
@@ -6158,7 +6612,7 @@
     {
         "id": "ab17d46e1b772514",
         "type": "ui_group",
-        "name": "Group 8",
+        "name": "Algemene wijziging - opties",
         "tab": "abe3d4c.9322328",
         "order": 2,
         "disp": false,
@@ -6171,7 +6625,7 @@
         "type": "ui_group",
         "name": "Set idx nummers en idx tabel",
         "tab": "abe3d4c.9322328",
-        "order": 6,
+        "order": 3,
         "disp": true,
         "width": "30",
         "collapse": false,
@@ -6182,7 +6636,7 @@
         "type": "ui_group",
         "name": "Zigbee tabel",
         "tab": "abe3d4c.9322328",
-        "order": 7,
+        "order": 4,
         "disp": true,
         "width": "30",
         "collapse": false,
@@ -6193,7 +6647,7 @@
         "type": "ui_group",
         "name": "",
         "tab": "abe3d4c.9322328",
-        "order": 8,
+        "order": 6,
         "disp": true,
         "width": "30",
         "collapse": false,
@@ -6206,6 +6660,17 @@
         "tab": "abe3d4c.9322328",
         "order": 1,
         "disp": false,
+        "width": "30",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "d0a2461924835075",
+        "type": "ui_group",
+        "name": "Set custom page domoticz",
+        "tab": "abe3d4c.9322328",
+        "order": 5,
+        "disp": true,
         "width": "30",
         "collapse": false,
         "className": ""
