@@ -5534,7 +5534,7 @@
         "z": "32e6b1c785b786d2",
         "g": "54c30edf1af25e1f",
         "name": "UPDATE RELEASE",
-        "func": "var version = \"V_22-03-2022_R1\"\noldStr = msg.payload;\nvar newStr = oldStr.slice(0, oldStr.length-1);\nvar store = newStr;\nflow.set(\"version\", newStr);\nvar html = \"\";\nmsg.topic = \"Release notes\";\nif (msg.statusCode === 200 || 201) {\n    if (store === version) {\n        msg.text = \"FLOW IS UP TO DATE MET GITHUB (\" + version + \")\"\n        msg.background = \"#0A8085\";\n        return msg;\n    } else {\n        msg.text = \"ER IS EEN UPDATE, DOWNLOAD FLOW FILE VAN GITHUB\"\n        msg.background = \"#8C101C\";\n        return msg;\n    }\n}\nreturn;",
+        "func": "var version = \"V_01-04-2022_R1\"\noldStr = msg.payload;\nvar newStr = oldStr.slice(0, oldStr.length-1);\nvar store = newStr;\nflow.set(\"version\", newStr);\nvar html = \"\";\nmsg.topic = \"Release notes\";\nif (msg.statusCode === 200 || 201) {\n    if (store === version) {\n        msg.text = \"FLOW IS UP TO DATE MET GITHUB (\" + version + \")\"\n        msg.background = \"#0A8085\";\n        return msg;\n    } else {\n        msg.text = \"ER IS EEN UPDATE, DOWNLOAD FLOW FILE VAN GITHUB\"\n        msg.background = \"#8C101C\";\n        return msg;\n    }\n}\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
