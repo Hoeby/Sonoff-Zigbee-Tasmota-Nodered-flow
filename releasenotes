@@ -1,7 +1,7 @@
 <b>09-04-2022 R1:</b><br>
 - Toevoegen debug mqtt veld in UI <br>
 - Toevoegen device Xiaomi smart home cube <br>
-- Als device IDX 0 is, dan gaat er geen bericht <br>
+- Als device IDX 0 is, dan gaat er geen bericht naar domoticz<br>
 <b>08-04-2022 R1:</b><br>
 - Deurcontact lidl HG06336 toegevoegd <br>
 - Lampen (RGB/CCT) lidl toegevoegd <br>
