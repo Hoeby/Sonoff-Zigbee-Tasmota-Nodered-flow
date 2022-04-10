@@ -62,7 +62,7 @@
         ],
         "env": [],
         "x": 34,
-        "y": 1159,
+        "y": 479,
         "w": 712,
         "h": 482
     },
@@ -339,7 +339,7 @@
         ],
         "env": [],
         "x": 2134,
-        "y": 984,
+        "y": 264,
         "w": 1132,
         "h": 112
     },
@@ -374,7 +374,7 @@
         ],
         "env": [],
         "x": 2134,
-        "y": 1099,
+        "y": 379,
         "w": 1452,
         "h": 222
     },
@@ -406,13 +406,17 @@
             "f9497cf555673053",
             "91d142db88659e5f",
             "f47089a5d5e9a3b4",
-            "f335dbd5e751a1bd"
+            "f335dbd5e751a1bd",
+            "e40155baa8a52116",
+            "f463c735fc2aa9c9",
+            "5aa905edadd1f100",
+            "40e955ac3e334fe2"
         ],
         "env": [],
         "x": 2134,
-        "y": 1339,
+        "y": 619,
         "w": 1372,
-        "h": 277
+        "h": 357
     },
     {
         "id": "918e0af22924c402",
@@ -434,7 +438,7 @@
         ],
         "env": [],
         "x": 2134,
-        "y": 1624,
+        "y": 1004,
         "w": 1412,
         "h": 112
     },
@@ -458,7 +462,7 @@
         ],
         "env": [],
         "x": 2134,
-        "y": 1764,
+        "y": 1124,
         "w": 1392,
         "h": 112
     },
@@ -553,7 +557,7 @@
         ],
         "env": [],
         "x": 2134,
-        "y": 1884,
+        "y": 1244,
         "w": 1522,
         "h": 672
     },
@@ -576,7 +580,7 @@
         ],
         "env": [],
         "x": 2134,
-        "y": 2564,
+        "y": 1924,
         "w": 1172,
         "h": 112
     },
@@ -595,7 +599,7 @@
         "expiry": "",
         "broker": "b1bc1db1ae7424c0",
         "x": 1900,
-        "y": 1660,
+        "y": 940,
         "wires": []
     },
     {
@@ -664,7 +668,7 @@
         "repair": false,
         "outputs": 9,
         "x": 890,
-        "y": 1520,
+        "y": 800,
         "wires": [
             [
                 "4d2cef4fee63b42e"
@@ -709,7 +713,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1350,
-        "y": 1680,
+        "y": 960,
         "wires": []
     },
     {
@@ -726,7 +730,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1130,
-        "y": 1360,
+        "y": 640,
         "wires": []
     },
     {
@@ -743,7 +747,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1140,
-        "y": 1680,
+        "y": 960,
         "wires": []
     },
     {
@@ -760,7 +764,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1130,
-        "y": 1520,
+        "y": 800,
         "wires": []
     },
     {
@@ -777,7 +781,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1130,
-        "y": 1600,
+        "y": 880,
         "wires": []
     },
     {
@@ -794,7 +798,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1130,
-        "y": 1560,
+        "y": 840,
         "wires": []
     },
     {
@@ -805,7 +809,7 @@
         "name": "Osram Mini Switch",
         "info": "Which domoticz dummy needed:\n- Selector switch (keuzeschakelaar)\n\nSelector switch setup:\n0   = Off\n10  = Up\n20  = Up: hold\n30  = Up: release\n40  = Circle: click\n50  = Circle: hold\n60  = Circle: release\n70  = Down\n80  = Down: hold\n90  = Down: release\n100 = Standby\n\nCode send by device:\n*** Knop omhoog kort ***\nDevice: \"0x5FE5\"\nName: \"Test_osramswitch\"\n0006!01: \"\"\nPower: 1\nEndpoint: 1\nLinkQuality: 157\n\n*** Knop omhoog lang ***\nDevice: \"0x5FE5\"\nName: \"Test_osramswitch\"\n0008!03: \"\"\nDimmerStop: true\nEndpoint: 1\nLinkQuality: 157\n\n*** Knop midden kort bericht 1 ***\nDevice: \"0x5FE5\"\nName: \"Test_osramswitch\"\n0008!04: \"FE0A00\"\nDimmer: 254\nPower: 1\nEndpoint: 3\nLinkQuality: 157\n\n*** Knop midden kort bericht 2 ***\nDevice: \"0x5FE5\"\nName: \"Test_osramswitch\"\n0300!0A: \"72010A00\"\nCT:370\nEndpoint: 3\nLinkQuality: 157\n\n*** Knop midden lang bericht 1 ***\nDevice: \"0x5FE5\"\nName: \"Test_osramswitch\"\n0300!03: \"FE0200\"\nSat: 254\nEndpoint: 3\nLinkQuality: 157\n\n*** Knop midden lang bericht 2 ***\nDevice: \"0x5FE5\"\nName: \"Test_osramswitch\"\n0300!01: \"0119\"\nHueMove: 1\nEndpoint: 3\nLinkQuality: 157\n\n*** Knop midden lang bericht 3 ***\nDevice: \"0x5FE5\"\nName: \"Test_osramswitch\"\n0003!01: \"0000\"\nHueMove: 0\nEndpoint: 3\nLinkQuality: 157\n\n*** Knop omlaag kort ***\nDevice: \"0x5FE5\"\nName: \"Test_osramswitch\"\n0006!00: \"\"\nPower: 0\nEndpoint: 2\nLinkQuality: 157\n\n*** Knop omlaag lang ***\nDevice: \"0x5FE5\"\nName: \"Test_osramswitch\"\n0008!01: \"0126\"\nDimmerMove: 1\nEndpoint: 2\nLinkQuality: 157\n\n",
         "x": 3430,
-        "y": 1680,
+        "y": 1060,
         "wires": []
     },
     {
@@ -822,7 +826,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1900,
-        "y": 1620,
+        "y": 900,
         "wires": []
     },
     {
@@ -838,7 +842,7 @@
         "finalize": "",
         "libs": [],
         "x": 660,
-        "y": 1420,
+        "y": 740,
         "wires": [
             [
                 "28b374ac5247c4e6"
@@ -853,7 +857,7 @@
         "name": "Lidl CCT bulb",
         "info": "Which domoticz dummy needed:\n- Switch (schakelaar)\n\nCode send by device:\nDevice: \"0xAF37\"\nName: \"Test_Lamp\"\nPower: 1\nDimmer: null\nHue: 0\nSat: 254\nX: 45874\nY: 19660\nCT: 153  // 153 = warm white, 500 = cold\nColorMode: 1\nRGB: \"FF0000\"\nRGBb: \"000000\"\nEndpoint: 1\nLinkQuality: 134",
         "x": 3410,
-        "y": 1380,
+        "y": 660,
         "wires": []
     },
     {
@@ -868,7 +872,7 @@
         "broker": "b1bc1db1ae7424c0",
         "inputs": 0,
         "x": 190,
-        "y": 1600,
+        "y": 920,
         "wires": [
             [
                 "77103c1516206c18",
@@ -888,7 +892,7 @@
         "initialize": "",
         "finalize": "",
         "x": 660,
-        "y": 1600,
+        "y": 920,
         "wires": [
             [
                 "28b374ac5247c4e6"
@@ -904,7 +908,7 @@
         "action": "",
         "pretty": false,
         "x": 1330,
-        "y": 1460,
+        "y": 740,
         "wires": [
             [
                 "4496ae8e6ae3b948"
@@ -947,10 +951,11 @@
             "83fbf5a16a2d3804",
             "356ebc678ef0dee1",
             "91d142db88659e5f",
-            "4aca286ee7c4de75"
+            "4aca286ee7c4de75",
+            "f463c735fc2aa9c9"
         ],
         "x": 1755,
-        "y": 1640,
+        "y": 920,
         "wires": [
             [
                 "1f1263b83da8549a",
@@ -973,7 +978,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1130,
-        "y": 1400,
+        "y": 680,
         "wires": []
     },
     {
@@ -985,7 +990,7 @@
         "action": "",
         "pretty": false,
         "x": 1110,
-        "y": 1440,
+        "y": 720,
         "wires": [
             [
                 "d3e6a3da5ededfb8",
@@ -1008,7 +1013,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1380,
-        "y": 1420,
+        "y": 700,
         "wires": []
     },
     {
@@ -1026,7 +1031,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 3110,
-        "y": 1680,
+        "y": 1060,
         "wires": []
     },
     {
@@ -1042,7 +1047,7 @@
         "finalize": "",
         "libs": [],
         "x": 2580,
-        "y": 1420,
+        "y": 700,
         "wires": [
             [
                 "6b3b57797279c717"
@@ -1067,7 +1072,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 3120,
-        "y": 1420,
+        "y": 700,
         "wires": []
     },
     {
@@ -1083,7 +1088,7 @@
         "finalize": "",
         "libs": [],
         "x": 2580,
-        "y": 1040,
+        "y": 320,
         "wires": [
             [
                 "e76ba050d460bb25"
@@ -1114,7 +1119,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 3120,
-        "y": 1040,
+        "y": 320,
         "wires": []
     },
     {
@@ -1130,7 +1135,7 @@
         "finalize": "",
         "libs": [],
         "x": 2570,
-        "y": 1260,
+        "y": 540,
         "wires": [
             [
                 "c752cbda7a171c88"
@@ -1161,7 +1166,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 3110,
-        "y": 1260,
+        "y": 540,
         "wires": []
     },
     {
@@ -1185,7 +1190,7 @@
         "repair": false,
         "outputs": 2,
         "x": 1130,
-        "y": 1480,
+        "y": 760,
         "wires": [
             [
                 "f2ae12a8451e0a9e"
@@ -1209,7 +1214,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1360,
-        "y": 1500,
+        "y": 780,
         "wires": []
     },
     {
@@ -1225,7 +1230,7 @@
         "defaultCmd": "default",
         "persist": false,
         "x": 1650,
-        "y": 1440,
+        "y": 720,
         "wires": [
             [
                 "62aff541a9f41a75",
@@ -1260,7 +1265,7 @@
         "to": "",
         "reg": false,
         "x": 1190,
-        "y": 1320,
+        "y": 600,
         "wires": [
             [
                 "6e53a18a4f6fed13"
@@ -1285,7 +1290,7 @@
         "topic": "topic",
         "outputs": 1,
         "x": 1420,
-        "y": 1320,
+        "y": 600,
         "wires": [
             [
                 "55927c21d4dc4376"
@@ -1301,10 +1306,11 @@
             "0ded517531ee02b6",
             "6b3b57797279c717",
             "423ee036c8c42318",
-            "b42a4699db8357fa"
+            "b42a4699db8357fa",
+            "f463c735fc2aa9c9"
         ],
         "x": 1075,
-        "y": 1320,
+        "y": 600,
         "wires": [
             [
                 "406fa44348363124"
@@ -1325,7 +1331,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1850,
-        "y": 1380,
+        "y": 660,
         "wires": []
     },
     {
@@ -1341,7 +1347,7 @@
         "finalize": "",
         "libs": [],
         "x": 2570,
-        "y": 1680,
+        "y": 1060,
         "wires": [
             [
                 "9b258c86f4629583"
@@ -1371,7 +1377,7 @@
         "logconfig": "f6ad6c620c7a1df8",
         "sendpane": "",
         "x": 1970,
-        "y": 1780,
+        "y": 1060,
         "wires": [
             []
         ]
@@ -1384,7 +1390,7 @@
         "name": "Ikea E1743",
         "info": "Which domoticz dummy needed:\n- Selector switch (keuzeschakelaar)\n\nWhich domoticz dummy for battery:\n- Percentage dummy (device CAN'T do voltage)\n\n\nSelector switch setup:\n0  = Off\n10 = On\n20 = On: hold\n30 = Off: hold\n40 = Hold: stop\n\nCode send by device:\n*** Knop streepje kort ***\nDevice: \"0x5D14\"\nName: \"Remote_kledingkast\"\n0006!01: \"\"\nPower: 1\nEndpoint: 1\nLinkQuality: 157\n\n*** Knop rondje kort ***\nDevice: \"0x5D14\"\nName: \"Remote_kledingkast\"\n0006!00: \"\"\nPower: 0\nEndpoint: 1\nLinkQuality: 157\n\n*** Knop streepje lang ***\nDevice: \"0x5D14\"\nName: \"Remote_kledingkast\"\n0008!05: \"0053\"\nDimmerMove: 0\nEndpoint: 1\nLinkQuality: 157\n\n*** Knop streepje lang release ***\nDevice: \"0x5D14\"\nName: \"Remote_kledingkast\n0008!07: \"\"\nDimmerStop: true\nEndpoint: 1\nLinkQuality: 157\n\n*** Knop rondje lang ***\nDevice: \"0x5D14\"\nName: \"Remote_kledingkast\"\n0008!01: \"01530000\"\nDimmermove: 1\nEndpoint: 1\nLinkQuality: 157\n\n*** Knop rondje lang release ***\nDevice: \"0x5D14\"\nName: \"Remote_kledingkast\"\n0008!07: \"\"\nDimmerStop: true\nEndpoint: 1\nLinkQuality: 157\n\n",
         "x": 3410,
-        "y": 1260,
+        "y": 540,
         "wires": []
     },
     {
@@ -1402,7 +1408,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 3130,
-        "y": 1140,
+        "y": 420,
         "wires": []
     },
     {
@@ -1416,7 +1422,7 @@
             "8b7f9c7c96650350"
         ],
         "x": 2955,
-        "y": 1680,
+        "y": 1060,
         "wires": [
             [
                 "28c81369517294e3"
@@ -1435,7 +1441,7 @@
             "17fce7e4a549f3c4"
         ],
         "x": 2895,
-        "y": 1680,
+        "y": 1060,
         "wires": []
     },
     {
@@ -1449,7 +1455,7 @@
             "bfbb529c51f44cf9"
         ],
         "x": 2955,
-        "y": 1420,
+        "y": 700,
         "wires": [
             [
                 "afac6bbd937f4c16"
@@ -1469,7 +1475,7 @@
             "c9e5c5badc9a8085"
         ],
         "x": 2895,
-        "y": 1420,
+        "y": 700,
         "wires": []
     },
     {
@@ -1483,7 +1489,7 @@
             "ad73507f15bf9249"
         ],
         "x": 2955,
-        "y": 1040,
+        "y": 320,
         "wires": [
             [
                 "7fb8b93e3108606a"
@@ -1502,7 +1508,7 @@
             "17fce7e4a549f3c4"
         ],
         "x": 2895,
-        "y": 1040,
+        "y": 320,
         "wires": []
     },
     {
@@ -1516,7 +1522,7 @@
             "c2f3907aa0b72ddc"
         ],
         "x": 2955,
-        "y": 1260,
+        "y": 540,
         "wires": [
             [
                 "d12cbf12c74a94d7"
@@ -1535,7 +1541,7 @@
             "17fce7e4a549f3c4"
         ],
         "x": 2895,
-        "y": 1260,
+        "y": 540,
         "wires": []
     },
     {
@@ -1549,7 +1555,7 @@
             "032cb5d89205a87e"
         ],
         "x": 2955,
-        "y": 1140,
+        "y": 420,
         "wires": [
             [
                 "bc634c8e18c261a4"
@@ -1569,7 +1575,7 @@
             "17fce7e4a549f3c4"
         ],
         "x": 2895,
-        "y": 1140,
+        "y": 420,
         "wires": []
     },
     {
@@ -1580,7 +1586,7 @@
         "name": "Ikea ICPSHC24 led strip",
         "info": "Which domoticz dummy needed:\n- Switch dimmer (schakelaar dimmer)\n\nCode send by device:\nDevice: \"0x3743\"\nName: \"Lamp kleding\"\nDimmer: 25\nPower: 1 (or 0 when lamp off)\nEndpoint: 1\nLinkQuality: 134",
         "x": 3450,
-        "y": 1140,
+        "y": 420,
         "wires": []
     },
     {
@@ -1596,7 +1602,7 @@
         "finalize": "",
         "libs": [],
         "x": 2560,
-        "y": 1200,
+        "y": 480,
         "wires": [
             [
                 "99c5802633a6ebf3"
@@ -1618,7 +1624,7 @@
             "7e95562f721cdefd"
         ],
         "x": 2895,
-        "y": 1200,
+        "y": 480,
         "wires": []
     },
     {
@@ -1632,7 +1638,7 @@
             "3af4d6f4138c2bd4"
         ],
         "x": 2955,
-        "y": 1200,
+        "y": 480,
         "wires": [
             [
                 "106ba09215cc4bf7"
@@ -1654,7 +1660,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 3100,
-        "y": 1200,
+        "y": 480,
         "wires": []
     },
     {
@@ -1665,7 +1671,7 @@
         "name": "Xiaomi Ikea Powerplug",
         "info": "Which domoticz dummy needed:\n- Switch (schakelaar)",
         "x": 3440,
-        "y": 1200,
+        "y": 480,
         "wires": []
     },
     {
@@ -1675,7 +1681,7 @@
         "name": "Flogger link",
         "links": [],
         "x": 1855,
-        "y": 1780,
+        "y": 1060,
         "wires": [
             [
                 "1b2b404d1e13b0bd"
@@ -1701,7 +1707,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 2760,
-        "y": 1280,
+        "y": 560,
         "wires": [
             [
                 "c752cbda7a171c88"
@@ -1735,7 +1741,7 @@
         "to": "",
         "reg": false,
         "x": 1220,
-        "y": 1280,
+        "y": 560,
         "wires": [
             [
                 "402e4b3e80019353"
@@ -1751,7 +1757,7 @@
             "c2f3907aa0b72ddc"
         ],
         "x": 1075,
-        "y": 1280,
+        "y": 560,
         "wires": [
             [
                 "1a658ea610c0e0ee"
@@ -1776,7 +1782,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 1420,
-        "y": 1280,
+        "y": 560,
         "wires": [
             [
                 "55927c21d4dc4376"
@@ -1796,7 +1802,7 @@
         "finalize": "",
         "libs": [],
         "x": 2590,
-        "y": 1140,
+        "y": 420,
         "wires": [
             [
                 "423ee036c8c42318"
@@ -1814,7 +1820,7 @@
         "mode": "link",
         "links": [],
         "x": 1295,
-        "y": 1380,
+        "y": 660,
         "wires": []
     },
     {
@@ -1829,7 +1835,7 @@
         "finalize": "",
         "libs": [],
         "x": 1540,
-        "y": 1640,
+        "y": 920,
         "wires": [
             [
                 "fb7face5ab5f8842"
@@ -1850,7 +1856,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 2250,
-        "y": 960,
+        "y": 240,
         "wires": []
     },
     {
@@ -1880,7 +1886,7 @@
         "repair": false,
         "outputs": 3,
         "x": 460,
-        "y": 1460,
+        "y": 780,
         "wires": [
             [
                 "90f47b611c850bf5"
@@ -1906,7 +1912,7 @@
         "finalize": "",
         "libs": [],
         "x": 660,
-        "y": 1460,
+        "y": 780,
         "wires": [
             [
                 "28b374ac5247c4e6"
@@ -1923,15 +1929,15 @@
             "17fce7e4a549f3c4"
         ],
         "x": 1695,
-        "y": 1640,
+        "y": 920,
         "wires": []
     },
     {
         "id": "2a9af97bcc2e365d",
         "type": "comment",
         "z": "fe9ee8c084b47472",
-        "name": "V_09-04-2022_R3",
-        "info": "09-03-2022 R3:\n- Tuya switch 4-buttons toegevoegd (beta)\n09-04-2022 R2:\n- Lidl bewegingsensor HG06335/HG07310 toegevoegd\n09-04-2022 R1:\n- Toevoegen debug mqtt veld in UI\n- Toevoegen device Xiaomi smart home cube\n- Als device IDX 0 is, dan gaat er geen bericht naar domoticz\n08-04-2022 R1:\n- Deurcontact lidl HG06336 toegevoegd\n- Lampen (RGB/CCT) lidl toegevoegd\n05-04-2022 R2:\n- Aanpassingen lidl HG06106B, dat CT en RGB mogelijk is.\n05-04-2022 R1:\n- Lamp Lidl HG06106B (RGB) toegevoegd\n01-04-2022 R1:\n- Optie om de custom domoticz pagina in te stellen toegevoegd\n22-03-2022 R1:\n- Finetuning van de aanpassing van 19-03-2022 R1\n19-03-2022 R1:\n\nNIET ZOMAAR UPDATEN, LEES AANPASSING 1 VAN DEZE RELEASE\n\n- Device aanduiding uit elkaar gehaald, was voorheen 1 veld met merk+type, dit zijn nu 2 losse velden. \n  HIERDOOR KAN JE NIET ZOMAAR UPDATEN, JE BACKUP ZAL FOUTIEF WORDEN INGELEZEN\n  Of alles opnieuw invoeren, of de backup handmatig aanpassen. \n\n- Actuele versie balk in UI toegevoegd\n- Ikea Powerplug Wordt nu ook gefaked voor link quality waarden\n- Flogger file wordt nu ook in de map opgeslagen waar de data file met idx nummer staat\n- Sonoff SNZB-01 switch toegevoegd\n10-03-2022 R1:\n- Beta versie is verwijdert, we zijn live\n- Release notes functie toegevoegd in UI\n- Bug voor automatisch toevoegen ikea E1743 opgelost\n07-03-2022 R1 Beta:\n- Check van versienummer controleert op response 200 of 201, anders return false\n06-03-2022 R1 Beta:\n- Download flows.json wordt nu opgeslagen met versie naam\n05-03-2022 R2 Beta:\n- Je kan nu per zigbee bridge een command sturen\n- Kleur/text verandert bij een beschikbare update\n05-03-2022 R1 Beta:\n- Ikea 1743 doet nu auto update flow.set na import nieuwe flow of idx set\n04-03-2022 R1 Beta:\n- Toevoegen van nodered UI tbx idx tabel\n28-02-2022 R2:\n- Tasmota zigbee UI toegevoegd\n28-02-2022 R1:\n- Bug Ikea LED Strip opgelost, bij power 0 stuurt deze nu ook een 0 ipv 1\n27-02-2022 R1:\n- Batterijtrigger aangepast van \"true\" naar \"false\", dit lijkt effect te hebben op het aantal response meldingen van het device\n26-02-2022 R1: \n- Ikea powerplug, link naar gate verwijdert\n- Batterijtrigger voor E1743 aangepast, want deze stopte soms vanzelf.\n22-02-2022 R1: \n- Node.send for ikea E1743 voor linkage updates\n- Bug Ikea Powerplug opgelost, bij power 0 stuurt deze nu ook een 0 ipv 1\n19-02-2022 R1: \n- Xiaomi Water sensor toegevoegd, niet getest\n17-02-2022 R1: \n- Gestart met Versie nummers",
+        "name": "V_10-04-2022_R1",
+        "info": "10-04-2022 R1:\n- Tuya switch 4-buttons is released, geen beta meer\n- Lidl TS0601 Thermostaatkraan toegevoegd (beta)\n09-04-2022 R3:\n- Tuya switch 4-buttons toegevoegd (beta)\n09-04-2022 R2:\n- Lidl bewegingsensor HG06335/HG07310 toegevoegd\n09-04-2022 R1:\n- Toevoegen debug mqtt veld in UI\n- Toevoegen device Xiaomi smart home cube\n- Als device IDX 0 is, dan gaat er geen bericht naar domoticz\n08-04-2022 R1:\n- Deurcontact lidl HG06336 toegevoegd\n- Lampen (RGB/CCT) lidl toegevoegd\n05-04-2022 R2:\n- Aanpassingen lidl HG06106B, dat CT en RGB mogelijk is.\n05-04-2022 R1:\n- Lamp Lidl HG06106B (RGB) toegevoegd\n01-04-2022 R1:\n- Optie om de custom domoticz pagina in te stellen toegevoegd\n22-03-2022 R1:\n- Finetuning van de aanpassing van 19-03-2022 R1\n19-03-2022 R1:\n\nNIET ZOMAAR UPDATEN, LEES AANPASSING 1 VAN DEZE RELEASE\n\n- Device aanduiding uit elkaar gehaald, was voorheen 1 veld met merk+type, dit zijn nu 2 losse velden. \n  HIERDOOR KAN JE NIET ZOMAAR UPDATEN, JE BACKUP ZAL FOUTIEF WORDEN INGELEZEN\n  Of alles opnieuw invoeren, of de backup handmatig aanpassen. \n\n- Actuele versie balk in UI toegevoegd\n- Ikea Powerplug Wordt nu ook gefaked voor link quality waarden\n- Flogger file wordt nu ook in de map opgeslagen waar de data file met idx nummer staat\n- Sonoff SNZB-01 switch toegevoegd\n10-03-2022 R1:\n- Beta versie is verwijdert, we zijn live\n- Release notes functie toegevoegd in UI\n- Bug voor automatisch toevoegen ikea E1743 opgelost\n07-03-2022 R1 Beta:\n- Check van versienummer controleert op response 200 of 201, anders return false\n06-03-2022 R1 Beta:\n- Download flows.json wordt nu opgeslagen met versie naam\n05-03-2022 R2 Beta:\n- Je kan nu per zigbee bridge een command sturen\n- Kleur/text verandert bij een beschikbare update\n05-03-2022 R1 Beta:\n- Ikea 1743 doet nu auto update flow.set na import nieuwe flow of idx set\n04-03-2022 R1 Beta:\n- Toevoegen van nodered UI tbx idx tabel\n28-02-2022 R2:\n- Tasmota zigbee UI toegevoegd\n28-02-2022 R1:\n- Bug Ikea LED Strip opgelost, bij power 0 stuurt deze nu ook een 0 ipv 1\n27-02-2022 R1:\n- Batterijtrigger aangepast van \"true\" naar \"false\", dit lijkt effect te hebben op het aantal response meldingen van het device\n26-02-2022 R1: \n- Ikea powerplug, link naar gate verwijdert\n- Batterijtrigger voor E1743 aangepast, want deze stopte soms vanzelf.\n22-02-2022 R1: \n- Node.send for ikea E1743 voor linkage updates\n- Bug Ikea Powerplug opgelost, bij power 0 stuurt deze nu ook een 0 ipv 1\n19-02-2022 R1: \n- Xiaomi Water sensor toegevoegd, niet getest\n17-02-2022 R1: \n- Gestart met Versie nummers",
         "x": 110,
         "y": 80,
         "wires": []
@@ -1945,7 +1951,7 @@
         "action": "",
         "pretty": false,
         "x": 1110,
-        "y": 1640,
+        "y": 920,
         "wires": [
             [
                 "fb87444d663cc51c",
@@ -1965,7 +1971,7 @@
         "finalize": "",
         "libs": [],
         "x": 1340,
-        "y": 1640,
+        "y": 920,
         "wires": [
             [
                 "86b817edc7ae2c52"
@@ -2021,8 +2027,8 @@
             "9c4b062463c4e794"
         ],
         "uncaught": false,
-        "x": 3610,
-        "y": 380,
+        "x": 3210,
+        "y": 220,
         "wires": [
             []
         ]
@@ -2108,7 +2114,7 @@
         "rap": false,
         "inputs": 0,
         "x": 210,
-        "y": 1460,
+        "y": 780,
         "wires": [
             [
                 "9c4b062463c4e794",
@@ -2127,7 +2133,7 @@
         "action": "",
         "pretty": false,
         "x": 470,
-        "y": 1280,
+        "y": 600,
         "wires": [
             [
                 "bb1eb60b98ab7aec"
@@ -2148,7 +2154,7 @@
         "rap": false,
         "inputs": 0,
         "x": 180,
-        "y": 1260,
+        "y": 580,
         "wires": [
             [
                 "9c4b062463c4e794"
@@ -2169,7 +2175,7 @@
         "rap": false,
         "inputs": 0,
         "x": 190,
-        "y": 1200,
+        "y": 520,
         "wires": [
             [
                 "9c4b062463c4e794"
@@ -2190,7 +2196,7 @@
         "rap": false,
         "inputs": 0,
         "x": 180,
-        "y": 1320,
+        "y": 640,
         "wires": [
             [
                 "9c4b062463c4e794"
@@ -4432,7 +4438,7 @@
         "z": "fe9ee8c084b47472",
         "g": "c101b10c559fee47",
         "name": "UPDATE RELEASE",
-        "func": "var version = \"V_09-04-2022_R3\"\noldStr = msg.payload;\nvar newStr = oldStr.slice(0, oldStr.length-1);\nvar store = newStr;\nflow.set(\"version\", newStr);\nvar html = \"\";\nmsg.topic = \"Release notes\";\nif (msg.statusCode === 200 || 201) {\n    if (store === version) {\n        msg.text = \"FLOW IS UP TO DATE MET GITHUB (\" + version + \")\"\n        msg.background = \"#0A8085\";\n        return msg;\n    } else {\n        msg.text = \"ER IS EEN UPDATE, DOWNLOAD FLOW FILE VAN GITHUB\"\n        msg.background = \"#8C101C\";\n        return msg;\n    }\n}\nreturn;",
+        "func": "var version = \"V_10-04-2022_R1\"\noldStr = msg.payload;\nvar newStr = oldStr.slice(0, oldStr.length-1);\nvar store = newStr;\nflow.set(\"version\", newStr);\nvar html = \"\";\nmsg.topic = \"Release notes\";\nif (msg.statusCode === 200 || 201) {\n    if (store === version) {\n        msg.text = \"FLOW IS UP TO DATE MET GITHUB (\" + version + \")\"\n        msg.background = \"#0A8085\";\n        return msg;\n    } else {\n        msg.text = \"ER IS EEN UPDATE, DOWNLOAD FLOW FILE VAN GITHUB\"\n        msg.background = \"#8C101C\";\n        return msg;\n    }\n}\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -4549,7 +4555,7 @@
         "width": 0,
         "height": 0,
         "name": "",
-        "label": "Actuele versie: V_09-04-2022_R3",
+        "label": "Actuele versie: V_10-04-2022_R1",
         "format": "{{msg.payload}}",
         "layout": "row-center",
         "className": "",
@@ -4620,7 +4626,7 @@
             "17fce7e4a549f3c4"
         ],
         "x": 2895,
-        "y": 1820,
+        "y": 1180,
         "wires": []
     },
     {
@@ -4634,7 +4640,7 @@
             "d4c6b864417c2c46"
         ],
         "x": 2955,
-        "y": 1820,
+        "y": 1180,
         "wires": [
             [
                 "1cca10fb7ccaa67d"
@@ -4656,7 +4662,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 3130,
-        "y": 1820,
+        "y": 1180,
         "wires": []
     },
     {
@@ -4672,7 +4678,7 @@
         "finalize": "",
         "libs": [],
         "x": 2590,
-        "y": 1820,
+        "y": 1180,
         "wires": [
             [
                 "20abb5580249af22"
@@ -4704,7 +4710,7 @@
         "z": "fe9ee8c084b47472",
         "g": "896b3999999cb97c",
         "name": "",
-        "func": "if (msg.payload === \"Heiman\") {\n    msg.options = [ \"Monoxide (HS1CA-M)\"]\n}\nelse if (msg.payload === \"Ikea\") {\n    msg.options = [ \"Light (ICPSHC24-10EU-IL-1)\",\n                    \"Plug (E1603)\",\n                    \"Plug (E1702)\",\n                    \"Plug (E1708)\",\n                    \"Remote (E1743)\"]\n}\nelse if (msg.payload === \"Lidl\") {\n    msg.options = [ \"Door (HG06336)\",\n                    \"Motion (HG06335)\",\n                    \"Motion (HG07310)\",\n                    \"Light (HG06106A)\",\n                    \"Light (HG06106B)\",\n                    \"Light (HG06106C)\",\n                    \"Light (HG06492A)\",\n                    \"Light (HG06492B)\",\n                    \"Light (HG06492C)\"]\n}\nelse if (msg.payload === \"Osram\") {\n    msg.options = [ \"Remote (AC0251100NJ)\",\n                    \"Remote (AC0251600NJ)\",\n                    \"Remote (AC0251700NJ)\"]\n}\nelse if (msg.payload === \"Sonoff\") {\n    msg.options = [ \"Remote (SNZB-01)\" ]\n}\nelse if (msg.payload === \"Tuya\") {\n    msg.options = [ \"Remote (TS0044)\" ]\n}\nelse if (msg.payload === \"Xiaomi\") {\n    msg.options = [ \"Cube (MFKZQ01LM)\",\n                    \"Door (MCCGQ12LM)\",\n                    \"Door (MCCGQ14LM)\",\n                    \"Lux (GZCGQ01LM)\",\n                    \"Motion (RTCGQ01LM)\",\n                    \"Motion (RTCGQ12LM)\",\n                    \"Smoke (JTYJ-GD-01LM/BW)\",\n                    \"Temp (WSDCGQ01LM)\",\n                    \"Temp (WSDCGQ11LM)\",\n                    \"Temp (WSDCGQ12LM)\",\n                    \"Water (SJCGQ11LM)\"]\n}\n\nreturn msg;",
+        "func": "if (msg.payload === \"Heiman\") {\n    msg.options = [ \"Monoxide (HS1CA-M)\"]\n}\nelse if (msg.payload === \"Ikea\") {\n    msg.options = [ \"Light (ICPSHC24-10EU-IL-1)\",\n                    \"Plug (E1603)\",\n                    \"Plug (E1702)\",\n                    \"Plug (E1708)\",\n                    \"Remote (E1743)\"]\n}\nelse if (msg.payload === \"Lidl\") {\n    msg.options = [ \"Door (HG06336)\",\n                    \"Motion (HG06335)\",\n                    \"Motion (HG07310)\",\n                    \"Light (HG06106A)\",\n                    \"Light (HG06106B)\",\n                    \"Light (HG06106C)\",\n                    \"Light (HG06492A)\",\n                    \"Light (HG06492B)\",\n                    \"Light (HG06492C)\",\n                    \"Thermo (TS0601)\"]\n}\nelse if (msg.payload === \"Osram\") {\n    msg.options = [ \"Remote (AC0251100NJ)\",\n                    \"Remote (AC0251600NJ)\",\n                    \"Remote (AC0251700NJ)\"]\n}\nelse if (msg.payload === \"Sonoff\") {\n    msg.options = [ \"Remote (SNZB-01)\" ]\n}\nelse if (msg.payload === \"Tuya\") {\n    msg.options = [ \"Remote (TS0044)\" ]\n}\nelse if (msg.payload === \"Xiaomi\") {\n    msg.options = [ \"Cube (MFKZQ01LM)\",\n                    \"Door (MCCGQ12LM)\",\n                    \"Door (MCCGQ14LM)\",\n                    \"Lux (GZCGQ01LM)\",\n                    \"Motion (RTCGQ01LM)\",\n                    \"Motion (RTCGQ12LM)\",\n                    \"Smoke (JTYJ-GD-01LM/BW)\",\n                    \"Temp (WSDCGQ01LM)\",\n                    \"Temp (WSDCGQ11LM)\",\n                    \"Temp (WSDCGQ12LM)\",\n                    \"Water (SJCGQ11LM)\"]\n}\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -4758,7 +4764,7 @@
         "finalize": "",
         "libs": [],
         "x": 1900,
-        "y": 1460,
+        "y": 740,
         "wires": [
             [
                 "c3d7575710381576",
@@ -4800,7 +4806,7 @@
         "finalize": "",
         "libs": [],
         "x": 2240,
-        "y": 1040,
+        "y": 320,
         "wires": [
             [
                 "59cc1938fe4a8989"
@@ -4820,7 +4826,7 @@
         "finalize": "",
         "libs": [],
         "x": 2230,
-        "y": 1200,
+        "y": 480,
         "wires": [
             [
                 "c0d6650e03376498"
@@ -4845,14 +4851,14 @@
         "z": "fe9ee8c084b47472",
         "g": "0a2e01214bded454",
         "name": "Lidl devices",
-        "func": "if (msg.payload.ZbInfo) {\n    if (msg.payload.ZbInfo.type === \"Light (HG06492A)\") {\n        return [msg, null, null, null];\n    } else if (msg.payload.ZbInfo.type === \"Light (HG06492B)\") {\n        return [msg, null, null, null];\n    } else if (msg.payload.ZbInfo.type === \"Light (HG06492B)\") {\n        return [msg, null, null, null];\n    } else if (msg.payload.ZbInfo.type === \"Light (HG06106A)\") {\n        return [null, msg, null, null];\n    } else if (msg.payload.ZbInfo.type === \"Light (HG06106B)\") {\n        return [null, msg, null, null];\n    } else if (msg.payload.ZbInfo.type === \"Light (HG06106C)\") {\n        return [null, msg, null, null];\n    } else if (msg.payload.ZbInfo.type === \"Door (HG06336)\") {\n        return [null, null, msg, null];\n    } else if (msg.payload.ZbInfo.type === \"Motion (HG06335)\") {\n        return [null, null, null, msg];\n    } else if (msg.payload.ZbInfo.type === \"Motion (HG07310)\") {\n        return [null, null, null, msg];\n    }\n}\n\nif (msg.payload.ZbReceived) {\n    if (msg.payload.ZbReceived.type === \"Light (HG06492A)\") {\n        return [msg, null, null, null];\n    } else if (msg.payload.ZbReceived.type === \"Light (HG06492B)\") {\n        return [msg, null, null, null];\n    } else if (msg.payload.ZbReceived.type === \"Light (HG06492C)\") {\n        return [msg, null, null, null];\n    } else if (msg.payload.ZbReceived.type === \"Light (HG06106A)\") {\n        return [null, msg, null, null];\n    } else if (msg.payload.ZbReceived.type === \"Light (HG06106B)\") {\n        return [null, msg, null, null];\n    } else if (msg.payload.ZbReceived.type === \"Light (HG06106C)\") {\n        return [null, msg, null, null];\n    } else if (msg.payload.ZbReceived.type === \"Door (HG06336)\") {\n        return [null, null, msg, null];\n    } else if (msg.payload.ZbReceived.type === \"Motion (HG06335)\") {\n        return [null, null, null, msg];\n    } else if (msg.payload.ZbReceived.type === \"Motion (HG07310)\") {\n        return [null, null, null, msg];\n    }\n}\n\nif ( msg.src === 'domoticz' ) {\n    if (msg.payload.type === \"Light (HG06492A)\") {\n        return [msg, null, null, null];\n    } else if (msg.payload.type === \"Light (HG06492B)\") {\n        return [msg, null, null, null];\n    } else if (msg.payload.type === \"Light (HG06492C)\") {\n        return [msg, null, null, null];\n    } else if (msg.payload.type === \"Light (HG06106A)\") {\n        return [null, msg, null, null];\n    } else if (msg.payload.type === \"Light (HG06106B)\") {\n        return [null, msg, null, null];\n    } else if (msg.payload.type === \"Light (HG06106C)\") {\n        return [null, msg, null, null];\n    } else if (msg.payload.type === \"Door (HG06336)\") {\n        return [null, null, msg, null];\n    } else if (msg.payload.type === \"Motion (HG06335)\") {\n        return [null, null, null, msg];\n    } else if (msg.payload.type === \"Motion (HG07310)\") {\n        return [null, null, null, msg];\n    }\n}",
-        "outputs": 4,
+        "func": "if (msg.payload.ZbInfo) {\n    if (msg.payload.ZbInfo.type === \"Light (HG06492A)\") {\n        return [msg, null, null, null, null];\n    } else if (msg.payload.ZbInfo.type === \"Light (HG06492B)\") {\n        return [msg, null, null, null, null];\n    } else if (msg.payload.ZbInfo.type === \"Light (HG06492B)\") {\n        return [msg, null, null, null, null];\n    } else if (msg.payload.ZbInfo.type === \"Light (HG06106A)\") {\n        return [null, msg, null, null, null];\n    } else if (msg.payload.ZbInfo.type === \"Light (HG06106B)\") {\n        return [null, msg, null, null, null];\n    } else if (msg.payload.ZbInfo.type === \"Light (HG06106C)\") {\n        return [null, msg, null, null, null];\n    } else if (msg.payload.ZbInfo.type === \"Door (HG06336)\") {\n        return [null, null, msg, null, null];\n    } else if (msg.payload.ZbInfo.type === \"Motion (HG06335)\") {\n        return [null, null, null, msg, null];\n    } else if (msg.payload.ZbInfo.type === \"Motion (HG07310)\") {\n        return [null, null, null, msg, null];\n    } else if (msg.payload.ZbInfo.type === \"Thermo (TS0601)\") {\n        return [null, null, null, null, msg];\n    }\n}\n\nif (msg.payload.ZbReceived) {\n    if (msg.payload.ZbReceived.type === \"Light (HG06492A)\") {\n        return [msg, null, null, null, null];\n    } else if (msg.payload.ZbReceived.type === \"Light (HG06492B)\") {\n        return [msg, null, null, null, null];\n    } else if (msg.payload.ZbReceived.type === \"Light (HG06492C)\") {\n        return [msg, null, null, null, null];\n    } else if (msg.payload.ZbReceived.type === \"Light (HG06106A)\") {\n        return [null, msg, null, null, null];\n    } else if (msg.payload.ZbReceived.type === \"Light (HG06106B)\") {\n        return [null, msg, null, null, null];\n    } else if (msg.payload.ZbReceived.type === \"Light (HG06106C)\") {\n        return [null, msg, null, null, null];\n    } else if (msg.payload.ZbReceived.type === \"Door (HG06336)\") {\n        return [null, null, msg, null, null];\n    } else if (msg.payload.ZbReceived.type === \"Motion (HG06335)\") {\n        return [null, null, null, msg, null];\n    } else if (msg.payload.ZbReceived.type === \"Motion (HG07310)\") {\n        return [null, null, null, msg, null];\n    } else if (msg.payload.ZbReceived.type === \"Thermo (TS0601)\") {\n        return [null, null, null, null, msg];\n    }\n}\n\nif ( msg.src === 'domoticz' ) {\n    if (msg.payload.type === \"Light (HG06492A)\") {\n        return [msg, null, null, null, null];\n    } else if (msg.payload.type === \"Light (HG06492B)\") {\n        return [msg, null, null, null, null];\n    } else if (msg.payload.type === \"Light (HG06492C)\") {\n        return [msg, null, null, null, null];\n    } else if (msg.payload.type === \"Light (HG06106A)\") {\n        return [null, msg, null, null, null];\n    } else if (msg.payload.type === \"Light (HG06106B)\") {\n        return [null, msg, null, null, null];\n    } else if (msg.payload.type === \"Light (HG06106C)\") {\n        return [null, msg, null, null, null];\n    } else if (msg.payload.type === \"Door (HG06336)\") {\n        return [null, null, msg, null, null];\n    } else if (msg.payload.type === \"Motion (HG06335)\") {\n        return [null, null, null, msg, null];\n    } else if (msg.payload.type === \"Motion (HG07310)\") {\n        return [null, null, null, msg, null];\n    } else if (msg.payload.type === \"Thermo (TS0601)\") {\n        return [null, null, null, null, msg];\n    }\n}",
+        "outputs": 5,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
         "x": 2230,
-        "y": 1480,
+        "y": 760,
         "wires": [
             [
                 "843b6baf5da9e7a0"
@@ -4865,6 +4871,9 @@
             ],
             [
                 "f9497cf555673053"
+            ],
+            [
+                "e40155baa8a52116"
             ]
         ]
     },
@@ -4881,7 +4890,7 @@
         "finalize": "",
         "libs": [],
         "x": 2240,
-        "y": 1680,
+        "y": 1060,
         "wires": [
             [
                 "6b66c7b991eac007"
@@ -4907,7 +4916,7 @@
         "finalize": "",
         "libs": [],
         "x": 2240,
-        "y": 1820,
+        "y": 1180,
         "wires": [
             [
                 "8683449d486c3f6b"
@@ -4942,7 +4951,7 @@
         "name": "Sonoff SNZB-01",
         "info": "Which domoticz dummy needed:\n- Selector switch (keuzeschakelaar)\n\nSelector switch setup:\n0   = Niet gebruikt\n10  = Single Click\n20  = Double Click\n30  = Hold Click",
         "x": 3420,
-        "y": 1820,
+        "y": 1180,
         "wires": []
     },
     {
@@ -5422,7 +5431,7 @@
         "finalize": "",
         "libs": [],
         "x": 2580,
-        "y": 1380,
+        "y": 660,
         "wires": [
             [
                 "b42a4699db8357fa"
@@ -5445,7 +5454,7 @@
             "c9e5c5badc9a8085"
         ],
         "x": 2895,
-        "y": 1380,
+        "y": 660,
         "wires": []
     },
     {
@@ -5459,7 +5468,7 @@
             "b42a4699db8357fa"
         ],
         "x": 2955,
-        "y": 1380,
+        "y": 660,
         "wires": [
             [
                 "5bb905544da5f536"
@@ -5481,7 +5490,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 3120,
-        "y": 1380,
+        "y": 660,
         "wires": []
     },
     {
@@ -5497,7 +5506,7 @@
         "finalize": "",
         "libs": [],
         "x": 2560,
-        "y": 1480,
+        "y": 760,
         "wires": [
             [
                 "83fbf5a16a2d3804"
@@ -5528,7 +5537,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 3130,
-        "y": 1480,
+        "y": 760,
         "wires": []
     },
     {
@@ -5543,7 +5552,7 @@
             "a306c5c8fa5ff9a9"
         ],
         "x": 2895,
-        "y": 1480,
+        "y": 760,
         "wires": []
     },
     {
@@ -5557,7 +5566,7 @@
             "fb87a0d4861d432e"
         ],
         "x": 2955,
-        "y": 1480,
+        "y": 760,
         "wires": [
             [
                 "8becaa666222f0fb"
@@ -5578,7 +5587,7 @@
         "layout": "row-left",
         "className": "",
         "x": 2540,
-        "y": 900,
+        "y": 180,
         "wires": []
     },
     {
@@ -5589,7 +5598,7 @@
         "name": "Xiaomi Deurcontact",
         "info": "Which domoticz dummy needed:\n- Switch (schakelaar)\n\nCode send by device:\nDevice: \"0x2590\"\nName: \"Test_deurcontact\"\nContact: 0  (0=contact dicht, 1=contact open)\nEndpoint: 1\nLinkQuality: 134",
         "x": 3430,
-        "y": 1940,
+        "y": 1300,
         "wires": []
     },
     {
@@ -5600,7 +5609,7 @@
         "name": "Xiaomi Beweging",
         "info": "Which domoticz dummy needed:\n- Switch motion (schakelaar beweging)\n\nCode send by device:\nDevice: \"0x11F0\"\nName: \"Test_beweging\"\nOccupancy: 1 (Occupancy 1 = motion, 0 = no motion)\nEndpoint: 1\nLinkQuality: 173",
         "x": 3420,
-        "y": 2100,
+        "y": 1460,
         "wires": []
     },
     {
@@ -5611,7 +5620,7 @@
         "name": "Xiaomi Rookmelder",
         "info": "Which domoticz dummy needed:\n- Switch (schakelaar)\n\nCode send by device:\n3 messages when pushing test button\n\n*** Bericht 1:***\nDevice: \"0x7460\"\nName: \"Test_rookmelder\"\nModelId: \"lumi.sensor_smoke\"\nEndpoint: 1\nLinkQuality: 157\n\n*** Bericht 2:***\nDevice: \"0x7460\"\nName: \"Test_rookmelder\"\n0500<00: 00000FF0000\nZoneStatusChange: 0\nFire: 0\nEndpoint: 1\nLinkQuality: 157\n\n*** Bericht 3:***\nDevice: \"0x7460\"\nName: \"Test_rookmelder\"\nBatteryVoltage: 3.05\nBatteryPercentage: 100\nSmokeDensity: 0\nEndpoint: 1\nLinkQuality: 157\n",
         "x": 3430,
-        "y": 2180,
+        "y": 1540,
         "wires": []
     },
     {
@@ -5627,7 +5636,7 @@
         "finalize": "",
         "libs": [],
         "x": 2570,
-        "y": 1940,
+        "y": 1300,
         "wires": [
             [
                 "fcc45a601372ea82"
@@ -5658,7 +5667,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 3110,
-        "y": 1940,
+        "y": 1300,
         "wires": []
     },
     {
@@ -5676,7 +5685,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 3120,
-        "y": 2100,
+        "y": 1460,
         "wires": []
     },
     {
@@ -5692,7 +5701,7 @@
         "finalize": "",
         "libs": [],
         "x": 2580,
-        "y": 2180,
+        "y": 1540,
         "wires": [
             [
                 "2d99642c66a5c870"
@@ -5723,7 +5732,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 3120,
-        "y": 2180,
+        "y": 1540,
         "wires": []
     },
     {
@@ -5738,7 +5747,7 @@
             "c5ca73ecb5ac32f7"
         ],
         "x": 2895,
-        "y": 1940,
+        "y": 1300,
         "wires": []
     },
     {
@@ -5752,7 +5761,7 @@
             "fcc45a601372ea82"
         ],
         "x": 2955,
-        "y": 1940,
+        "y": 1300,
         "wires": [
             [
                 "53b00bf0430b7050"
@@ -5771,7 +5780,7 @@
             "17fce7e4a549f3c4"
         ],
         "x": 2895,
-        "y": 2100,
+        "y": 1460,
         "wires": []
     },
     {
@@ -5785,7 +5794,7 @@
             "d7b32d0304f27044"
         ],
         "x": 2955,
-        "y": 2100,
+        "y": 1460,
         "wires": [
             [
                 "e99cc5d4ea5b8ff2"
@@ -5803,7 +5812,7 @@
             "ee35794e5d630df2"
         ],
         "x": 2955,
-        "y": 2180,
+        "y": 1540,
         "wires": [
             [
                 "c1c0b2dba023871a"
@@ -5822,7 +5831,7 @@
             "17fce7e4a549f3c4"
         ],
         "x": 2895,
-        "y": 2180,
+        "y": 1540,
         "wires": []
     },
     {
@@ -5833,7 +5842,7 @@
         "name": "Xiaomi WSDCGQ11LM Temp sensor",
         "info": "Which domoticz dummy needed:\n- Temp+Hum+Baro\n\n\ntele/tasmota_9467D4/SENSOR : msg.payload : Object\nobject\nZbReceived: object\n0x4C81: object\nDevice: \"0x4C81\"\nName: \"Temp_woonkamer\"\nTemperature: 20.78\nHumidity: 59.98\nPressure: 995\nPressureScale: -1\nPressureScaledValue: 9957\nSeaPressure: 995\nEndpoint: 1\nLinkQuality: 149\n\n20.68;54.87;0;996;0\n\nhttps://www.domoticz.com/wiki/Domoticz_API/JSON_URL's#Temperature.2Fhumidity.2Fbarometer",
         "x": 3480,
-        "y": 2340,
+        "y": 1700,
         "wires": []
     },
     {
@@ -5849,7 +5858,7 @@
         "finalize": "",
         "libs": [],
         "x": 2630,
-        "y": 2340,
+        "y": 1700,
         "wires": [
             [
                 "08b20c29baa2864e"
@@ -5880,7 +5889,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 3160,
-        "y": 2340,
+        "y": 1700,
         "wires": []
     },
     {
@@ -5894,7 +5903,7 @@
             "1ea5ebf102e05851"
         ],
         "x": 2955,
-        "y": 2340,
+        "y": 1700,
         "wires": [
             [
                 "084cdb103cdf0689"
@@ -5913,7 +5922,7 @@
             "17fce7e4a549f3c4"
         ],
         "x": 2895,
-        "y": 2340,
+        "y": 1700,
         "wires": []
     },
     {
@@ -5929,7 +5938,7 @@
         "finalize": "",
         "libs": [],
         "x": 2610,
-        "y": 2020,
+        "y": 1380,
         "wires": [
             [
                 "a28d026537f564cb"
@@ -5957,7 +5966,7 @@
             "17fce7e4a549f3c4"
         ],
         "x": 2895,
-        "y": 2020,
+        "y": 1380,
         "wires": []
     },
     {
@@ -5971,7 +5980,7 @@
             "77e8f521bfa3e396"
         ],
         "x": 2955,
-        "y": 2020,
+        "y": 1380,
         "wires": [
             [
                 "f88985f05d6a2da5"
@@ -5993,7 +6002,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 3150,
-        "y": 2020,
+        "y": 1380,
         "wires": []
     },
     {
@@ -6009,7 +6018,7 @@
         "finalize": "",
         "libs": [],
         "x": 2630,
-        "y": 2260,
+        "y": 1620,
         "wires": [
             [
                 "139535167a72ee3d"
@@ -6033,7 +6042,7 @@
         "name": "Xiaomi WSDCGQ01LM Temp sensor",
         "info": "Which domoticz dummy needed:\n- Temp+Hum",
         "x": 3480,
-        "y": 2260,
+        "y": 1620,
         "wires": []
     },
     {
@@ -6051,7 +6060,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 3160,
-        "y": 2260,
+        "y": 1620,
         "wires": []
     },
     {
@@ -6065,7 +6074,7 @@
             "139535167a72ee3d"
         ],
         "x": 2955,
-        "y": 2260,
+        "y": 1620,
         "wires": [
             [
                 "c4d1576b6fcc7988"
@@ -6084,7 +6093,7 @@
             "17fce7e4a549f3c4"
         ],
         "x": 2895,
-        "y": 2260,
+        "y": 1620,
         "wires": []
     },
     {
@@ -6095,7 +6104,7 @@
         "name": "Xiaomi GZCGQ01LM lux sensor",
         "info": "Which domoticz dummy needed:\n- Lux",
         "x": 3470,
-        "y": 2020,
+        "y": 1380,
         "wires": []
     },
     {
@@ -6113,7 +6122,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 3120,
-        "y": 2420,
+        "y": 1780,
         "wires": []
     },
     {
@@ -6127,7 +6136,7 @@
             "01dd9b0687c95a4e"
         ],
         "x": 2955,
-        "y": 2420,
+        "y": 1780,
         "wires": [
             [
                 "37683f48364ef490"
@@ -6147,7 +6156,7 @@
         "finalize": "",
         "libs": [],
         "x": 2580,
-        "y": 2100,
+        "y": 1460,
         "wires": [
             [
                 "c3911e29eff22c69"
@@ -6179,7 +6188,7 @@
         "finalize": "",
         "libs": [],
         "x": 2620,
-        "y": 2420,
+        "y": 1780,
         "wires": [
             [
                 "01dd9b0687c95a4e"
@@ -6207,7 +6216,7 @@
             "17fce7e4a549f3c4"
         ],
         "x": 2895,
-        "y": 2420,
+        "y": 1780,
         "wires": []
     },
     {
@@ -6223,7 +6232,7 @@
         "finalize": "",
         "libs": [],
         "x": 2240,
-        "y": 2180,
+        "y": 1540,
         "wires": [
             [
                 "29960d7b5547c80b"
@@ -6287,7 +6296,7 @@
         "animate": false,
         "className": "",
         "x": 1950,
-        "y": 900,
+        "y": 180,
         "wires": [
             [
                 "6d37173dad5facb7",
@@ -6310,7 +6319,7 @@
         "persist": false,
         "storeName": "memory",
         "x": 2190,
-        "y": 920,
+        "y": 200,
         "wires": [
             [
                 "4f9e509384d9bfe1"
@@ -6329,7 +6338,7 @@
         "finalize": "",
         "libs": [],
         "x": 2200,
-        "y": 880,
+        "y": 160,
         "wires": [
             [
                 "4f9e509384d9bfe1"
@@ -6363,7 +6372,7 @@
         "animate": false,
         "className": "",
         "x": 1630,
-        "y": 1560,
+        "y": 840,
         "wires": [
             [
                 "35e24bbe339bbbea",
@@ -6386,7 +6395,7 @@
         "persist": false,
         "storeName": "memory",
         "x": 1870,
-        "y": 1580,
+        "y": 860,
         "wires": [
             [
                 "6d15c32c2c544a39"
@@ -6405,7 +6414,7 @@
         "finalize": "",
         "libs": [],
         "x": 1880,
-        "y": 1540,
+        "y": 820,
         "wires": [
             [
                 "6d15c32c2c544a39"
@@ -6424,7 +6433,7 @@
             "091a6cbf81003659"
         ],
         "x": 2395,
-        "y": 900,
+        "y": 180,
         "wires": [
             [
                 "6a0dda10c607ef60",
@@ -6442,7 +6451,7 @@
             "faa56198f3a87334"
         ],
         "x": 2345,
-        "y": 900,
+        "y": 180,
         "wires": []
     },
     {
@@ -6455,7 +6464,7 @@
             "faa56198f3a87334"
         ],
         "x": 1995,
-        "y": 1560,
+        "y": 840,
         "wires": []
     },
     {
@@ -6486,7 +6495,7 @@
         "animate": false,
         "className": "",
         "x": 240,
-        "y": 1540,
+        "y": 860,
         "wires": [
             [
                 "4aca05fbb0986699",
@@ -6510,7 +6519,7 @@
         "persist": false,
         "storeName": "memory",
         "x": 530,
-        "y": 1560,
+        "y": 880,
         "wires": [
             [
                 "3a25158bf00b1ca3"
@@ -6530,7 +6539,7 @@
         "finalize": "",
         "libs": [],
         "x": 540,
-        "y": 1520,
+        "y": 840,
         "wires": [
             [
                 "3a25158bf00b1ca3"
@@ -6548,7 +6557,7 @@
             "faa56198f3a87334"
         ],
         "x": 695,
-        "y": 1540,
+        "y": 860,
         "wires": []
     },
     {
@@ -6579,7 +6588,7 @@
         "animate": false,
         "className": "",
         "x": 180,
-        "y": 1380,
+        "y": 700,
         "wires": [
             [
                 "f0278da88994eb3d",
@@ -6600,7 +6609,7 @@
         "finalize": "",
         "libs": [],
         "x": 440,
-        "y": 1360,
+        "y": 680,
         "wires": [
             [
                 "091a6cbf81003659"
@@ -6623,7 +6632,7 @@
         "persist": false,
         "storeName": "memory",
         "x": 430,
-        "y": 1400,
+        "y": 720,
         "wires": [
             [
                 "091a6cbf81003659"
@@ -6641,7 +6650,7 @@
             "faa56198f3a87334"
         ],
         "x": 555,
-        "y": 1380,
+        "y": 700,
         "wires": []
     },
     {
@@ -6665,7 +6674,7 @@
         "topic": "",
         "payloadType": "str",
         "x": 2370,
-        "y": 860,
+        "y": 140,
         "wires": [
             [
                 "6a0dda10c607ef60",
@@ -6686,7 +6695,7 @@
         "finalize": "",
         "libs": [],
         "x": 2540,
-        "y": 860,
+        "y": 140,
         "wires": [
             [
                 "2fe6df87f1088f1f"
@@ -6705,7 +6714,7 @@
             "872e7b0f422a1d41"
         ],
         "x": 2655,
-        "y": 860,
+        "y": 140,
         "wires": []
     },
     {
@@ -6717,7 +6726,7 @@
             "2fe6df87f1088f1f"
         ],
         "x": 1775,
-        "y": 900,
+        "y": 180,
         "wires": [
             [
                 "90290040f067d92c"
@@ -6733,7 +6742,7 @@
             "2fe6df87f1088f1f"
         ],
         "x": 1435,
-        "y": 1560,
+        "y": 840,
         "wires": [
             [
                 "57c3c0041b45bf32"
@@ -6750,7 +6759,7 @@
             "2fe6df87f1088f1f"
         ],
         "x": 75,
-        "y": 1540,
+        "y": 860,
         "wires": [
             [
                 "5bd5cc18ada34d81",
@@ -6771,7 +6780,7 @@
         "finalize": "",
         "libs": [],
         "x": 2570,
-        "y": 2500,
+        "y": 1860,
         "wires": [
             [
                 "356ebc678ef0dee1"
@@ -6802,7 +6811,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 3110,
-        "y": 2500,
+        "y": 1860,
         "wires": []
     },
     {
@@ -6817,7 +6826,7 @@
             "1e24ade3c53d3538"
         ],
         "x": 2895,
-        "y": 2500,
+        "y": 1860,
         "wires": []
     },
     {
@@ -6830,7 +6839,7 @@
             "356ebc678ef0dee1"
         ],
         "x": 2955,
-        "y": 2500,
+        "y": 1860,
         "wires": [
             [
                 "16f71bd9eeec5062"
@@ -6850,7 +6859,7 @@
         "finalize": "",
         "libs": [],
         "x": 2570,
-        "y": 1560,
+        "y": 840,
         "wires": [
             [
                 "91d142db88659e5f"
@@ -6878,7 +6887,7 @@
             "f47089a5d5e9a3b4"
         ],
         "x": 2895,
-        "y": 1560,
+        "y": 840,
         "wires": []
     },
     {
@@ -6891,7 +6900,7 @@
             "91d142db88659e5f"
         ],
         "x": 2955,
-        "y": 1560,
+        "y": 840,
         "wires": [
             [
                 "f335dbd5e751a1bd"
@@ -6913,7 +6922,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 3120,
-        "y": 1560,
+        "y": 840,
         "wires": []
     },
     {
@@ -6929,7 +6938,7 @@
             "0a0ff151505cd5cf"
         ],
         "x": 555,
-        "y": 1280,
+        "y": 600,
         "wires": []
     },
     {
@@ -6993,7 +7002,7 @@
         "finalize": "",
         "libs": [],
         "x": 2540,
-        "y": 940,
+        "y": 220,
         "wires": [
             [
                 "844367908f47f455"
@@ -7014,7 +7023,7 @@
         "layout": "row-left",
         "className": "",
         "x": 2670,
-        "y": 940,
+        "y": 220,
         "wires": []
     },
     {
@@ -7032,7 +7041,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 3140,
-        "y": 2620,
+        "y": 1980,
         "wires": []
     },
     {
@@ -7048,7 +7057,7 @@
         "finalize": "",
         "libs": [],
         "x": 2600,
-        "y": 2620,
+        "y": 1980,
         "wires": [
             [
                 "4aca286ee7c4de75"
@@ -7075,7 +7084,7 @@
             "8b7f9c7c96650350"
         ],
         "x": 2955,
-        "y": 2620,
+        "y": 1980,
         "wires": [
             [
                 "707724ee7edcf005"
@@ -7094,7 +7103,7 @@
             "17fce7e4a549f3c4"
         ],
         "x": 2895,
-        "y": 2620,
+        "y": 1980,
         "wires": []
     },
     {
@@ -7110,12 +7119,92 @@
         "finalize": "",
         "libs": [],
         "x": 2230,
-        "y": 2620,
+        "y": 1980,
         "wires": [
             [
                 "3a12c2edd9b6c7d4"
             ]
         ]
+    },
+    {
+        "id": "e40155baa8a52116",
+        "type": "function",
+        "z": "fe9ee8c084b47472",
+        "g": "0a2e01214bded454",
+        "name": "Lidl thermo TS0601",
+        "func": "if ( msg.src === 'tasmota' ) {\n    msg.topic = \"domoticz/in\";\n    var idx = msg.payload.ZbReceived.idx;\n    var idxbat = msg.payload.ZbReceived.idxbat;\n    var idxper = msg.payload.ZbReceived.idxper;\n    var idxlink = msg.payload.ZbReceived.idxlink;\n    var idxextra = msg.payload.ZbReceived.idxextra;\n    var zigbeeid = msg.payload.ZbReceived.zigbeeid;\n  \n    var batmsg;\n    var permsg;\n    var linkmsg;\n    var extramsg;\n    var valuebat;\n    var valuebatdummy;\n    var valuebatperc;\n    var valuelink;\n    var valuetemp;\n\n    if ( msg.payload.ZbReceived[zigbeeid] ) {    \n        //Set value battery voltage idx\n        if (msg.payload.ZbReceived[zigbeeid].hasOwnProperty(\"BatteryVoltage\")) {\n            valuebatdummy = msg.payload.ZbReceived[zigbeeid].BatteryVoltage;\n            valuebat = (Math.round(valuebatdummy * 10))/10.0;\n        }\n        //Set value battery percentage idx\n        if (msg.payload.ZbReceived[zigbeeid].hasOwnProperty(\"BatteryPercentage\")) {\n            valuebatperc = msg.payload.ZbReceived[zigbeeid].BatteryPercentage;\n        }\n        //Set value linkQuality idx\n        if (msg.payload.ZbReceived[zigbeeid].hasOwnProperty(\"LinkQuality\")) {\n            valuelink = msg.payload.ZbReceived[zigbeeid].LinkQuality;\n        }\n        //Set value Illuminance idx\n        if (msg.payload.ZbReceived[zigbeeid].hasOwnProperty(\"LocalTemperature\")) {\n            valuetemp = msg.payload.ZbReceived[zigbeeid].LocalTemperature;\n        }\n    \n    \tif ( idx !== 0 ) {\n    \t    if (valuetemp !== undefined) {\n                msg = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idx , \"svalue\": \"\" + valuetemp + \"\", \"parse\": false}}; \n            } else {\n                msg = null;\n            }\n        } else {\n\t        msg = null;\n\t    }\n        \n    \tif ( idxbat !== 0 ) {\n            if (valuebat !== undefined) {\n                batmsg = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idxbat , \"svalue\": \"\" + valuebat + \"\", \"parse\": false}}; \n            } else {\n                batmsg = null;\n            }\n\t    } else {\n            batmsg = null;\n        }\n        if ( idxper !== 0 ) {\n            if (valuebatperc !== undefined) {\n                permsg = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idxper , \"svalue\": \"\" + valuebatperc + \"\", \"parse\": false}}; \n            } else {\n                permsg = null;\n            }\n        } else {\n            permsg = null;\n        }\n        if ( idxlink !== 0 ) {\n            if (valuelink !== undefined) {\n                linkmsg = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idxlink , \"svalue\": \"\" + valuelink + \"\", \"parse\": false}}; \n            } else {\n                linkmsg = null;\n            }\n        } else {\n            linkmsg = null;\n        }\n        return [msg, batmsg, permsg, linkmsg];\n    }\n}\n\nif ( msg.src === 'domoticz' ) {\n    var ZigbeeID = msg.payload.zigbeeid\n    var topicname = msg.payload.topicname;\n    var setpoint = msg.payload.svalue1;\n   \n    msg = { \"topic\": \"cmnd/\" + topicname + \"/ZbSend\",\"payload\":{\"Device\":ZigbeeID,\"Send\":{\"TuyaTempTarget\":setpoint}}};\n\treturn [msg, null, null, null];\n}",
+        "outputs": 4,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2570,
+        "y": 920,
+        "wires": [
+            [
+                "f463c735fc2aa9c9"
+            ],
+            [
+                "f463c735fc2aa9c9"
+            ],
+            [
+                "f463c735fc2aa9c9"
+            ],
+            [
+                "f463c735fc2aa9c9"
+            ]
+        ]
+    },
+    {
+        "id": "f463c735fc2aa9c9",
+        "type": "link out",
+        "z": "fe9ee8c084b47472",
+        "g": "0a2e01214bded454",
+        "name": "Lidl TS0601 out",
+        "mode": "link",
+        "links": [
+            "17fce7e4a549f3c4",
+            "5aa905edadd1f100",
+            "c9e5c5badc9a8085"
+        ],
+        "x": 2895,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "5aa905edadd1f100",
+        "type": "link in",
+        "z": "fe9ee8c084b47472",
+        "g": "0a2e01214bded454",
+        "name": "Lidl TS0601 in",
+        "links": [
+            "f463c735fc2aa9c9"
+        ],
+        "x": 2955,
+        "y": 920,
+        "wires": [
+            [
+                "40e955ac3e334fe2"
+            ]
+        ]
+    },
+    {
+        "id": "40e955ac3e334fe2",
+        "type": "debug",
+        "z": "fe9ee8c084b47472",
+        "g": "0a2e01214bded454",
+        "name": "Lidl TS0601",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 3090,
+        "y": 920,
+        "wires": []
     },
     {
         "id": "184c77467f039f6e",
