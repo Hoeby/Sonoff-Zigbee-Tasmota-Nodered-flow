@@ -20,13 +20,12 @@
         "nodes": [
             "c0b6e90bc373771b",
             "bef2273801e888f7",
-            "0fe7a3bfa859e679",
             "86fac75bfb9f867b"
         ],
-        "x": 4354,
-        "y": 2039,
-        "w": 622,
-        "h": 142
+        "x": 4474,
+        "y": 1999,
+        "w": 502,
+        "h": 82
     },
     {
         "id": "55c0110d8a16ff0d",
@@ -78,7 +77,6 @@
             "d68ed5181e9c86b1",
             "bb33c93aa582bb8d",
             "13907cbfae6fbf76",
-            "330ca2a7c1780599",
             "1b0988dd438402ed",
             "c7386a6cd9acf86c",
             "1308f565f28a8c73"
@@ -86,7 +84,7 @@
         "x": 4094,
         "y": 1539,
         "w": 892,
-        "h": 162
+        "h": 122
     },
     {
         "id": "aca7b5bb3271a2a5",
@@ -205,13 +203,12 @@
             "6f463b6e9c88b001",
             "8593ad253022cc51",
             "3d742aa02c8ac93e",
-            "72c72ad3078043b0",
             "b8ad9bb69c783e4b"
         ],
         "env": [],
         "x": 3674,
         "y": 359,
-        "w": 1312,
+        "w": 1302,
         "h": 162
     },
     {
@@ -261,7 +258,7 @@
         ],
         "env": [],
         "x": 4194,
-        "y": 1939,
+        "y": 1899,
         "w": 792,
         "h": 82
     },
@@ -289,9 +286,9 @@
             "e52028fa5c84a6c1"
         ],
         "env": [],
-        "x": 3814,
+        "x": 3754,
         "y": 1079,
-        "w": 1172,
+        "w": 1232,
         "h": 122
     },
     {
@@ -317,7 +314,7 @@
         ],
         "env": [],
         "x": 4194,
-        "y": 1719,
+        "y": 1679,
         "w": 792,
         "h": 202
     },
@@ -547,7 +544,7 @@
         "env": [],
         "x": 2134,
         "y": 1244,
-        "w": 1212,
+        "w": 1222,
         "h": 672
     },
     {
@@ -888,38 +885,31 @@
         "z": "fe9ee8c084b47472",
         "name": "MQTT Server",
         "links": [
-            "fe1b30e1681a0b63",
-            "b6f143479743cebb",
-            "fcc45a601372ea82",
-            "c3911e29eff22c69",
-            "2d99642c66a5c870",
-            "6b3b57797279c717",
-            "e76ba050d460bb25",
-            "c752cbda7a171c88",
-            "423ee036c8c42318",
-            "08b20c29baa2864e",
-            "9b258c86f4629583",
-            "99c5802633a6ebf3",
-            "a28d026537f564cb",
-            "139535167a72ee3d",
-            "f7a9bdcae6412aef",
-            "32e21a68283df2bb",
-            "fb7face5ab5f8842",
             "01dd9b0687c95a4e",
-            "2793e58ce2aba424",
-            "1b9c54730ad51654",
-            "b26efc2253e722f6",
-            "86fac75bfb9f867b",
-            "7eaa3d68004ad078",
-            "14102d5fc55821a7",
-            "714592ea394fdf89",
+            "08b20c29baa2864e",
+            "139535167a72ee3d",
             "20abb5580249af22",
-            "b42a4699db8357fa",
-            "83fbf5a16a2d3804",
+            "2793e58ce2aba424",
+            "2d99642c66a5c870",
             "356ebc678ef0dee1",
-            "91d142db88659e5f",
+            "423ee036c8c42318",
             "4aca286ee7c4de75",
-            "f463c735fc2aa9c9"
+            "6b3b57797279c717",
+            "7eaa3d68004ad078",
+            "83fbf5a16a2d3804",
+            "86fac75bfb9f867b",
+            "91d142db88659e5f",
+            "99c5802633a6ebf3",
+            "9b258c86f4629583",
+            "a28d026537f564cb",
+            "b26efc2253e722f6",
+            "b42a4699db8357fa",
+            "c3911e29eff22c69",
+            "c752cbda7a171c88",
+            "e76ba050d460bb25",
+            "f463c735fc2aa9c9",
+            "fb7face5ab5f8842",
+            "fcc45a601372ea82"
         ],
         "x": 1755,
         "y": 920,
@@ -1857,7 +1847,7 @@
         "id": "fb7face5ab5f8842",
         "type": "link out",
         "z": "fe9ee8c084b47472",
-        "name": "",
+        "name": "Fake ikea out",
         "mode": "link",
         "links": [
             "17fce7e4a549f3c4"
@@ -1870,8 +1860,8 @@
         "id": "2a9af97bcc2e365d",
         "type": "comment",
         "z": "fe9ee8c084b47472",
-        "name": "V_10-04-2022_R2",
-        "info": "10-04-2022 R2:\n- Button \"Hoe device instellen domoticz\" toegevoegd\n10-04-2022 R1:\n- Tuya switch 4-buttons is released, geen beta meer\n- Lidl TS0601 Thermostaatkraan toegevoegd (beta)\n09-04-2022 R3:\n- Tuya switch 4-buttons toegevoegd (beta)\n09-04-2022 R2:\n- Lidl bewegingsensor HG06335/HG07310 toegevoegd\n09-04-2022 R1:\n- Toevoegen debug mqtt veld in UI\n- Toevoegen device Xiaomi smart home cube\n- Als device IDX 0 is, dan gaat er geen bericht naar domoticz\n08-04-2022 R1:\n- Deurcontact lidl HG06336 toegevoegd\n- Lampen (RGB/CCT) lidl toegevoegd\n05-04-2022 R2:\n- Aanpassingen lidl HG06106B, dat CT en RGB mogelijk is.\n05-04-2022 R1:\n- Lamp Lidl HG06106B (RGB) toegevoegd\n01-04-2022 R1:\n- Optie om de custom domoticz pagina in te stellen toegevoegd\n22-03-2022 R1:\n- Finetuning van de aanpassing van 19-03-2022 R1\n19-03-2022 R1:\n\nNIET ZOMAAR UPDATEN, LEES AANPASSING 1 VAN DEZE RELEASE\n\n- Device aanduiding uit elkaar gehaald, was voorheen 1 veld met merk+type, dit zijn nu 2 losse velden. \n  HIERDOOR KAN JE NIET ZOMAAR UPDATEN, JE BACKUP ZAL FOUTIEF WORDEN INGELEZEN\n  Of alles opnieuw invoeren, of de backup handmatig aanpassen. \n\n- Actuele versie balk in UI toegevoegd\n- Ikea Powerplug Wordt nu ook gefaked voor link quality waarden\n- Flogger file wordt nu ook in de map opgeslagen waar de data file met idx nummer staat\n- Sonoff SNZB-01 switch toegevoegd\n10-03-2022 R1:\n- Beta versie is verwijdert, we zijn live\n- Release notes functie toegevoegd in UI\n- Bug voor automatisch toevoegen ikea E1743 opgelost\n07-03-2022 R1 Beta:\n- Check van versienummer controleert op response 200 of 201, anders return false\n06-03-2022 R1 Beta:\n- Download flows.json wordt nu opgeslagen met versie naam\n05-03-2022 R2 Beta:\n- Je kan nu per zigbee bridge een command sturen\n- Kleur/text verandert bij een beschikbare update\n05-03-2022 R1 Beta:\n- Ikea 1743 doet nu auto update flow.set na import nieuwe flow of idx set\n04-03-2022 R1 Beta:\n- Toevoegen van nodered UI tbx idx tabel\n28-02-2022 R2:\n- Tasmota zigbee UI toegevoegd\n28-02-2022 R1:\n- Bug Ikea LED Strip opgelost, bij power 0 stuurt deze nu ook een 0 ipv 1\n27-02-2022 R1:\n- Batterijtrigger aangepast van \"true\" naar \"false\", dit lijkt effect te hebben op het aantal response meldingen van het device\n26-02-2022 R1: \n- Ikea powerplug, link naar gate verwijdert\n- Batterijtrigger voor E1743 aangepast, want deze stopte soms vanzelf.\n22-02-2022 R1: \n- Node.send for ikea E1743 voor linkage updates\n- Bug Ikea Powerplug opgelost, bij power 0 stuurt deze nu ook een 0 ipv 1\n19-02-2022 R1: \n- Xiaomi Water sensor toegevoegd, niet getest\n17-02-2022 R1: \n- Gestart met Versie nummers",
+        "name": "V_11-04-2022_R1",
+        "info": "11-04-2022 R1:\n- Lidl TS0601: idxextra werkte niet correct, aangepast\n10-04-2022 R3:\n- Bug in \"Set idx nummers en idx tabel\", is aangepast maar is nog in test-fase\n10-04-2022 R2:\n- Button \"Hoe device instellen domoticz\" toegevoegd\n10-04-2022 R1:\n- Tuya switch 4-buttons is released, geen beta meer\n- Lidl TS0601 Thermostaatkraan toegevoegd (beta)\n09-04-2022 R3:\n- Tuya switch 4-buttons toegevoegd (beta)\n09-04-2022 R2:\n- Lidl bewegingsensor HG06335/HG07310 toegevoegd\n09-04-2022 R1:\n- Toevoegen debug mqtt veld in UI\n- Toevoegen device Xiaomi smart home cube\n- Als device IDX 0 is, dan gaat er geen bericht naar domoticz\n08-04-2022 R1:\n- Deurcontact lidl HG06336 toegevoegd\n- Lampen (RGB/CCT) lidl toegevoegd\n05-04-2022 R2:\n- Aanpassingen lidl HG06106B, dat CT en RGB mogelijk is.\n05-04-2022 R1:\n- Lamp Lidl HG06106B (RGB) toegevoegd\n01-04-2022 R1:\n- Optie om de custom domoticz pagina in te stellen toegevoegd\n22-03-2022 R1:\n- Finetuning van de aanpassing van 19-03-2022 R1\n19-03-2022 R1:\n\nNIET ZOMAAR UPDATEN, LEES AANPASSING 1 VAN DEZE RELEASE\n\n- Device aanduiding uit elkaar gehaald, was voorheen 1 veld met merk+type, dit zijn nu 2 losse velden. \n  HIERDOOR KAN JE NIET ZOMAAR UPDATEN, JE BACKUP ZAL FOUTIEF WORDEN INGELEZEN\n  Of alles opnieuw invoeren, of de backup handmatig aanpassen. \n\n- Actuele versie balk in UI toegevoegd\n- Ikea Powerplug Wordt nu ook gefaked voor link quality waarden\n- Flogger file wordt nu ook in de map opgeslagen waar de data file met idx nummer staat\n- Sonoff SNZB-01 switch toegevoegd\n10-03-2022 R1:\n- Beta versie is verwijdert, we zijn live\n- Release notes functie toegevoegd in UI\n- Bug voor automatisch toevoegen ikea E1743 opgelost\n07-03-2022 R1 Beta:\n- Check van versienummer controleert op response 200 of 201, anders return false\n06-03-2022 R1 Beta:\n- Download flows.json wordt nu opgeslagen met versie naam\n05-03-2022 R2 Beta:\n- Je kan nu per zigbee bridge een command sturen\n- Kleur/text verandert bij een beschikbare update\n05-03-2022 R1 Beta:\n- Ikea 1743 doet nu auto update flow.set na import nieuwe flow of idx set\n04-03-2022 R1 Beta:\n- Toevoegen van nodered UI tbx idx tabel\n28-02-2022 R2:\n- Tasmota zigbee UI toegevoegd\n28-02-2022 R1:\n- Bug Ikea LED Strip opgelost, bij power 0 stuurt deze nu ook een 0 ipv 1\n27-02-2022 R1:\n- Batterijtrigger aangepast van \"true\" naar \"false\", dit lijkt effect te hebben op het aantal response meldingen van het device\n26-02-2022 R1: \n- Ikea powerplug, link naar gate verwijdert\n- Batterijtrigger voor E1743 aangepast, want deze stopte soms vanzelf.\n22-02-2022 R1: \n- Node.send for ikea E1743 voor linkage updates\n- Bug Ikea Powerplug opgelost, bij power 0 stuurt deze nu ook een 0 ipv 1\n19-02-2022 R1: \n- Xiaomi Water sensor toegevoegd, niet getest\n17-02-2022 R1: \n- Gestart met Versie nummers",
         "x": 110,
         "y": 80,
         "wires": []
@@ -1897,7 +1887,7 @@
         "id": "fb87444d663cc51c",
         "type": "function",
         "z": "fe9ee8c084b47472",
-        "name": "",
+        "name": "Split time",
         "func": "var minuts = msg.payload.Time\nvar array = minuts.split(\":\");\nvar value = parseFloat(array[1]);\nif (value < 5) {\n    msg.payload = value;\n} else {\n    return;\n}\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
@@ -1944,7 +1934,7 @@
         "finalize": "",
         "libs": [],
         "x": 4040,
-        "y": 1860,
+        "y": 1820,
         "wires": [
             [
                 "e3ed960a4aa17dc4",
@@ -1988,8 +1978,8 @@
         "onceDelay": "",
         "topic": "ds",
         "payloadType": "str",
-        "x": 4470,
-        "y": 2080,
+        "x": 4590,
+        "y": 2040,
         "wires": [
             [
                 "bef2273801e888f7"
@@ -2008,31 +1998,13 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 4670,
-        "y": 2080,
+        "x": 4790,
+        "y": 2040,
         "wires": [
             [
-                "0fe7a3bfa859e679",
                 "86fac75bfb9f867b"
             ]
         ]
-    },
-    {
-        "id": "0fe7a3bfa859e679",
-        "type": "debug",
-        "z": "fe9ee8c084b47472",
-        "g": "7ff275045da68003",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 4860,
-        "y": 2140,
-        "wires": []
     },
     {
         "id": "37f87489bd6dde46",
@@ -2209,17 +2181,6 @@
         "wires": []
     },
     {
-        "id": "330ca2a7c1780599",
-        "type": "comment",
-        "z": "fe9ee8c084b47472",
-        "g": "d5b11f0d9e7bf749",
-        "name": "Add your own notification service here:",
-        "info": "",
-        "x": 4510,
-        "y": 1660,
-        "wires": []
-    },
-    {
         "id": "1b0988dd438402ed",
         "type": "function",
         "z": "fe9ee8c084b47472",
@@ -2377,14 +2338,14 @@
         "type": "function",
         "z": "fe9ee8c084b47472",
         "g": "5c5e3c83cb6dbe07",
-        "name": "",
+        "name": "Del zigbee bridge",
         "func": "if (msg.topic === \"link\") {\n    return;\n}\n\nif (msg.topic === \"del\") {\n    var devs = flow.get(\"tasmotas\") || {};\n    delete devs[msg.payload.name];\n    msg.topic = \"Bridge: \" + msg.payload.name + \" is verwijdert.\";\n    msg.payload = \"Sonoff bridge is niet buiten werking gezet, alleen verwijdert op deze pagina.\"\n    return msg;\n}\n\nmsg.topic = msg.payload.name;\n\nlet str = JSON.stringify(msg.payload, null, 2);\ndelete msg.payload;\nmsg.payload = \"<pre>\" + str + \"</pre>\";\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 4460,
+        "x": 4470,
         "y": 1260,
         "wires": [
             [
@@ -2590,7 +2551,7 @@
         "type": "debug",
         "z": "fe9ee8c084b47472",
         "g": "280d3e6578824262",
-        "name": "",
+        "name": "Debug flow.get",
         "active": false,
         "tosidebar": true,
         "console": false,
@@ -2599,7 +2560,7 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 4730,
+        "x": 4820,
         "y": 480,
         "wires": []
     },
@@ -2629,8 +2590,8 @@
         "topic": "device",
         "topicType": "str",
         "className": "",
-        "x": 3960,
-        "y": 920,
+        "x": 4080,
+        "y": 740,
         "wires": [
             [
                 "9519be1631bb453c"
@@ -2792,7 +2753,7 @@
         "z": "fe9ee8c084b47472",
         "g": "896b3999999cb97c",
         "name": "Set Device settings",
-        "func": "var data1 = context.get(\"data1\") || null; //get from context or default to 0\nvar data2 = context.get(\"data2\") || 0; //get from context or default to 0\nvar data3 = context.get(\"data3\") || 0; //get from context or default to 0\nvar data4 = context.get(\"data4\") || 0; //get from context or default to 0\nvar data5 = context.get(\"data5\") || 0; //get from context or default to 0\nvar data6 = context.get(\"data6\") || 0; //get from context or default to 0\nvar data7 = context.get(\"data7\") || 0; //get from context or default to 0\nvar data8 = context.get(\"data8\") || 0; //get from context or default to 0\n\nvar reconfig = flow.get(\"t2ztable\") || {};\n\nswitch (msg.topic){\n\n    case \"device\":\n        data1 = msg.payload; \n        context.set(\"data1\", data1);//store in context for next time \n        return;\n    \n    case \"vendor\":\n        data2 = msg.payload; \n        context.set(\"data2\", data2);//store in context for next time \n        return;\n    \n    case \"type\":\n        data3 = msg.payload; \n        context.set(\"data3\", data3);//store in context for next time \n        return;\n    \n    case \"idx\":\n        data4 = msg.payload; \n        context.set(\"data4\", data4);//store in context for next time \n        return;\n        \n    case \"idxbat\":\n        data5 = msg.payload;\n        context.set(\"data5\", data5); //store in context for next time \n        return;\n        \n    case \"idxper\":\n        data6 = msg.payload;\n        context.set(\"data6\", data6); //store in context for next time \n        return;\n    \n    case \"idxlink\":\n        data7 = msg.payload;\n        context.set(\"data7\", data7); //store in context for next time \n        return;\n    \n    case \"idxextra\":\n        data8 = msg.payload;\n        context.set(\"data8\", data8); //store in context for next time \n        return;\n        \n    case \"submit\":\n        if (data1 !== null ) {\n            //msg.payload = \"Device: \"+ data1 +\" , type: \" + data2 +\" , idx: \" + data3 +\" , idxbat: \" + data4 +\" , idxper: \" + data5 + \", idxlink: \" + data6 + \", idxextra: \" + data7;\n            var string = \"{\" + \"_/\" + data1 + \"/_/}\"\n            var array = string.split(\"/\")[2];\n            var receivedSensors = []\n            //return msg; \n        \n            let dev = reconfig[array] || {};\n            //dev.name = data1;\n            dev.vendors = data2;\n            dev.type = data3;\n            dev.idx = data4;\n            dev.idxbat = data5;\n            dev.idxper = data6;\n            dev.idxlink = data7;\n            dev.idxextra = data8;\n      \n            // write back\n            reconfig[array] = dev;\n            receivedSensors.push(dev);\n \n            flow.set(\"t2ztable\", reconfig);\n            context.set(\"data1\", null)\n        } else {\n            return;\n        }\n    }\n\nreturn [{payload:Object.values(reconfig)},msg];\n//return msg;\n//return;",
+        "func": "var data1 = context.get(\"data1\") || null; //get from context or default to 0\nvar data2 = context.get(\"data2\") || 0; //get from context or default to 0\nvar data3 = context.get(\"data3\") || 0; //get from context or default to 0\nvar data4 = context.get(\"data4\") || 0; //get from context or default to 0\nvar data5 = context.get(\"data5\") || 0; //get from context or default to 0\nvar data6 = context.get(\"data6\") || 0; //get from context or default to 0\nvar data7 = context.get(\"data7\") || 0; //get from context or default to 0\nvar data8 = context.get(\"data8\") || 0; //get from context or default to 0\n\nvar reconfig = flow.get(\"t2ztable\") || {};\n\nswitch (msg.topic){\n\n    case \"device\":\n        data1 = msg.payload; \n        context.set(\"data1\", data1);//store in context for next time \n        return;\n    \n    case \"vendor\":\n        data2 = msg.payload; \n        context.set(\"data2\", data2);//store in context for next time \n        return;\n    \n    case \"type\":\n        data3 = msg.payload; \n        context.set(\"data3\", data3);//store in context for next time \n        return;\n    \n    case \"idx\":\n        data4 = msg.payload; \n        context.set(\"data4\", data4);//store in context for next time \n        return;\n        \n    case \"idxbat\":\n        data5 = msg.payload;\n        context.set(\"data5\", data5); //store in context for next time \n        return;\n        \n    case \"idxper\":\n        data6 = msg.payload;\n        context.set(\"data6\", data6); //store in context for next time \n        return;\n    \n    case \"idxlink\":\n        data7 = msg.payload;\n        context.set(\"data7\", data7); //store in context for next time \n        return;\n    \n    case \"idxextra\":\n        data8 = msg.payload;\n        context.set(\"data8\", data8); //store in context for next time \n        return;\n        \n    case \"submit\":\n        if (data1 !== null ) {\n            //msg.payload = \"Device: \"+ data1 +\" , type: \" + data2 +\" , idx: \" + data3 +\" , idxbat: \" + data4 +\" , idxper: \" + data5 + \", idxlink: \" + data6 + \", idxextra: \" + data7;\n            var string = \"{\" + \"_/\" + data1 + \"/_/}\"\n            var array = string.split(\"/\")[2];\n            var receivedSensors = []\n            //return msg; \n        \n            let dev = reconfig[array] || {};\n            dev.name = data1;\n            dev.vendors = data2;\n            dev.type = data3;\n            dev.idx = data4;\n            dev.idxbat = data5;\n            dev.idxper = data6;\n            dev.idxlink = data7;\n            dev.idxextra = data8;\n      \n            // write back\n            reconfig[array] = dev;\n            receivedSensors.push(dev);\n \n            flow.set(\"t2ztable\", reconfig);\n            context.set(\"data1\", null)\n        } else {\n            return;\n        }\n    }\n\nreturn [{payload:Object.values(reconfig)},msg];\n//return msg;\n//return;",
         "outputs": 2,
         "noerr": 0,
         "initialize": "",
@@ -3121,7 +3082,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 4740,
+        "x": 4820,
         "y": 440,
         "wires": [
             [
@@ -3154,14 +3115,14 @@
         "type": "function",
         "z": "fe9ee8c084b47472",
         "g": "bdaf844989e00ee8",
-        "name": "",
+        "name": "Del in zigbee tabel",
         "func": "if (msg.topic === \"del\") {\n    var devs = flow.get(\"t2ztable\") || {};\n    var flowdeltype = msg.payload.type;\n    var flowdelid = msg.payload.zigbeeid;\n    delete devs[msg.payload.zigbeeid];\n    if (flowdeltype === \"Remote (E1743)\" || flowdeltype === \"Plug (E1603)\" || flowdeltype === \"Plug (E1702)\" || flowdeltype === \"Plug (E1708)\") {\n        flow.set(flowdelid, undefined);\n    }\n    \n    msg.topic = \"IDX tabel: \" + msg.payload.name + \", \" + msg.payload.zigbeeid + \" is verwijdert.\";\n    msg.payload = \"Device is niet verwijdert in de sonoff bridge, alleen op deze webpagina.\"\n    var reconfig = flow.get(\"t2ztable\") || {}\n    return [msg,{payload:Object.values(reconfig)}];\n}\n\nmsg.topic = msg.payload.name;\n\nlet str = JSON.stringify(msg.payload, null, 2);\ndelete msg.payload;\nmsg.payload = \"<pre>\" + str + \"</pre>\";\n\nreturn msg;",
         "outputs": 2,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 4460,
+        "x": 4490,
         "y": 580,
         "wires": [
             [
@@ -3200,14 +3161,14 @@
         "type": "function",
         "z": "fe9ee8c084b47472",
         "g": "280d3e6578824262",
-        "name": "",
+        "name": "Payload2Object",
         "func": "//var test = flow.get(\"t2ztest\") || {};\nvar store = msg.payload;\nmsg2 = Object.assign({}, store);\nreturn [{payload:(msg2)}];",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 4180,
+        "x": 4200,
         "y": 440,
         "wires": [
             [
@@ -3227,7 +3188,7 @@
         "arraySpltType": "len",
         "stream": false,
         "addname": "",
-        "x": 4310,
+        "x": 4350,
         "y": 440,
         "wires": [
             [
@@ -3240,14 +3201,14 @@
         "type": "function",
         "z": "fe9ee8c084b47472",
         "g": "280d3e6578824262",
-        "name": "",
+        "name": "zigbeeID2Topic",
         "func": "var value = msg.payload.zigbeeid\nmsg.topic = value;\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 4440,
+        "x": 4500,
         "y": 440,
         "wires": [
             [
@@ -3276,7 +3237,7 @@
         "reduceInit": "",
         "reduceInitType": "",
         "reduceFixup": "",
-        "x": 4570,
+        "x": 4650,
         "y": 440,
         "wires": [
             [
@@ -3335,7 +3296,7 @@
             "01aaf238e2a83257",
             "453768eeb1731288"
         ],
-        "x": 4855,
+        "x": 4935,
         "y": 440,
         "wires": []
     },
@@ -3344,15 +3305,15 @@
         "type": "function",
         "z": "fe9ee8c084b47472",
         "g": "bdaf844989e00ee8",
-        "name": "",
+        "name": "rewrite backup file",
         "func": "var reconfig = flow.get(\"t2ztable\") || {};\nreturn [{payload:Object.values(reconfig)},msg];",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 4620,
-        "y": 620,
+        "x": 4590,
+        "y": 640,
         "wires": [
             [
                 "c898ad69eda3762d"
@@ -3369,7 +3330,7 @@
         "action": "",
         "pretty": false,
         "x": 4750,
-        "y": 620,
+        "y": 640,
         "wires": [
             [
                 "c7517a7695411d71"
@@ -3387,7 +3348,7 @@
         "createDir": true,
         "overwriteFile": "true",
         "x": 4890,
-        "y": 620,
+        "y": 640,
         "wires": [
             []
         ]
@@ -3420,7 +3381,7 @@
         "finalize": "",
         "libs": [],
         "x": 3840,
-        "y": 1840,
+        "y": 1800,
         "wires": [
             [
                 "6de321a36a5801d6"
@@ -3436,7 +3397,7 @@
             "71ac9f2fe79236ec"
         ],
         "x": 3735,
-        "y": 1840,
+        "y": 1800,
         "wires": [
             [
                 "b08ac8676e34eb55"
@@ -3562,7 +3523,7 @@
         "outputs": 1,
         "cts": true,
         "x": 4300,
-        "y": 1980,
+        "y": 1940,
         "wires": [
             [
                 "dc24154c6e48c679"
@@ -3574,15 +3535,15 @@
         "type": "function",
         "z": "fe9ee8c084b47472",
         "g": "d5058dd19940945a",
-        "name": "",
+        "name": "Del zigbee device status list",
         "func": "if (msg.topic === \"del\") {\n    var devs = flow.get(\"t2zdevices\") || {};\n    delete devs[msg.payload.Device];\n    msg.topic = \"Zigbee tabel: \" + msg.payload.label + \", \"  + msg.payload.Device + \" is verwijdert.\";\n    msg.payload = \"Device is niet verwijdert in de sonoff bridge, alleen op deze webpagina.\"\n    return msg;\n}\n\nmsg.topic = msg.payload.label;\n\nlet str = JSON.stringify(msg.payload, null, 2);\ndelete msg.payload;\nmsg.payload = \"<pre>\" + str + \"</pre>\";\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 4560,
-        "y": 1980,
+        "x": 4540,
+        "y": 1940,
         "wires": [
             [
                 "96b98e5e7309ed24",
@@ -3607,7 +3568,7 @@
         "topic": "",
         "name": "Zigbee Device Info",
         "x": 4790,
-        "y": 1980,
+        "y": 1940,
         "wires": [
             []
         ]
@@ -3659,7 +3620,7 @@
             "4285b21fd5d5eb37"
         ],
         "x": 4945,
-        "y": 1980,
+        "y": 1940,
         "wires": []
     },
     {
@@ -3720,7 +3681,7 @@
         "type": "comment",
         "z": "fe9ee8c084b47472",
         "name": "Wat instellen bij een nieuw device",
-        "info": "Wat allemaal instellen bij een nieuw device\n\n* Tasmota ID filter on ui table\n  - Als het een nieuw merk betreft:\n      - In tab \"Setup\" de \"Outputs\" met 1 verhogen.\n      - In tab \"On Message\" de returns bij werken ivm 1 extra output. Let op, voor tasmota, tasmotainfo en domoticz zijn 3 aparte blocken\n      - Achter de ID filter natuurlijk de nieuwe functie node voor het device maken en toevoegen\n  - Als het een nieuw device is:\n      - Dan hierin niets doen, dan naar de uitgang van het juiste merk gaan, daar het type toevoegen en een nieuwe device block maken\n\n* Drop Down Vendors node voor webpagina\n  - Bij options een extra block aanmaken. De naam moet identiek zijn aan wat je bij de tasmota ID filter hebt ingevoerd.\n \n* Drop Down type node voor webpagina\n  - Bij options een extra block aanmaken. De naam moet identiek zijn aan wat je bij de Vendor naam filter hebt ingevoerd.",
+        "info": "Wat allemaal instellen bij een nieuw device\n\n* Tasmota ID filter on ui table\n  - Als het een nieuw merk betreft:\n      - In tab \"Setup\" de \"Outputs\" met 1 verhogen.\n      - In tab \"On Message\" de returns bij werken ivm 1 extra output. Let op, voor tasmota, tasmotainfo en domoticz zijn 3 aparte blocken\n      - Achter de ID filter natuurlijk de nieuwe functie node voor het device maken en toevoegen\n  - Als het een nieuw device is:\n      - Dan hierin niets doen, dan naar de uitgang van het juiste merk gaan, daar het type toevoegen en een nieuwe device block maken\n\n* Drop Down Vendors node voor webpagina\n  - Bij options een extra block aanmaken. De naam moet identiek zijn aan wat je bij de tasmota ID filter hebt ingevoerd.\n \n* Drop Down type node voor webpagina\n  - Bij options een extra block aanmaken. De naam moet identiek zijn aan wat je bij de Vendor naam filter hebt ingevoerd.\n  \n* Update \"Hoe device instellen in domoticz\"",
         "x": 150,
         "y": 200,
         "wires": []
@@ -3735,8 +3696,8 @@
         "links": [
             "17fce7e4a549f3c4"
         ],
-        "x": 4815,
-        "y": 2080,
+        "x": 4935,
+        "y": 2040,
         "wires": []
     },
     {
@@ -3761,37 +3722,18 @@
         "type": "function",
         "z": "fe9ee8c084b47472",
         "g": "280d3e6578824262",
-        "name": "",
+        "name": "Store fake ikea ID",
         "func": "var devsdomoticz = flow.get(\"t2ztable\") || {};\nvar length = Object.keys(devsdomoticz).length;\n\nfor ( var i = 0; i < length; i++ ) {\n    var keys = Object.keys(devsdomoticz);\n    var IDkey = keys[i];\n    var message = devsdomoticz[IDkey];\n    var messagetype = devsdomoticz[IDkey].type;\n    var messageidx = parseInt(devsdomoticz[IDkey].idx);\n    var messagezigbeeid = devsdomoticz[IDkey].zigbeeid;\n    var messagebridge = devsdomoticz[IDkey].bridge;\n    var array = [];\n    \n    if ( messagetype === \"Remote (E1743)\" || messagetype === \"Plug (E1603)\" || messagetype === \"Plug (E1702)\" || messagetype === \"Plug (E1708)\") {\n        array[0] = messageidx;\n        array[1] = messagebridge;\n        flow.set(messagezigbeeid, array);\n        msg.payload = \"Flow.set for device id \" + messagezigbeeid + \", idx: \" + messageidx + \", bridge: \" + messagebridge + \"\";\n        node.send(msg);\n    }\n}\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 4720,
+        "x": 4830,
         "y": 400,
         "wires": [
-            [
-                "72c72ad3078043b0"
-            ]
+            []
         ]
-    },
-    {
-        "id": "72c72ad3078043b0",
-        "type": "debug",
-        "z": "fe9ee8c084b47472",
-        "g": "280d3e6578824262",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 4870,
-        "y": 400,
-        "wires": []
     },
     {
         "id": "407b6a20b708894c",
@@ -4064,7 +4006,7 @@
         "onceDelay": "5",
         "topic": "",
         "payloadType": "date",
-        "x": 3930,
+        "x": 3870,
         "y": 1120,
         "wires": [
             [
@@ -4087,7 +4029,7 @@
         "proxy": "",
         "authType": "",
         "senderr": false,
-        "x": 4090,
+        "x": 4030,
         "y": 1120,
         "wires": [
             [
@@ -4132,7 +4074,7 @@
         "topicType": "str",
         "className": "",
         "x": 4540,
-        "y": 1760,
+        "y": 1720,
         "wires": [
             [
                 "72113a7b7f790446"
@@ -4152,7 +4094,7 @@
         "finalize": "",
         "libs": [],
         "x": 4320,
-        "y": 1760,
+        "y": 1720,
         "wires": [
             [
                 "050fb9afb2b185a1",
@@ -4182,7 +4124,7 @@
         "topic": "rename",
         "topicType": "str",
         "x": 4520,
-        "y": 1880,
+        "y": 1840,
         "wires": [
             [
                 "72113a7b7f790446"
@@ -4209,7 +4151,7 @@
         "className": "",
         "topicType": "str",
         "x": 4520,
-        "y": 1820,
+        "y": 1780,
         "wires": [
             [
                 "72113a7b7f790446"
@@ -4229,7 +4171,7 @@
         "finalize": "",
         "libs": [],
         "x": 4760,
-        "y": 1780,
+        "y": 1740,
         "wires": [
             [
                 "fc525bd61fe98543",
@@ -4249,7 +4191,7 @@
         "initialize": "",
         "finalize": "",
         "x": 4750,
-        "y": 1860,
+        "y": 1820,
         "wires": [
             [
                 "b5d12c116471a898"
@@ -4267,7 +4209,7 @@
             "17fce7e4a549f3c4"
         ],
         "x": 4945,
-        "y": 1780,
+        "y": 1740,
         "wires": []
     },
     {
@@ -4281,7 +4223,7 @@
             "ecb6c1f1d953c7e3"
         ],
         "x": 4375,
-        "y": 1820,
+        "y": 1780,
         "wires": []
     },
     {
@@ -4303,7 +4245,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 4760,
-        "y": 1820,
+        "y": 1780,
         "wires": [
             [
                 "b26efc2253e722f6"
@@ -4319,7 +4261,7 @@
         "links": [
             "58aca37319371d05"
         ],
-        "x": 4595,
+        "x": 4675,
         "y": 400,
         "wires": [
             [
@@ -4352,14 +4294,14 @@
         "type": "function",
         "z": "fe9ee8c084b47472",
         "g": "c101b10c559fee47",
-        "name": "",
+        "name": "Make http header",
         "func": "var store = flow.get(\"version\")\nmsg.headers['Content-Disposition'] = 'attachment; filename=\"' + store + '.json\"'\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 4500,
+        "x": 4510,
         "y": 1160,
         "wires": [
             [
@@ -4373,13 +4315,13 @@
         "z": "fe9ee8c084b47472",
         "g": "c101b10c559fee47",
         "name": "UPDATE RELEASE",
-        "func": "var version = \"V_10-04-2022_R2\"\noldStr = msg.payload;\nvar newStr = oldStr.slice(0, oldStr.length-1);\nvar store = newStr;\nflow.set(\"version\", newStr);\nvar html = \"\";\nmsg.topic = \"Release notes\";\nif (msg.statusCode === 200 || 201) {\n    if (store === version) {\n        msg.text = \"FLOW IS UP TO DATE MET GITHUB (\" + version + \")\"\n        msg.background = \"#0A8085\";\n        return msg;\n    } else {\n        msg.text = \"ER IS EEN UPDATE, DOWNLOAD FLOW FILE VAN GITHUB\"\n        msg.background = \"#8C101C\";\n        return msg;\n    }\n}\nreturn;",
+        "func": "var version = \"V_11-04-2022_R1\"\noldStr = msg.payload;\nvar newStr = oldStr.slice(0, oldStr.length-1);\nvar store = newStr;\nflow.set(\"version\", newStr);\nvar html = \"\";\nmsg.topic = \"Release notes\";\nif (msg.statusCode === 200 || 201) {\n    if (store === version) {\n        msg.text = \"FLOW IS UP TO DATE MET GITHUB (\" + version + \")\"\n        msg.background = \"#0A8085\";\n        return msg;\n    } else {\n        msg.text = \"ER IS EEN UPDATE, DOWNLOAD FLOW FILE VAN GITHUB\"\n        msg.background = \"#8C101C\";\n        return msg;\n    }\n}\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 4280,
+        "x": 4220,
         "y": 1120,
         "wires": [
             [
@@ -4408,7 +4350,7 @@
         "payloadType": "str",
         "topic": "show",
         "topicType": "str",
-        "x": 4470,
+        "x": 4390,
         "y": 1120,
         "wires": [
             [
@@ -4431,7 +4373,7 @@
         "proxy": "",
         "authType": "",
         "senderr": false,
-        "x": 4610,
+        "x": 4530,
         "y": 1120,
         "wires": [
             [
@@ -4466,14 +4408,14 @@
         "type": "function",
         "z": "fe9ee8c084b47472",
         "g": "c101b10c559fee47",
-        "name": "",
+        "name": "Check response github",
         "func": "if (msg.statusCode === 200 || 201) {\n    return msg;\n} else {\n    msg.payload = '<p style=\"color:red;\">Fout bij laden release notes van github</p><br><a href=\"https://raw.githubusercontent.com/Hoeby/Sonoff-Zigbee-Tasmota-Nodered-flow/main/releasenotes\" target=\"_blank\">Link naar github, voor release notes</a>'\n    return msg;\n}\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 4760,
+        "x": 4720,
         "y": 1120,
         "wires": [
             [
@@ -4490,7 +4432,7 @@
         "width": 0,
         "height": 0,
         "name": "",
-        "label": "Actuele versie: V_10-04-2022_R2",
+        "label": "Actuele versie: V_11-04-2022_R1",
         "format": "{{msg.payload}}",
         "layout": "row-center",
         "className": "",
@@ -4546,7 +4488,7 @@
         "layout": "row-left",
         "className": "",
         "x": 4110,
-        "y": 2000,
+        "y": 1960,
         "wires": []
     },
     {
@@ -4644,14 +4586,14 @@
         "type": "function",
         "z": "fe9ee8c084b47472",
         "g": "896b3999999cb97c",
-        "name": "",
+        "name": "Device list",
         "func": "if (msg.payload === \"Heiman\") {\n    msg.options = [ \"Monoxide (HS1CA-M)\"]\n}\nelse if (msg.payload === \"Ikea\") {\n    msg.options = [ \"Light (ICPSHC24-10EU-IL-1)\",\n                    \"Plug (E1603)\",\n                    \"Plug (E1702)\",\n                    \"Plug (E1708)\",\n                    \"Remote (E1743)\"]\n}\nelse if (msg.payload === \"Lidl\") {\n    msg.options = [ \"Door (HG06336)\",\n                    \"Motion (HG06335)\",\n                    \"Motion (HG07310)\",\n                    \"Light (HG06106A)\",\n                    \"Light (HG06106B)\",\n                    \"Light (HG06106C)\",\n                    \"Light (HG06492A)\",\n                    \"Light (HG06492B)\",\n                    \"Light (HG06492C)\",\n                    \"Thermo (TS0601)\"]\n}\nelse if (msg.payload === \"Osram\") {\n    msg.options = [ \"Remote (AC0251100NJ)\",\n                    \"Remote (AC0251600NJ)\",\n                    \"Remote (AC0251700NJ)\"]\n}\nelse if (msg.payload === \"Sonoff\") {\n    msg.options = [ \"Remote (SNZB-01)\" ]\n}\nelse if (msg.payload === \"Tuya\") {\n    msg.options = [ \"Remote (TS0044)\" ]\n}\nelse if (msg.payload === \"Xiaomi\") {\n    msg.options = [ \"Cube (MFKZQ01LM)\",\n                    \"Door (MCCGQ12LM)\",\n                    \"Door (MCCGQ14LM)\",\n                    \"Lux (GZCGQ01LM)\",\n                    \"Motion (RTCGQ01LM)\",\n                    \"Motion (RTCGQ12LM)\",\n                    \"Smoke (JTYJ-GD-01LM/BW)\",\n                    \"Temp (WSDCGQ01LM)\",\n                    \"Temp (WSDCGQ11LM)\",\n                    \"Temp (WSDCGQ12LM)\",\n                    \"Water (SJCGQ11LM)\"]\n}\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 4520,
+        "x": 4530,
         "y": 960,
         "wires": [
             [
@@ -4864,14 +4806,14 @@
         "type": "function",
         "z": "fe9ee8c084b47472",
         "g": "896b3999999cb97c",
-        "name": "",
+        "name": "Clear option list",
         "func": "msg.options =[];\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 4240,
+        "x": 4260,
         "y": 1020,
         "wires": [
             [
@@ -4885,7 +4827,7 @@
         "z": "fe9ee8c084b47472",
         "g": "9bb2b82d7bf97e98",
         "name": "Make custom page domoticz",
-        "func": "var ipnodered = flow.get(\"ipnodered\") //|| null; //get from context or default to 0\nvar portnodered = flow.get(\"portnodered\")// || 0; //get from context or default to 0\nvar filelocation = flow.get(\"filelocation\")\n\nswitch (msg.topic){\n\n    case \"ipnodered\":\n        ipnodered = msg.payload; \n        flow.set(\"ipnodered\", ipnodered);//store in context for next time \n        return;\n    \n    case \"portnodered\":\n        portnodered = msg.payload; \n        flow.set(\"portnodered\", portnodered);//store in context for next time \n        return;\n        \n    case \"filelocation\":\n        var filelocationexcl = msg.payload; \n        filelocation = filelocationexl + \"/tasmota_sonoff_bridge.html\"\n        flow.set(\"filelocation\", filelocation);//store in context for next time \n        return;\n    \n    case \"Cancel\":\n        return;\n\n    case \"Submit\":\n        if (ipnodered !== null ) {\n            var file = flow.get(\"filelocation\");\n            msg.filename = file; \n            msg.payload = '<IFRAME SRC=\"http://' + ipnodered + ':' + portnodered + '/ui\" height=\"800\" width=\"100%\"></IFRAME>';\n            return msg;\n        } else {\n            return;\n        }\n}",
+        "func": "var ipnodered = flow.get(\"ipnodered\") //|| null; //get from context or default to 0\nvar portnodered = flow.get(\"portnodered\")// || 0; //get from context or default to 0\nvar filelocation = flow.get(\"filelocation\")\n\nswitch (msg.topic){\n\n    case \"ipnodered\":\n        ipnodered = msg.payload; \n        flow.set(\"ipnodered\", ipnodered);//store in context for next time \n        return;\n    \n    case \"portnodered\":\n        portnodered = msg.payload; \n        flow.set(\"portnodered\", portnodered);//store in context for next time \n        return;\n        \n    case \"filelocation\":\n        var filelocationexcl = msg.payload; \n        filelocation = filelocationexcl + \"/tasmota_sonoff_bridge.html\"\n        flow.set(\"filelocation\", filelocation);//store in context for next time \n        return;\n    \n    case \"Cancel\":\n        return;\n\n    case \"Submit\":\n        if (ipnodered !== null ) {\n            var file = flow.get(\"filelocation\");\n            msg.filename = file; \n            msg.payload = '<IFRAME SRC=\"http://' + ipnodered + ':' + portnodered + '/ui\" height=\"800\" width=\"100%\"></IFRAME>';\n            return msg;\n        } else {\n            return;\n        }\n}",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -5087,14 +5029,14 @@
         "type": "function",
         "z": "fe9ee8c084b47472",
         "g": "9bb2b82d7bf97e98",
-        "name": "",
+        "name": "Add ip source",
         "func": "msg.src = 'ipnodered';\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 4000,
+        "x": 4020,
         "y": 100,
         "wires": [
             [
@@ -5107,14 +5049,14 @@
         "type": "function",
         "z": "fe9ee8c084b47472",
         "g": "9bb2b82d7bf97e98",
-        "name": "",
+        "name": "Add port source",
         "func": "msg.src = 'portnodered';\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 4000,
+        "x": 4020,
         "y": 180,
         "wires": [
             [
@@ -5127,14 +5069,14 @@
         "type": "function",
         "z": "fe9ee8c084b47472",
         "g": "9bb2b82d7bf97e98",
-        "name": "",
+        "name": "Add file source",
         "func": "msg.src = 'filelocation';\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 4000,
+        "x": 4020,
         "y": 260,
         "wires": [
             [
@@ -5199,14 +5141,14 @@
         "type": "function",
         "z": "fe9ee8c084b47472",
         "g": "9bb2b82d7bf97e98",
-        "name": "",
+        "name": "Get IP2payload",
         "func": "oldIP = msg.payload;\nvar newIP = oldIP.slice(0, oldIP.length-1);\nmsg.payload = newIP;\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 3780,
+        "x": 3800,
         "y": 80,
         "wires": [
             [
@@ -5328,14 +5270,14 @@
         "type": "function",
         "z": "fe9ee8c084b47472",
         "g": "9bb2b82d7bf97e98",
-        "name": "",
+        "name": "topic2payload",
         "func": "msg.topic = msg.payload;\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 4080,
+        "x": 4100,
         "y": 300,
         "wires": [
             [
@@ -5511,7 +5453,7 @@
         "format": "{{msg.payload}}",
         "layout": "row-left",
         "className": "",
-        "x": 2720,
+        "x": 2820,
         "y": 180,
         "wires": []
     },
@@ -6453,7 +6395,7 @@
         "onceDelay": "1",
         "topic": "",
         "payloadType": "str",
-        "x": 2510,
+        "x": 2630,
         "y": 120,
         "wires": [
             [
@@ -6467,14 +6409,14 @@
         "id": "748fa252ea23d046",
         "type": "function",
         "z": "fe9ee8c084b47472",
-        "name": "",
+        "name": "Set debug switch off",
         "func": "msg.payload = false;\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2720,
+        "x": 2860,
         "y": 120,
         "wires": [
             [
@@ -6493,7 +6435,7 @@
             "41ea56d4ee4b75cc",
             "872e7b0f422a1d41"
         ],
-        "x": 2815,
+        "x": 3015,
         "y": 120,
         "wires": []
     },
@@ -6747,7 +6689,7 @@
             "bb1eb60b98ab7aec"
         ],
         "x": 3875,
-        "y": 1880,
+        "y": 1840,
         "wires": [
             [
                 "6de321a36a5801d6"
@@ -6774,14 +6716,14 @@
         "id": "2c53c2ad456171f6",
         "type": "function",
         "z": "fe9ee8c084b47472",
-        "name": "",
+        "name": "Debug topic2payload",
         "func": "msg.payload = msg.topic\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2720,
+        "x": 2860,
         "y": 240,
         "wires": [
             [
@@ -6802,7 +6744,7 @@
         "format": "{{msg.payload}}",
         "layout": "row-left",
         "className": "",
-        "x": 2850,
+        "x": 3050,
         "y": 240,
         "wires": []
     },
@@ -6858,10 +6800,9 @@
         "type": "link in",
         "z": "fe9ee8c084b47472",
         "g": "219168e7678220cf",
-        "name": "Osram mini switch in",
+        "name": "Tuya 4 button switch in",
         "links": [
-            "4aca286ee7c4de75",
-            "8b7f9c7c96650350"
+            "4aca286ee7c4de75"
         ],
         "x": 2955,
         "y": 1980,
@@ -6876,11 +6817,11 @@
         "type": "link out",
         "z": "fe9ee8c084b47472",
         "g": "219168e7678220cf",
-        "name": "Osram mini switch out",
+        "name": "Tuya 4 button switch out",
         "mode": "link",
         "links": [
-            "23e0810b20425dd3",
-            "17fce7e4a549f3c4"
+            "17fce7e4a549f3c4",
+            "23e0810b20425dd3"
         ],
         "x": 2895,
         "y": 1980,
@@ -6912,7 +6853,7 @@
         "z": "fe9ee8c084b47472",
         "g": "0a2e01214bded454",
         "name": "Lidl thermo TS0601",
-        "func": "if ( msg.src === 'tasmota' ) {\n    msg.topic = \"domoticz/in\";\n    var idx = msg.payload.ZbReceived.idx;\n    var idxbat = msg.payload.ZbReceived.idxbat;\n    var idxper = msg.payload.ZbReceived.idxper;\n    var idxlink = msg.payload.ZbReceived.idxlink;\n    var idxextra = msg.payload.ZbReceived.idxextra;\n    var zigbeeid = msg.payload.ZbReceived.zigbeeid;\n  \n    var batmsg;\n    var permsg;\n    var linkmsg;\n    var extramsg;\n    var valuebat;\n    var valuebatdummy;\n    var valuebatperc;\n    var valuelink;\n    var valuetemp;\n\n    if ( msg.payload.ZbReceived[zigbeeid] ) {    \n        //Set value battery voltage idx\n        if (msg.payload.ZbReceived[zigbeeid].hasOwnProperty(\"BatteryVoltage\")) {\n            valuebatdummy = msg.payload.ZbReceived[zigbeeid].BatteryVoltage;\n            valuebat = (Math.round(valuebatdummy * 10))/10.0;\n        }\n        //Set value battery percentage idx\n        if (msg.payload.ZbReceived[zigbeeid].hasOwnProperty(\"BatteryPercentage\")) {\n            valuebatperc = msg.payload.ZbReceived[zigbeeid].BatteryPercentage;\n        }\n        //Set value linkQuality idx\n        if (msg.payload.ZbReceived[zigbeeid].hasOwnProperty(\"LinkQuality\")) {\n            valuelink = msg.payload.ZbReceived[zigbeeid].LinkQuality;\n        }\n        //Set value localtemperatur idx\n        if (msg.payload.ZbReceived[zigbeeid].hasOwnProperty(\"LocalTemperature\")) {\n            valuetemp = msg.payload.ZbReceived[zigbeeid].LocalTemperature;\n        }\n    \n    \tif ( idx !== 0 ) {\n    \t    msg = null;\n        } else {\n\t        msg = null;\n\t    }\n        \n    \tif ( idxbat !== 0 ) {\n            if (valuebat !== undefined) {\n                batmsg = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idxbat , \"svalue\": \"\" + valuebat + \"\", \"parse\": false}}; \n            } else {\n                batmsg = null;\n            }\n\t    } else {\n            batmsg = null;\n        }\n        \n        if ( idxper !== 0 ) {\n            if (valuebatperc !== undefined) {\n                permsg = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idxper , \"svalue\": \"\" + valuebatperc + \"\", \"parse\": false}}; \n            } else {\n                permsg = null;\n            }\n        } else {\n            permsg = null;\n        }\n        \n        if ( idxlink !== 0 ) {\n            if (valuelink !== undefined) {\n                linkmsg = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idxlink , \"svalue\": \"\" + valuelink + \"\", \"parse\": false}}; \n            } else {\n                linkmsg = null;\n            }\n        } else {\n            linkmsg = null;\n        }\n        \n        if ( idxextra !== 0 ) {\n            if (valuetemp !== undefined) {\n                msg = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idx , \"svalue\": \"\" + valuetemp + \"\", \"parse\": false}}; \n            } else {\n               extramsg = null;\n            }\n        } else {\n            extramsg = null;\n        }\n    \n        \n        return [msg, batmsg, permsg, linkmsg, extramsg];\n    }\n}\n\nif ( msg.src === 'domoticz' ) {\n    var ZigbeeID = msg.payload.zigbeeid\n    var topicname = msg.payload.topicname;\n    var setpoint = msg.payload.svalue1;\n   \n    msg = { \"topic\": \"cmnd/\" + topicname + \"/ZbSend\",\"payload\":{\"Device\":ZigbeeID,\"Send\":{\"TuyaTempTarget\":setpoint}}};\n\treturn [msg, null, null, null, null];\n}",
+        "func": "if ( msg.src === 'tasmota' ) {\n    msg.topic = \"domoticz/in\";\n    var idx = msg.payload.ZbReceived.idx;\n    var idxbat = msg.payload.ZbReceived.idxbat;\n    var idxper = msg.payload.ZbReceived.idxper;\n    var idxlink = msg.payload.ZbReceived.idxlink;\n    var idxextra = msg.payload.ZbReceived.idxextra;\n    var zigbeeid = msg.payload.ZbReceived.zigbeeid;\n  \n    var batmsg;\n    var permsg;\n    var linkmsg;\n    var extramsg;\n    var valuebat;\n    var valuebatdummy;\n    var valuebatperc;\n    var valuelink;\n    var valuetemp;\n\n    if ( msg.payload.ZbReceived[zigbeeid] ) {    \n        //Set value battery voltage idx\n        if (msg.payload.ZbReceived[zigbeeid].hasOwnProperty(\"BatteryVoltage\")) {\n            valuebatdummy = msg.payload.ZbReceived[zigbeeid].BatteryVoltage;\n            valuebat = (Math.round(valuebatdummy * 10))/10.0;\n        }\n        //Set value battery percentage idx\n        if (msg.payload.ZbReceived[zigbeeid].hasOwnProperty(\"BatteryPercentage\")) {\n            valuebatperc = msg.payload.ZbReceived[zigbeeid].BatteryPercentage;\n        }\n        //Set value linkQuality idx\n        if (msg.payload.ZbReceived[zigbeeid].hasOwnProperty(\"LinkQuality\")) {\n            valuelink = msg.payload.ZbReceived[zigbeeid].LinkQuality;\n        }\n        //Set value localtemperatur idx\n        if (msg.payload.ZbReceived[zigbeeid].hasOwnProperty(\"LocalTemperature\")) {\n            valuetemp = msg.payload.ZbReceived[zigbeeid].LocalTemperature;\n        }\n    \n    \tif ( idx !== 0 ) {\n    \t    msg = null;\n        } else {\n\t        msg = null;\n\t    }\n        \n    \tif ( idxbat !== 0 ) {\n            if (valuebat !== undefined) {\n                batmsg = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idxbat , \"svalue\": \"\" + valuebat + \"\", \"parse\": false}}; \n            } else {\n                batmsg = null;\n            }\n\t    } else {\n            batmsg = null;\n        }\n        \n        if ( idxper !== 0 ) {\n            if (valuebatperc !== undefined) {\n                permsg = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idxper , \"svalue\": \"\" + valuebatperc + \"\", \"parse\": false}}; \n            } else {\n                permsg = null;\n            }\n        } else {\n            permsg = null;\n        }\n        \n        if ( idxlink !== 0 ) {\n            if (valuelink !== undefined) {\n                linkmsg = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idxlink , \"svalue\": \"\" + valuelink + \"\", \"parse\": false}}; \n            } else {\n                linkmsg = null;\n            }\n        } else {\n            linkmsg = null;\n        }\n        \n        if ( idxextra !== 0 ) {\n            if (valuetemp !== undefined) {\n                extramsg = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idxextra , \"svalue\": \"\" + valuetemp + \"\", \"parse\": false}}; \n            } else {\n               extramsg = null;\n            }\n        } else {\n            extramsg = null;\n        }\n    \n        \n        return [msg, batmsg, permsg, linkmsg, extramsg];\n    }\n}\n\nif ( msg.src === 'domoticz' ) {\n    var ZigbeeID = msg.payload.zigbeeid\n    var topicname = msg.payload.topicname;\n    var setpoint = msg.payload.svalue1;\n   \n    msg = { \"topic\": \"cmnd/\" + topicname + \"/ZbSend\",\"payload\":{\"Device\":ZigbeeID,\"Send\":{\"TuyaTempTarget\":setpoint}}};\n\treturn [msg, null, null, null, null];\n}",
         "outputs": 5,
         "noerr": 0,
         "initialize": "",
@@ -6993,14 +6934,14 @@
         "id": "01a86f0281c55fc6",
         "type": "function",
         "z": "fe9ee8c084b47472",
-        "name": "",
+        "name": "Debug switch empty payload",
         "func": "if (msg.payload === true) {\n    msg.topic = \"\"\n    msg.payload = \"\"\n}\nif (msg.payload === false) {\n    msg.payload = \"\"\n    msg.topic = \"\"\n}\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2500,
+        "x": 2560,
         "y": 180,
         "wires": [
             [
@@ -7044,7 +6985,7 @@
         "z": "fe9ee8c084b47472",
         "g": "896b3999999cb97c",
         "name": "Hoe device instellen in domoticz",
-        "func": "var data3info = context.get(\"data3info\") || 0; //get from context or default to 0\n\nswitch (msg.topic){\n\n    case \"type\":\n        data3info = msg.payload; \n        context.set(\"data3info\", data3info);//store in context for next time \n        return;\n\n    case \"submit\":\n        //Heiman\n        if (data3info === \"Monoxide (HS1CA-M)\" ) {\n            msg.topic = \"Heiman, Monoxide (HS1CA-M)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: Schakelaar</p><p>Schakelaar daarna instellen als: smoke detector</p>\"\n            \n        //Ikea\n        } else if (data3info === \"Light (ICPSHC24-10EU-IL-1)\" ) {   \n            msg.topic = \"Ikea, Light (ICPSHC24-10EU-IL-1)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: schakelaar</p><p>Schakelaar daarna instellen als: dimmer</p>\"\n        } else if (data3info === \"Plug (E1603)\" ) {\n            msg.topic = \"Ikea, Plug (E1603)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: schakelaar</p>\"\n        } else if (data3info === \"Plug (E1702)\" ) {  \n            msg.topic = \"Ikea, Plug (E1702)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: schakelaar</p>\"\n        } else if (data3info === \"Plug (E1708)\" ) {   \n            msg.topic = \"Ikea, Plug (E1708)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: schakelaar</p>\"\n        } else if (data3info === \"Remote (E1743)\" ) {    \n            msg.topic = \"Ikea, Remote (E1743)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: keuzeschakelaar</p><p>Keuzeschakelaar daarna instellen onderstaand;</p><p>Niveau 0: Off</p><p>Niveau 10: On</p><p>Niveau 20: On hold</p><p>Niveau 30: Off hold</p><p>Niveau 40: Hold stop</p>\"\n        \n        //Lidl\n        } else if (data3info === \"Door (HG06336)\" ) {   \n            msg.topic = \"Lidl, Door (HG06336)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: schakelaar</p><p>Schakelaar daarna instellen als: door contact</p>\"\n        } else if (data3info === \"Motion (HG06335)\" ) {   \n            msg.topic = \"Lidl, Motion (HG06335)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: schakelaar</p><p>Schakelaar daarna instellen als: motion sensor</p>\"\n        } else if (data3info === \"Motion (HG07310)\" ) {   \n            msg.topic = \"Lidl, Motion (HG07310)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: schakelaar</p><p>Schakelaar daarna instellen als: motion sensor</p>\"\n        } else if (data3info === \"Light (HG06106A)\" ) {   \n            msg.topic = \"Lidl, Light (HG06106A)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: RGBWW switch</p>\"\n        } else if (data3info === \"Light (HG06106B)\" ) {   \n            msg.topic = \"Lidl, Light (HG06106B)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: RGBWW switch</p>\"\n        } else if (data3info === \"Light (HG06106C)\" ) {   \n            msg.topic = \"Lidl, Light (HG06106C)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: RGBWW switch</p>\"\n        } else if (data3info === \"Light (HG06492A)\" ) {   \n            msg.topic = \"Lidl, Light (HG06492A)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: RGBWW switch</p>\"\n        } else if (data3info === \"Light (HG06492B)\" ) {   \n            msg.topic = \"Lidl, Light (HG06492B)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: RGBWW switch</p>\"\n        } else if (data3info === \"Light (HG06492C)\" ) {   \n            msg.topic = \"Lidl, Light (HG06492C)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: RGBWW switch</p>\"\n        } else if (data3info === \"Thermo (TS0601)\" ) {   \n            msg.topic = \"Lidl, Thermo (TS0601)\"\n            msg.payload = \"<p>Aanmaken in domoticz;</p><p>1e dummy type: Thermostaat Setpoint</p><p>1e dummy instellen als IDX in tasmota dashboard</p><br><p>2e dummy type: Temperatuur</p><p>2e dummy instellen als IDX-extra in tasmota dashboard</p>\"\n        \n        //Osram       \n        } else if (data3info === \"Remote (AC0251100NJ)\" ) {   \n            msg.topic = \"Osram, Remote (AC0251100NJ)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: keuzeschakelaar</p><p>Keuzeschakelaar daarna instellen onderstaand;</p><p>Niveau 0: Off</p><p>Niveau 10: Up</p><p>Niveau 20: Up Hold</p><p>Niveau 30: Up Release</p><p>Niveau 40: Circle Click</p><p>Niveau 50: Circle hold</p><p>Niveau 60: Circle Release</p><p>Niveau 70: Down</p><p>Niveau 80: Down Hold</p><p>Niveau 90: Down Release</p><p>Niveau 100: Standy</p>\"\n        } else if (data3info === \"Remote (AC0251600NJ)\" ) {   \n            msg.topic = \"Osram, Remote (AC0251600NJ)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: keuzeschakelaar</p><p>Keuzeschakelaar daarna instellen onderstaand;</p><p>Niveau 0: Off</p><p>Niveau 10: Up</p><p>Niveau 20: Up Hold</p><p>Niveau 30: Up Release</p><p>Niveau 40: Circle Click</p><p>Niveau 50: Circle hold</p><p>Niveau 60: Circle Release</p><p>Niveau 70: Down</p><p>Niveau 80: Down Hold</p><p>Niveau 90: Down Release</p><p>Niveau 100: Standy</p>\"\n        } else if (data3info === \"Remote (AC0251700NJ)\" ) {   \n            msg.topic = \"Osram, Remote (AC0251700NJ)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: keuzeschakelaar</p><p>Keuzeschakelaar daarna instellen onderstaand;</p><p>Niveau 0: Off</p><p>Niveau 10: Up</p><p>Niveau 20: Up Hold</p><p>Niveau 30: Up Release</p><p>Niveau 40: Circle Click</p><p>Niveau 50: Circle hold</p><p>Niveau 60: Circle Release</p><p>Niveau 70: Down</p><p>Niveau 80: Down Hold</p><p>Niveau 90: Down Release</p><p>Niveau 100: Standy</p>\"\n \n        //Sonoff\n        } else if (data3info === \"Remote (SNZB-01)\" ) {   \n            msg.topic = \"Sonoff, Remote (SNZB-01)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: keuzeschakelaar</p><p>Keuzeschakelaar daarna instellen onderstaand;</p><p>Niveau 0: Off</p><p>Niveau 10: Single push</p><p>Niveau 20: Double push</p><p>Niveau 30: Hold</p>\"\n\n        //Tuya\n        } else if (data3info === \"Remote (TS0044)\" ) {   \n            msg.topic = \"Tuya, Remote (TS0044)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: keuzeschakelaar</p><p>Keuzeschakelaar daarna instellen onderstaand;</p><p>Niveau 0: Off</p><p>Niveau 10 = Button 1 single push</p><p>Niveau 20 = Button 1 double push</p><p>Niveau 30 = Button 1 hold</p><p>Niveau 40 = Button 2 single push</p><p>Niveau 50 = Button 2 double push</p><p>Niveau 60 = Button 2 hold</p><p>Niveau 70 = Button 3 single push</p><p>Niveau 80 = Button 3 double push</p><p>Niveau 90 = Button 3 hold</p><p>Niveau 100 = Button 4 single push</p><p>Niveau 110 = Button 4 double push</p><p>Niveau 120 = Button 4 hold</p>\"\n\n        //Xiaomi\n        } else if (data3info === \"Cube (MFKZQ01LM)\" ) {   \n            msg.topic = \"Xiaomi, Cube (MFKZQ01LM)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: keuzeschakelaar</p><p>Keuzeschakelaar daarna instellen onderstaand;</p><p>Niveau 0: Wakeup</p><p>Niveau 10 = Shake</p><p>Niveau 20 = Slide</p><p>Niveau 30 = Flip 90</p><p>Niveau 40 = Flip 180</p><p>Niveau 50 = Rotate right</p><p>Niveau 60 = Rotate left</p><p>Niveau 70 = Tap</p><p>Niveau 80 = Fall</p>\"\n        } else if (data3info === \"Door (MCCGQ12LM)\" ) {   \n            msg.topic = \"Xiaomi, Door (MCCGQ12LM)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: schakelaar</p><p>Schakelaar daarna instellen als: door contact</p>\"\n        } else if (data3info === \"Door (MCCGQ14LM))\" ) {   \n            msg.topic = \"Xiaomi, Door (MCCGQ14LM)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: schakelaar</p><p>Schakelaar daarna instellen als: door contact</p>\"\n        } else if (data3info === \"Lux (GZCGQ01LM)\" ) {   \n            msg.topic = \"Xiaomi, Lux (GZCGQ01LM)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: Lux</p>\"\n        } else if (data3info === \"Motion (RTCGQ01LM)\" ) {   \n            msg.topic = \"Xiaomi, Motion (RTCGQ01LM)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: schakelaar</p><p>Schakelaar daarna instellen als: motion sensor</p>\"\n        } else if (data3info === \"Motion (RTCGQ12LM)\" ) {   \n            msg.topic = \"Xiaomi, Motion (RTCGQ12LM)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: schakelaar</p><p>Schakelaar daarna instellen als: motion sensor</p>\"\n        } else if (data3info === \"Smoke (JTYJ-GD-01LM/BW)\" ) {   \n            msg.topic = \"Xiaomi, Smoke (JTYJ-GD-01LM/BW)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: Schakelaar</p><p>Schakelaar daarna instellen als: smoke detector</p>\"\n        } else if (data3info === \"Temp (WSDCGQ01LM)\" ) {   \n            msg.topic = \"Xiaomi, Temp (WSDCGQ01LM)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: Temp + Hum</p>\"\n        } else if (data3info === \"Temp (WSDCGQ11LM)\" ) {   \n            msg.topic = \"Xiaomi, Temp (WSDCGQ11LM)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: Temp + Hum + Baro</p>\"\n        } else if (data3info === \"Temp (WSDCGQ12LM)\" ) {   \n            msg.topic = \"Xiaomi, Temp (WSDCGQ12LM)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: Temp + Hum + Baro</p>\"\n        } else if (data3info === \"Water (SJCGQ11LM)\" ) {   \n            msg.topic = \"Xiaomi, Water (SJCGQ11LM)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: Schakelaar</p><p>Schakelaar daarna instellen als: contact</p>\"\n\n        } else {\n            msg.topic = \"Device type onbekend\"\n            msg.payload = \"<p>Kies eerst merk en device, alvorens hier informatie kan worden getoond</p>\"\n        }\n        return msg;\n    }",
+        "func": "var data3info = context.get(\"data3info\") || 0; //get from context or default to 0\n\nswitch (msg.topic){\n\n    case \"type\":\n        data3info = msg.payload; \n        context.set(\"data3info\", data3info);//store in context for next time \n        return;\n\n    case \"submit\":\n        //Heiman\n        if (data3info === \"Monoxide (HS1CA-M)\" ) {\n            msg.topic = \"Heiman, Monoxide (HS1CA-M)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: Schakelaar</p><p>Schakelaar daarna instellen als: smoke detector</p>\"\n            \n        //Ikea\n        } else if (data3info === \"Light (ICPSHC24-10EU-IL-1)\" ) {   \n            msg.topic = \"Ikea, Light (ICPSHC24-10EU-IL-1)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: schakelaar</p><p>Schakelaar daarna instellen als: dimmer</p>\"\n        } else if (data3info === \"Plug (E1603)\" ) {\n            msg.topic = \"Ikea, Plug (E1603)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: schakelaar</p>\"\n        } else if (data3info === \"Plug (E1702)\" ) {  \n            msg.topic = \"Ikea, Plug (E1702)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: schakelaar</p>\"\n        } else if (data3info === \"Plug (E1708)\" ) {   \n            msg.topic = \"Ikea, Plug (E1708)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: schakelaar</p>\"\n        } else if (data3info === \"Remote (E1743)\" ) {    \n            msg.topic = \"Ikea, Remote (E1743)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: keuzeschakelaar</p><p>Keuzeschakelaar daarna instellen als onderstaand;</p><p>Niveau 0: Off</p><p>Niveau 10: On</p><p>Niveau 20: On hold</p><p>Niveau 30: Off hold</p><p>Niveau 40: Hold stop</p>\"\n        \n        //Lidl\n        } else if (data3info === \"Door (HG06336)\" ) {   \n            msg.topic = \"Lidl, Door (HG06336)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: schakelaar</p><p>Schakelaar daarna instellen als: door contact</p>\"\n        } else if (data3info === \"Motion (HG06335)\" ) {   \n            msg.topic = \"Lidl, Motion (HG06335)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: schakelaar</p><p>Schakelaar daarna instellen als: motion sensor</p>\"\n        } else if (data3info === \"Motion (HG07310)\" ) {   \n            msg.topic = \"Lidl, Motion (HG07310)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: schakelaar</p><p>Schakelaar daarna instellen als: motion sensor</p>\"\n        } else if (data3info === \"Light (HG06106A)\" ) {   \n            msg.topic = \"Lidl, Light (HG06106A)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: RGBWW switch</p>\"\n        } else if (data3info === \"Light (HG06106B)\" ) {   \n            msg.topic = \"Lidl, Light (HG06106B)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: RGBWW switch</p>\"\n        } else if (data3info === \"Light (HG06106C)\" ) {   \n            msg.topic = \"Lidl, Light (HG06106C)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: RGBWW switch</p>\"\n        } else if (data3info === \"Light (HG06492A)\" ) {   \n            msg.topic = \"Lidl, Light (HG06492A)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: RGBWW switch</p>\"\n        } else if (data3info === \"Light (HG06492B)\" ) {   \n            msg.topic = \"Lidl, Light (HG06492B)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: RGBWW switch</p>\"\n        } else if (data3info === \"Light (HG06492C)\" ) {   \n            msg.topic = \"Lidl, Light (HG06492C)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: RGBWW switch</p>\"\n        } else if (data3info === \"Thermo (TS0601)\" ) {   \n            msg.topic = \"Lidl, Thermo (TS0601)\"\n            msg.payload = \"<p>Aanmaken in domoticz;</p><p>1e dummy type: Thermostaat Setpoint</p><p>1e dummy instellen als IDX in tasmota dashboard</p><br><p>2e dummy type: Temperatuur</p><p>2e dummy instellen als IDX-extra in tasmota dashboard</p>\"\n        \n        //Osram       \n        } else if (data3info === \"Remote (AC0251100NJ)\" ) {   \n            msg.topic = \"Osram, Remote (AC0251100NJ)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: keuzeschakelaar</p><p>Keuzeschakelaar daarna instellen als onderstaand;</p><p>Niveau 0: Off</p><p>Niveau 10: Up</p><p>Niveau 20: Up Hold</p><p>Niveau 30: Up Release</p><p>Niveau 40: Circle Click</p><p>Niveau 50: Circle hold</p><p>Niveau 60: Circle Release</p><p>Niveau 70: Down</p><p>Niveau 80: Down Hold</p><p>Niveau 90: Down Release</p><p>Niveau 100: Standy</p>\"\n        } else if (data3info === \"Remote (AC0251600NJ)\" ) {   \n            msg.topic = \"Osram, Remote (AC0251600NJ)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: keuzeschakelaar</p><p>Keuzeschakelaar daarna instellen als onderstaand;</p><p>Niveau 0: Off</p><p>Niveau 10: Up</p><p>Niveau 20: Up Hold</p><p>Niveau 30: Up Release</p><p>Niveau 40: Circle Click</p><p>Niveau 50: Circle hold</p><p>Niveau 60: Circle Release</p><p>Niveau 70: Down</p><p>Niveau 80: Down Hold</p><p>Niveau 90: Down Release</p><p>Niveau 100: Standy</p>\"\n        } else if (data3info === \"Remote (AC0251700NJ)\" ) {   \n            msg.topic = \"Osram, Remote (AC0251700NJ)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: keuzeschakelaar</p><p>Keuzeschakelaar daarna instellen als onderstaand;</p><p>Niveau 0: Off</p><p>Niveau 10: Up</p><p>Niveau 20: Up Hold</p><p>Niveau 30: Up Release</p><p>Niveau 40: Circle Click</p><p>Niveau 50: Circle hold</p><p>Niveau 60: Circle Release</p><p>Niveau 70: Down</p><p>Niveau 80: Down Hold</p><p>Niveau 90: Down Release</p><p>Niveau 100: Standy</p>\"\n \n        //Sonoff\n        } else if (data3info === \"Remote (SNZB-01)\" ) {   \n            msg.topic = \"Sonoff, Remote (SNZB-01)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: keuzeschakelaar</p><p>Keuzeschakelaar daarna instellen als onderstaand;</p><p>Niveau 0: Off</p><p>Niveau 10: Single push</p><p>Niveau 20: Double push</p><p>Niveau 30: Hold</p>\"\n\n        //Tuya\n        } else if (data3info === \"Remote (TS0044)\" ) {   \n            msg.topic = \"Tuya, Remote (TS0044)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: keuzeschakelaar</p><p>Keuzeschakelaar daarna instellen als onderstaand;</p><p>Niveau 0: Off</p><p>Niveau 10 = Button 1 single push</p><p>Niveau 20 = Button 1 double push</p><p>Niveau 30 = Button 1 hold</p><p>Niveau 40 = Button 2 single push</p><p>Niveau 50 = Button 2 double push</p><p>Niveau 60 = Button 2 hold</p><p>Niveau 70 = Button 3 single push</p><p>Niveau 80 = Button 3 double push</p><p>Niveau 90 = Button 3 hold</p><p>Niveau 100 = Button 4 single push</p><p>Niveau 110 = Button 4 double push</p><p>Niveau 120 = Button 4 hold</p>\"\n\n        //Xiaomi\n        } else if (data3info === \"Cube (MFKZQ01LM)\" ) {   \n            msg.topic = \"Xiaomi, Cube (MFKZQ01LM)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: keuzeschakelaar</p><p>Keuzeschakelaar daarna instellen als onderstaand;</p><p>Niveau 0: Wakeup</p><p>Niveau 10 = Shake</p><p>Niveau 20 = Slide</p><p>Niveau 30 = Flip 90</p><p>Niveau 40 = Flip 180</p><p>Niveau 50 = Rotate right</p><p>Niveau 60 = Rotate left</p><p>Niveau 70 = Tap</p><p>Niveau 80 = Fall</p>\"\n        } else if (data3info === \"Door (MCCGQ12LM)\" ) {   \n            msg.topic = \"Xiaomi, Door (MCCGQ12LM)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: schakelaar</p><p>Schakelaar daarna instellen als: door contact</p>\"\n        } else if (data3info === \"Door (MCCGQ14LM))\" ) {   \n            msg.topic = \"Xiaomi, Door (MCCGQ14LM)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: schakelaar</p><p>Schakelaar daarna instellen als: door contact</p>\"\n        } else if (data3info === \"Lux (GZCGQ01LM)\" ) {   \n            msg.topic = \"Xiaomi, Lux (GZCGQ01LM)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: Lux</p>\"\n        } else if (data3info === \"Motion (RTCGQ01LM)\" ) {   \n            msg.topic = \"Xiaomi, Motion (RTCGQ01LM)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: schakelaar</p><p>Schakelaar daarna instellen als: motion sensor</p>\"\n        } else if (data3info === \"Motion (RTCGQ12LM)\" ) {   \n            msg.topic = \"Xiaomi, Motion (RTCGQ12LM)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: schakelaar</p><p>Schakelaar daarna instellen als: motion sensor</p>\"\n        } else if (data3info === \"Smoke (JTYJ-GD-01LM/BW)\" ) {   \n            msg.topic = \"Xiaomi, Smoke (JTYJ-GD-01LM/BW)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: Schakelaar</p><p>Schakelaar daarna instellen als: smoke detector</p>\"\n        } else if (data3info === \"Temp (WSDCGQ01LM)\" ) {   \n            msg.topic = \"Xiaomi, Temp (WSDCGQ01LM)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: Temp + Hum</p>\"\n        } else if (data3info === \"Temp (WSDCGQ11LM)\" ) {   \n            msg.topic = \"Xiaomi, Temp (WSDCGQ11LM)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: Temp + Hum + Baro</p>\"\n        } else if (data3info === \"Temp (WSDCGQ12LM)\" ) {   \n            msg.topic = \"Xiaomi, Temp (WSDCGQ12LM)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: Temp + Hum + Baro</p>\"\n        } else if (data3info === \"Water (SJCGQ11LM)\" ) {   \n            msg.topic = \"Xiaomi, Water (SJCGQ11LM)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: Schakelaar</p><p>Schakelaar daarna instellen als: contact</p>\"\n\n        } else {\n            msg.topic = \"Device type onbekend\"\n            msg.payload = \"<p>Kies eerst merk en device, alvorens hier informatie kan worden getoond</p>\"\n        }\n        return msg;\n    }",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
