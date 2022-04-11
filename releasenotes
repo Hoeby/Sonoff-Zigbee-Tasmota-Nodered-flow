@@ -1,3 +1,7 @@
+<b>11-04-2022 R1:</b><br>
+- Lidl TS0601: idxextra werkte niet correct, aangepast <br>
+<b>10-04-2022 R3:</b><br>
+- Bug in "Set idx nummers en idx tabel", is aangepast maar is nog in test-fase <br>
 <b>10-04-2022 R2:</b><br>
 - Button "Hoe device instellen domoticz" toegevoegd <br>
 <b>10-04-2022 R1:</b><br>
