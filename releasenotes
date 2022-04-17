@@ -1,3 +1,11 @@
+<b>17-04-2022 R1:</b><br>
+- Toegevoegd device ikea motion E1525 <br>
+- Toegevoegd device ikea motion E1745 <br>
+- Toegevoegd device Heiman rookmelder HS1SA <br>
+- Toegevoegd device Sonoff motion SNZB-03 <br>
+- Menu gebruiksvriendelijker gemaakt (beta) <br>
+<b>11-04-2022 R2:</b><br>
+- Check op ikea flow data, om error te voorkomen <br>
 <b>11-04-2022 R1:</b><br>
 - Lidl TS0601: idxextra werkte niet correct, aangepast <br>
 <b>10-04-2022 R3:</b><br>
