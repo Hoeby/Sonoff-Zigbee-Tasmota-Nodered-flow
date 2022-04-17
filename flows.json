@@ -1942,7 +1942,7 @@
         "type": "function",
         "z": "fe9ee8c084b47472",
         "name": "store zigbee sensors",
-        "func": "var devs; \n\nif ( msg.src === 'restore' ) {\n    devs = flow.get(\"t2zdevices\") || {};\n    return [{payload:Object.values(devs)}];\n} else if (msg.payload.ZbReceived === undefined) {\n    return;\n} else {\n\n\n    // properties that should  show up in the status\n    var inStatus = [\"Contact\", \"Occupancy\", \"Power\", \"Power2\", \"Dimmer\", \"Hue\", \"CT\", \"ColorMode\", \"Sat\", \"RGB\", \"RGBb\", \"Temperature\", \"Humidity\", \"Pressure\", \"LocalTemperature\", \"OccupiedHeatingSetpoint\", \"PIHeatingDemand\", \"Illuminance\", \"AqaraVibrationMode\", \"AqaraVibrationsOrAngle\", \"AqaraVibration505\", \"ZoneStatusChange\", \"AqaraCube\", \"AqaraCubeSide\", \"AqaraCubeFromSide\", \"AqaraRotate\"];\n\n    // properties that should not show up in the status\n    var notStatus = [\"Device\", \"Name\", \"BatteryVoltage\", \"BatteryPercentage\", \"LinkQuality\", \"Endpoint\", \"bridge\", \"lastTime\", \"seen\", \"label\", \"status\", \"EurotronicErrors\", \"0201/4008\", \"Xiaomi_64\"];\n\n    //node.warn(msg.payload);\n    devs = flow.get(\"t2zdevices\") || {};\n\n    var update;\n    update = {payload:Object.values(devs)};\n\n    devt = flow.get(\"t2ztable\") || {};\n    var length = Object.keys(devt).length;\n    for ( var i = 0; i < length; i++ ) {\n        var keys = Object.keys(devt);\n        var IDkey = keys[i];\n        //var message = devs[IDkey].Device;\n        var message = devt[IDkey].zigbeeid;\n        //var messageidx = parseInt(devs[IDkey].idx);\n        if (msg.payload.ZbReceived[message]) {\n           update = null;\n           node.warn(message)\n        }\n        \n    }\n        \n\n\n\n\n    var receivedSensors = []\n    for (var devN in msg.payload.ZbReceived) {\n        let devInfo = msg.payload.ZbReceived[devN];\n        let ID = devInfo.Device;\n    \n        // get dev by ID\n        let dev = devs[ID] || {};\n\n        for (let prop in devInfo) {\n            dev[prop] = devInfo[prop];\n        }\n    \n        if (devInfo.Name!==undefined) {\n            dev.label = devInfo.Name;\n        } else {\n            dev.label = ID; \n        }\n        dev.bridge = msg.topic.split(\"/\")[1];\n        dev.lastTime = new Date().getTime();\n    \n        // create status from properties\n        let status = \"\";\n        for (let prop in dev) {\n            if (inStatus.includes(prop)) {\n                status += \" \"+prop+\": \"+ dev[prop]; \n            }\n        }\n        if (status === \"\") {\n            for (let prop in dev) {\n                if (! notStatus.includes(prop)) {\n                    status += \" \"+prop+\": \"+ dev[prop]; \n                }\n            }   \n        }\n        dev.status = status;\n    \n        // write back\n        devs[ID] = dev;\n       receivedSensors.push(dev);\n    }\n   \n    Object.entries(devs).forEach(element => element[1].seen = Math.round((new Date().getTime()-element[1].lastTime)/60000)+\"m\");\n    \n    flow.set(\"t2zdevices\", devs);\n\n    //return [{payload:Object.values(devs)}, {payload:receivedSensors}];\n    return [update, {payload:Object.values(devs)}];\n}",
+        "func": "var devs; \n\nif ( msg.src === 'restore' ) {\n    devs = flow.get(\"t2zdevices\") || {};\n    return [{payload:Object.values(devs)}, {payload:Object.values(devs)}];\n} else if (msg.payload.ZbReceived === undefined) {\n    return;\n} else {\n\n\n    // properties that should  show up in the status\n    var inStatus = [\"Contact\", \"Occupancy\", \"Power\", \"Power2\", \"Dimmer\", \"Hue\", \"CT\", \"ColorMode\", \"Sat\", \"RGB\", \"RGBb\", \"Temperature\", \"Humidity\", \"Pressure\", \"LocalTemperature\", \"OccupiedHeatingSetpoint\", \"PIHeatingDemand\", \"Illuminance\", \"AqaraVibrationMode\", \"AqaraVibrationsOrAngle\", \"AqaraVibration505\", \"ZoneStatusChange\", \"AqaraCube\", \"AqaraCubeSide\", \"AqaraCubeFromSide\", \"AqaraRotate\"];\n\n    // properties that should not show up in the status\n    var notStatus = [\"Device\", \"Name\", \"BatteryVoltage\", \"BatteryPercentage\", \"LinkQuality\", \"Endpoint\", \"bridge\", \"lastTime\", \"seen\", \"label\", \"status\", \"EurotronicErrors\", \"0201/4008\", \"Xiaomi_64\"];\n\n    //node.warn(msg.payload);\n    devs = flow.get(\"t2zdevices\") || {};\n\n    var update;\n    update = {payload:Object.values(devs)};\n\n    devt = flow.get(\"t2ztable\") || {};\n    var length = Object.keys(devt).length;\n    for ( var i = 0; i < length; i++ ) {\n        var keys = Object.keys(devt);\n        var IDkey = keys[i];\n        //var message = devs[IDkey].Device;\n        var message = devt[IDkey].zigbeeid;\n        //var messageidx = parseInt(devs[IDkey].idx);\n        if (msg.payload.ZbReceived[message]) {\n            if (devt[IDkey].vendors !== \"onbekend\") {\n                update = null;\n                //node.warn(message)\n            }\n        }\n        \n    }\n        \n\n\n\n\n    var receivedSensors = []\n    for (var devN in msg.payload.ZbReceived) {\n        let devInfo = msg.payload.ZbReceived[devN];\n        let ID = devInfo.Device;\n    \n        // get dev by ID\n        let dev = devs[ID] || {};\n\n        for (let prop in devInfo) {\n            dev[prop] = devInfo[prop];\n        }\n    \n        if (devInfo.Name!==undefined) {\n            dev.label = devInfo.Name;\n        } else {\n            dev.label = ID; \n        }\n        dev.bridge = msg.topic.split(\"/\")[1];\n        dev.lastTime = new Date().getTime();\n    \n        // create status from properties\n        let status = \"\";\n        for (let prop in dev) {\n            if (inStatus.includes(prop)) {\n                status += \" \"+prop+\": \"+ dev[prop]; \n            }\n        }\n        if (status === \"\") {\n            for (let prop in dev) {\n                if (! notStatus.includes(prop)) {\n                    status += \" \"+prop+\": \"+ dev[prop]; \n                }\n            }   \n        }\n        dev.status = status;\n    \n        // write back\n        devs[ID] = dev;\n       receivedSensors.push(dev);\n    }\n   \n    Object.entries(devs).forEach(element => element[1].seen = Math.round((new Date().getTime()-element[1].lastTime)/60000)+\"m\");\n    \n    flow.set(\"t2zdevices\", devs);\n\n    //return [{payload:Object.values(devs)}, {payload:receivedSensors}];\n    return [update, {payload:Object.values(devs)}];\n}",
         "outputs": 2,
         "noerr": 0,
         "initialize": "",
@@ -1952,12 +1952,10 @@
         "y": 1800,
         "wires": [
             [
-                "2e5f5500f9bb45f9",
-                "1690afd336772c2b"
+                "2e5f5500f9bb45f9"
             ],
             [
-                "e3ed960a4aa17dc4",
-                "71be43927ca226a2"
+                "e3ed960a4aa17dc4"
             ]
         ]
     },
@@ -4117,8 +4115,7 @@
         "wires": [
             [
                 "050fb9afb2b185a1",
-                "2e7efb15b32cef6b",
-                "be6de5154a6a7b75"
+                "2e7efb15b32cef6b"
             ]
         ]
     },
@@ -6721,8 +6718,7 @@
         "y": 1840,
         "wires": [
             [
-                "6de321a36a5801d6",
-                "7c678bec0b072d67"
+                "6de321a36a5801d6"
             ]
         ]
     },
@@ -7050,70 +7046,6 @@
         "wires": [
             []
         ]
-    },
-    {
-        "id": "1690afd336772c2b",
-        "type": "debug",
-        "z": "fe9ee8c084b47472",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 3950,
-        "y": 1680,
-        "wires": []
-    },
-    {
-        "id": "71be43927ca226a2",
-        "type": "debug",
-        "z": "fe9ee8c084b47472",
-        "name": "",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 3940,
-        "y": 1940,
-        "wires": []
-    },
-    {
-        "id": "be6de5154a6a7b75",
-        "type": "debug",
-        "z": "fe9ee8c084b47472",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 3720,
-        "y": 1540,
-        "wires": []
-    },
-    {
-        "id": "7c678bec0b072d67",
-        "type": "debug",
-        "z": "fe9ee8c084b47472",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 3940,
-        "y": 1580,
-        "wires": []
     },
     {
         "id": "e1d4fe7edd783dd6",
