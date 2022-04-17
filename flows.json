@@ -333,13 +333,17 @@
             "7fb8b93e3108606a",
             "91cb3b0e8eff134b",
             "e76ba050d460bb25",
-            "355a0e3683278b80"
+            "355a0e3683278b80",
+            "650b9ca485aeaab1",
+            "12f603fb7ce38886",
+            "3a6f80efb587496b",
+            "6eb23e8f2824607a"
         ],
         "env": [],
         "x": 2134,
         "y": 264,
-        "w": 1132,
-        "h": 112
+        "w": 1152,
+        "h": 192
     },
     {
         "id": "b7e34177f056a897",
@@ -365,13 +369,17 @@
             "106ba09215cc4bf7",
             "fc2fa765ab141bd3",
             "c0d6650e03376498",
-            "4d8fe180afbe8514"
+            "4d8fe180afbe8514",
+            "e1d4fe7edd783dd6",
+            "0e891d6bbf506488",
+            "2265acf8cb8707c4",
+            "e39377a2457682b4"
         ],
         "env": [],
         "x": 2134,
-        "y": 379,
+        "y": 459,
         "w": 1152,
-        "h": 222
+        "h": 297
     },
     {
         "id": "0a2e01214bded454",
@@ -408,7 +416,7 @@
         ],
         "env": [],
         "x": 2134,
-        "y": 619,
+        "y": 759,
         "w": 1152,
         "h": 364.5
     },
@@ -431,7 +439,7 @@
         ],
         "env": [],
         "x": 2134,
-        "y": 1004,
+        "y": 1124,
         "w": 1112,
         "h": 112
     },
@@ -450,13 +458,17 @@
             "94f3f677567afe90",
             "1cca10fb7ccaa67d",
             "8683449d486c3f6b",
-            "289659383f163731"
+            "289659383f163731",
+            "498ba43866809f9d",
+            "e8f24b6b346293fe",
+            "9e5cc2582878cf49",
+            "be8648d4896c7fc0"
         ],
         "env": [],
         "x": 2134,
-        "y": 1124,
+        "y": 1244,
         "w": 1152,
-        "h": 112
+        "h": 192
     },
     {
         "id": "9bb2b82d7bf97e98",
@@ -543,7 +555,7 @@
         ],
         "env": [],
         "x": 2134,
-        "y": 1244,
+        "y": 1444,
         "w": 1222,
         "h": 672
     },
@@ -566,7 +578,7 @@
         ],
         "env": [],
         "x": 2134,
-        "y": 1924,
+        "y": 2124,
         "w": 1172,
         "h": 112
     },
@@ -909,7 +921,10 @@
             "e76ba050d460bb25",
             "f463c735fc2aa9c9",
             "fb7face5ab5f8842",
-            "fcc45a601372ea82"
+            "fcc45a601372ea82",
+            "2265acf8cb8707c4",
+            "6eb23e8f2824607a",
+            "be8648d4896c7fc0"
         ],
         "x": 1755,
         "y": 920,
@@ -988,7 +1003,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 3110,
-        "y": 1060,
+        "y": 1180,
         "wires": []
     },
     {
@@ -1004,7 +1019,7 @@
         "finalize": "",
         "libs": [],
         "x": 2580,
-        "y": 700,
+        "y": 840,
         "wires": [
             [
                 "6b3b57797279c717"
@@ -1029,7 +1044,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 3120,
-        "y": 700,
+        "y": 840,
         "wires": []
     },
     {
@@ -1092,7 +1107,7 @@
         "finalize": "",
         "libs": [],
         "x": 2570,
-        "y": 540,
+        "y": 620,
         "wires": [
             [
                 "c752cbda7a171c88"
@@ -1123,7 +1138,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 3110,
-        "y": 540,
+        "y": 620,
         "wires": []
     },
     {
@@ -1304,7 +1319,7 @@
         "finalize": "",
         "libs": [],
         "x": 2570,
-        "y": 1060,
+        "y": 1180,
         "wires": [
             [
                 "9b258c86f4629583"
@@ -1354,7 +1369,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 3130,
-        "y": 420,
+        "y": 500,
         "wires": []
     },
     {
@@ -1368,7 +1383,7 @@
             "8b7f9c7c96650350"
         ],
         "x": 2955,
-        "y": 1060,
+        "y": 1180,
         "wires": [
             [
                 "28c81369517294e3"
@@ -1387,7 +1402,7 @@
             "17fce7e4a549f3c4"
         ],
         "x": 2895,
-        "y": 1060,
+        "y": 1180,
         "wires": []
     },
     {
@@ -1401,7 +1416,7 @@
             "bfbb529c51f44cf9"
         ],
         "x": 2955,
-        "y": 700,
+        "y": 840,
         "wires": [
             [
                 "afac6bbd937f4c16"
@@ -1421,7 +1436,7 @@
             "c9e5c5badc9a8085"
         ],
         "x": 2895,
-        "y": 700,
+        "y": 840,
         "wires": []
     },
     {
@@ -1468,7 +1483,7 @@
             "c2f3907aa0b72ddc"
         ],
         "x": 2955,
-        "y": 540,
+        "y": 620,
         "wires": [
             [
                 "d12cbf12c74a94d7"
@@ -1487,7 +1502,7 @@
             "17fce7e4a549f3c4"
         ],
         "x": 2895,
-        "y": 540,
+        "y": 620,
         "wires": []
     },
     {
@@ -1501,7 +1516,7 @@
             "032cb5d89205a87e"
         ],
         "x": 2955,
-        "y": 420,
+        "y": 500,
         "wires": [
             [
                 "bc634c8e18c261a4"
@@ -1521,7 +1536,7 @@
             "17fce7e4a549f3c4"
         ],
         "x": 2895,
-        "y": 420,
+        "y": 500,
         "wires": []
     },
     {
@@ -1537,7 +1552,7 @@
         "finalize": "",
         "libs": [],
         "x": 2560,
-        "y": 480,
+        "y": 560,
         "wires": [
             [
                 "99c5802633a6ebf3"
@@ -1559,7 +1574,7 @@
             "7e95562f721cdefd"
         ],
         "x": 2895,
-        "y": 480,
+        "y": 560,
         "wires": []
     },
     {
@@ -1573,7 +1588,7 @@
             "3af4d6f4138c2bd4"
         ],
         "x": 2955,
-        "y": 480,
+        "y": 560,
         "wires": [
             [
                 "106ba09215cc4bf7"
@@ -1595,7 +1610,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 3100,
-        "y": 480,
+        "y": 560,
         "wires": []
     },
     {
@@ -1631,7 +1646,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 2760,
-        "y": 560,
+        "y": 640,
         "wires": [
             [
                 "c752cbda7a171c88"
@@ -1726,7 +1741,7 @@
         "finalize": "",
         "libs": [],
         "x": 2590,
-        "y": 420,
+        "y": 500,
         "wires": [
             [
                 "423ee036c8c42318"
@@ -1752,7 +1767,7 @@
         "type": "function",
         "z": "fe9ee8c084b47472",
         "name": "E1743 + Powerplug bat+link",
-        "func": "var getflow = flow.keys();\nvar topicname;\n\nfor ( var i = 0; i < getflow.length; i++ ) {\n    var zigbeedevice = getflow[i]; //geeft het zigbee ID\n    var digits = (zigbeedevice.substring(0,2));\n    if (digits == \"0x\") {\n      topicname = flow.get(zigbeedevice)[1]; //geeft array0\n      msg.topic = \"cmnd/\" + topicname + \"/ZbInfo\"\n      msg.payload = zigbeedevice;\n      node.send(msg);\n    }\n}\nreturn;",
+        "func": "var getflow = flow.keys();\nvar topicname;\n\nif (getflow !== \"\") {\n    for ( var i = 0; i < getflow.length; i++ ) {\n        var zigbeedevice = getflow[i]; //geeft het zigbee ID\n        var digits = (zigbeedevice.substring(0,2));\n        if (digits == \"0x\") {\n          topicname = flow.get(zigbeedevice)[1]; //geeft array0\n          msg.topic = \"cmnd/\" + topicname + \"/ZbInfo\"\n          msg.payload = zigbeedevice;\n          node.send(msg);\n        }\n    }\n} \nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -1860,8 +1875,8 @@
         "id": "2a9af97bcc2e365d",
         "type": "comment",
         "z": "fe9ee8c084b47472",
-        "name": "V_11-04-2022_R1",
-        "info": "11-04-2022 R1:\n- Lidl TS0601: idxextra werkte niet correct, aangepast\n10-04-2022 R3:\n- Bug in \"Set idx nummers en idx tabel\", is aangepast maar is nog in test-fase\n10-04-2022 R2:\n- Button \"Hoe device instellen domoticz\" toegevoegd\n10-04-2022 R1:\n- Tuya switch 4-buttons is released, geen beta meer\n- Lidl TS0601 Thermostaatkraan toegevoegd (beta)\n09-04-2022 R3:\n- Tuya switch 4-buttons toegevoegd (beta)\n09-04-2022 R2:\n- Lidl bewegingsensor HG06335/HG07310 toegevoegd\n09-04-2022 R1:\n- Toevoegen debug mqtt veld in UI\n- Toevoegen device Xiaomi smart home cube\n- Als device IDX 0 is, dan gaat er geen bericht naar domoticz\n08-04-2022 R1:\n- Deurcontact lidl HG06336 toegevoegd\n- Lampen (RGB/CCT) lidl toegevoegd\n05-04-2022 R2:\n- Aanpassingen lidl HG06106B, dat CT en RGB mogelijk is.\n05-04-2022 R1:\n- Lamp Lidl HG06106B (RGB) toegevoegd\n01-04-2022 R1:\n- Optie om de custom domoticz pagina in te stellen toegevoegd\n22-03-2022 R1:\n- Finetuning van de aanpassing van 19-03-2022 R1\n19-03-2022 R1:\n\nNIET ZOMAAR UPDATEN, LEES AANPASSING 1 VAN DEZE RELEASE\n\n- Device aanduiding uit elkaar gehaald, was voorheen 1 veld met merk+type, dit zijn nu 2 losse velden. \n  HIERDOOR KAN JE NIET ZOMAAR UPDATEN, JE BACKUP ZAL FOUTIEF WORDEN INGELEZEN\n  Of alles opnieuw invoeren, of de backup handmatig aanpassen. \n\n- Actuele versie balk in UI toegevoegd\n- Ikea Powerplug Wordt nu ook gefaked voor link quality waarden\n- Flogger file wordt nu ook in de map opgeslagen waar de data file met idx nummer staat\n- Sonoff SNZB-01 switch toegevoegd\n10-03-2022 R1:\n- Beta versie is verwijdert, we zijn live\n- Release notes functie toegevoegd in UI\n- Bug voor automatisch toevoegen ikea E1743 opgelost\n07-03-2022 R1 Beta:\n- Check van versienummer controleert op response 200 of 201, anders return false\n06-03-2022 R1 Beta:\n- Download flows.json wordt nu opgeslagen met versie naam\n05-03-2022 R2 Beta:\n- Je kan nu per zigbee bridge een command sturen\n- Kleur/text verandert bij een beschikbare update\n05-03-2022 R1 Beta:\n- Ikea 1743 doet nu auto update flow.set na import nieuwe flow of idx set\n04-03-2022 R1 Beta:\n- Toevoegen van nodered UI tbx idx tabel\n28-02-2022 R2:\n- Tasmota zigbee UI toegevoegd\n28-02-2022 R1:\n- Bug Ikea LED Strip opgelost, bij power 0 stuurt deze nu ook een 0 ipv 1\n27-02-2022 R1:\n- Batterijtrigger aangepast van \"true\" naar \"false\", dit lijkt effect te hebben op het aantal response meldingen van het device\n26-02-2022 R1: \n- Ikea powerplug, link naar gate verwijdert\n- Batterijtrigger voor E1743 aangepast, want deze stopte soms vanzelf.\n22-02-2022 R1: \n- Node.send for ikea E1743 voor linkage updates\n- Bug Ikea Powerplug opgelost, bij power 0 stuurt deze nu ook een 0 ipv 1\n19-02-2022 R1: \n- Xiaomi Water sensor toegevoegd, niet getest\n17-02-2022 R1: \n- Gestart met Versie nummers",
+        "name": "V_17-04-2022_R1",
+        "info": "17-04-2022 R1:\n- Toegevoegd device ikea motion E1525\n- Toegevoegd device ikea motion E1745\n- Toegevoegd device Heiman rookmelder HS1SA\n- Toegevoegd device Sonoff motion SNZB-03\n- Menu gebruiksvriendelijker gemaakt (beta)\n11-04-2022 R2:\n- Check op ikea flow data, om error te voorkomen\n11-04-2022 R1:\n- Lidl TS0601: idxextra werkte niet correct, aangepast\n10-04-2022 R3:\n- Bug in \"Set idx nummers en idx tabel\", is aangepast maar is nog in test-fase\n10-04-2022 R2:\n- Button \"Hoe device instellen domoticz\" toegevoegd\n10-04-2022 R1:\n- Tuya switch 4-buttons is released, geen beta meer\n- Lidl TS0601 Thermostaatkraan toegevoegd (beta)\n09-04-2022 R3:\n- Tuya switch 4-buttons toegevoegd (beta)\n09-04-2022 R2:\n- Lidl bewegingsensor HG06335/HG07310 toegevoegd\n09-04-2022 R1:\n- Toevoegen debug mqtt veld in UI\n- Toevoegen device Xiaomi smart home cube\n- Als device IDX 0 is, dan gaat er geen bericht naar domoticz\n08-04-2022 R1:\n- Deurcontact lidl HG06336 toegevoegd\n- Lampen (RGB/CCT) lidl toegevoegd\n05-04-2022 R2:\n- Aanpassingen lidl HG06106B, dat CT en RGB mogelijk is.\n05-04-2022 R1:\n- Lamp Lidl HG06106B (RGB) toegevoegd\n01-04-2022 R1:\n- Optie om de custom domoticz pagina in te stellen toegevoegd\n22-03-2022 R1:\n- Finetuning van de aanpassing van 19-03-2022 R1\n19-03-2022 R1:\n\nNIET ZOMAAR UPDATEN, LEES AANPASSING 1 VAN DEZE RELEASE\n\n- Device aanduiding uit elkaar gehaald, was voorheen 1 veld met merk+type, dit zijn nu 2 losse velden. \n  HIERDOOR KAN JE NIET ZOMAAR UPDATEN, JE BACKUP ZAL FOUTIEF WORDEN INGELEZEN\n  Of alles opnieuw invoeren, of de backup handmatig aanpassen. \n\n- Actuele versie balk in UI toegevoegd\n- Ikea Powerplug Wordt nu ook gefaked voor link quality waarden\n- Flogger file wordt nu ook in de map opgeslagen waar de data file met idx nummer staat\n- Sonoff SNZB-01 switch toegevoegd\n10-03-2022 R1:\n- Beta versie is verwijdert, we zijn live\n- Release notes functie toegevoegd in UI\n- Bug voor automatisch toevoegen ikea E1743 opgelost\n07-03-2022 R1 Beta:\n- Check van versienummer controleert op response 200 of 201, anders return false\n06-03-2022 R1 Beta:\n- Download flows.json wordt nu opgeslagen met versie naam\n05-03-2022 R2 Beta:\n- Je kan nu per zigbee bridge een command sturen\n- Kleur/text verandert bij een beschikbare update\n05-03-2022 R1 Beta:\n- Ikea 1743 doet nu auto update flow.set na import nieuwe flow of idx set\n04-03-2022 R1 Beta:\n- Toevoegen van nodered UI tbx idx tabel\n28-02-2022 R2:\n- Tasmota zigbee UI toegevoegd\n28-02-2022 R1:\n- Bug Ikea LED Strip opgelost, bij power 0 stuurt deze nu ook een 0 ipv 1\n27-02-2022 R1:\n- Batterijtrigger aangepast van \"true\" naar \"false\", dit lijkt effect te hebben op het aantal response meldingen van het device\n26-02-2022 R1: \n- Ikea powerplug, link naar gate verwijdert\n- Batterijtrigger voor E1743 aangepast, want deze stopte soms vanzelf.\n22-02-2022 R1: \n- Node.send for ikea E1743 voor linkage updates\n- Bug Ikea Powerplug opgelost, bij power 0 stuurt deze nu ook een 0 ipv 1\n19-02-2022 R1: \n- Xiaomi Water sensor toegevoegd, niet getest\n17-02-2022 R1: \n- Gestart met Versie nummers",
         "x": 110,
         "y": 80,
         "wires": []
@@ -1927,18 +1942,22 @@
         "type": "function",
         "z": "fe9ee8c084b47472",
         "name": "store zigbee sensors",
-        "func": "var devs; \n\nif ( msg.src === 'restore' ) {\n    devs = flow.get(\"t2zdevices\") || {};\n    return [{payload:Object.values(devs)}];\n} else if (msg.payload.ZbReceived === undefined) {\n    return;\n} else {\n\n\n    // properties that should  show up in the status\n    var inStatus = [\"Contact\", \"Occupancy\", \"Power\", \"Power2\", \"Dimmer\", \"Hue\", \"CT\", \"ColorMode\", \"Sat\", \"RGB\", \"RGBb\", \"Temperature\", \"Humidity\", \"Pressure\", \"LocalTemperature\", \"OccupiedHeatingSetpoint\", \"PIHeatingDemand\", \"Illuminance\", \"AqaraVibrationMode\", \"AqaraVibrationsOrAngle\", \"AqaraVibration505\", \"ZoneStatusChange\", \"AqaraCube\", \"AqaraCubeSide\", \"AqaraCubeFromSide\", \"AqaraRotate\"];\n\n    // properties that should not show up in the status\n    var notStatus = [\"Device\", \"Name\", \"BatteryVoltage\", \"BatteryPercentage\", \"LinkQuality\", \"Endpoint\", \"bridge\", \"lastTime\", \"seen\", \"label\", \"status\", \"EurotronicErrors\", \"0201/4008\", \"Xiaomi_64\"];\n\n    //node.warn(msg.payload);\n    devs = flow.get(\"t2zdevices\") || {};\n\n    var receivedSensors = []\n    for (var devN in msg.payload.ZbReceived) {\n        let devInfo = msg.payload.ZbReceived[devN];\n        let ID = devInfo.Device;\n    \n        // get dev by ID\n        let dev = devs[ID] || {};\n\n        for (let prop in devInfo) {\n            dev[prop] = devInfo[prop];\n        }\n    \n        if (devInfo.Name!==undefined) {\n            dev.label = devInfo.Name;\n        } else {\n            dev.label = ID; \n        }\n        dev.bridge = msg.topic.split(\"/\")[1];\n        dev.lastTime = new Date().getTime();\n    \n        // create status from properties\n        let status = \"\";\n        for (let prop in dev) {\n            if (inStatus.includes(prop)) {\n                status += \" \"+prop+\": \"+ dev[prop]; \n            }\n        }\n        if (status === \"\") {\n            for (let prop in dev) {\n                if (! notStatus.includes(prop)) {\n                    status += \" \"+prop+\": \"+ dev[prop]; \n                }\n            }   \n        }\n        dev.status = status;\n    \n        // write back\n        devs[ID] = dev;\n       receivedSensors.push(dev);\n    }\n   \n    Object.entries(devs).forEach(element => element[1].seen = Math.round((new Date().getTime()-element[1].lastTime)/60000)+\"m\");\n    \n    flow.set(\"t2zdevices\", devs);\n\n    //return [{payload:Object.values(devs)}, {payload:receivedSensors}];\n    return [{payload:Object.values(devs)}];\n}",
-        "outputs": 1,
+        "func": "var devs; \n\nif ( msg.src === 'restore' ) {\n    devs = flow.get(\"t2zdevices\") || {};\n    return [{payload:Object.values(devs)}];\n} else if (msg.payload.ZbReceived === undefined) {\n    return;\n} else {\n\n\n    // properties that should  show up in the status\n    var inStatus = [\"Contact\", \"Occupancy\", \"Power\", \"Power2\", \"Dimmer\", \"Hue\", \"CT\", \"ColorMode\", \"Sat\", \"RGB\", \"RGBb\", \"Temperature\", \"Humidity\", \"Pressure\", \"LocalTemperature\", \"OccupiedHeatingSetpoint\", \"PIHeatingDemand\", \"Illuminance\", \"AqaraVibrationMode\", \"AqaraVibrationsOrAngle\", \"AqaraVibration505\", \"ZoneStatusChange\", \"AqaraCube\", \"AqaraCubeSide\", \"AqaraCubeFromSide\", \"AqaraRotate\"];\n\n    // properties that should not show up in the status\n    var notStatus = [\"Device\", \"Name\", \"BatteryVoltage\", \"BatteryPercentage\", \"LinkQuality\", \"Endpoint\", \"bridge\", \"lastTime\", \"seen\", \"label\", \"status\", \"EurotronicErrors\", \"0201/4008\", \"Xiaomi_64\"];\n\n    //node.warn(msg.payload);\n    devs = flow.get(\"t2zdevices\") || {};\n\n    var update;\n    update = {payload:Object.values(devs)};\n\n    devt = flow.get(\"t2ztable\") || {};\n    var length = Object.keys(devt).length;\n    for ( var i = 0; i < length; i++ ) {\n        var keys = Object.keys(devt);\n        var IDkey = keys[i];\n        //var message = devs[IDkey].Device;\n        var message = devt[IDkey].zigbeeid;\n        //var messageidx = parseInt(devs[IDkey].idx);\n        if (msg.payload.ZbReceived[message]) {\n           update = null;\n           node.warn(message)\n        }\n        \n    }\n        \n\n\n\n\n    var receivedSensors = []\n    for (var devN in msg.payload.ZbReceived) {\n        let devInfo = msg.payload.ZbReceived[devN];\n        let ID = devInfo.Device;\n    \n        // get dev by ID\n        let dev = devs[ID] || {};\n\n        for (let prop in devInfo) {\n            dev[prop] = devInfo[prop];\n        }\n    \n        if (devInfo.Name!==undefined) {\n            dev.label = devInfo.Name;\n        } else {\n            dev.label = ID; \n        }\n        dev.bridge = msg.topic.split(\"/\")[1];\n        dev.lastTime = new Date().getTime();\n    \n        // create status from properties\n        let status = \"\";\n        for (let prop in dev) {\n            if (inStatus.includes(prop)) {\n                status += \" \"+prop+\": \"+ dev[prop]; \n            }\n        }\n        if (status === \"\") {\n            for (let prop in dev) {\n                if (! notStatus.includes(prop)) {\n                    status += \" \"+prop+\": \"+ dev[prop]; \n                }\n            }   \n        }\n        dev.status = status;\n    \n        // write back\n        devs[ID] = dev;\n       receivedSensors.push(dev);\n    }\n   \n    Object.entries(devs).forEach(element => element[1].seen = Math.round((new Date().getTime()-element[1].lastTime)/60000)+\"m\");\n    \n    flow.set(\"t2zdevices\", devs);\n\n    //return [{payload:Object.values(devs)}, {payload:receivedSensors}];\n    return [update, {payload:Object.values(devs)}];\n}",
+        "outputs": 2,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
         "x": 4040,
-        "y": 1820,
+        "y": 1800,
         "wires": [
             [
+                "2e5f5500f9bb45f9",
+                "1690afd336772c2b"
+            ],
+            [
                 "e3ed960a4aa17dc4",
-                "2e5f5500f9bb45f9"
+                "71be43927ca226a2"
             ]
         ]
     },
@@ -4087,7 +4106,7 @@
         "z": "fe9ee8c084b47472",
         "g": "44758f092409c09e",
         "name": "extract devicenames",
-        "func": "\nmsg.options = msg.payload.map(obj => {\n   var rObj = {};\n   rObj[obj.label] = obj.bridge+\"/\"+obj.Device;\n   return rObj;\n});\n\nmsg.payload = {};\nreturn msg;",
+        "func": "\nmsg.options = msg.payload.map(obj => {\n   var rObj = {};\n   rObj[obj.label] = obj.bridge+\"/\"+obj.Device;\n   return rObj;\n});\n\nmsg.payload = {};\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -4098,7 +4117,8 @@
         "wires": [
             [
                 "050fb9afb2b185a1",
-                "2e7efb15b32cef6b"
+                "2e7efb15b32cef6b",
+                "be6de5154a6a7b75"
             ]
         ]
     },
@@ -4315,7 +4335,7 @@
         "z": "fe9ee8c084b47472",
         "g": "c101b10c559fee47",
         "name": "UPDATE RELEASE",
-        "func": "var version = \"V_11-04-2022_R1\"\noldStr = msg.payload;\nvar newStr = oldStr.slice(0, oldStr.length-1);\nvar store = newStr;\nflow.set(\"version\", newStr);\nvar html = \"\";\nmsg.topic = \"Release notes\";\nif (msg.statusCode === 200 || 201) {\n    if (store === version) {\n        msg.text = \"FLOW IS UP TO DATE MET GITHUB (\" + version + \")\"\n        msg.background = \"#0A8085\";\n        return msg;\n    } else {\n        msg.text = \"ER IS EEN UPDATE, DOWNLOAD FLOW FILE VAN GITHUB\"\n        msg.background = \"#8C101C\";\n        return msg;\n    }\n}\nreturn;",
+        "func": "var version = \"V_17-04-2022_R1\"\noldStr = msg.payload;\nvar newStr = oldStr.slice(0, oldStr.length-1);\nvar store = newStr;\nflow.set(\"version\", newStr);\nvar html = \"\";\nmsg.topic = \"Release notes\";\nif (msg.statusCode === 200 || 201) {\n    if (store === version) {\n        msg.text = \"FLOW IS UP TO DATE MET GITHUB (\" + version + \")\"\n        msg.background = \"#0A8085\";\n        return msg;\n    } else {\n        msg.text = \"ER IS EEN UPDATE, DOWNLOAD FLOW FILE VAN GITHUB\"\n        msg.background = \"#8C101C\";\n        return msg;\n    }\n}\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -4432,7 +4452,7 @@
         "width": 0,
         "height": 0,
         "name": "",
-        "label": "Actuele versie: V_11-04-2022_R1",
+        "label": "Actuele versie: V_17-04-2022_R1",
         "format": "{{msg.payload}}",
         "layout": "row-center",
         "className": "",
@@ -4503,7 +4523,7 @@
             "17fce7e4a549f3c4"
         ],
         "x": 2895,
-        "y": 1180,
+        "y": 1300,
         "wires": []
     },
     {
@@ -4517,7 +4537,7 @@
             "d4c6b864417c2c46"
         ],
         "x": 2955,
-        "y": 1180,
+        "y": 1300,
         "wires": [
             [
                 "1cca10fb7ccaa67d"
@@ -4539,7 +4559,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 3130,
-        "y": 1180,
+        "y": 1300,
         "wires": []
     },
     {
@@ -4555,7 +4575,7 @@
         "finalize": "",
         "libs": [],
         "x": 2590,
-        "y": 1180,
+        "y": 1300,
         "wires": [
             [
                 "20abb5580249af22"
@@ -4587,7 +4607,7 @@
         "z": "fe9ee8c084b47472",
         "g": "896b3999999cb97c",
         "name": "Device list",
-        "func": "if (msg.payload === \"Heiman\") {\n    msg.options = [ \"Monoxide (HS1CA-M)\"]\n}\nelse if (msg.payload === \"Ikea\") {\n    msg.options = [ \"Light (ICPSHC24-10EU-IL-1)\",\n                    \"Plug (E1603)\",\n                    \"Plug (E1702)\",\n                    \"Plug (E1708)\",\n                    \"Remote (E1743)\"]\n}\nelse if (msg.payload === \"Lidl\") {\n    msg.options = [ \"Door (HG06336)\",\n                    \"Motion (HG06335)\",\n                    \"Motion (HG07310)\",\n                    \"Light (HG06106A)\",\n                    \"Light (HG06106B)\",\n                    \"Light (HG06106C)\",\n                    \"Light (HG06492A)\",\n                    \"Light (HG06492B)\",\n                    \"Light (HG06492C)\",\n                    \"Thermo (TS0601)\"]\n}\nelse if (msg.payload === \"Osram\") {\n    msg.options = [ \"Remote (AC0251100NJ)\",\n                    \"Remote (AC0251600NJ)\",\n                    \"Remote (AC0251700NJ)\"]\n}\nelse if (msg.payload === \"Sonoff\") {\n    msg.options = [ \"Remote (SNZB-01)\" ]\n}\nelse if (msg.payload === \"Tuya\") {\n    msg.options = [ \"Remote (TS0044)\" ]\n}\nelse if (msg.payload === \"Xiaomi\") {\n    msg.options = [ \"Cube (MFKZQ01LM)\",\n                    \"Door (MCCGQ12LM)\",\n                    \"Door (MCCGQ14LM)\",\n                    \"Lux (GZCGQ01LM)\",\n                    \"Motion (RTCGQ01LM)\",\n                    \"Motion (RTCGQ12LM)\",\n                    \"Smoke (JTYJ-GD-01LM/BW)\",\n                    \"Temp (WSDCGQ01LM)\",\n                    \"Temp (WSDCGQ11LM)\",\n                    \"Temp (WSDCGQ12LM)\",\n                    \"Water (SJCGQ11LM)\"]\n}\n\nreturn msg;",
+        "func": "if (msg.payload === \"Heiman\") {\n    msg.options = [ \"Monoxide (HS1CA-M)\",\n                    \"Smoke (HS1SA)\"]\n}\nelse if (msg.payload === \"Ikea\") {\n    msg.options = [ \"Light (ICPSHC24-10EU-IL-1)\",\n                    \"Motion (E1525)\",\n                    \"Motion (E1745)\",\n                    \"Plug (E1603)\",\n                    \"Plug (E1702)\",\n                    \"Plug (E1708)\",\n                    \"Remote (E1743)\"]\n}\nelse if (msg.payload === \"Lidl\") {\n    msg.options = [ \"Door (HG06336)\",\n                    \"Motion (HG06335)\",\n                    \"Motion (HG07310)\",\n                    \"Light (HG06106A)\",\n                    \"Light (HG06106B)\",\n                    \"Light (HG06106C)\",\n                    \"Light (HG06492A)\",\n                    \"Light (HG06492B)\",\n                    \"Light (HG06492C)\",\n                    \"Thermo (TS0601)\"]\n}\nelse if (msg.payload === \"Osram\") {\n    msg.options = [ \"Remote (AC0251100NJ)\",\n                    \"Remote (AC0251600NJ)\",\n                    \"Remote (AC0251700NJ)\"]\n}\nelse if (msg.payload === \"Sonoff\") {\n    msg.options = [ \"Remote (SNZB-01)\",\n                    \"Motion (SNZB-03)\" ]\n}\nelse if (msg.payload === \"Tuya\") {\n    msg.options = [ \"Remote (TS0044)\" ]\n}\nelse if (msg.payload === \"Xiaomi\") {\n    msg.options = [ \"Cube (MFKZQ01LM)\",\n                    \"Door (MCCGQ12LM)\",\n                    \"Door (MCCGQ14LM)\",\n                    \"Lux (GZCGQ01LM)\",\n                    \"Motion (RTCGQ01LM)\",\n                    \"Motion (RTCGQ12LM)\",\n                    \"Smoke (JTYJ-GD-01LM/BW)\",\n                    \"Temp (WSDCGQ01LM)\",\n                    \"Temp (WSDCGQ11LM)\",\n                    \"Temp (WSDCGQ12LM)\",\n                    \"Water (SJCGQ11LM)\"]\n}\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -4677,17 +4697,20 @@
         "z": "fe9ee8c084b47472",
         "g": "228df667ae552978",
         "name": "Heiman devices",
-        "func": "if (msg.payload.ZbReceived.type === \"Monoxide (HS1CA-M)\") {\n    return [msg]\n}",
-        "outputs": 1,
+        "func": "if (msg.payload.ZbReceived.type === \"Monoxide (HS1CA-M)\") {\n    return [msg, null]\n} else if (msg.payload.ZbReceived.type === \"Smoke (HS1SA)\") {\n    return [null, msg]\n}",
+        "outputs": 2,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
         "x": 2240,
-        "y": 320,
+        "y": 360,
         "wires": [
             [
                 "59cc1938fe4a8989"
+            ],
+            [
+                "650b9ca485aeaab1"
             ]
         ]
     },
@@ -4697,14 +4720,14 @@
         "z": "fe9ee8c084b47472",
         "g": "b7e34177f056a897",
         "name": "Ikea devices",
-        "func": "if (msg.payload.ZbInfo) {\n    if (msg.payload.ZbInfo.type === \"Light (ICPSHC24-10EU-IL-1)\") {\n        return [msg, null, null, null, null]\n    }\n    else if (msg.payload.ZbInfo.type === \"Plug (E1603)\") {\n        return [null, msg, null, null, null]\n    }\n    else if (msg.payload.ZbInfo.type === \"Plug (E1702)\") {\n        return [null, null, msg, null, null]\n    }\n    else if (msg.payload.ZbInfo.type === \"Plug (E1708)\") {\n        return [null, null, null, msg, null]\n    }\n    else if (msg.payload.ZbInfo.type === \"Remote (E1743)\") {\n        return [null, null, null, null, msg]\n    }\n}\n\nif (msg.payload.ZbReceived) {\n    if (msg.payload.ZbReceived.type === \"Light (ICPSHC24-10EU-IL-1)\") {\n        return [msg, null, null, null, null]\n    }\n    else if (msg.payload.ZbReceived.type === \"Plug (E1603)\") {\n        return [null, msg, null, null, null]\n    }\n    else if (msg.payload.ZbReceived.type === \"Plug (E1702)\") {\n        return [null, null, msg, null, null]\n    }\n    else if (msg.payload.ZbReceived.type === \"Plug (E1708)\") {\n        return [null, null, null, msg, null]\n    }\n    else if (msg.payload.ZbReceived.type === \"Remote (E1743)\") {\n        return [null, null, null, null, msg]\n    }\n}\n\nif ( msg.src === 'domoticz' ) {\n    if (msg.payload.type === \"Light (ICPSHC24-10EU-IL-1)\") {\n        return [msg, null, null, null, null]\n    }\n    else if (msg.payload.type === \"Plug (E1603)\") {\n        return [null, msg, null, null, null]\n    }\n    else if (msg.payload.type === \"Plug (E1702)\") {\n        return [null, null, msg, null, null]\n    }\n    else if (msg.payload.type === \"Plug (E1708)\") {\n        return [null, null, null, msg, null]\n    }\n    else if (msg.payload.type === \"Remote (E1743)\") {\n        return [null, null, null, null, msg]\n    }\n}",
-        "outputs": 5,
+        "func": "if (msg.payload.ZbInfo) {\n    if (msg.payload.ZbInfo.type === \"Light (ICPSHC24-10EU-IL-1)\") {\n        return [msg, null, null, null, null, null]\n    }\n    else if (msg.payload.ZbInfo.type === \"Plug (E1603)\") {\n        return [null, msg, null, null, null, null]\n    }\n    else if (msg.payload.ZbInfo.type === \"Plug (E1702)\") {\n        return [null, null, msg, null, null, null]\n    }\n    else if (msg.payload.ZbInfo.type === \"Plug (E1708)\") {\n        return [null, null, null, msg, null, null]\n    }\n    else if (msg.payload.ZbInfo.type === \"Remote (E1743)\") {\n        return [null, null, null, null, msg, null]\n    }\n    else if (msg.payload.ZbInfo.type === \"Motion (E1525)\") {\n        return [null, null, null, null, null, msg]\n    }\n    else if (msg.payload.ZbInfo.type === \"Motion (E1745)\") {\n        return [null, null, null, null, null, msg]\n    }\n}\n\nif (msg.payload.ZbReceived) {\n    if (msg.payload.ZbReceived.type === \"Light (ICPSHC24-10EU-IL-1)\") {\n        return [msg, null, null, null, null, null]\n    }\n    else if (msg.payload.ZbReceived.type === \"Plug (E1603)\") {\n        return [null, msg, null, null, null, null]\n    }\n    else if (msg.payload.ZbReceived.type === \"Plug (E1702)\") {\n        return [null, null, msg, null, null, null]\n    }\n    else if (msg.payload.ZbReceived.type === \"Plug (E1708)\") {\n        return [null, null, null, msg, null, null]\n    }\n    else if (msg.payload.ZbReceived.type === \"Remote (E1743)\") {\n        return [null, null, null, null, msg, null]\n    }\n    else if (msg.payload.ZbReceived.type === \"Motion (E1525)\") {\n        return [null, null, null, null, null, msg]\n    }\n    else if (msg.payload.ZbReceived.type === \"Motion (E1745)\") {\n        return [null, null, null, null, null, msg]\n    }\n}\n\nif ( msg.src === 'domoticz' ) {\n    if (msg.payload.type === \"Light (ICPSHC24-10EU-IL-1)\") {\n        return [msg, null, null, null, null, null]\n    }\n    else if (msg.payload.type === \"Plug (E1603)\") {\n        return [null, msg, null, null, null, null]\n    }\n    else if (msg.payload.type === \"Plug (E1702)\") {\n        return [null, null, msg, null, null, null]\n    }\n    else if (msg.payload.type === \"Plug (E1708)\") {\n        return [null, null, null, msg, null, null]\n    }\n    else if (msg.payload.type === \"Remote (E1743)\") {\n        return [null, null, null, null, msg, null]\n    }\n    else if (msg.payload.type === \"Motion (E1525)\") {\n        return [null, null, null, null, null, msg]\n    }\n    else if (msg.payload.type === \"Motion (E1745)\") {\n        return [null, null, null, null, null, msg]\n    }\n}",
+        "outputs": 6,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
         "x": 2230,
-        "y": 480,
+        "y": 600,
         "wires": [
             [
                 "c0d6650e03376498"
@@ -4720,6 +4743,9 @@
             ],
             [
                 "b795c491237ecd83"
+            ],
+            [
+                "e1d4fe7edd783dd6"
             ]
         ]
     },
@@ -4736,7 +4762,7 @@
         "finalize": "",
         "libs": [],
         "x": 2230,
-        "y": 760,
+        "y": 900,
         "wires": [
             [
                 "843b6baf5da9e7a0"
@@ -4768,7 +4794,7 @@
         "finalize": "",
         "libs": [],
         "x": 2240,
-        "y": 1060,
+        "y": 1180,
         "wires": [
             [
                 "6b66c7b991eac007"
@@ -4787,17 +4813,20 @@
         "z": "fe9ee8c084b47472",
         "g": "72778dde22d80e88",
         "name": "Sonoff devices",
-        "func": "if (msg.payload.ZbReceived.type === \"Remote (SNZB-01)\") {\n    return [msg]\n}",
-        "outputs": 1,
+        "func": "if (msg.payload.ZbReceived.type === \"Remote (SNZB-01)\") {\n    return [msg, null]\n} else if (msg.payload.ZbReceived.type === \"Motion (SNZB-03)\") {\n    return [null, msg];\n}",
+        "outputs": 2,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
         "x": 2240,
-        "y": 1180,
+        "y": 1340,
         "wires": [
             [
                 "8683449d486c3f6b"
+            ],
+            [
+                "498ba43866809f9d"
             ]
         ]
     },
@@ -5298,7 +5327,7 @@
         "finalize": "",
         "libs": [],
         "x": 2580,
-        "y": 660,
+        "y": 800,
         "wires": [
             [
                 "b42a4699db8357fa"
@@ -5321,7 +5350,7 @@
             "c9e5c5badc9a8085"
         ],
         "x": 2895,
-        "y": 660,
+        "y": 800,
         "wires": []
     },
     {
@@ -5335,7 +5364,7 @@
             "b42a4699db8357fa"
         ],
         "x": 2955,
-        "y": 660,
+        "y": 800,
         "wires": [
             [
                 "5bb905544da5f536"
@@ -5357,7 +5386,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 3120,
-        "y": 660,
+        "y": 800,
         "wires": []
     },
     {
@@ -5373,7 +5402,7 @@
         "finalize": "",
         "libs": [],
         "x": 2560,
-        "y": 760,
+        "y": 900,
         "wires": [
             [
                 "83fbf5a16a2d3804"
@@ -5404,7 +5433,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 3130,
-        "y": 760,
+        "y": 900,
         "wires": []
     },
     {
@@ -5419,7 +5448,7 @@
             "a306c5c8fa5ff9a9"
         ],
         "x": 2895,
-        "y": 760,
+        "y": 900,
         "wires": []
     },
     {
@@ -5433,7 +5462,7 @@
             "fb87a0d4861d432e"
         ],
         "x": 2955,
-        "y": 760,
+        "y": 900,
         "wires": [
             [
                 "8becaa666222f0fb"
@@ -5470,7 +5499,7 @@
         "finalize": "",
         "libs": [],
         "x": 2570,
-        "y": 1300,
+        "y": 1500,
         "wires": [
             [
                 "fcc45a601372ea82"
@@ -5501,7 +5530,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 3110,
-        "y": 1300,
+        "y": 1500,
         "wires": []
     },
     {
@@ -5519,7 +5548,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 3120,
-        "y": 1460,
+        "y": 1660,
         "wires": []
     },
     {
@@ -5535,7 +5564,7 @@
         "finalize": "",
         "libs": [],
         "x": 2580,
-        "y": 1540,
+        "y": 1740,
         "wires": [
             [
                 "2d99642c66a5c870"
@@ -5566,7 +5595,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 3120,
-        "y": 1540,
+        "y": 1740,
         "wires": []
     },
     {
@@ -5581,7 +5610,7 @@
             "c5ca73ecb5ac32f7"
         ],
         "x": 2895,
-        "y": 1300,
+        "y": 1500,
         "wires": []
     },
     {
@@ -5595,7 +5624,7 @@
             "fcc45a601372ea82"
         ],
         "x": 2955,
-        "y": 1300,
+        "y": 1500,
         "wires": [
             [
                 "53b00bf0430b7050"
@@ -5614,7 +5643,7 @@
             "17fce7e4a549f3c4"
         ],
         "x": 2895,
-        "y": 1460,
+        "y": 1660,
         "wires": []
     },
     {
@@ -5628,7 +5657,7 @@
             "d7b32d0304f27044"
         ],
         "x": 2955,
-        "y": 1460,
+        "y": 1660,
         "wires": [
             [
                 "e99cc5d4ea5b8ff2"
@@ -5646,7 +5675,7 @@
             "ee35794e5d630df2"
         ],
         "x": 2955,
-        "y": 1540,
+        "y": 1740,
         "wires": [
             [
                 "c1c0b2dba023871a"
@@ -5665,7 +5694,7 @@
             "17fce7e4a549f3c4"
         ],
         "x": 2895,
-        "y": 1540,
+        "y": 1740,
         "wires": []
     },
     {
@@ -5681,7 +5710,7 @@
         "finalize": "",
         "libs": [],
         "x": 2630,
-        "y": 1700,
+        "y": 1900,
         "wires": [
             [
                 "08b20c29baa2864e"
@@ -5712,7 +5741,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 3160,
-        "y": 1700,
+        "y": 1900,
         "wires": []
     },
     {
@@ -5726,7 +5755,7 @@
             "1ea5ebf102e05851"
         ],
         "x": 2955,
-        "y": 1700,
+        "y": 1900,
         "wires": [
             [
                 "084cdb103cdf0689"
@@ -5745,7 +5774,7 @@
             "17fce7e4a549f3c4"
         ],
         "x": 2895,
-        "y": 1700,
+        "y": 1900,
         "wires": []
     },
     {
@@ -5761,7 +5790,7 @@
         "finalize": "",
         "libs": [],
         "x": 2610,
-        "y": 1380,
+        "y": 1580,
         "wires": [
             [
                 "a28d026537f564cb"
@@ -5789,7 +5818,7 @@
             "17fce7e4a549f3c4"
         ],
         "x": 2895,
-        "y": 1380,
+        "y": 1580,
         "wires": []
     },
     {
@@ -5803,7 +5832,7 @@
             "77e8f521bfa3e396"
         ],
         "x": 2955,
-        "y": 1380,
+        "y": 1580,
         "wires": [
             [
                 "f88985f05d6a2da5"
@@ -5825,7 +5854,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 3150,
-        "y": 1380,
+        "y": 1580,
         "wires": []
     },
     {
@@ -5841,7 +5870,7 @@
         "finalize": "",
         "libs": [],
         "x": 2630,
-        "y": 1620,
+        "y": 1820,
         "wires": [
             [
                 "139535167a72ee3d"
@@ -5872,7 +5901,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 3160,
-        "y": 1620,
+        "y": 1820,
         "wires": []
     },
     {
@@ -5886,7 +5915,7 @@
             "139535167a72ee3d"
         ],
         "x": 2955,
-        "y": 1620,
+        "y": 1820,
         "wires": [
             [
                 "c4d1576b6fcc7988"
@@ -5905,7 +5934,7 @@
             "17fce7e4a549f3c4"
         ],
         "x": 2895,
-        "y": 1620,
+        "y": 1820,
         "wires": []
     },
     {
@@ -5923,7 +5952,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 3120,
-        "y": 1780,
+        "y": 1980,
         "wires": []
     },
     {
@@ -5937,7 +5966,7 @@
             "01dd9b0687c95a4e"
         ],
         "x": 2955,
-        "y": 1780,
+        "y": 1980,
         "wires": [
             [
                 "37683f48364ef490"
@@ -5957,7 +5986,7 @@
         "finalize": "",
         "libs": [],
         "x": 2580,
-        "y": 1460,
+        "y": 1660,
         "wires": [
             [
                 "c3911e29eff22c69"
@@ -5989,7 +6018,7 @@
         "finalize": "",
         "libs": [],
         "x": 2620,
-        "y": 1780,
+        "y": 1980,
         "wires": [
             [
                 "01dd9b0687c95a4e"
@@ -6017,7 +6046,7 @@
             "17fce7e4a549f3c4"
         ],
         "x": 2895,
-        "y": 1780,
+        "y": 1980,
         "wires": []
     },
     {
@@ -6033,7 +6062,7 @@
         "finalize": "",
         "libs": [],
         "x": 2240,
-        "y": 1540,
+        "y": 1740,
         "wires": [
             [
                 "29960d7b5547c80b"
@@ -6502,7 +6531,7 @@
         "finalize": "",
         "libs": [],
         "x": 2570,
-        "y": 1860,
+        "y": 2060,
         "wires": [
             [
                 "356ebc678ef0dee1"
@@ -6533,7 +6562,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 3110,
-        "y": 1860,
+        "y": 2060,
         "wires": []
     },
     {
@@ -6548,7 +6577,7 @@
             "1e24ade3c53d3538"
         ],
         "x": 2895,
-        "y": 1860,
+        "y": 2060,
         "wires": []
     },
     {
@@ -6561,7 +6590,7 @@
             "356ebc678ef0dee1"
         ],
         "x": 2955,
-        "y": 1860,
+        "y": 2060,
         "wires": [
             [
                 "16f71bd9eeec5062"
@@ -6581,7 +6610,7 @@
         "finalize": "",
         "libs": [],
         "x": 2570,
-        "y": 840,
+        "y": 980,
         "wires": [
             [
                 "91d142db88659e5f"
@@ -6609,7 +6638,7 @@
             "f47089a5d5e9a3b4"
         ],
         "x": 2895,
-        "y": 840,
+        "y": 980,
         "wires": []
     },
     {
@@ -6622,7 +6651,7 @@
             "91d142db88659e5f"
         ],
         "x": 2955,
-        "y": 840,
+        "y": 980,
         "wires": [
             [
                 "f335dbd5e751a1bd"
@@ -6644,7 +6673,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 3120,
-        "y": 840,
+        "y": 980,
         "wires": []
     },
     {
@@ -6692,7 +6721,8 @@
         "y": 1840,
         "wires": [
             [
-                "6de321a36a5801d6"
+                "6de321a36a5801d6",
+                "7c678bec0b072d67"
             ]
         ]
     },
@@ -6763,7 +6793,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 3140,
-        "y": 1980,
+        "y": 2180,
         "wires": []
     },
     {
@@ -6779,7 +6809,7 @@
         "finalize": "",
         "libs": [],
         "x": 2600,
-        "y": 1980,
+        "y": 2180,
         "wires": [
             [
                 "4aca286ee7c4de75"
@@ -6805,7 +6835,7 @@
             "4aca286ee7c4de75"
         ],
         "x": 2955,
-        "y": 1980,
+        "y": 2180,
         "wires": [
             [
                 "707724ee7edcf005"
@@ -6824,7 +6854,7 @@
             "23e0810b20425dd3"
         ],
         "x": 2895,
-        "y": 1980,
+        "y": 2180,
         "wires": []
     },
     {
@@ -6840,7 +6870,7 @@
         "finalize": "",
         "libs": [],
         "x": 2230,
-        "y": 1980,
+        "y": 2180,
         "wires": [
             [
                 "3a12c2edd9b6c7d4"
@@ -6860,7 +6890,7 @@
         "finalize": "",
         "libs": [],
         "x": 2570,
-        "y": 920,
+        "y": 1060,
         "wires": [
             [
                 "f463c735fc2aa9c9"
@@ -6892,7 +6922,7 @@
             "c9e5c5badc9a8085"
         ],
         "x": 2895,
-        "y": 920,
+        "y": 1060,
         "wires": []
     },
     {
@@ -6905,7 +6935,7 @@
             "f463c735fc2aa9c9"
         ],
         "x": 2955,
-        "y": 920,
+        "y": 1060,
         "wires": [
             [
                 "40e955ac3e334fe2"
@@ -6927,7 +6957,7 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 3090,
-        "y": 920,
+        "y": 1060,
         "wires": []
     },
     {
@@ -6985,7 +7015,7 @@
         "z": "fe9ee8c084b47472",
         "g": "896b3999999cb97c",
         "name": "Hoe device instellen in domoticz",
-        "func": "var data3info = context.get(\"data3info\") || 0; //get from context or default to 0\n\nswitch (msg.topic){\n\n    case \"type\":\n        data3info = msg.payload; \n        context.set(\"data3info\", data3info);//store in context for next time \n        return;\n\n    case \"submit\":\n        //Heiman\n        if (data3info === \"Monoxide (HS1CA-M)\" ) {\n            msg.topic = \"Heiman, Monoxide (HS1CA-M)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: Schakelaar</p><p>Schakelaar daarna instellen als: smoke detector</p>\"\n            \n        //Ikea\n        } else if (data3info === \"Light (ICPSHC24-10EU-IL-1)\" ) {   \n            msg.topic = \"Ikea, Light (ICPSHC24-10EU-IL-1)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: schakelaar</p><p>Schakelaar daarna instellen als: dimmer</p>\"\n        } else if (data3info === \"Plug (E1603)\" ) {\n            msg.topic = \"Ikea, Plug (E1603)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: schakelaar</p>\"\n        } else if (data3info === \"Plug (E1702)\" ) {  \n            msg.topic = \"Ikea, Plug (E1702)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: schakelaar</p>\"\n        } else if (data3info === \"Plug (E1708)\" ) {   \n            msg.topic = \"Ikea, Plug (E1708)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: schakelaar</p>\"\n        } else if (data3info === \"Remote (E1743)\" ) {    \n            msg.topic = \"Ikea, Remote (E1743)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: keuzeschakelaar</p><p>Keuzeschakelaar daarna instellen als onderstaand;</p><p>Niveau 0: Off</p><p>Niveau 10: On</p><p>Niveau 20: On hold</p><p>Niveau 30: Off hold</p><p>Niveau 40: Hold stop</p>\"\n        \n        //Lidl\n        } else if (data3info === \"Door (HG06336)\" ) {   \n            msg.topic = \"Lidl, Door (HG06336)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: schakelaar</p><p>Schakelaar daarna instellen als: door contact</p>\"\n        } else if (data3info === \"Motion (HG06335)\" ) {   \n            msg.topic = \"Lidl, Motion (HG06335)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: schakelaar</p><p>Schakelaar daarna instellen als: motion sensor</p>\"\n        } else if (data3info === \"Motion (HG07310)\" ) {   \n            msg.topic = \"Lidl, Motion (HG07310)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: schakelaar</p><p>Schakelaar daarna instellen als: motion sensor</p>\"\n        } else if (data3info === \"Light (HG06106A)\" ) {   \n            msg.topic = \"Lidl, Light (HG06106A)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: RGBWW switch</p>\"\n        } else if (data3info === \"Light (HG06106B)\" ) {   \n            msg.topic = \"Lidl, Light (HG06106B)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: RGBWW switch</p>\"\n        } else if (data3info === \"Light (HG06106C)\" ) {   \n            msg.topic = \"Lidl, Light (HG06106C)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: RGBWW switch</p>\"\n        } else if (data3info === \"Light (HG06492A)\" ) {   \n            msg.topic = \"Lidl, Light (HG06492A)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: RGBWW switch</p>\"\n        } else if (data3info === \"Light (HG06492B)\" ) {   \n            msg.topic = \"Lidl, Light (HG06492B)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: RGBWW switch</p>\"\n        } else if (data3info === \"Light (HG06492C)\" ) {   \n            msg.topic = \"Lidl, Light (HG06492C)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: RGBWW switch</p>\"\n        } else if (data3info === \"Thermo (TS0601)\" ) {   \n            msg.topic = \"Lidl, Thermo (TS0601)\"\n            msg.payload = \"<p>Aanmaken in domoticz;</p><p>1e dummy type: Thermostaat Setpoint</p><p>1e dummy instellen als IDX in tasmota dashboard</p><br><p>2e dummy type: Temperatuur</p><p>2e dummy instellen als IDX-extra in tasmota dashboard</p>\"\n        \n        //Osram       \n        } else if (data3info === \"Remote (AC0251100NJ)\" ) {   \n            msg.topic = \"Osram, Remote (AC0251100NJ)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: keuzeschakelaar</p><p>Keuzeschakelaar daarna instellen als onderstaand;</p><p>Niveau 0: Off</p><p>Niveau 10: Up</p><p>Niveau 20: Up Hold</p><p>Niveau 30: Up Release</p><p>Niveau 40: Circle Click</p><p>Niveau 50: Circle hold</p><p>Niveau 60: Circle Release</p><p>Niveau 70: Down</p><p>Niveau 80: Down Hold</p><p>Niveau 90: Down Release</p><p>Niveau 100: Standy</p>\"\n        } else if (data3info === \"Remote (AC0251600NJ)\" ) {   \n            msg.topic = \"Osram, Remote (AC0251600NJ)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: keuzeschakelaar</p><p>Keuzeschakelaar daarna instellen als onderstaand;</p><p>Niveau 0: Off</p><p>Niveau 10: Up</p><p>Niveau 20: Up Hold</p><p>Niveau 30: Up Release</p><p>Niveau 40: Circle Click</p><p>Niveau 50: Circle hold</p><p>Niveau 60: Circle Release</p><p>Niveau 70: Down</p><p>Niveau 80: Down Hold</p><p>Niveau 90: Down Release</p><p>Niveau 100: Standy</p>\"\n        } else if (data3info === \"Remote (AC0251700NJ)\" ) {   \n            msg.topic = \"Osram, Remote (AC0251700NJ)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: keuzeschakelaar</p><p>Keuzeschakelaar daarna instellen als onderstaand;</p><p>Niveau 0: Off</p><p>Niveau 10: Up</p><p>Niveau 20: Up Hold</p><p>Niveau 30: Up Release</p><p>Niveau 40: Circle Click</p><p>Niveau 50: Circle hold</p><p>Niveau 60: Circle Release</p><p>Niveau 70: Down</p><p>Niveau 80: Down Hold</p><p>Niveau 90: Down Release</p><p>Niveau 100: Standy</p>\"\n \n        //Sonoff\n        } else if (data3info === \"Remote (SNZB-01)\" ) {   \n            msg.topic = \"Sonoff, Remote (SNZB-01)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: keuzeschakelaar</p><p>Keuzeschakelaar daarna instellen als onderstaand;</p><p>Niveau 0: Off</p><p>Niveau 10: Single push</p><p>Niveau 20: Double push</p><p>Niveau 30: Hold</p>\"\n\n        //Tuya\n        } else if (data3info === \"Remote (TS0044)\" ) {   \n            msg.topic = \"Tuya, Remote (TS0044)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: keuzeschakelaar</p><p>Keuzeschakelaar daarna instellen als onderstaand;</p><p>Niveau 0: Off</p><p>Niveau 10 = Button 1 single push</p><p>Niveau 20 = Button 1 double push</p><p>Niveau 30 = Button 1 hold</p><p>Niveau 40 = Button 2 single push</p><p>Niveau 50 = Button 2 double push</p><p>Niveau 60 = Button 2 hold</p><p>Niveau 70 = Button 3 single push</p><p>Niveau 80 = Button 3 double push</p><p>Niveau 90 = Button 3 hold</p><p>Niveau 100 = Button 4 single push</p><p>Niveau 110 = Button 4 double push</p><p>Niveau 120 = Button 4 hold</p>\"\n\n        //Xiaomi\n        } else if (data3info === \"Cube (MFKZQ01LM)\" ) {   \n            msg.topic = \"Xiaomi, Cube (MFKZQ01LM)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: keuzeschakelaar</p><p>Keuzeschakelaar daarna instellen als onderstaand;</p><p>Niveau 0: Wakeup</p><p>Niveau 10 = Shake</p><p>Niveau 20 = Slide</p><p>Niveau 30 = Flip 90</p><p>Niveau 40 = Flip 180</p><p>Niveau 50 = Rotate right</p><p>Niveau 60 = Rotate left</p><p>Niveau 70 = Tap</p><p>Niveau 80 = Fall</p>\"\n        } else if (data3info === \"Door (MCCGQ12LM)\" ) {   \n            msg.topic = \"Xiaomi, Door (MCCGQ12LM)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: schakelaar</p><p>Schakelaar daarna instellen als: door contact</p>\"\n        } else if (data3info === \"Door (MCCGQ14LM))\" ) {   \n            msg.topic = \"Xiaomi, Door (MCCGQ14LM)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: schakelaar</p><p>Schakelaar daarna instellen als: door contact</p>\"\n        } else if (data3info === \"Lux (GZCGQ01LM)\" ) {   \n            msg.topic = \"Xiaomi, Lux (GZCGQ01LM)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: Lux</p>\"\n        } else if (data3info === \"Motion (RTCGQ01LM)\" ) {   \n            msg.topic = \"Xiaomi, Motion (RTCGQ01LM)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: schakelaar</p><p>Schakelaar daarna instellen als: motion sensor</p>\"\n        } else if (data3info === \"Motion (RTCGQ12LM)\" ) {   \n            msg.topic = \"Xiaomi, Motion (RTCGQ12LM)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: schakelaar</p><p>Schakelaar daarna instellen als: motion sensor</p>\"\n        } else if (data3info === \"Smoke (JTYJ-GD-01LM/BW)\" ) {   \n            msg.topic = \"Xiaomi, Smoke (JTYJ-GD-01LM/BW)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: Schakelaar</p><p>Schakelaar daarna instellen als: smoke detector</p>\"\n        } else if (data3info === \"Temp (WSDCGQ01LM)\" ) {   \n            msg.topic = \"Xiaomi, Temp (WSDCGQ01LM)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: Temp + Hum</p>\"\n        } else if (data3info === \"Temp (WSDCGQ11LM)\" ) {   \n            msg.topic = \"Xiaomi, Temp (WSDCGQ11LM)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: Temp + Hum + Baro</p>\"\n        } else if (data3info === \"Temp (WSDCGQ12LM)\" ) {   \n            msg.topic = \"Xiaomi, Temp (WSDCGQ12LM)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: Temp + Hum + Baro</p>\"\n        } else if (data3info === \"Water (SJCGQ11LM)\" ) {   \n            msg.topic = \"Xiaomi, Water (SJCGQ11LM)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: Schakelaar</p><p>Schakelaar daarna instellen als: contact</p>\"\n\n        } else {\n            msg.topic = \"Device type onbekend\"\n            msg.payload = \"<p>Kies eerst merk en device, alvorens hier informatie kan worden getoond</p>\"\n        }\n        return msg;\n    }",
+        "func": "var data3info = context.get(\"data3info\") || 0; //get from context or default to 0\n\nswitch (msg.topic){\n\n    case \"type\":\n        data3info = msg.payload; \n        context.set(\"data3info\", data3info);//store in context for next time \n        return;\n\n    case \"submit\":\n        //Heiman\n        if (data3info === \"Monoxide (HS1CA-M)\" ) {\n            msg.topic = \"Heiman, Monoxide (HS1CA-M)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: Schakelaar</p><p>Schakelaar daarna instellen als: smoke detector</p>\"\n        } else if (data3info === \"Smoke (HS1SA)\" ) {   \n            msg.topic = \"Heiman, Smoke (HS1SA)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: Schakelaar</p><p>Schakelaar daarna instellen als: smoke detector</p>\"\n\n        //Ikea\n        } else if (data3info === \"Light (ICPSHC24-10EU-IL-1)\" ) {   \n            msg.topic = \"Ikea, Light (ICPSHC24-10EU-IL-1)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: schakelaar</p><p>Schakelaar daarna instellen als: dimmer</p>\"\n        } else if (data3info === \"Motion (E1525)\" ) {   \n            msg.topic = \"Ikea, Motion (E1525)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: schakelaar</p><p>Schakelaar daarna instellen als: motion sensor</p>\"\n        } else if (data3info === \"Motion (E1745)\" ) {   \n            msg.topic = \"Ikea, Motion (E1745)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: schakelaar</p><p>Schakelaar daarna instellen als: motion sensor</p>\"\n        } else if (data3info === \"Plug (E1603)\" ) {\n            msg.topic = \"Ikea, Plug (E1603)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: schakelaar</p>\"\n        } else if (data3info === \"Plug (E1702)\" ) {  \n            msg.topic = \"Ikea, Plug (E1702)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: schakelaar</p>\"\n        } else if (data3info === \"Plug (E1708)\" ) {   \n            msg.topic = \"Ikea, Plug (E1708)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: schakelaar</p>\"\n        } else if (data3info === \"Remote (E1743)\" ) {    \n            msg.topic = \"Ikea, Remote (E1743)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: keuzeschakelaar</p><p>Keuzeschakelaar daarna instellen als onderstaand;</p><p>Niveau 0: Off</p><p>Niveau 10: On</p><p>Niveau 20: On hold</p><p>Niveau 30: Off hold</p><p>Niveau 40: Hold stop</p>\"\n        \n        //Lidl\n        } else if (data3info === \"Door (HG06336)\" ) {   \n            msg.topic = \"Lidl, Door (HG06336)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: schakelaar</p><p>Schakelaar daarna instellen als: door contact</p>\"\n        } else if (data3info === \"Motion (HG06335)\" ) {   \n            msg.topic = \"Lidl, Motion (HG06335)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: schakelaar</p><p>Schakelaar daarna instellen als: motion sensor</p>\"\n        } else if (data3info === \"Motion (HG07310)\" ) {   \n            msg.topic = \"Lidl, Motion (HG07310)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: schakelaar</p><p>Schakelaar daarna instellen als: motion sensor</p>\"\n        } else if (data3info === \"Light (HG06106A)\" ) {   \n            msg.topic = \"Lidl, Light (HG06106A)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: RGBWW switch</p>\"\n        } else if (data3info === \"Light (HG06106B)\" ) {   \n            msg.topic = \"Lidl, Light (HG06106B)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: RGBWW switch</p>\"\n        } else if (data3info === \"Light (HG06106C)\" ) {   \n            msg.topic = \"Lidl, Light (HG06106C)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: RGBWW switch</p>\"\n        } else if (data3info === \"Light (HG06492A)\" ) {   \n            msg.topic = \"Lidl, Light (HG06492A)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: RGBWW switch</p>\"\n        } else if (data3info === \"Light (HG06492B)\" ) {   \n            msg.topic = \"Lidl, Light (HG06492B)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: RGBWW switch</p>\"\n        } else if (data3info === \"Light (HG06492C)\" ) {   \n            msg.topic = \"Lidl, Light (HG06492C)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: RGBWW switch</p>\"\n        } else if (data3info === \"Thermo (TS0601)\" ) {   \n            msg.topic = \"Lidl, Thermo (TS0601)\"\n            msg.payload = \"<p>Aanmaken in domoticz;</p><p>1e dummy type: Thermostaat Setpoint</p><p>1e dummy instellen als IDX in tasmota dashboard</p><br><p>2e dummy type: Temperatuur</p><p>2e dummy instellen als IDX-extra in tasmota dashboard</p>\"\n        \n        //Osram       \n        } else if (data3info === \"Remote (AC0251100NJ)\" ) {   \n            msg.topic = \"Osram, Remote (AC0251100NJ)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: keuzeschakelaar</p><p>Keuzeschakelaar daarna instellen als onderstaand;</p><p>Niveau 0: Off</p><p>Niveau 10: Up</p><p>Niveau 20: Up Hold</p><p>Niveau 30: Up Release</p><p>Niveau 40: Circle Click</p><p>Niveau 50: Circle hold</p><p>Niveau 60: Circle Release</p><p>Niveau 70: Down</p><p>Niveau 80: Down Hold</p><p>Niveau 90: Down Release</p><p>Niveau 100: Standy</p>\"\n        } else if (data3info === \"Remote (AC0251600NJ)\" ) {   \n            msg.topic = \"Osram, Remote (AC0251600NJ)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: keuzeschakelaar</p><p>Keuzeschakelaar daarna instellen als onderstaand;</p><p>Niveau 0: Off</p><p>Niveau 10: Up</p><p>Niveau 20: Up Hold</p><p>Niveau 30: Up Release</p><p>Niveau 40: Circle Click</p><p>Niveau 50: Circle hold</p><p>Niveau 60: Circle Release</p><p>Niveau 70: Down</p><p>Niveau 80: Down Hold</p><p>Niveau 90: Down Release</p><p>Niveau 100: Standy</p>\"\n        } else if (data3info === \"Remote (AC0251700NJ)\" ) {   \n            msg.topic = \"Osram, Remote (AC0251700NJ)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: keuzeschakelaar</p><p>Keuzeschakelaar daarna instellen als onderstaand;</p><p>Niveau 0: Off</p><p>Niveau 10: Up</p><p>Niveau 20: Up Hold</p><p>Niveau 30: Up Release</p><p>Niveau 40: Circle Click</p><p>Niveau 50: Circle hold</p><p>Niveau 60: Circle Release</p><p>Niveau 70: Down</p><p>Niveau 80: Down Hold</p><p>Niveau 90: Down Release</p><p>Niveau 100: Standy</p>\"\n \n        //Sonoff\n        } else if (data3info === \"Remote (SNZB-01)\" ) {   \n            msg.topic = \"Sonoff, Remote (SNZB-01)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: keuzeschakelaar</p><p>Keuzeschakelaar daarna instellen als onderstaand;</p><p>Niveau 0: Off</p><p>Niveau 10: Single push</p><p>Niveau 20: Double push</p><p>Niveau 30: Hold</p>\"\n        } else if (data3info === \"Motion (SNZB-03)\" ) {   \n            msg.topic = \"Sonoff, Motion (SNZB-03)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: schakelaar</p><p>Schakelaar daarna instellen als: motion sensor</p>\"\n\n        //Tuya\n        } else if (data3info === \"Remote (TS0044)\" ) {   \n            msg.topic = \"Tuya, Remote (TS0044)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: keuzeschakelaar</p><p>Keuzeschakelaar daarna instellen als onderstaand;</p><p>Niveau 0: Off</p><p>Niveau 10 = Button 1 single push</p><p>Niveau 20 = Button 1 double push</p><p>Niveau 30 = Button 1 hold</p><p>Niveau 40 = Button 2 single push</p><p>Niveau 50 = Button 2 double push</p><p>Niveau 60 = Button 2 hold</p><p>Niveau 70 = Button 3 single push</p><p>Niveau 80 = Button 3 double push</p><p>Niveau 90 = Button 3 hold</p><p>Niveau 100 = Button 4 single push</p><p>Niveau 110 = Button 4 double push</p><p>Niveau 120 = Button 4 hold</p>\"\n\n        //Xiaomi\n        } else if (data3info === \"Cube (MFKZQ01LM)\" ) {   \n            msg.topic = \"Xiaomi, Cube (MFKZQ01LM)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: keuzeschakelaar</p><p>Keuzeschakelaar daarna instellen als onderstaand;</p><p>Niveau 0: Wakeup</p><p>Niveau 10 = Shake</p><p>Niveau 20 = Slide</p><p>Niveau 30 = Flip 90</p><p>Niveau 40 = Flip 180</p><p>Niveau 50 = Rotate right</p><p>Niveau 60 = Rotate left</p><p>Niveau 70 = Tap</p><p>Niveau 80 = Fall</p>\"\n        } else if (data3info === \"Door (MCCGQ12LM)\" ) {   \n            msg.topic = \"Xiaomi, Door (MCCGQ12LM)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: schakelaar</p><p>Schakelaar daarna instellen als: door contact</p>\"\n        } else if (data3info === \"Door (MCCGQ14LM))\" ) {   \n            msg.topic = \"Xiaomi, Door (MCCGQ14LM)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: schakelaar</p><p>Schakelaar daarna instellen als: door contact</p>\"\n        } else if (data3info === \"Lux (GZCGQ01LM)\" ) {   \n            msg.topic = \"Xiaomi, Lux (GZCGQ01LM)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: Lux</p>\"\n        } else if (data3info === \"Motion (RTCGQ01LM)\" ) {   \n            msg.topic = \"Xiaomi, Motion (RTCGQ01LM)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: schakelaar</p><p>Schakelaar daarna instellen als: motion sensor</p>\"\n        } else if (data3info === \"Motion (RTCGQ12LM)\" ) {   \n            msg.topic = \"Xiaomi, Motion (RTCGQ12LM)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: schakelaar</p><p>Schakelaar daarna instellen als: motion sensor</p>\"\n        } else if (data3info === \"Smoke (JTYJ-GD-01LM/BW)\" ) {   \n            msg.topic = \"Xiaomi, Smoke (JTYJ-GD-01LM/BW)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: Schakelaar</p><p>Schakelaar daarna instellen als: smoke detector</p>\"\n        } else if (data3info === \"Temp (WSDCGQ01LM)\" ) {   \n            msg.topic = \"Xiaomi, Temp (WSDCGQ01LM)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: Temp + Hum</p>\"\n        } else if (data3info === \"Temp (WSDCGQ11LM)\" ) {   \n            msg.topic = \"Xiaomi, Temp (WSDCGQ11LM)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: Temp + Hum + Baro</p>\"\n        } else if (data3info === \"Temp (WSDCGQ12LM)\" ) {   \n            msg.topic = \"Xiaomi, Temp (WSDCGQ12LM)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: Temp + Hum + Baro</p>\"\n        } else if (data3info === \"Water (SJCGQ11LM)\" ) {   \n            msg.topic = \"Xiaomi, Water (SJCGQ11LM)\"\n            msg.payload = \"<p>Aanmaken in domoticz, dummy type: Schakelaar</p><p>Schakelaar daarna instellen als: contact</p>\"\n\n        } else {\n            msg.topic = \"Device type onbekend\"\n            msg.payload = \"<p>Kies eerst merk en device, alvorens hier informatie kan worden getoond</p>\"\n        }\n        return msg;\n    }",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -7020,6 +7050,307 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "1690afd336772c2b",
+        "type": "debug",
+        "z": "fe9ee8c084b47472",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 3950,
+        "y": 1680,
+        "wires": []
+    },
+    {
+        "id": "71be43927ca226a2",
+        "type": "debug",
+        "z": "fe9ee8c084b47472",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 3940,
+        "y": 1940,
+        "wires": []
+    },
+    {
+        "id": "be6de5154a6a7b75",
+        "type": "debug",
+        "z": "fe9ee8c084b47472",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 3720,
+        "y": 1540,
+        "wires": []
+    },
+    {
+        "id": "7c678bec0b072d67",
+        "type": "debug",
+        "z": "fe9ee8c084b47472",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 3940,
+        "y": 1580,
+        "wires": []
+    },
+    {
+        "id": "e1d4fe7edd783dd6",
+        "type": "function",
+        "z": "fe9ee8c084b47472",
+        "g": "b7e34177f056a897",
+        "name": "Ikea motion senor",
+        "func": "msg.topic = \"domoticz/in\";\nvar idx = msg.payload.ZbReceived.idx;\nvar idxbat = msg.payload.ZbReceived.idxbat;\nvar idxper = msg.payload.ZbReceived.idxper;\nvar idxlink = msg.payload.ZbReceived.idxlink;\nvar zigbeeid = msg.payload.ZbReceived.zigbeeid;\n\nvar batmsg;\nvar permsg;\nvar linkmsg;\nvar extramsg;\nvar valuebat;\nvar valuebatdummy;\nvar valuebatperc;\nvar valuelink;\n\nif ( msg.payload.ZbReceived[zigbeeid] ) {    \n    //Set value battery voltage idx\n    if (msg.payload.ZbReceived[zigbeeid].hasOwnProperty(\"BatteryVoltage\")) {\n        valuebatdummy = msg.payload.ZbReceived[zigbeeid].BatteryVoltage;\n        valuebat = (Math.round(valuebatdummy * 10))/10.0;\n    }\n    //Set value battery percentage idx\n    if (msg.payload.ZbReceived[zigbeeid].hasOwnProperty(\"BatteryPercentage\")) {\n        valuebatperc = msg.payload.ZbReceived[zigbeeid].BatteryPercentage;\n    }\n    //Set value linkQuality idx\n    if (msg.payload.ZbReceived[zigbeeid].hasOwnProperty(\"LinkQuality\")) {\n        valuelink = msg.payload.ZbReceived[zigbeeid].LinkQuality;\n    }\n\n\tvar updmsg0 = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idx , \"nvalue\": 0, \"svalue\": \"0\" , \"parse\": false}}; \n    var updmsg1 = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idx , \"nvalue\": 1, \"svalue\": \"0\" , \"parse\": false}}; \n    \n\tif (context.get(zigbeeid) === undefined) {\n        context.set(zigbeeid, 3);\n    }\n    \n    if ( idx !== 0 ) {\n\t    if (msg.payload.ZbReceived[zigbeeid].Occupancy === 1) {\n            if (context.get(zigbeeid) === 0 || context.get(zigbeeid) === 3) {\n                context.set(zigbeeid, 1);      \n                msg.payload = {\"command\": \"switchlight\", \"idx\": idx, \"switchcmd\": \"On\" };\n            }\n            else {\n                msg = null;\n            }\n        }\n\t    else if (msg.payload.ZbReceived[zigbeeid].Occupancy === 0) {\n            if (context.get(zigbeeid) === 1 || context.get(zigbeeid) === 3) {\n                context.set(zigbeeid, 0);   \n                msg.payload = {\"command\": \"switchlight\", \"idx\": idx, \"switchcmd\": \"Off\" };\n            } \n            else if (context.get(zigbeeid) === 0) {  \n                msg = updmsg0; \n            }\n        }\n\t    else {\n    \t    msg = null; \n\t    }\n    } else {\n        msg = null;\n    }\n    \n\tif ( idxbat !== 0 ) {\n        if (valuebat !== undefined) {\n            batmsg = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idxbat , \"svalue\": \"\" + valuebat + \"\", \"parse\": false}}; \n        } else {\n            batmsg = null;\n        }\n\t} else {\n        batmsg = null;\n    }\n    if ( idxper !== 0 ) {\n        if (valuebatperc !== undefined) {\n            permsg = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idxper , \"svalue\": \"\" + valuebatperc + \"\", \"parse\": false}}; \n        } else {\n            permsg = null;\n        }\n    } else {\n        permsg = null;\n    }\n    if ( idxlink !== 0 ) {\n        if (valuelink !== undefined) {\n            linkmsg = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idxlink , \"svalue\": \"\" + valuelink + \"\", \"parse\": false}}; \n        } else {\n            linkmsg = null;\n        }\n    } else {\n        linkmsg = null;\n    }\n    return [msg, batmsg, permsg, linkmsg];\n}",
+        "outputs": 4,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2570,
+        "y": 700,
+        "wires": [
+            [
+                "2265acf8cb8707c4"
+            ],
+            [
+                "2265acf8cb8707c4"
+            ],
+            [
+                "2265acf8cb8707c4"
+            ],
+            [
+                "2265acf8cb8707c4"
+            ]
+        ]
+    },
+    {
+        "id": "e39377a2457682b4",
+        "type": "debug",
+        "z": "fe9ee8c084b47472",
+        "g": "b7e34177f056a897",
+        "name": "Ikea motion",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 3090,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "0e891d6bbf506488",
+        "type": "link in",
+        "z": "fe9ee8c084b47472",
+        "g": "b7e34177f056a897",
+        "name": "Ikea motion in",
+        "links": [
+            "2265acf8cb8707c4"
+        ],
+        "x": 2955,
+        "y": 700,
+        "wires": [
+            [
+                "e39377a2457682b4"
+            ]
+        ]
+    },
+    {
+        "id": "2265acf8cb8707c4",
+        "type": "link out",
+        "z": "fe9ee8c084b47472",
+        "g": "b7e34177f056a897",
+        "name": "Ikea motion out",
+        "mode": "link",
+        "links": [
+            "0e891d6bbf506488",
+            "17fce7e4a549f3c4"
+        ],
+        "x": 2895,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "650b9ca485aeaab1",
+        "type": "function",
+        "z": "fe9ee8c084b47472",
+        "g": "228df667ae552978",
+        "name": "Heiman smoke detector",
+        "func": "msg.topic = \"domoticz/in\";\nvar idx = msg.payload.ZbReceived.idx;\nvar idxbat = msg.payload.ZbReceived.idxbat;\nvar idxper = msg.payload.ZbReceived.idxper;\nvar idxlink = msg.payload.ZbReceived.idxlink;\nvar zigbeeid = msg.payload.ZbReceived.zigbeeid;\n\nvar batmsg;\nvar permsg;\nvar linkmsg;\nvar valuebat;\nvar valuebatdummy;\nvar valuebatperc;\nvar valuelink;\n\nif ( msg.payload.ZbReceived[zigbeeid] ) {    \n    //Set value battery voltage idx\n    if (msg.payload.ZbReceived[zigbeeid].hasOwnProperty(\"BatteryVoltage\")) {\n        valuebatdummy = msg.payload.ZbReceived[zigbeeid].BatteryVoltage;\n        valuebat = (Math.round(valuebatdummy * 10))/10.0;\n    }\n    //Set value battery percentage idx\n    if (msg.payload.ZbReceived[zigbeeid].hasOwnProperty(\"BatteryPercentage\")) {\n        valuebatperc = msg.payload.ZbReceived[zigbeeid].BatteryPercentage;\n    }\n    //Set value linkQuality idx\n    if (msg.payload.ZbReceived[zigbeeid].hasOwnProperty(\"LinkQuality\")) {\n        valuelink = msg.payload.ZbReceived[zigbeeid].LinkQuality;\n    }\n\n\tvar updmsg0 = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idx , \"nvalue\": 0, \"svalue\": \"0\" , \"parse\": false}}; \n    var updmsg1 = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idx , \"nvalue\": 1, \"svalue\": \"0\" , \"parse\": false}}; \n    \n\tif (context.get(zigbeeid) === undefined) {\n        context.set(zigbeeid, 3);\n    }\n    \n    if ( idx !== 0 ) {\n\t    if (msg.payload.ZbReceived[zigbeeid].Fire === 1) {\n            if (context.get(zigbeeid) === 0 || context.get(zigbeeid) === 3) {\n                context.set(zigbeeid, 1);      \n                msg.payload = {\"command\": \"switchlight\", \"idx\": idx, \"switchcmd\": \"On\" };\n            } \n\t        else if (context.get(zigbeeid) === 1) {  \n                msg = updmsg1; \n            }\n        }\n\t    else if (msg.payload.ZbReceived[zigbeeid].Fire === 0) {\n            if (context.get(zigbeeid) === 1 || context.get(zigbeeid) === 3) {\n                context.set(zigbeeid, 0);   \n                msg.payload = {\"command\": \"switchlight\", \"idx\": idx, \"switchcmd\": \"Off\" };\n            } \n            else if (context.get(zigbeeid) === 0) {  \n                msg = updmsg0; \n            }\n        }\n        else {\n    \t    msg = updmsg0; \n    \t}\n    } else {\n        msg = null;\n    }\n\t\n\tif ( idxbat !== 0 ) {\n        if (valuebat !== undefined) {\n            batmsg = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idxbat , \"svalue\": \"\" + valuebat + \"\", \"parse\": false}}; \n        } else {\n            batmsg = null;\n        }\n\t} else {\n\t    batmsg = null;\n    }\n    if ( idxper !== 0 ) {\n        if (valuebatperc !== undefined) {\n            permsg = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idxper , \"svalue\": \"\" + valuebatperc + \"\", \"parse\": false}}; \n        } else {\n            permsg = null;\n        }\n    } else { \n        permsg = null;\n    }\n    if ( idxlink !== 0 ) {\n        if (valuelink !== undefined) {\n            linkmsg = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idxlink , \"svalue\": \"\" + valuelink + \"\", \"parse\": false}}; \n        } else {\n            linkmsg = null;\n        }\n    } else {\n        linkmsg = null;\n    }\n    return [msg, batmsg, permsg, linkmsg];\n}",
+        "outputs": 4,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2590,
+        "y": 400,
+        "wires": [
+            [
+                "6eb23e8f2824607a"
+            ],
+            [
+                "6eb23e8f2824607a"
+            ],
+            [
+                "6eb23e8f2824607a"
+            ],
+            [
+                "6eb23e8f2824607a"
+            ]
+        ]
+    },
+    {
+        "id": "12f603fb7ce38886",
+        "type": "debug",
+        "z": "fe9ee8c084b47472",
+        "g": "228df667ae552978",
+        "name": "Heiman smoke detector",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 3130,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "3a6f80efb587496b",
+        "type": "link in",
+        "z": "fe9ee8c084b47472",
+        "g": "228df667ae552978",
+        "name": "Heiman Smoke in",
+        "links": [
+            "6eb23e8f2824607a"
+        ],
+        "x": 2955,
+        "y": 400,
+        "wires": [
+            [
+                "12f603fb7ce38886"
+            ]
+        ]
+    },
+    {
+        "id": "6eb23e8f2824607a",
+        "type": "link out",
+        "z": "fe9ee8c084b47472",
+        "g": "228df667ae552978",
+        "name": "Heiman Smoke out",
+        "mode": "link",
+        "links": [
+            "17fce7e4a549f3c4",
+            "3a6f80efb587496b"
+        ],
+        "x": 2895,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "498ba43866809f9d",
+        "type": "function",
+        "z": "fe9ee8c084b47472",
+        "g": "72778dde22d80e88",
+        "name": "Sonoff SNZB-03 motion senor",
+        "func": "msg.topic = \"domoticz/in\";\nvar idx = msg.payload.ZbReceived.idx;\nvar idxbat = msg.payload.ZbReceived.idxbat;\nvar idxper = msg.payload.ZbReceived.idxper;\nvar idxlink = msg.payload.ZbReceived.idxlink;\nvar zigbeeid = msg.payload.ZbReceived.zigbeeid;\n\nvar batmsg;\nvar permsg;\nvar linkmsg;\nvar extramsg;\nvar valuebat;\nvar valuebatdummy;\nvar valuebatperc;\nvar valuelink;\n\nif ( msg.payload.ZbReceived[zigbeeid] ) {    \n    //Set value battery voltage idx\n    if (msg.payload.ZbReceived[zigbeeid].hasOwnProperty(\"BatteryVoltage\")) {\n        valuebatdummy = msg.payload.ZbReceived[zigbeeid].BatteryVoltage;\n        valuebat = (Math.round(valuebatdummy * 10))/10.0;\n    }\n    //Set value battery percentage idx\n    if (msg.payload.ZbReceived[zigbeeid].hasOwnProperty(\"BatteryPercentage\")) {\n        valuebatperc = msg.payload.ZbReceived[zigbeeid].BatteryPercentage;\n    }\n    //Set value linkQuality idx\n    if (msg.payload.ZbReceived[zigbeeid].hasOwnProperty(\"LinkQuality\")) {\n        valuelink = msg.payload.ZbReceived[zigbeeid].LinkQuality;\n    }\n\n\tvar updmsg0 = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idx , \"nvalue\": 0, \"svalue\": \"0\" , \"parse\": false}}; \n    var updmsg1 = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idx , \"nvalue\": 1, \"svalue\": \"0\" , \"parse\": false}}; \n    \n\tif (context.get(zigbeeid) === undefined) {\n        context.set(zigbeeid, 3);\n    }\n    \n    if ( idx !== 0 ) {\n\t    if (msg.payload.ZbReceived[zigbeeid].Occupancy === 1) {\n            if (context.get(zigbeeid) === 0 || context.get(zigbeeid) === 3) {\n                context.set(zigbeeid, 1);      \n                msg.payload = {\"command\": \"switchlight\", \"idx\": idx, \"switchcmd\": \"On\" };\n            }\n            else {\n                msg = null;\n            }\n        }\n\t    else if (msg.payload.ZbReceived[zigbeeid].Occupancy === 0) {\n            if (context.get(zigbeeid) === 1 || context.get(zigbeeid) === 3) {\n                context.set(zigbeeid, 0);   \n                msg.payload = {\"command\": \"switchlight\", \"idx\": idx, \"switchcmd\": \"Off\" };\n            } \n            else if (context.get(zigbeeid) === 0) {  \n                msg = updmsg0; \n            }\n        }\n\t    else {\n    \t    msg = null; \n\t    }\n    } else {\n        msg = null;\n    }\n    \n\tif ( idxbat !== 0 ) {\n        if (valuebat !== undefined) {\n            batmsg = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idxbat , \"svalue\": \"\" + valuebat + \"\", \"parse\": false}}; \n        } else {\n            batmsg = null;\n        }\n\t} else {\n        batmsg = null;\n    }\n    if ( idxper !== 0 ) {\n        if (valuebatperc !== undefined) {\n            permsg = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idxper , \"svalue\": \"\" + valuebatperc + \"\", \"parse\": false}}; \n        } else {\n            permsg = null;\n        }\n    } else {\n        permsg = null;\n    }\n    if ( idxlink !== 0 ) {\n        if (valuelink !== undefined) {\n            linkmsg = { \"topic\": \"domoticz/in\",\"payload\":{\"command\": \"udevice\" , \"idx\": idxlink , \"svalue\": \"\" + valuelink + \"\", \"parse\": false}}; \n        } else {\n            linkmsg = null;\n        }\n    } else {\n        linkmsg = null;\n    }\n    return [msg, batmsg, permsg, linkmsg];\n}",
+        "outputs": 4,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2610,
+        "y": 1380,
+        "wires": [
+            [
+                "be8648d4896c7fc0"
+            ],
+            [
+                "be8648d4896c7fc0"
+            ],
+            [
+                "be8648d4896c7fc0"
+            ],
+            [
+                "be8648d4896c7fc0"
+            ]
+        ]
+    },
+    {
+        "id": "e8f24b6b346293fe",
+        "type": "debug",
+        "z": "fe9ee8c084b47472",
+        "g": "72778dde22d80e88",
+        "name": "Sonoff SNZB-03 motion",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 3130,
+        "y": 1380,
+        "wires": []
+    },
+    {
+        "id": "9e5cc2582878cf49",
+        "type": "link in",
+        "z": "fe9ee8c084b47472",
+        "g": "72778dde22d80e88",
+        "name": "Sonoff SNZB-03 in",
+        "links": [
+            "be8648d4896c7fc0"
+        ],
+        "x": 2955,
+        "y": 1380,
+        "wires": [
+            [
+                "e8f24b6b346293fe"
+            ]
+        ]
+    },
+    {
+        "id": "be8648d4896c7fc0",
+        "type": "link out",
+        "z": "fe9ee8c084b47472",
+        "g": "72778dde22d80e88",
+        "name": "Sonoff SNZB-03 out",
+        "mode": "link",
+        "links": [
+            "17fce7e4a549f3c4",
+            "9e5cc2582878cf49"
+        ],
+        "x": 2895,
+        "y": 1380,
+        "wires": []
     },
     {
         "id": "184c77467f039f6e",
