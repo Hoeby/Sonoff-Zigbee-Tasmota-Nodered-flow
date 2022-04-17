@@ -153,7 +153,6 @@
             "color": "#3f93cf"
         },
         "nodes": [
-            "9f6b771e8f5e4d9a",
             "afdae34213774c80",
             "8859c54cff425966",
             "d95ad6c0fc0c4dba",
@@ -173,10 +172,12 @@
             "2d4009137014058b",
             "2bb630daa4cf4ede",
             "a532c4f9908b536a",
-            "da1ba52052d62685"
+            "da1ba52052d62685",
+            "55ef8afd05fe2e88",
+            "42c5a1b287c92ddc"
         ],
         "env": [],
-        "x": 3754,
+        "x": 3734,
         "y": 699,
         "w": 1232,
         "h": 362
@@ -1875,8 +1876,8 @@
         "id": "2a9af97bcc2e365d",
         "type": "comment",
         "z": "fe9ee8c084b47472",
-        "name": "V_17-04-2022_R1",
-        "info": "17-04-2022 R1:\n- Toegevoegd device ikea motion E1525\n- Toegevoegd device ikea motion E1745\n- Toegevoegd device Heiman rookmelder HS1SA\n- Toegevoegd device Sonoff motion SNZB-03\n- Menu gebruiksvriendelijker gemaakt (beta)\n11-04-2022 R2:\n- Check op ikea flow data, om error te voorkomen\n11-04-2022 R1:\n- Lidl TS0601: idxextra werkte niet correct, aangepast\n10-04-2022 R3:\n- Bug in \"Set idx nummers en idx tabel\", is aangepast maar is nog in test-fase\n10-04-2022 R2:\n- Button \"Hoe device instellen domoticz\" toegevoegd\n10-04-2022 R1:\n- Tuya switch 4-buttons is released, geen beta meer\n- Lidl TS0601 Thermostaatkraan toegevoegd (beta)\n09-04-2022 R3:\n- Tuya switch 4-buttons toegevoegd (beta)\n09-04-2022 R2:\n- Lidl bewegingsensor HG06335/HG07310 toegevoegd\n09-04-2022 R1:\n- Toevoegen debug mqtt veld in UI\n- Toevoegen device Xiaomi smart home cube\n- Als device IDX 0 is, dan gaat er geen bericht naar domoticz\n08-04-2022 R1:\n- Deurcontact lidl HG06336 toegevoegd\n- Lampen (RGB/CCT) lidl toegevoegd\n05-04-2022 R2:\n- Aanpassingen lidl HG06106B, dat CT en RGB mogelijk is.\n05-04-2022 R1:\n- Lamp Lidl HG06106B (RGB) toegevoegd\n01-04-2022 R1:\n- Optie om de custom domoticz pagina in te stellen toegevoegd\n22-03-2022 R1:\n- Finetuning van de aanpassing van 19-03-2022 R1\n19-03-2022 R1:\n\nNIET ZOMAAR UPDATEN, LEES AANPASSING 1 VAN DEZE RELEASE\n\n- Device aanduiding uit elkaar gehaald, was voorheen 1 veld met merk+type, dit zijn nu 2 losse velden. \n  HIERDOOR KAN JE NIET ZOMAAR UPDATEN, JE BACKUP ZAL FOUTIEF WORDEN INGELEZEN\n  Of alles opnieuw invoeren, of de backup handmatig aanpassen. \n\n- Actuele versie balk in UI toegevoegd\n- Ikea Powerplug Wordt nu ook gefaked voor link quality waarden\n- Flogger file wordt nu ook in de map opgeslagen waar de data file met idx nummer staat\n- Sonoff SNZB-01 switch toegevoegd\n10-03-2022 R1:\n- Beta versie is verwijdert, we zijn live\n- Release notes functie toegevoegd in UI\n- Bug voor automatisch toevoegen ikea E1743 opgelost\n07-03-2022 R1 Beta:\n- Check van versienummer controleert op response 200 of 201, anders return false\n06-03-2022 R1 Beta:\n- Download flows.json wordt nu opgeslagen met versie naam\n05-03-2022 R2 Beta:\n- Je kan nu per zigbee bridge een command sturen\n- Kleur/text verandert bij een beschikbare update\n05-03-2022 R1 Beta:\n- Ikea 1743 doet nu auto update flow.set na import nieuwe flow of idx set\n04-03-2022 R1 Beta:\n- Toevoegen van nodered UI tbx idx tabel\n28-02-2022 R2:\n- Tasmota zigbee UI toegevoegd\n28-02-2022 R1:\n- Bug Ikea LED Strip opgelost, bij power 0 stuurt deze nu ook een 0 ipv 1\n27-02-2022 R1:\n- Batterijtrigger aangepast van \"true\" naar \"false\", dit lijkt effect te hebben op het aantal response meldingen van het device\n26-02-2022 R1: \n- Ikea powerplug, link naar gate verwijdert\n- Batterijtrigger voor E1743 aangepast, want deze stopte soms vanzelf.\n22-02-2022 R1: \n- Node.send for ikea E1743 voor linkage updates\n- Bug Ikea Powerplug opgelost, bij power 0 stuurt deze nu ook een 0 ipv 1\n19-02-2022 R1: \n- Xiaomi Water sensor toegevoegd, niet getest\n17-02-2022 R1: \n- Gestart met Versie nummers",
+        "name": "V_17-04-2022_R2",
+        "info": "17-04-2022 R2:\n- Wegschrijven naam bij set idx ging niet goed, werd bridge/zigbeeid getoond. Dit aangepast.\n17-04-2022 R1:\n- Toegevoegd device ikea motion E1525\n- Toegevoegd device ikea motion E1745\n- Toegevoegd device Heiman rookmelder HS1SA\n- Toegevoegd device Sonoff motion SNZB-03\n- Menu gebruiksvriendelijker gemaakt (beta)\n11-04-2022 R2:\n- Check op ikea flow data, om error te voorkomen\n11-04-2022 R1:\n- Lidl TS0601: idxextra werkte niet correct, aangepast\n10-04-2022 R3:\n- Bug in \"Set idx nummers en idx tabel\", is aangepast maar is nog in test-fase\n10-04-2022 R2:\n- Button \"Hoe device instellen domoticz\" toegevoegd\n10-04-2022 R1:\n- Tuya switch 4-buttons is released, geen beta meer\n- Lidl TS0601 Thermostaatkraan toegevoegd (beta)\n09-04-2022 R3:\n- Tuya switch 4-buttons toegevoegd (beta)\n09-04-2022 R2:\n- Lidl bewegingsensor HG06335/HG07310 toegevoegd\n09-04-2022 R1:\n- Toevoegen debug mqtt veld in UI\n- Toevoegen device Xiaomi smart home cube\n- Als device IDX 0 is, dan gaat er geen bericht naar domoticz\n08-04-2022 R1:\n- Deurcontact lidl HG06336 toegevoegd\n- Lampen (RGB/CCT) lidl toegevoegd\n05-04-2022 R2:\n- Aanpassingen lidl HG06106B, dat CT en RGB mogelijk is.\n05-04-2022 R1:\n- Lamp Lidl HG06106B (RGB) toegevoegd\n01-04-2022 R1:\n- Optie om de custom domoticz pagina in te stellen toegevoegd\n22-03-2022 R1:\n- Finetuning van de aanpassing van 19-03-2022 R1\n19-03-2022 R1:\n\nNIET ZOMAAR UPDATEN, LEES AANPASSING 1 VAN DEZE RELEASE\n\n- Device aanduiding uit elkaar gehaald, was voorheen 1 veld met merk+type, dit zijn nu 2 losse velden. \n  HIERDOOR KAN JE NIET ZOMAAR UPDATEN, JE BACKUP ZAL FOUTIEF WORDEN INGELEZEN\n  Of alles opnieuw invoeren, of de backup handmatig aanpassen. \n\n- Actuele versie balk in UI toegevoegd\n- Ikea Powerplug Wordt nu ook gefaked voor link quality waarden\n- Flogger file wordt nu ook in de map opgeslagen waar de data file met idx nummer staat\n- Sonoff SNZB-01 switch toegevoegd\n10-03-2022 R1:\n- Beta versie is verwijdert, we zijn live\n- Release notes functie toegevoegd in UI\n- Bug voor automatisch toevoegen ikea E1743 opgelost\n07-03-2022 R1 Beta:\n- Check van versienummer controleert op response 200 of 201, anders return false\n06-03-2022 R1 Beta:\n- Download flows.json wordt nu opgeslagen met versie naam\n05-03-2022 R2 Beta:\n- Je kan nu per zigbee bridge een command sturen\n- Kleur/text verandert bij een beschikbare update\n05-03-2022 R1 Beta:\n- Ikea 1743 doet nu auto update flow.set na import nieuwe flow of idx set\n04-03-2022 R1 Beta:\n- Toevoegen van nodered UI tbx idx tabel\n28-02-2022 R2:\n- Tasmota zigbee UI toegevoegd\n28-02-2022 R1:\n- Bug Ikea LED Strip opgelost, bij power 0 stuurt deze nu ook een 0 ipv 1\n27-02-2022 R1:\n- Batterijtrigger aangepast van \"true\" naar \"false\", dit lijkt effect te hebben op het aantal response meldingen van het device\n26-02-2022 R1: \n- Ikea powerplug, link naar gate verwijdert\n- Batterijtrigger voor E1743 aangepast, want deze stopte soms vanzelf.\n22-02-2022 R1: \n- Node.send for ikea E1743 voor linkage updates\n- Bug Ikea Powerplug opgelost, bij power 0 stuurt deze nu ook een 0 ipv 1\n19-02-2022 R1: \n- Xiaomi Water sensor toegevoegd, niet getest\n17-02-2022 R1: \n- Gestart met Versie nummers",
         "x": 110,
         "y": 80,
         "wires": []
@@ -1952,7 +1953,8 @@
         "y": 1800,
         "wires": [
             [
-                "2e5f5500f9bb45f9"
+                "2e5f5500f9bb45f9",
+                "2e7efb15b32cef6b"
             ],
             [
                 "e3ed960a4aa17dc4"
@@ -2473,7 +2475,7 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 4730,
+        "x": 4710,
         "y": 740,
         "wires": [
             [
@@ -2491,7 +2493,7 @@
         "appendNewline": false,
         "createDir": true,
         "overwriteFile": "true",
-        "x": 4890,
+        "x": 4870,
         "y": 740,
         "wires": [
             []
@@ -2582,40 +2584,6 @@
         "wires": []
     },
     {
-        "id": "9f6b771e8f5e4d9a",
-        "type": "ui_dropdown",
-        "z": "fe9ee8c084b47472",
-        "g": "896b3999999cb97c",
-        "name": "",
-        "label": "Apparaat",
-        "tooltip": "",
-        "place": "",
-        "group": "9493153c6a285be5",
-        "order": 1,
-        "width": 6,
-        "height": 1,
-        "passthru": false,
-        "multiple": false,
-        "options": [
-            {
-                "label": "",
-                "value": "",
-                "type": "str"
-            }
-        ],
-        "payload": "",
-        "topic": "device",
-        "topicType": "str",
-        "className": "",
-        "x": 4080,
-        "y": 740,
-        "wires": [
-            [
-                "9519be1631bb453c"
-            ]
-        ]
-    },
-    {
         "id": "afdae34213774c80",
         "type": "ui_text_input",
         "z": "fe9ee8c084b47472",
@@ -2634,7 +2602,7 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "str",
-        "x": 4250,
+        "x": 4230,
         "y": 760,
         "wires": [
             [
@@ -2698,7 +2666,7 @@
         "topic": "vendor",
         "topicType": "str",
         "className": "",
-        "x": 4520,
+        "x": 4500,
         "y": 920,
         "wires": [
             [
@@ -2729,7 +2697,7 @@
         "payloadType": "str",
         "topic": "submit",
         "topicType": "str",
-        "x": 4250,
+        "x": 4230,
         "y": 960,
         "wires": [
             [
@@ -2750,7 +2718,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 4050,
+        "x": 4030,
         "y": 1020,
         "wires": [
             [
@@ -2770,13 +2738,13 @@
         "z": "fe9ee8c084b47472",
         "g": "896b3999999cb97c",
         "name": "Set Device settings",
-        "func": "var data1 = context.get(\"data1\") || null; //get from context or default to 0\nvar data2 = context.get(\"data2\") || 0; //get from context or default to 0\nvar data3 = context.get(\"data3\") || 0; //get from context or default to 0\nvar data4 = context.get(\"data4\") || 0; //get from context or default to 0\nvar data5 = context.get(\"data5\") || 0; //get from context or default to 0\nvar data6 = context.get(\"data6\") || 0; //get from context or default to 0\nvar data7 = context.get(\"data7\") || 0; //get from context or default to 0\nvar data8 = context.get(\"data8\") || 0; //get from context or default to 0\n\nvar reconfig = flow.get(\"t2ztable\") || {};\n\nswitch (msg.topic){\n\n    case \"device\":\n        data1 = msg.payload; \n        context.set(\"data1\", data1);//store in context for next time \n        return;\n    \n    case \"vendor\":\n        data2 = msg.payload; \n        context.set(\"data2\", data2);//store in context for next time \n        return;\n    \n    case \"type\":\n        data3 = msg.payload; \n        context.set(\"data3\", data3);//store in context for next time \n        return;\n    \n    case \"idx\":\n        data4 = msg.payload; \n        context.set(\"data4\", data4);//store in context for next time \n        return;\n        \n    case \"idxbat\":\n        data5 = msg.payload;\n        context.set(\"data5\", data5); //store in context for next time \n        return;\n        \n    case \"idxper\":\n        data6 = msg.payload;\n        context.set(\"data6\", data6); //store in context for next time \n        return;\n    \n    case \"idxlink\":\n        data7 = msg.payload;\n        context.set(\"data7\", data7); //store in context for next time \n        return;\n    \n    case \"idxextra\":\n        data8 = msg.payload;\n        context.set(\"data8\", data8); //store in context for next time \n        return;\n        \n    case \"submit\":\n        if (data1 !== null ) {\n            //msg.payload = \"Device: \"+ data1 +\" , type: \" + data2 +\" , idx: \" + data3 +\" , idxbat: \" + data4 +\" , idxper: \" + data5 + \", idxlink: \" + data6 + \", idxextra: \" + data7;\n            var string = \"{\" + \"_/\" + data1 + \"/_/}\"\n            var array = string.split(\"/\")[2];\n            var receivedSensors = []\n            //return msg; \n        \n            let dev = reconfig[array] || {};\n            dev.name = data1;\n            dev.vendors = data2;\n            dev.type = data3;\n            dev.idx = data4;\n            dev.idxbat = data5;\n            dev.idxper = data6;\n            dev.idxlink = data7;\n            dev.idxextra = data8;\n      \n            // write back\n            reconfig[array] = dev;\n            receivedSensors.push(dev);\n \n            flow.set(\"t2ztable\", reconfig);\n            context.set(\"data1\", null)\n        } else {\n            return;\n        }\n    }\n\nreturn [{payload:Object.values(reconfig)},msg];\n//return msg;\n//return;",
+        "func": "var data1 = context.get(\"data1\") || null; //get from context or default to 0\nvar data2 = context.get(\"data2\") || 0; //get from context or default to 0\nvar data3 = context.get(\"data3\") || 0; //get from context or default to 0\nvar data4 = context.get(\"data4\") || 0; //get from context or default to 0\nvar data5 = context.get(\"data5\") || 0; //get from context or default to 0\nvar data6 = context.get(\"data6\") || 0; //get from context or default to 0\nvar data7 = context.get(\"data7\") || 0; //get from context or default to 0\nvar data8 = context.get(\"data8\") || 0; //get from context or default to 0\n\nvar reconfig = flow.get(\"t2ztable\") || {};\n\nswitch (msg.topic){\n\n    case \"device\":\n        data1 = msg.payload; \n        context.set(\"data1\", data1);//store in context for next time \n        return;\n    \n    case \"vendor\":\n        data2 = msg.payload; \n        context.set(\"data2\", data2);//store in context for next time \n        return;\n    \n    case \"type\":\n        data3 = msg.payload; \n        context.set(\"data3\", data3);//store in context for next time \n        return;\n    \n    case \"idx\":\n        data4 = msg.payload; \n        context.set(\"data4\", data4);//store in context for next time \n        return;\n        \n    case \"idxbat\":\n        data5 = msg.payload;\n        context.set(\"data5\", data5); //store in context for next time \n        return;\n        \n    case \"idxper\":\n        data6 = msg.payload;\n        context.set(\"data6\", data6); //store in context for next time \n        return;\n    \n    case \"idxlink\":\n        data7 = msg.payload;\n        context.set(\"data7\", data7); //store in context for next time \n        return;\n    \n    case \"idxextra\":\n        data8 = msg.payload;\n        context.set(\"data8\", data8); //store in context for next time \n        return;\n        \n    case \"submit\":\n        if (data1 !== null ) {\n            //msg.payload = \"Device: \"+ data1 +\" , type: \" + data2 +\" , idx: \" + data3 +\" , idxbat: \" + data4 +\" , idxper: \" + data5 + \", idxlink: \" + data6 + \", idxextra: \" + data7;\n            var string = \"{\" + \"_/\" + data1 + \"/_/}\"\n            var array = string.split(\"/\")[2];\n            \n            var strings = \"{\" + \"_/\" + data1 + \"/_/}\"\n            var arrayname = string.split(\"/\")[3];\n            var receivedSensors = []\n            //return msg; \n        \n            let dev = reconfig[array] || {};\n            dev.name = arrayname;\n            dev.vendors = data2;\n            dev.type = data3;\n            dev.idx = data4;\n            dev.idxbat = data5;\n            dev.idxper = data6;\n            dev.idxlink = data7;\n            dev.idxextra = data8;\n      \n            // write back\n            reconfig[array] = dev;\n            receivedSensors.push(dev);\n \n            flow.set(\"t2ztable\", reconfig);\n            context.set(\"data1\", null)\n        } else {\n            return;\n        }\n    }\n\nreturn [{payload:Object.values(reconfig)},msg];\n//return msg;\n//return;",
         "outputs": 2,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 4550,
+        "x": 4530,
         "y": 760,
         "wires": [
             [
@@ -2806,7 +2774,7 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "str",
-        "x": 4250,
+        "x": 4230,
         "y": 800,
         "wires": [
             [
@@ -2833,7 +2801,7 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "str",
-        "x": 4260,
+        "x": 4240,
         "y": 840,
         "wires": [
             [
@@ -2860,7 +2828,7 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "str",
-        "x": 4240,
+        "x": 4220,
         "y": 920,
         "wires": [
             [
@@ -2886,7 +2854,7 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 3890,
+        "x": 3870,
         "y": 1020,
         "wires": [
             [
@@ -2913,7 +2881,7 @@
         "sendOnBlur": true,
         "className": "",
         "topicType": "str",
-        "x": 4240,
+        "x": 4220,
         "y": 880,
         "wires": [
             [
@@ -3277,7 +3245,7 @@
             "01aaf238e2a83257",
             "453768eeb1731288"
         ],
-        "x": 4695,
+        "x": 4675,
         "y": 780,
         "wires": []
     },
@@ -3726,11 +3694,11 @@
         "links": [
             "2e7efb15b32cef6b"
         ],
-        "x": 3795,
+        "x": 3775,
         "y": 920,
         "wires": [
             [
-                "9f6b771e8f5e4d9a"
+                "42c5a1b287c92ddc"
             ]
         ]
     },
@@ -4104,7 +4072,7 @@
         "z": "fe9ee8c084b47472",
         "g": "44758f092409c09e",
         "name": "extract devicenames",
-        "func": "\nmsg.options = msg.payload.map(obj => {\n   var rObj = {};\n   rObj[obj.label] = obj.bridge+\"/\"+obj.Device;\n   return rObj;\n});\n\nmsg.payload = {};\nreturn msg;\n",
+        "func": "\nmsg.options = msg.payload.map(obj => {\n   var rObj = {};\n   rObj[obj.label] = obj.bridge+\"/\"+obj.Device;\n   //rObj[obj.label] = obj.bridge+\"/\"+obj.Device+\"/\"+obj.Name+\"/\"\n   return rObj;\n});\n\nmsg.payload = {};\nreturn msg;\n",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -4114,8 +4082,7 @@
         "y": 1720,
         "wires": [
             [
-                "050fb9afb2b185a1",
-                "2e7efb15b32cef6b"
+                "050fb9afb2b185a1"
             ]
         ]
     },
@@ -4332,7 +4299,7 @@
         "z": "fe9ee8c084b47472",
         "g": "c101b10c559fee47",
         "name": "UPDATE RELEASE",
-        "func": "var version = \"V_17-04-2022_R1\"\noldStr = msg.payload;\nvar newStr = oldStr.slice(0, oldStr.length-1);\nvar store = newStr;\nflow.set(\"version\", newStr);\nvar html = \"\";\nmsg.topic = \"Release notes\";\nif (msg.statusCode === 200 || 201) {\n    if (store === version) {\n        msg.text = \"FLOW IS UP TO DATE MET GITHUB (\" + version + \")\"\n        msg.background = \"#0A8085\";\n        return msg;\n    } else {\n        msg.text = \"ER IS EEN UPDATE, DOWNLOAD FLOW FILE VAN GITHUB\"\n        msg.background = \"#8C101C\";\n        return msg;\n    }\n}\nreturn;",
+        "func": "var version = \"V_17-04-2022_R2\"\noldStr = msg.payload;\nvar newStr = oldStr.slice(0, oldStr.length-1);\nvar store = newStr;\nflow.set(\"version\", newStr);\nvar html = \"\";\nmsg.topic = \"Release notes\";\nif (msg.statusCode === 200 || 201) {\n    if (store === version) {\n        msg.text = \"FLOW IS UP TO DATE MET GITHUB (\" + version + \")\"\n        msg.background = \"#0A8085\";\n        return msg;\n    } else {\n        msg.text = \"ER IS EEN UPDATE, DOWNLOAD FLOW FILE VAN GITHUB\"\n        msg.background = \"#8C101C\";\n        return msg;\n    }\n}\nreturn;",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -4449,7 +4416,7 @@
         "width": 0,
         "height": 0,
         "name": "",
-        "label": "Actuele versie: V_17-04-2022_R1",
+        "label": "Actuele versie: V_17-04-2022_R2",
         "format": "{{msg.payload}}",
         "layout": "row-center",
         "className": "",
@@ -4504,7 +4471,7 @@
         "format": "<font color =\"#0EB8C0\" font size= \"4px\">Verander naam zigbee apparaat</font>",
         "layout": "row-left",
         "className": "",
-        "x": 4110,
+        "x": 4130,
         "y": 1960,
         "wires": []
     },
@@ -4610,7 +4577,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 4530,
+        "x": 4510,
         "y": 960,
         "wires": [
             [
@@ -4638,7 +4605,7 @@
         "topic": "type",
         "topicType": "str",
         "className": "",
-        "x": 4520,
+        "x": 4500,
         "y": 1020,
         "wires": [
             [
@@ -4839,7 +4806,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 4260,
+        "x": 4240,
         "y": 1020,
         "wires": [
             [
@@ -6997,7 +6964,7 @@
         "payloadType": "str",
         "topic": "submit",
         "topicType": "str",
-        "x": 4810,
+        "x": 4790,
         "y": 900,
         "wires": [
             [
@@ -7017,7 +6984,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 4810,
+        "x": 4790,
         "y": 960,
         "wires": [
             [
@@ -7041,7 +7008,7 @@
         "className": "",
         "topic": "",
         "name": "Zigbee Device Info",
-        "x": 4770,
+        "x": 4750,
         "y": 1020,
         "wires": [
             []
@@ -7285,6 +7252,88 @@
         "wires": []
     },
     {
+        "id": "55ef8afd05fe2e88",
+        "type": "ui_dropdown",
+        "z": "fe9ee8c084b47472",
+        "g": "896b3999999cb97c",
+        "name": "",
+        "label": "Apparaat",
+        "tooltip": "",
+        "place": "",
+        "group": "9493153c6a285be5",
+        "order": 1,
+        "width": 6,
+        "height": 1,
+        "passthru": false,
+        "multiple": false,
+        "options": [
+            {
+                "label": "",
+                "value": "",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "device",
+        "topicType": "str",
+        "className": "",
+        "x": 4000,
+        "y": 740,
+        "wires": [
+            [
+                "9519be1631bb453c"
+            ]
+        ]
+    },
+    {
+        "id": "4b21f1fef5a51773",
+        "type": "inject",
+        "z": "fe9ee8c084b47472",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payloadType": "date",
+        "x": 3670,
+        "y": 1760,
+        "wires": [
+            [
+                "b08ac8676e34eb55"
+            ]
+        ]
+    },
+    {
+        "id": "42c5a1b287c92ddc",
+        "type": "function",
+        "z": "fe9ee8c084b47472",
+        "g": "896b3999999cb97c",
+        "name": "extract devicenames",
+        "func": "\nmsg.options = msg.payload.map(obj => {\n   var rObj = {};\n   //rObj[obj.label] = obj.bridge+\"/\"+obj.Device;\n   rObj[obj.label] = obj.bridge+\"/\"+obj.Device+\"/\"+obj.Name+\"/\"\n   return rObj;\n});\n\nmsg.payload = {};\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3880,
+        "y": 820,
+        "wires": [
+            [
+                "55ef8afd05fe2e88"
+            ]
+        ]
+    },
+    {
         "id": "184c77467f039f6e",
         "type": "ui_spacer",
         "z": "fe9ee8c084b47472",
@@ -7295,7 +7344,7 @@
         "height": 1
     },
     {
-        "id": "c13095787712f7a8",
+        "id": "a4074fc57e597d9a",
         "type": "ui_spacer",
         "z": "fe9ee8c084b47472",
         "name": "spacer",
@@ -7305,7 +7354,7 @@
         "height": 1
     },
     {
-        "id": "1b19e4b529eb42d3",
+        "id": "877310ae86ef81c3",
         "type": "ui_spacer",
         "z": "fe9ee8c084b47472",
         "name": "spacer",
@@ -7315,7 +7364,7 @@
         "height": 1
     },
     {
-        "id": "53223975f3e12e96",
+        "id": "3964dcd80ae57a52",
         "type": "ui_spacer",
         "z": "fe9ee8c084b47472",
         "name": "spacer",
@@ -7325,7 +7374,7 @@
         "height": 1
     },
     {
-        "id": "5f7e0d3862bdb789",
+        "id": "7f6c2a13e6bc37ba",
         "type": "ui_spacer",
         "z": "fe9ee8c084b47472",
         "name": "spacer",
