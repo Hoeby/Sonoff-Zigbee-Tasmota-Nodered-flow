@@ -1,92 +1,49 @@
-<b>23-05-2021 R1:</b><br>
-- bug: Domoticz commands voor sonoff werden niet gerouteerd in UI table <br>
-<b>22-05-2021 R1:</b><br>
-- Sonoff SNZB-02 toegevoegd <br>
-<b>19-05-2022 R1:</b><br>
-- Sonoff S26R2ZB toegevoegd <br>
-<b>17-05-2022 R1:</b><br>
-- Lidl HG06620 toegevoegd <br>
-- Variable vendor bug opgelost (Met dank aan Appiesan) <br>
-<b>24-04-2022 R1:</b><br>
-- Verwijderen device uit IDX-tabel vraagt eerst om bevestiging alvorens uit te verwijderen. <br>
-<b>17-04-2022 R2:</b><br>
-- Wegschrijven naam bij set idx ging niet goed, werd bridge/zigbeeid getoond. Dit aangepast. <br>
-<b>17-04-2022 R1:</b><br>
-- Toegevoegd device ikea motion E1525 <br>
-- Toegevoegd device ikea motion E1745 <br>
-- Toegevoegd device Heiman rookmelder HS1SA <br>
-- Toegevoegd device Sonoff motion SNZB-03 <br>
-- Menu gebruiksvriendelijker gemaakt (beta) <br>
-<b>11-04-2022 R2:</b><br>
-- Check op ikea flow data, om error te voorkomen <br>
-<b>11-04-2022 R1:</b><br>
-- Lidl TS0601: idxextra werkte niet correct, aangepast <br>
-<b>10-04-2022 R3:</b><br>
-- Bug in "Set idx nummers en idx tabel", is aangepast maar is nog in test-fase <br>
-<b>10-04-2022 R2:</b><br>
-- Button "Hoe device instellen domoticz" toegevoegd <br>
-<b>10-04-2022 R1:</b><br>
-- Tuya switch 4-buttons is released, geen beta meer <br>
-- Lidl TS0601 Thermostaatkraan toegevoegd (beta) <br>
-<b>09-04-2022 R3:</b><br>
-- Tuya switch 4-buttons toegevoegd (beta) <br>
-<b>09-04-2022 R2:</b><br>
-- Lidl bewegingsensor HG06335/HG07310 toegevoegd <br>
-<b>09-04-2022 R1:</b><br>
-- Toevoegen debug mqtt veld in UI <br>
-- Toevoegen device Xiaomi smart home cube <br>
-- Als device IDX 0 is, dan gaat er geen bericht naar domoticz<br>
-<b>08-04-2022 R1:</b><br>
-- Deurcontact lidl HG06336 toegevoegd <br>
-- Lampen (RGB/CCT) lidl toegevoegd <br>
-<b>05-04-2022 R2:</b><br>
-- Aanpassingen lidl HG06106B, dat CT en RGB mogelijk is<br>
-<b>05-04-2022 R1:</b><br>
-- Lamp Lidl HG06106B (RGB) toegevoegd <br>
-<b>01-04-2022 R1:</b><br>
-- Optie om de custom domoticz pagina in te stellen toegevoegd <br>
-<b>22-03-2022 R1:</b><br>
-- Finetuning van de aanpassing van 19-03-2022 R1 <br>
-<b>19-03-2022 R1:</b><br>
-<br>
-<font color="red">NIET ZOMAAR UPDATEN, LEES AANPASSING 1 VAN DEZE RELEASE</font><br>
-<br>
-- Device aanduiding uit elkaar gehaald, was voorheen 1 veld met merk+type, dit zijn nu 2 losse velden. <br>
-  <font color="red">HIERDOOR KAN JE NIET ZOMAAR UPDATEN, JE BACKUP ZAL FOUTIEF WORDEN INGELEZEN</font><br>
-  Of alles opnieuw invoeren, of de backup handmatig aanpassen. <br>
-<br>
-- Actuele versie balk in UI toegevoegd <br>
-- Ikea Powerplug Wordt nu ook gefaked voor link quality waarden <br>
-- Flogger file wordt nu ook in de map opgeslagen waar de data file met idx nummer staat <br>
-- Sonoff SNZB-01 switch toegevoegd <br>
-<b>10-03-2022 R1:</b><br>
-- Beta versie is verwijdert, we zijn live <br>
-- Release notes functie toegevoegd in UI <br>
-- Bug voor automatisch toevoegen ikea E1743 opgelost <br>
-<b>07-03-2022 R1 Beta:</b><br>
-- Check van versienummer controleert op response 200 of 201, anders return false <br>
-<b>06-03-2022 R1 Beta:</b><br>
-- Download flows.json wordt nu opgeslagen met versie naam <br>
-<b>05-03-2022 R2 Beta:</b><br>
-- Je kan nu per zigbee bridge een command sturen <br>
-- Kleur/text verandert bij een beschikbare update <br>
-<b>05-03-2022 R1 Beta:</b><br>
-- Ikea 1743 doet nu auto update flow.set na import nieuwe flow of idx set <br>
-<b>04-03-2022 R1 Beta:</b><br>
-- Toevoegen van nodered UI tbx idx tabel <br>
-<b>28-02-2022 R2:</b><br>
-- Tasmota zigbee UI toegevoegd <br>
-<b>28-02-2022 R1:</b><br>
-- Bug Ikea LED Strip opgelost, bij power 0 stuurt deze nu ook een 0 ipv 1 <br>
-<b>27-02-2022 R1:</b><br>
-- Batterijtrigger aangepast van "true" naar "false", dit lijkt effect te hebben op het aantal response meldingen van het device <br>
-<b>26-02-2022 R1:</b><br> 
-- Ikea powerplug, link naar gate verwijdert <br>
-- Batterijtrigger voor E1743 aangepast, want deze stopte soms vanzelf. <br>
-<b>22-02-2022 R1:</b><br> 
-- Node.send for ikea E1743 voor linkage updates <br>
-- Bug Ikea Powerplug opgelost, bij power 0 stuurt deze nu ook een 0 ipv 1 <br>
-<b>19-02-2022 R1:</b><br> 
-- Xiaomi Water sensor toegevoegd, niet getest <br>
-<b>17-02-2022 R1:</b><br>
-- Gestart met Versie nummers <br>
+<b>24-05-2022 R1: </b><br>
+- Aanpassing: "Endpoint":1 toegevoegd aan Sonoff S26R2ZB <br>
+- Aanpassing: Device namen worden beter in tabellen toegevoegd/verwijdert worden <br>
+<b>23-05-2021 R1: </b><br>
+- Bug:        Domoticz commands voor sonoff werden niet gerouteerd in UI table <br>
+<b>22-05-2021 R1: </b><br>
+- Toegevoegd: Sonoff SNZB-02 <br>
+<b>19-05-2022 R1: </b><br>
+- Toegevoegd: Sonoff S26R2ZB <br>
+<b>17-05-2022 R1: </b><br>
+- Toegevoegd: Lidl HG06620 <br>
+- Bug:        Variable vendor bug opgelost (Met dank aan Appiesan) <br>
+<b>24-04-2022 R1: </b><br>
+- Aanpassing: Verwijderen device uit IDX-tabel vraagt eerst om bevestiging alvorens te verwijderen <br>
+<b>17-04-2022 R2: </b><br>
+- Bug:        Wegschrijven naam bij set idx ging niet goed, werd bridge/zigbeeid getoond <br>
+<b>17-04-2022 R1: </b><br>
+- Toegevoegd: Ikea motion E1525 <br>
+- Toegevoegd: Ikea motion E1745 <br>
+- Toegevoegd: Heiman rookmelder HS1SA <br>
+- Toegevoegd: Sonoff motion SNZB-03 <br>
+- Aanpassing: Menu gebruiksvriendelijker gemaakt <br>
+<b>11-04-2022 R2: </b><br>
+- Aanpassing: Check op ikea flow data, om error te voorkomen <br>
+<b>11-04-2022 R1: </b><br>
+- Aanpassing: Lidl TS0601: idxextra werkte niet correct <br>
+<b>10-04-2022 R3: </b><br>
+- Aanpassing: In "Set idx nummers en idx tabel" een aanpassing doorgevoerd <br>
+<b>10-04-2022 R2: </b><br>
+- Toegevoegd: Button "Hoe device instellen domoticz" <br>
+<b>10-04-2022 R1: </b><br>
+- Toegevoegd: Tuya switch 4-buttons <br>
+<b>09-04-2022 R2: </b><br>
+- Toegevoegd: Lidl HG06335/HG07310 <br>
+<b>09-04-2022 R1: </b><br>
+- Toegevoegd: Debug mqtt veld in UI <br>
+- Toegevoegd: Xiaomi smart home cube <br>
+- Aanpassing: Als IDX 0 is, dan gaat er geen bericht naar domoticz <br>
+<b>08-04-2022 R1: </b><br>
+- Toegevoegd: Lidl HG06336 <br>
+- Toegevoegd: Lampen (RGB/CCT) lidl toegevoegd <br>
+<b>05-04-2022 R2: </b><br>
+- Aanpassing: Lidl HG06106B, dat CT en RGB mogelijk is <br>
+<b>05-04-2022 R1: </b><br>
+- Toegevoegd: Lidl HG06106B <br>
+<b>01-04-2022 R1: </b><br>
+- Aanpassing: Optie om de custom domoticz pagina in te stellen toegevoegd <br>
+<b>17-02-2022 R1: </b><br>
+- Gestart met Versie nummers
