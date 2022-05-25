@@ -1,3 +1,7 @@
+<b>25-05-2022 R1: </b><br>
+- Aanpassing: "Endpoint":1 toegevoegd aan Sonoff S26R2ZB <br>
+- Aanpassing: Sonoff SNZB-02, bij missende data toch bericht versturen <br>
+- Aanpassing: Device namen worden beter in tabellen toegevoegd/verwijdert worden <br>
 <b>23-05-2021 R1: </b><br>
 - Bug:        Domoticz commands voor sonoff werden niet gerouteerd in UI table <br>
 <b>22-05-2021 R1: </b><br>
